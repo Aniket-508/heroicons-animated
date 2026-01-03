@@ -1,6 +1,11 @@
 "use client";
 
-import { ClipboardDocumentIcon, PauseIcon, PlayIcon, CommandLineIcon } from "@heroicons/react/24/outline";
+import {
+  ClipboardDocumentIcon,
+  CommandLineIcon,
+  PauseIcon,
+  PlayIcon,
+} from "@heroicons/react/24/outline";
 import type { RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
@@ -8,7 +13,7 @@ import { getIconContent } from "@/actions/get-icon-content";
 import type { Icon } from "@/actions/get-icons";
 import { openInV0Action } from "@/actions/open-in-v0";
 import type { IconStatus } from "@/components/ui/icon-state";
-import { IconState } from "@/components/ui/icon-state"; 
+import { IconState } from "@/components/ui/icon-state";
 import {
   Tooltip,
   TooltipContent,
@@ -174,7 +179,6 @@ const CopyCLIAction = ({ name }: Pick<Icon, "name">) => {
 };
 
 const CopyCodeAction = ({ name }: Pick<Icon, "name">) => {
-
   const [state, setState] = useState<IconStatus>("idle");
 
   const handleCopy = async () => {
@@ -227,7 +231,6 @@ const CopyCodeAction = ({ name }: Pick<Icon, "name">) => {
 };
 
 const OpenInV0Action = ({ name }: Pick<Icon, "name">) => {
-
   const [state, setState] = useState<IconStatus>("idle");
 
   const handleOpenInV0 = async () => {

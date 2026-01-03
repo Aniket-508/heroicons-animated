@@ -2,8 +2,21 @@
 
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
-const CommentAnimationsDevLinkClient = () => {
+const CommentLucideAnimatedLinkClient = () => {
+  return (
+    <a
+      className="inline-block underline underline-offset-3 transition-[decoration-color,color] duration-100 focus-within:outline-offset-0 hover:text-primary hover:decoration-primary focus-visible:text-primary focus-visible:outline-1 focus-visible:outline-primary"
+      href="https://lucide-animated.com/"
+      rel="noopener external"
+      tabIndex={0}
+      target="_blank"
+    >
+      lucide-animated by dmytro
+    </a>
+  );
+};
 
+const CommentAnimationsDevLinkClient = () => {
   return (
     <a
       className="inline-block underline underline-offset-3 transition-[decoration-color,color] duration-100 focus-within:outline-offset-0 hover:text-primary hover:decoration-primary focus-visible:text-primary focus-visible:outline-1 focus-visible:outline-primary"
@@ -19,7 +32,6 @@ const CommentAnimationsDevLinkClient = () => {
 };
 
 const CommentButtonClient = () => {
-
   return (
     <a
       className="supports-[corner-shape:squircle]:corner-squircle flex w-fit cursor-pointer items-center justify-center gap-1 rounded-[8px] bg-primary px-[12px] py-[4px] font-sans text-sm text-white transition-[background-color] duration-100 hover:bg-[color-mix(in_oklab,var(--color-primary),black_10%)] focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-1 supports-[corner-shape:squircle]:rounded-[12px] max-[445px]:w-full"
@@ -35,4 +47,8 @@ const CommentButtonClient = () => {
   );
 };
 
-export { CommentAnimationsDevLinkClient, CommentButtonClient };
+export {
+  CommentLucideAnimatedLinkClient,
+  CommentAnimationsDevLinkClient,
+  CommentButtonClient,
+};

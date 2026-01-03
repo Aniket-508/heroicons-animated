@@ -3,16 +3,19 @@ import { unstable_cache } from "next/cache";
 
 import { LINK } from "@/constants";
 
-const DEFAULT_STARS = 6077;
+const DEFAULT_STARS = 1;
 const CACHE_TIME = 86_400; // 1 day
 
 const fetchGithubStars = async (): Promise<number> => {
   try {
-    const res = await fetch("https://api.github.com/repos/Aniket-508/heroicons-animated", {
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      },
-    });
+    const res = await fetch(
+      "https://api.github.com/repos/Aniket-508/heroicons-animated",
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+      }
+    );
 
     if (!res.ok) {
       return DEFAULT_STARS;

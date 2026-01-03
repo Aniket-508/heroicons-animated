@@ -1,6 +1,10 @@
 "use client";
 
-import { CheckIcon, ArrowPathIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowPathIcon,
+  CheckIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
