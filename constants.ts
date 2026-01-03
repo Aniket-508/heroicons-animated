@@ -40,6 +40,7 @@ const LINK = {
   HEROICONS: "https://heroicons.com",
   MOTION: "https://motion.dev",
   LICENSE: "https://github.com/Aniket-508/heroicons-animated/blob/main/LICENSE",
+  SPONSOR: "https://github.com/sponsors/Aniket-508",
 } as const;
 
 const PACKAGE_MANAGER = {
