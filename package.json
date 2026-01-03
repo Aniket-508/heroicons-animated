@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/download-fonts.js",
     "build": "next build",
     "start": "next start",
     "lint": "pnpm run check-style:fix && npx ultracite fix",
