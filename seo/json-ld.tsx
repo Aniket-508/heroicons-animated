@@ -137,8 +137,7 @@ const FAQJsonLd = () => {
     },
     {
       question: "What technologies are used in heroicons-animated?",
-      answer:
-        `${SITE.NAME} icons are React components written in TypeScript. Animations are powered by Motion (formerly Framer Motion), and the icons are based on Heroicons.`,
+      answer: `${SITE.NAME} icons are React components written in TypeScript. Animations are powered by Motion (formerly Framer Motion), and the icons are based on Heroicons.`,
     },
   ];
 
