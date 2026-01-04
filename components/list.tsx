@@ -75,7 +75,7 @@ const IconsList = ({ icons }: Props) => {
   }, [fuse, icons, deferredSearchValue]);
 
   return (
-    <div className="mb-20 w-full">
+    <div className="view-container mb-20">
       <SearchInput
         searchOpen={searchOpen}
         searchValue={searchValue}

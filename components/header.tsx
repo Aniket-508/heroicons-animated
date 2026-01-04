@@ -40,7 +40,7 @@ const Logo = ({ className, type = "default" }: LogoProps) => {
 
 const Header = () => {
   return (
-    <header className="mx-auto mt-[25px] w-full max-w-[1292px] px-4 font-mono">
+    <header className="view-container mt-[25px] font-mono">
       <div className="flex h-full w-full justify-between gap-4">
         <Link
           aria-label="Heroicons Animated - Home"
@@ -51,10 +51,10 @@ const Header = () => {
           <Logo className="w-6 text-primary data-[type='christmas']:translate-y-[-4px] min-[395px]:w-8" />
           heroicons-animated
         </Link>
-        <div className="ml-auto flex w-full flex-1 flex-wrap-reverse items-center justify-end gap-2">
+        <div className="ml-auto flex w-full flex-1 flex-wrap-reverse items-center justify-end gap-3">
           <a
             aria-label="Sponsor Project"
-            className="flex items-center gap-1 pr-1 font-sans text-[#3F3F47] text-sm underline-offset-4 focus-within:outline-offset-4 hover:underline focus-visible:outline-1 focus-visible:outline-primary dark:text-[#FAFAFA]"
+            className="flex items-center gap-1 font-sans text-[#3F3F47] text-sm underline-offset-4 focus-within:outline-offset-4 hover:underline focus-visible:outline-1 focus-visible:outline-primary dark:text-[#FAFAFA]"
             href={LINK.SPONSOR}
             tabIndex={0}
             target="_blank"
