@@ -64,6 +64,7 @@ const Card = ({ children, animationRef, className, ...props }: CardProps) => {
 
   const handlePlayClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+    e.preventDefault();
 
     if (isAnimating) {
       animationRef?.current?.stopAnimation();
@@ -135,7 +136,10 @@ const CopyCLIAction = ({ name }: Pick<Icon, "name">) => {
 
   const [state, setState] = useState<IconStatus>("idle");
 
-  const handleCopy = async () => {
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+
     if (state !== "idle") return;
 
     try {
@@ -189,7 +193,10 @@ const CopyCLIAction = ({ name }: Pick<Icon, "name">) => {
 const CopyCodeAction = ({ name }: Pick<Icon, "name">) => {
   const [state, setState] = useState<IconStatus>("idle");
 
-  const handleCopy = async () => {
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+
     if (state !== "idle") return;
 
     try {
@@ -245,8 +252,12 @@ const CopyCodeAction = ({ name }: Pick<Icon, "name">) => {
 const OpenInV0Action = ({ name }: Pick<Icon, "name">) => {
   const [state, setState] = useState<IconStatus>("idle");
 
-  const handleOpenInV0 = async () => {
+  const handleOpenInV0 = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+
     if (state !== "idle") return;
+
     try {
       setState("loading");
       if (typeof window !== "undefined" && window.umami) {
