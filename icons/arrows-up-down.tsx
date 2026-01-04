@@ -16,24 +16,24 @@ interface ArrowsUpDownIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const UP_ARROW_VARIANTS: Variants = {
+  normal: { translateY: 0 },
+  animate: {
+    translateY: [0, -2, 0],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
+};
+
+const DOWN_ARROW_VARIANTS: Variants = {
+  normal: { translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -56,11 +56,8 @@ const ArrowsUpDownIcon = forwardRef<
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (isControlledRef.current) {
-        onMouseEnter?.(e);
-      } else {
-        controls.start("animate");
-      }
+      if (!isControlledRef.current) controls.start("animate");
+      onMouseEnter?.(e);
     },
     [controls, onMouseEnter]
   );
@@ -94,12 +91,12 @@ const ArrowsUpDownIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <motion.g animate={controls} variants={UP_ARROW_VARIANTS}>
+          <path d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5" />
+        </motion.g>
+        <motion.g animate={controls} variants={DOWN_ARROW_VARIANTS}>
+          <path d="M21 16.5L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+        </motion.g>
       </svg>
     </div>
   );

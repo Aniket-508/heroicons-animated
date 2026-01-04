@@ -17,24 +17,21 @@ interface ArrowTopRightOnSquareIconProps
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const ARROW_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
+    scale: 1,
+    translateX: 0,
+    translateY: 0,
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    scale: [1, 0.85, 1],
+    translateX: [0, -4, 0],
+    translateY: [0, 4, 0],
+    originX: 1,
+    originY: 0,
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeInOut",
     },
   },
 };
@@ -57,11 +54,8 @@ const ArrowTopRightOnSquareIcon = forwardRef<
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (isControlledRef.current) {
-        onMouseEnter?.(e);
-      } else {
-        controls.start("animate");
-      }
+      if (!isControlledRef.current) controls.start("animate");
+      onMouseEnter?.(e);
     },
     [controls, onMouseEnter]
   );
@@ -90,17 +84,15 @@ const ArrowTopRightOnSquareIcon = forwardRef<
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="1.5"
+        strokeWidth="2"
         viewBox="0 0 24 24"
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <path d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5" />
+        <motion.g animate={controls} variants={ARROW_VARIANTS}>
+          <path d="M7.5 16.5L21 3m0 0h-5.25M21 3v5.25" />
+        </motion.g>
       </svg>
     </div>
   );
