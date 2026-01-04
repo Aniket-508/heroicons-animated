@@ -25,10 +25,6 @@ import { ArrowRightIcon } from "./arrow-right";
 import { ArrowRightCircleIcon } from "./arrow-right-circle";
 import { ArrowRightEndOnRectangleIcon } from "./arrow-right-end-on-rectangle";
 import { ArrowRightStartOnRectangleIcon } from "./arrow-right-start-on-rectangle";
-import { ArrowSmallDownIcon } from "./arrow-small-down";
-import { ArrowSmallLeftIcon } from "./arrow-small-left";
-import { ArrowSmallRightIcon } from "./arrow-small-right";
-import { ArrowSmallUpIcon } from "./arrow-small-up";
 import { ArrowTopRightOnSquareIcon } from "./arrow-top-right-on-square";
 import { ArrowTrendingDownIcon } from "./arrow-trending-down";
 import { ArrowTrendingUpIcon } from "./arrow-trending-up";
@@ -229,7 +225,6 @@ import { MegaphoneIcon } from "./megaphone";
 import { MicrophoneIcon } from "./microphone";
 import { MinusIcon } from "./minus";
 import { MinusCircleIcon } from "./minus-circle";
-import { MinusSmallIcon } from "./minus-small";
 import { MoonIcon } from "./moon";
 import { MusicalNoteIcon } from "./musical-note";
 import { NewspaperIcon } from "./newspaper";
@@ -253,7 +248,6 @@ import { PlayCircleIcon } from "./play-circle";
 import { PlayPauseIcon } from "./play-pause";
 import { PlusIcon } from "./plus";
 import { PlusCircleIcon } from "./plus-circle";
-import { PlusSmallIcon } from "./plus-small";
 import { PowerIcon } from "./power";
 import { PresentationChartBarIcon } from "./presentation-chart-bar";
 import { PresentationChartLineIcon } from "./presentation-chart-line";
@@ -503,26 +497,6 @@ const ICON_LIST: IconListItem[] = [
     name: "arrow-right",
     icon: ArrowRightIcon,
     keywords: ["arrow", "right", "arrow right"],
-  },
-  {
-    name: "arrow-small-down",
-    icon: ArrowSmallDownIcon,
-    keywords: ["arrow", "small", "down", "arrow small down"],
-  },
-  {
-    name: "arrow-small-left",
-    icon: ArrowSmallLeftIcon,
-    keywords: ["arrow", "small", "left", "arrow small left"],
-  },
-  {
-    name: "arrow-small-right",
-    icon: ArrowSmallRightIcon,
-    keywords: ["arrow", "small", "right", "arrow small right"],
-  },
-  {
-    name: "arrow-small-up",
-    icon: ArrowSmallUpIcon,
-    keywords: ["arrow", "small", "up", "arrow small up"],
   },
   {
     name: "arrow-top-right-on-square",
@@ -1570,11 +1544,6 @@ const ICON_LIST: IconListItem[] = [
     keywords: ["minus", "circle", "minus circle"],
   },
   {
-    name: "minus-small",
-    icon: MinusSmallIcon,
-    keywords: ["minus", "small", "minus small"],
-  },
-  {
     name: "minus",
     icon: MinusIcon,
     keywords: ["minus"],
@@ -1688,11 +1657,6 @@ const ICON_LIST: IconListItem[] = [
     name: "plus-circle",
     icon: PlusCircleIcon,
     keywords: ["plus", "circle", "plus circle"],
-  },
-  {
-    name: "plus-small",
-    icon: PlusSmallIcon,
-    keywords: ["plus", "small", "plus small"],
   },
   {
     name: "plus",

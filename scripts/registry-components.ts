@@ -188,30 +188,6 @@ export const components: ComponentDefinition[] = [
     dependencies: ["motion"],
   },
   {
-    name: "arrow-small-down",
-    path: path.join(__dirname, "../icons/arrow-small-down.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
-    name: "arrow-small-left",
-    path: path.join(__dirname, "../icons/arrow-small-left.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
-    name: "arrow-small-right",
-    path: path.join(__dirname, "../icons/arrow-small-right.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
-    name: "arrow-small-up",
-    path: path.join(__dirname, "../icons/arrow-small-up.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
     name: "arrow-top-right-on-square",
     path: path.join(__dirname, "../icons/arrow-top-right-on-square.tsx"),
     registryDependencies: [],
@@ -1412,12 +1388,6 @@ export const components: ComponentDefinition[] = [
     dependencies: ["motion"],
   },
   {
-    name: "minus-small",
-    path: path.join(__dirname, "../icons/minus-small.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
     name: "moon",
     path: path.join(__dirname, "../icons/moon.tsx"),
     registryDependencies: [],
@@ -1552,12 +1522,6 @@ export const components: ComponentDefinition[] = [
   {
     name: "plus-circle",
     path: path.join(__dirname, "../icons/plus-circle.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
-    name: "plus-small",
-    path: path.join(__dirname, "../icons/plus-small.tsx"),
     registryDependencies: [],
     dependencies: ["motion"],
   },

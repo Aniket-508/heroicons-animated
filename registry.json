@@ -355,58 +355,6 @@
       ]
     },
     {
-      "name": "arrow-small-down",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "arrow-small-down.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "arrow-small-left",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "arrow-small-left.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "arrow-small-right",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "arrow-small-right.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "arrow-small-up",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "arrow-small-up.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "arrow-top-right-on-square",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3007,19 +2955,6 @@
       ]
     },
     {
-      "name": "minus-small",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "minus-small.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "moon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3314,19 +3249,6 @@
       "files": [
         {
           "path": "plus-circle.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "plus-small",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "plus-small.tsx",
           "type": "registry:ui"
         }
       ]
