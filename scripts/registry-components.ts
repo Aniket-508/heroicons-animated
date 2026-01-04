@@ -122,12 +122,6 @@ export const components: ComponentDefinition[] = [
     dependencies: ["motion"],
   },
   {
-    name: "arrow-left-on-rectangle",
-    path: path.join(__dirname, "../icons/arrow-left-on-rectangle.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
     name: "arrow-left-start-on-rectangle",
     path: path.join(__dirname, "../icons/arrow-left-start-on-rectangle.tsx"),
     registryDependencies: [],
@@ -184,12 +178,6 @@ export const components: ComponentDefinition[] = [
   {
     name: "arrow-right-end-on-rectangle",
     path: path.join(__dirname, "../icons/arrow-right-end-on-rectangle.tsx"),
-    registryDependencies: [],
-    dependencies: ["motion"],
-  },
-  {
-    name: "arrow-right-on-rectangle",
-    path: path.join(__dirname, "../icons/arrow-right-on-rectangle.tsx"),
     registryDependencies: [],
     dependencies: ["motion"],
   },
@@ -1918,6 +1906,54 @@ export const components: ComponentDefinition[] = [
   {
     name: "wallet",
     path: path.join(__dirname, "../icons/wallet.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "square3-stack3-d",
+    path: path.join(__dirname, "../icons/square3-stack3-d.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "squares2-x2",
+    path: path.join(__dirname, "../icons/squares2-x2.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "wifi",
+    path: path.join(__dirname, "../icons/wifi.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "window",
+    path: path.join(__dirname, "../icons/window.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "wrench-screwdriver",
+    path: path.join(__dirname, "../icons/wrench-screwdriver.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "wrench",
+    path: path.join(__dirname, "../icons/wrench.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "x-circle",
+    path: path.join(__dirname, "../icons/x-circle.tsx"),
+    registryDependencies: [],
+    dependencies: ["motion"],
+  },
+  {
+    name: "x-mark",
+    path: path.join(__dirname, "../icons/x-mark.tsx"),
     registryDependencies: [],
     dependencies: ["motion"],
   },

@@ -14,7 +14,6 @@ import { ArrowDownTrayIcon } from "./arrow-down-tray";
 import { ArrowLeftIcon } from "./arrow-left";
 import { ArrowLeftCircleIcon } from "./arrow-left-circle";
 import { ArrowLeftEndOnRectangleIcon } from "./arrow-left-end-on-rectangle";
-import { ArrowLeftOnRectangleIcon } from "./arrow-left-on-rectangle";
 import { ArrowLeftStartOnRectangleIcon } from "./arrow-left-start-on-rectangle";
 import { ArrowLongDownIcon } from "./arrow-long-down";
 import { ArrowLongLeftIcon } from "./arrow-long-left";
@@ -25,7 +24,6 @@ import { ArrowPathRoundedSquareIcon } from "./arrow-path-rounded-square";
 import { ArrowRightIcon } from "./arrow-right";
 import { ArrowRightCircleIcon } from "./arrow-right-circle";
 import { ArrowRightEndOnRectangleIcon } from "./arrow-right-end-on-rectangle";
-import { ArrowRightOnRectangleIcon } from "./arrow-right-on-rectangle";
 import { ArrowRightStartOnRectangleIcon } from "./arrow-right-start-on-rectangle";
 import { ArrowSmallDownIcon } from "./arrow-small-down";
 import { ArrowSmallLeftIcon } from "./arrow-small-left";
@@ -420,11 +418,6 @@ const ICON_LIST: IconListItem[] = [
     ],
   },
   {
-    name: "arrow-left-on-rectangle",
-    icon: ArrowLeftOnRectangleIcon,
-    keywords: ["arrow", "left", "on", "rectangle", "arrow left on rectangle"],
-  },
-  {
     name: "arrow-left-start-on-rectangle",
     icon: ArrowLeftStartOnRectangleIcon,
     keywords: [
@@ -493,11 +486,6 @@ const ICON_LIST: IconListItem[] = [
       "rectangle",
       "arrow right end on rectangle",
     ],
-  },
-  {
-    name: "arrow-right-on-rectangle",
-    icon: ArrowRightOnRectangleIcon,
-    keywords: ["arrow", "right", "on", "rectangle", "arrow right on rectangle"],
   },
   {
     name: "arrow-right-start-on-rectangle",
