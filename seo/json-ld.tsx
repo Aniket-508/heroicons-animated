@@ -125,7 +125,7 @@ const FAQJsonLd = () => {
   const faqs = [
     {
       question: "What is heroicons-animated?",
-      answer: `${SITE.NAME} is a free, open-source library of 324 beautifully crafted animated React icons. Built with Motion library and based on Heroicons.`,
+      answer: `${SITE.NAME} is a free, open-source library of 316 beautifully crafted animated React icons. Built with Motion library and based on Heroicons.`,
     },
     {
       question: "How do I install heroicons-animated icons?",
