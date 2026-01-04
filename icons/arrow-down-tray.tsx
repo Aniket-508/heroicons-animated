@@ -16,24 +16,13 @@ interface ArrowDownTrayIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const ARROW_VARIANTS: Variants = {
+  normal: { translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -94,12 +83,10 @@ const ArrowDownTrayIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <path d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5" />
+        <motion.g animate={controls} variants={ARROW_VARIANTS}>
+          <path d="M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </motion.g>
       </svg>
     </div>
   );

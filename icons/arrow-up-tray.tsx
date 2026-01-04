@@ -16,24 +16,13 @@ interface ArrowUpTrayIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const ARROW_VARIANTS: Variants = {
+  normal: { translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: [0, -2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -92,12 +81,10 @@ const ArrowUpTrayIcon = forwardRef<ArrowUpTrayIconHandle, ArrowUpTrayIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5"
-            initial="normal"
-            variants={VARIANTS}
-          />
+          <path d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5" />
+          <motion.g animate={controls} variants={ARROW_VARIANTS}>
+            <path d="M7.5 7.5L12 3m0 0 4.5 4.5M12 3v13.5" />
+          </motion.g>
         </svg>
       </div>
     );
