@@ -2,7 +2,8 @@
 
 import Fuse from "fuse.js";
 import Link from "next/link";
-import { useDeferredValue, useMemo, useRef, useState } from "react";
+import { useQueryState } from "nuqs";
+import { useDeferredValue, useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
 import { Card, CardActions, CardTitle } from "@/components/card";
 import { ICON_LIST } from "@/icons";
@@ -54,7 +55,10 @@ const IconItem = ({
 };
 
 const IconsList = ({ icons }: Props) => {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useQueryState("search", {
+    defaultValue: "",
+    clearOnDefault: true,
+  });
   const deferredSearchValue = useDeferredValue(searchValue);
 
   const fuse = useMemo(
