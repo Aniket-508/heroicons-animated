@@ -17,23 +17,12 @@ interface ChevronDoubleUpIconProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+  normal: { translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: [0, -2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -97,14 +86,11 @@ const ChevronDoubleUpIcon = forwardRef<
         <motion.path
           animate={controls}
           d="m4.5 18.75 7.5-7.5 7.5 7.5"
-          initial="normal"
           variants={VARIANTS}
         />
         <motion.path
           animate={controls}
           d="m4.5 12.75 7.5-7.5 7.5 7.5"
-          initial="normal"
-          transition={{ delay: 0.1 }}
           variants={VARIANTS}
         />
       </svg>

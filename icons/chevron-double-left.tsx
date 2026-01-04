@@ -17,23 +17,12 @@ interface ChevronDoubleLeftIconProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+  normal: { translateX: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateX: [0, -2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -97,7 +86,6 @@ const ChevronDoubleLeftIcon = forwardRef<
         <motion.path
           animate={controls}
           d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
-          initial="normal"
           variants={VARIANTS}
         />
       </svg>
