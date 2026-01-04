@@ -16,24 +16,22 @@ interface ArrowLongRightIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const ARROW_HEAD_VARIANTS: Variants = {
+  normal: { translateX: 0 },
+  animate: {
+    translateX: [0, -3, 0],
     transition: {
       duration: 0.4,
-      opacity: { duration: 0.1 },
     },
   },
+};
+
+const LINE_VARIANTS: Variants = {
+  normal: { d: "M21 12H3" },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    d: ["M21 12H3", "M18 12H3", "M21 12H3"],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.4,
     },
   },
 };
@@ -94,12 +92,16 @@ const ArrowLongRightIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-          initial="normal"
-          variants={VARIANTS}
-        />
+          <motion.path
+            animate={controls}
+            d="M17.25 8.25 21 12m0 0-3.75 3.75"
+            variants={ARROW_HEAD_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M21 12H3"
+            variants={LINE_VARIANTS}
+          />
       </svg>
     </div>
   );

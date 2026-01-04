@@ -16,24 +16,22 @@ interface ArrowLongUpIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const ARROW_HEAD_VARIANTS: Variants = {
+  normal: { translateY: 0 },
+  animate: {
+    translateY: [0, 3, 0],
     transition: {
       duration: 0.4,
-      opacity: { duration: 0.1 },
     },
   },
+};
+
+const LINE_VARIANTS: Variants = {
+  normal: { d: "M12 3v18" },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    d: ["M12 3v18", "M12 6v15", "M12 3v18"],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.4,
     },
   },
 };
@@ -94,9 +92,13 @@ const ArrowLongUpIcon = forwardRef<ArrowLongUpIconHandle, ArrowLongUpIconProps>(
         >
           <motion.path
             animate={controls}
-            d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"
-            initial="normal"
-            variants={VARIANTS}
+            d="M8.25 6.75 12 3m0 0 3.75 3.75"
+            variants={ARROW_HEAD_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M12 3v18"
+            variants={LINE_VARIANTS}
           />
         </svg>
       </div>
