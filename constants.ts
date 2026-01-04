@@ -7,9 +7,9 @@ const SITE = {
     TWITTER: "@alaymanguy",
   },
   DESCRIPTION: {
-    LONG: "Free open-source library of 316 beautifully crafted animated React icons. Built with Motion and Heroicons. Copy-paste ready, MIT licensed, fully customizable SVG icons with smooth animations.",
+    LONG: "Free open-source library of 316 beautifully animated React icons. Built with Motion and Heroicons. Copy-paste ready, MIT licensed, fully customizable SVG icons with smooth animations.",
     SHORT:
-      "Free animated React icons library with 316 smooth Motion-powered icons based on Heroicons. MIT licensed, copy-paste ready.",
+      "Free animated React icons library with 316 smooth Motion-powered Heroicons. MIT licensed, copy-paste ready.",
   },
   KEYWORDS: [
     "animated icons",
