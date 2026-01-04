@@ -28,7 +28,7 @@ const Home = () => {
             MIT License
           </a>
           ) collection of smooth animated <br />
-          316 icons for your projects. feel free to use them, share your
+          324 icons for your projects. feel free to use them, share your
           feedback, and let's make this library awesome together!
         </p>
         <p className="mt-4 font-mono text-secondary text-xs min-[640px]:text-sm">

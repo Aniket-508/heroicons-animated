@@ -63,7 +63,7 @@ const SearchInput = ({ searchValue, setSearchValue }: SearchInputProps) => {
             />
           }
           onChange={(e) => setSearchValue(e.target.value)}
-          placeholder="search 316 icons..."
+          placeholder="search icons..."
           ref={inputRef}
           role="search"
           spellCheck="false"

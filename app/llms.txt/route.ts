@@ -9,7 +9,7 @@ export function GET() {
 
 > Beautifully animated heroicons
 
-${SITE.NAME} is an open-source (MIT License) collection of smooth animated 316 icons for React projects.
+${SITE.NAME} is an open-source (MIT License) collection of smooth animated 324 icons for React projects.
 
 ## Overview
 
