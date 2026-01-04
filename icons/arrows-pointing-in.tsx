@@ -16,24 +16,50 @@ interface ArrowsPointingInIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const TOP_LEFT_ARROW_VARIANTS: Variants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: {
+    translateX: [0, 2, 0],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
+};
+
+const BOTTOM_LEFT_ARROW_VARIANTS: Variants = {
+  normal: { translateX: 0, translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateX: [0, 2, 0],
+    translateY: [0, -2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const TOP_RIGHT_ARROW_VARIANTS: Variants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: {
+    translateX: [0, -2, 0],
+    translateY: [0, 2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const BOTTOM_RIGHT_ARROW_VARIANTS: Variants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: {
+    translateX: [0, -2, 0],
+    translateY: [0, -2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -94,12 +120,18 @@ const ArrowsPointingInIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <motion.g animate={controls} variants={TOP_LEFT_ARROW_VARIANTS}>
+          <path d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75" />
+        </motion.g>
+        <motion.g animate={controls} variants={BOTTOM_LEFT_ARROW_VARIANTS}>
+          <path d="M9 15v4.5M9 15H4.5M9 15l-5.25 5.25" />
+        </motion.g>
+        <motion.g animate={controls} variants={TOP_RIGHT_ARROW_VARIANTS}>
+          <path d="M15 9h4.5M15 9V4.5M15 9l5.25-5.25" />
+        </motion.g>
+        <motion.g animate={controls} variants={BOTTOM_RIGHT_ARROW_VARIANTS}>
+          <path d="M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
+        </motion.g>
       </svg>
     </div>
   );

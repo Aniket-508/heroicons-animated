@@ -16,24 +16,13 @@ interface BarsArrowUpIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const ARROW_VARIANTS: Variants = {
+  normal: { translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: [0, -2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -92,11 +81,12 @@ const BarsArrowUpIcon = forwardRef<BarsArrowUpIconHandle, BarsArrowUpIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25" />
           <motion.path
             animate={controls}
-            d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12"
+            d="M13.5 12.75L17.25 9L21 12.75M17.25 9v12"
             initial="normal"
-            variants={VARIANTS}
+            variants={ARROW_VARIANTS}
           />
         </svg>
       </div>

@@ -16,24 +16,13 @@ interface BarsArrowDownIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const ARROW_VARIANTS: Variants = {
+  normal: { translateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
@@ -94,11 +83,12 @@ const BarsArrowDownIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75" />
         <motion.path
           animate={controls}
-          d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25"
+          d="M17.25 9v12m0 0-3.75-3.75M17.25 21L21 17.25"
           initial="normal"
-          variants={VARIANTS}
+          variants={ARROW_VARIANTS}
         />
       </svg>
     </div>
