@@ -1,9 +1,9 @@
 "use client";
 
 import Fuse from "fuse.js";
+import Link from "next/link";
 import { useDeferredValue, useMemo, useRef, useState } from "react";
 import type { Icon } from "@/actions/get-icons";
-
 import { Card, CardActions, CardTitle } from "@/components/card";
 import { ICON_LIST } from "@/icons";
 import { SearchInput } from "./search-input";
@@ -31,20 +31,25 @@ const IconItem = ({
   }
 
   return (
-    <Card
-      animationRef={animationRef}
-      className="[contain-intrinsic-size:auto_180px] [content-visibility:auto]"
-      key={icon.name}
-      onMouseEnter={() => animationRef.current?.startAnimation()}
-      onMouseLeave={() => animationRef.current?.stopAnimation()}
+    <Link
+      className="rounded-[20px] focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
+      href={`/icons/${icon.name}`}
     >
-      <Icon
-        className="flex items-center justify-center [&>svg]:size-10 [&>svg]:text-neutral-800 dark:[&>svg]:text-neutral-100"
-        ref={animationRef}
-      />
-      <CardTitle>{icon.name}</CardTitle>
-      <CardActions {...icon} />
-    </Card>
+      <Card
+        animationRef={animationRef}
+        className="transition-shadow [contain-intrinsic-size:auto_180px] [content-visibility:auto] hover:shadow-sm"
+        key={icon.name}
+        onMouseEnter={() => animationRef.current?.startAnimation()}
+        onMouseLeave={() => animationRef.current?.stopAnimation()}
+      >
+        <Icon
+          className="flex items-center justify-center [&>svg]:size-10 [&>svg]:text-neutral-800 dark:[&>svg]:text-neutral-100"
+          ref={animationRef}
+        />
+        <CardTitle>{icon.name}</CardTitle>
+        <CardActions {...icon} />
+      </Card>
+    </Link>
   );
 };
 
