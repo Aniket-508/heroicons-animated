@@ -16,20 +16,17 @@ import { ThemeProvider } from "@/providers/theme";
 import { JsonLdScripts } from "@/seo/json-ld";
 import { baseMetadata } from "@/seo/metadata";
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const andaleMono = geistMono;
-const gtCinetype = geist;
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata = baseMetadata;
 
@@ -48,16 +45,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${andaleMono.variable} ${gtCinetype.variable}`}
+      className={`${geist.variable} ${geistMono.variable}`}
       lang="en"
       suppressHydrationWarning
     >
       <head>
         <JsonLdScripts />
       </head>
-      <body
-        className={`${gtCinetype.className} relative bg-background antialiased`}
-      >
+      <body className={`${geist.className} relative bg-background antialiased`}>
         <div className="root">
           <ThemeProvider
             attribute="class"
