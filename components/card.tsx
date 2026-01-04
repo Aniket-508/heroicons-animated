@@ -121,7 +121,10 @@ const Card = ({ children, animationRef, className, ...props }: CardProps) => {
 
 const Title = ({ children }: { children: React.ReactNode }) => {
   return (
-    <p className="mt-[36px] text-center font-mono text-[#9F9FA9] text-xs dark:text-[#D4D4D4]">
+    <p
+      className="mt-[36px] line-clamp-1 text-center font-mono text-[#9F9FA9] text-xs dark:text-[#D4D4D4]"
+      title={children as string}
+    >
       {children}
     </p>
   );
