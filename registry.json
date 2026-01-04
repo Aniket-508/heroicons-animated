@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "heroicons-animated",
-  "homepage": "https://heroicons-animated.com",
+  "homepage": "https://heroicons-animated.vercel.app",
   "items": [
     {
       "name": "academic-cap",

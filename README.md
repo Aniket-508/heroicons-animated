@@ -2,7 +2,7 @@
 
 ![preview](./public/og.png)
 
-**Demo** → [heroicons-animated](https://heroicons-animated.com)
+**Demo** → [heroicons-animated](https://heroicons-animated.vercel.app)
 
 **Sponsorship** → [heroicons-animated/sponsorship](https://github.com/sponsors/Aniket-508)
 
