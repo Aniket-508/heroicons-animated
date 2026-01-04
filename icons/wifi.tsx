@@ -1,6 +1,5 @@
 "use client";
 
-import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
@@ -16,27 +15,21 @@ interface WifiIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
+const WIFI_LEVELS = [
+  {
+    d: "M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0",
+    delay: 0,
   },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
+  { d: "M8.288 15.038a5.25 5.25 0 0 1 7.424 0", delay: 0.1 },
+  {
+    d: "M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0",
+    delay: 0.2,
   },
-};
+  {
+    d: "M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0",
+    delay: 0.3,
+  },
+];
 
 const WifiIcon = forwardRef<WifiIconHandle, WifiIconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
@@ -92,12 +85,28 @@ const WifiIcon = forwardRef<WifiIconHandle, WifiIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z"
-            initial="normal"
-            variants={VARIANTS}
-          />
+          {WIFI_LEVELS.map((level, index) => (
+            <motion.path
+              animate={controls}
+              d={level.d}
+              initial="normal"
+              key={index}
+              variants={{
+                normal: {
+                  opacity: 1,
+                },
+                animate: {
+                  opacity: index === 0 ? 1 : [1, 0, 1],
+                  transition: {
+                    duration: 0.6,
+                    times: [0, 0.3, 1],
+                    ease: "easeInOut",
+                    delay: level.delay,
+                  },
+                },
+              }}
+            />
+          ))}
         </svg>
       </div>
     );
