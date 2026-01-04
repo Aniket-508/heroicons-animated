@@ -16,24 +16,14 @@ interface ArrowTurnLeftDownIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const STRETCH_VARIANTS: Variants = {
+  normal: { scaleY: 1, y: 0, opacity: 1 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    scaleY: [1, 1.15, 1],
+    y: [0, 2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.45,
+      ease: "easeInOut",
     },
   },
 };
@@ -83,24 +73,22 @@ const ArrowTurnLeftDownIcon = forwardRef<
       onMouseLeave={handleMouseLeave}
       {...props}
     >
-      <svg
+      <motion.svg
+        animate={controls}
         fill="none"
         height={size}
+        initial="normal"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.5"
+        variants={STRETCH_VARIANTS}
         viewBox="0 0 24 24"
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25"
-          initial="normal"
-          variants={VARIANTS}
-        />
-      </svg>
+        <path d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
+      </motion.svg>
     </div>
   );
 });
