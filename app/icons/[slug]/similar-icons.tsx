@@ -31,12 +31,12 @@ const SimilarIconItem = ({
 
   return (
     <Link
-      className="focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
+      className="rounded-[20px] focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
       href={`/icons/${icon.name}`}
     >
       <Card
         animationRef={animationRef}
-        className="pb-[50px]"
+        className="pb-[50px] transition-shadow hover:shadow-sm"
         onMouseEnter={() => animationRef.current?.startAnimation()}
         onMouseLeave={() => animationRef.current?.stopAnimation()}
       >
