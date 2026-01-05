@@ -24,9 +24,8 @@ const ARROW_VARIANTS: Variants = {
     translateY: 0,
   },
   animate: {
-    scale: [1, 0.85, 1],
-    translateX: [0, -4, 0],
-    translateY: [0, 4, 0],
+    translateX: [0, 2, 0],
+    translateY: [0, -2, 0],
     originX: 1,
     originY: 0,
     transition: {
@@ -84,15 +83,17 @@ const ArrowTopRightOnSquareIcon = forwardRef<
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth="1.5"
         viewBox="0 0 24 24"
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5" />
-        <motion.g animate={controls} variants={ARROW_VARIANTS}>
-          <path d="M7.5 16.5L21 3m0 0h-5.25M21 3v5.25" />
-        </motion.g>
+        <motion.path
+          animate={controls}
+          d="M7.5 16.5L21 3m0 0h-5.25M21 3v5.25"
+          variants={ARROW_VARIANTS}
+        />
       </svg>
     </div>
   );
