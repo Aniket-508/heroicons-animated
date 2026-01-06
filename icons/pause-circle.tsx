@@ -16,9 +16,34 @@ interface PauseCircleIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const BASE_RECT_VARIANTS: Variants = {
+const BASE_VARIANTS: Variants = {
   normal: {
     y: 0,
+  },
+};
+
+const BASE_TRANSITION = {
+  transition: {
+    times: [0, 0.2, 0.5, 1],
+    duration: 0.5,
+    stiffness: 260,
+    damping: 20,
+  },
+};
+
+const LEFT_BAR_VARIANTS: Variants = {
+  ...BASE_VARIANTS,
+  animate: {
+    y: [0, 2, 0, 0],
+    ...BASE_TRANSITION,
+  },
+};
+
+const RIGHT_BAR_VARIANTS: Variants = {
+  ...BASE_VARIANTS,
+  animate: {
+    y: [0, 0, 2, 0],
+    ...BASE_TRANSITION,
   },
 };
 
@@ -76,11 +101,16 @@ const PauseCircleIcon = forwardRef<PauseCircleIconHandle, PauseCircleIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           <motion.path
             animate={controls}
-            d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            initial="normal"
-            variants={BASE_RECT_VARIANTS}
+            d="M9.75 9v6"
+            variants={LEFT_BAR_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M14.25 9v6"
+            variants={RIGHT_BAR_VARIANTS}
           />
         </svg>
       </div>

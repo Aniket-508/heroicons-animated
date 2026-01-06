@@ -16,26 +16,17 @@ interface CodeBracketSquareIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
+const CODE_VARIANTS: Variants = {
+  normal: { x: 0, rotate: 0, opacity: 1 },
+  animate: (direction: number) => ({
+    x: [0, direction * 1.5, 0],
+    rotate: [0, direction * -6, 0],
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeInOut",
     },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+  }),
 };
 
 const CodeBracketSquareIcon = forwardRef<
@@ -94,11 +85,20 @@ const CodeBracketSquareIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
         <motion.path
           animate={controls}
-          d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+          custom={-1}
+          d="M9.75 9.75L7.5 12l2.25 2.25"
           initial="normal"
-          variants={VARIANTS}
+          variants={CODE_VARIANTS}
+        />
+        <motion.path
+          animate={controls}
+          custom={1}
+          d="M14.25 9.75 16.5 12l-2.25 2.25"
+          initial="normal"
+          variants={CODE_VARIANTS}
         />
       </svg>
     </div>

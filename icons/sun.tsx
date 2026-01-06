@@ -16,7 +16,7 @@ interface SunIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const PATH_VARIANTS: Variants = {
+const RAY_VARIANTS: Variants = {
   normal: { opacity: 1 },
   animate: (i: number) => ({
     opacity: [0, 1],
@@ -78,10 +78,54 @@ const SunIcon = forwardRef<SunIconHandle, SunIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <circle cx="12" cy="12" r="3.75" />
           <motion.path
             animate={controls}
-            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            variants={PATH_VARIANTS}
+            custom={0}
+            d="M12 3V5.25"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={1}
+            d="M18.364 5.63604L16.773 7.22703"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={2}
+            d="M21 12H18.75"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={3}
+            d="M18.364 18.364L16.773 16.773"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={4}
+            d="M12 18.75V21"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={5}
+            d="M7.22703 16.773L5.63604 18.364"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={6}
+            d="M5.25 12H3"
+            variants={RAY_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={7}
+            d="M7.22703 7.22703L5.63604 5.63604"
+            variants={RAY_VARIANTS}
           />
         </svg>
       </div>

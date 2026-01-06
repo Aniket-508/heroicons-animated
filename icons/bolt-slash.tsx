@@ -17,24 +17,10 @@ interface BoltSlashIconProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+  normal: { x: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
+    x: [0, "-7%", "7%", "-7%", "7%", 0],
+    transition: { duration: 0.6, ease: "easeInOut" },
   },
 };
 
@@ -81,24 +67,22 @@ const BoltSlashIcon = forwardRef<BoltSlashIconHandle, BoltSlashIconProps>(
         onMouseLeave={handleMouseLeave}
         {...props}
       >
-        <svg
+        <motion.svg
+          animate={controls}
           fill="none"
           height={size}
+          initial="normal"
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
+          variants={VARIANTS}
           viewBox="0 0 24 24"
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M11.412 15.655 9.75 21.75l3.745-4.012M9.257 13.5H3.75l2.659-2.849m2.048-2.194L14.25 2.25 12 10.5h8.25l-4.707 5.043M8.457 8.457 3 3m5.457 5.457 7.086 7.086m0 0L21 21"
-            initial="normal"
-            variants={VARIANTS}
-          />
-        </svg>
+          <path d="M11.412 15.655 9.75 21.75l3.745-4.012M9.257 13.5H3.75l2.659-2.849m2.048-2.194L14.25 2.25 12 10.5h8.25l-4.707 5.043M8.457 8.457 3 3m5.457 5.457 7.086 7.086m0 0L21 21" />
+        </motion.svg>
       </div>
     );
   }

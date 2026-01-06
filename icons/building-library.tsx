@@ -16,27 +16,40 @@ interface BuildingLibraryIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const DOT_VARIANTS: Variants = {
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
   animate: {
     opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      delay: 0.1,
+      duration: 0.1,
     },
   },
 };
+
+const PILLAR_VARIANTS: Variants = {
+  normal: {
+    pathLength: 1,
+    opacity: 1,
+  },
+  animate: (custom: number) => ({
+    pathLength: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      delay: 0.2 + custom * 0.15,
+      duration: 0.3,
+      ease: "linear",
+    },
+  }),
+};
+
+const PILLARS = [
+  { d: "M8.25 12.75v8.25", index: 0 },
+  { d: "M12 12.75v8.25", index: 1 },
+  { d: "M15.75 12.75v8.25", index: 2 },
+] as const;
 
 const BuildingLibraryIcon = forwardRef<
   BuildingLibraryIconHandle,
@@ -94,12 +107,23 @@ const BuildingLibraryIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18" />
         <motion.path
           animate={controls}
-          d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+          d="M12 6.75h.008v.008H12V6.75Z"
           initial="normal"
-          variants={VARIANTS}
+          variants={DOT_VARIANTS}
         />
+        {PILLARS.map((pillar) => (
+          <motion.path
+            animate={controls}
+            custom={pillar.index}
+            d={pillar.d}
+            initial="normal"
+            key={pillar.index}
+            variants={PILLAR_VARIANTS}
+          />
+        ))}
       </svg>
     </div>
   );

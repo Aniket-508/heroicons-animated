@@ -16,24 +16,20 @@ interface DocumentCheckIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const PATH_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
     pathLength: 1,
-    pathOffset: 0,
+    opacity: 1,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.3,
     },
   },
   animate: {
-    opacity: [0, 1],
     pathLength: [0, 1],
-    pathOffset: [1, 0],
+    opacity: [0, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      pathLength: { duration: 0.4, ease: "easeInOut" },
+      opacity: { duration: 0.4, ease: "easeInOut" },
     },
   },
 };
@@ -94,11 +90,12 @@ const DocumentCheckIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375" />
         <motion.path
           animate={controls}
-          d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"
+          d="M9 15l2.25 2.25L15 12"
           initial="normal"
-          variants={VARIANTS}
+          variants={PATH_VARIANTS}
         />
       </svg>
     </div>

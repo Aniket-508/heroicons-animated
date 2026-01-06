@@ -16,26 +16,9 @@ interface DocumentTextIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+const LINE_VARIANTS: Variants = {
+  visible: { pathLength: 1, opacity: 1 },
+  hidden: { pathLength: 0, opacity: 0 },
 };
 
 const DocumentTextIcon = forwardRef<
@@ -49,17 +32,37 @@ const DocumentTextIcon = forwardRef<
     isControlledRef.current = true;
 
     return {
-      startAnimation: () => controls.start("animate"),
-      stopAnimation: () => controls.start("normal"),
+      startAnimation: async () => {
+        await controls.start((i) => ({
+          pathLength: 0,
+          opacity: 0,
+          transition: { delay: i * 0.1, duration: 0.3 },
+        }));
+        await controls.start((i) => ({
+          pathLength: 1,
+          opacity: 1,
+          transition: { delay: i * 0.1, duration: 0.3 },
+        }));
+      },
+      stopAnimation: () => controls.start("visible"),
     };
   });
 
   const handleMouseEnter = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
+    async (e: React.MouseEvent<HTMLDivElement>) => {
       if (isControlledRef.current) {
         onMouseEnter?.(e);
       } else {
-        controls.start("animate");
+        await controls.start((i) => ({
+          pathLength: 0,
+          opacity: 0,
+          transition: { delay: i * 0.1, duration: 0.3 },
+        }));
+        await controls.start((i) => ({
+          pathLength: 1,
+          opacity: 1,
+          transition: { delay: i * 0.1, duration: 0.3 },
+        }));
       }
     },
     [controls, onMouseEnter]
@@ -70,7 +73,7 @@ const DocumentTextIcon = forwardRef<
       if (isControlledRef.current) {
         onMouseLeave?.(e);
       } else {
-        controls.start("normal");
+        controls.start("visible");
       }
     },
     [controls, onMouseLeave]
@@ -94,12 +97,20 @@ const DocumentTextIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+        {[
+          { d: "M8.25 12.75h7.5", index: 0 },
+          { d: "M8.25 15.75H12", index: 1 },
+        ].map((line) => (
+          <motion.path
+            animate={controls}
+            custom={line.index}
+            d={line.d}
+            initial="visible"
+            key={line.index}
+            variants={LINE_VARIANTS}
+          />
+        ))}
       </svg>
     </div>
   );

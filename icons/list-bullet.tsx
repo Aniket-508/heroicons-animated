@@ -16,27 +16,58 @@ interface ListBulletIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const DOT_DURATION = 0.1;
+const LINE_DURATION = 0.3;
+
+const createBulletVariants = (delay: number): Variants => ({
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
   animate: {
     opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: DOT_DURATION,
+      ease: "easeInOut",
+      delay,
     },
   },
-};
+});
+
+const createLineVariants = (delay: number): Variants => ({
+  normal: {
+    pathLength: 1,
+    opacity: 1,
+  },
+  animate: {
+    pathLength: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      pathLength: { duration: LINE_DURATION, ease: "easeInOut", delay },
+      opacity: { duration: LINE_DURATION, ease: "easeInOut", delay },
+    },
+  },
+});
+
+const LIST_ITEMS = [
+  {
+    y: 6.75,
+    bulletPath:
+      "M3.75 6.75H3.7575V6.7575H3.75V6.75ZM4.125 6.75C4.125 6.95711 3.95711 7.125 3.75 7.125C3.54289 7.125 3.375 6.95711 3.375 6.75C3.375 6.54289 3.54289 6.375 3.75 6.375C3.95711 6.375 4.125 6.54289 4.125 6.75Z",
+    linePath: "M8.25 6.75H20.25",
+  },
+  {
+    y: 12,
+    bulletPath:
+      "M3.75 12H3.7575V12.0075H3.75V12ZM4.125 12C4.125 12.2071 3.95711 12.375 3.75 12.375C3.54289 12.375 3.375 12.2071 3.375 12C3.375 11.7929 3.54289 11.625 3.75 11.625C3.95711 11.625 4.125 11.7929 4.125 12Z",
+    linePath: "M8.25 12H20.25",
+  },
+  {
+    y: 17.25,
+    bulletPath:
+      "M3.75 17.25H3.7575V17.2575H3.75V17.25ZM4.125 17.25C4.125 17.4571 3.95711 17.625 3.75 17.625C3.54289 17.625 3.375 17.4571 3.375 17.25C3.375 17.0429 3.54289 16.875 3.75 16.875C3.95711 16.875 4.125 17.0429 4.125 17.25Z",
+    linePath: "M8.25 17.25H20.25",
+  },
+] as const;
 
 const ListBulletIcon = forwardRef<ListBulletIconHandle, ListBulletIconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
@@ -92,12 +123,27 @@ const ListBulletIcon = forwardRef<ListBulletIconHandle, ListBulletIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-            initial="normal"
-            variants={VARIANTS}
-          />
+          {LIST_ITEMS.map((item, index) => {
+            const bulletDelay = index * (DOT_DURATION + LINE_DURATION);
+            const lineDelay = bulletDelay + DOT_DURATION;
+
+            return (
+              <g key={item.y}>
+                <motion.path
+                  animate={controls}
+                  d={item.bulletPath}
+                  initial="normal"
+                  variants={createBulletVariants(bulletDelay)}
+                />
+                <motion.path
+                  animate={controls}
+                  d={item.linePath}
+                  initial="normal"
+                  variants={createLineVariants(lineDelay)}
+                />
+              </g>
+            );
+          })}
         </svg>
       </div>
     );

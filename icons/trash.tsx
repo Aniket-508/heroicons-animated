@@ -16,24 +16,44 @@ interface TrashIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const LID_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+    translateY: 0,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.2,
+      type: "spring",
+      stiffness: 200,
+      damping: 25,
     },
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    translateY: -1.5,
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.2,
+      type: "spring",
+      stiffness: 200,
+      damping: 25,
+    },
+  },
+};
+
+const PATH_VARIANTS: Variants = {
+  normal: {
+    translateY: 0,
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 200,
+      damping: 25,
+    },
+  },
+  animate: {
+    translateY: 1,
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 200,
+      damping: 25,
     },
   },
 };
@@ -94,9 +114,15 @@ const TrashIcon = forwardRef<TrashIconHandle, TrashIconProps>(
         >
           <motion.path
             animate={controls}
-            d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+            d="M15.75 5.39432V4.47819C15.75 3.29882 14.8393 2.31423 13.6606 2.27652C13.1092 2.25889 12.5556 2.25 12 2.25C11.4444 2.25 10.8908 2.25889 10.3394 2.27652C9.16065 2.31423 8.25 3.29882 8.25 4.47819V5.39432M15.75 5.39432C14.5126 5.2987 13.262 5.25 12 5.25C10.738 5.25 9.48744 5.2987 8.25 5.39432M19.2276 5.79057C19.5696 5.84221 19.9104 5.89747 20.25 5.95629M19.2276 5.79057C18.0812 5.61744 16.9215 5.48485 15.75 5.39432M3.75 5.95629C4.08957 5.89747 4.43037 5.84221 4.77235 5.79057M4.77235 5.79057C5.91878 5.61744 7.07849 5.48485 8.25 5.39432"
             initial="normal"
-            variants={VARIANTS}
+            variants={LID_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M14.7404 9L14.3942 18M9.60577 18L9.25962 9M19.2276 5.79057L18.1598 19.6726C18.0696 20.8448 17.0921 21.75 15.9164 21.75H8.08357C6.90786 21.75 5.93037 20.8448 5.8402 19.6726L4.77235 5.79057"
+            initial="normal"
+            variants={PATH_VARIANTS}
           />
         </svg>
       </div>

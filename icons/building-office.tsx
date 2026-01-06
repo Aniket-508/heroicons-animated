@@ -16,27 +16,28 @@ interface BuildingOfficeIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const FLOOR_VARIANTS: Variants = {
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
-  animate: {
+  animate: (custom: number) => ({
     opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "linear",
-      opacity: { duration: 0.1 },
+      delay: 0.1 + custom * 0.15,
     },
-  },
+  }),
 };
+
+const FLOOR_LINES = [
+  { path: "M9 12.75h1.5", y: 12.75, index: 0 },
+  { path: "M13.5 12.75H15", y: 12.75, index: 0 },
+  { path: "M9 9.75h1.5", y: 9.75, index: 1 },
+  { path: "M13.5 9.75H15", y: 9.75, index: 1 },
+  { path: "M9 6.75h1.5", y: 6.75, index: 2 },
+  { path: "M13.5 6.75H15", y: 6.75, index: 2 },
+] as const;
 
 const BuildingOfficeIcon = forwardRef<
   BuildingOfficeIconHandle,
@@ -94,12 +95,19 @@ const BuildingOfficeIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+        {FLOOR_LINES.map((floorLine, index) => {
+          return (
+            <motion.path
+              animate={controls}
+              custom={floorLine.index}
+              d={floorLine.path}
+              initial="normal"
+              key={`${floorLine.y}-${index}`}
+              variants={FLOOR_VARIANTS}
+            />
+          );
+        })}
       </svg>
     </div>
   );

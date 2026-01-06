@@ -75,14 +75,17 @@ const ChartPieIcon = forwardRef<ChartPieIconHandle, ChartPieIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
-            variants={PATH_VARIANTS}
-          />
+          <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
           <motion.path
             animate={controls}
             d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
+            initial="normal"
+            transition={{
+              type: "spring",
+              stiffness: 250,
+              damping: 15,
+              bounce: 0.6,
+            }}
             variants={PATH_VARIANTS}
           />
         </svg>

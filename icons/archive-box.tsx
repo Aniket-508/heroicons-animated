@@ -16,7 +16,7 @@ interface ArchiveBoxIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const RECT_VARIANTS: Variants = {
+const LID_VARIANTS: Variants = {
   normal: {
     translateY: 0,
     transition: {
@@ -28,6 +28,27 @@ const RECT_VARIANTS: Variants = {
   },
   animate: {
     translateY: -1.5,
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 200,
+      damping: 25,
+    },
+  },
+};
+
+const PATH_VARIANTS: Variants = {
+  normal: {
+    translateY: 0,
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 200,
+      damping: 25,
+    },
+  },
+  animate: {
+    translateY: 1,
     transition: {
       duration: 0.2,
       type: "spring",
@@ -93,9 +114,33 @@ const ArchiveBoxIcon = forwardRef<ArchiveBoxIconHandle, ArchiveBoxIconProps>(
         >
           <motion.path
             animate={controls}
-            d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+            d="M19.6246 18.1321C19.5546 19.3214 18.5698 20.25 17.3785 20.25H6.62154C5.43022 20.25 4.44538 19.3214 4.37542 18.1321"
             initial="normal"
-            variants={RECT_VARIANTS}
+            variants={PATH_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M20.25 7.5L19.6246 18.1321"
+            initial="normal"
+            variants={PATH_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M3.75 7.5L4.37542 18.1321"
+            initial="normal"
+            variants={PATH_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M9.99976 11.25H13.9998"
+            initial="normal"
+            variants={PATH_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M3.375 7.5H20.625C21.2463 7.5 21.75 6.99632 21.75 6.375V4.875C21.75 4.25368 21.2463 3.75 20.625 3.75H3.375C2.75368 3.75 2.25 4.25368 2.25 4.875V6.375C2.25 6.99632 2.75368 7.5 3.375 7.5Z"
+            initial="normal"
+            variants={LID_VARIANTS}
           />
         </svg>
       </div>

@@ -16,24 +16,32 @@ interface MagnifyingGlassPlusIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const VERTICAL_LINE_VARIANT: Variants = {
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
   animate: {
     opacity: [0, 1],
     pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      delay: 0.3,
+      duration: 0.2,
+      opacity: { duration: 0.1, delay: 0.3 },
+    },
+  },
+};
+
+const HORIZONTAL_LINE_VARIANT: Variants = {
+  normal: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    transition: {
+      delay: 0.6,
+      duration: 0.2,
+      opacity: { duration: 0.1, delay: 0.6 },
     },
   },
 };
@@ -94,11 +102,18 @@ const MagnifyingGlassPlusIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         <motion.path
           animate={controls}
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6"
+          d="M10.5 7.5v6"
           initial="normal"
-          variants={VARIANTS}
+          variants={VERTICAL_LINE_VARIANT}
+        />
+        <motion.path
+          animate={controls}
+          d="M7.5 10.5h6"
+          initial="normal"
+          variants={HORIZONTAL_LINE_VARIANT}
         />
       </svg>
     </div>

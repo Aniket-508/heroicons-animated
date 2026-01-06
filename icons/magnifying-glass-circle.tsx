@@ -19,22 +19,15 @@ interface MagnifyingGlassCircleIconProps
 
 const VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
+    x: 0,
+    y: 0,
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    x: [0, 0, -2, 0],
+    y: [0, -3, 0, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 1,
+      bounce: 0.3,
     },
   },
 };
@@ -95,9 +88,10 @@ const MagnifyingGlassCircleIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
         <motion.path
           animate={controls}
-          d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          d="M15.75 15.75L13.2615 13.2615M13.2615 13.2615C13.8722 12.6507 14.25 11.807 14.25 10.875C14.25 9.01104 12.739 7.5 10.875 7.5C9.01104 7.5 7.5 9.01104 7.5 10.875C7.5 12.739 9.01104 14.25 10.875 14.25C11.807 14.25 12.6507 13.8722 13.2615 13.2615"
           initial="normal"
           variants={VARIANTS}
         />

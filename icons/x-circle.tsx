@@ -81,11 +81,20 @@ const XCircleIcon = forwardRef<XCircleIconHandle, XCircleIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            variants={PATH_VARIANTS}
-          />
+        <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        <motion.path
+          animate={controls}
+          d="m9.75 9.75 4.5 4.5"
+          initial="normal"
+          variants={PATH_VARIANTS}
+        />
+        <motion.path
+          animate={controls}
+          d="m14.25 9.75-4.5 4.5"
+          initial="normal"
+          transition={{ delay: 0.2 }}
+          variants={PATH_VARIANTS}
+        />
         </svg>
       </div>
     );

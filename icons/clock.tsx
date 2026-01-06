@@ -1,6 +1,6 @@
 "use client";
 
-import type { Variants } from "motion/react";
+import type { Transition, Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
@@ -16,16 +16,21 @@ interface ClockIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
+const HAND_TRANSITION: Transition = {
+  duration: 0.6,
+  ease: [0.4, 0, 0.2, 1],
+};
+
 const HAND_VARIANTS: Variants = {
   normal: {
     rotate: 0,
-    originX: "0%",
-    originY: "100%",
+    originX: "50%",
+    originY: "50%",
   },
   animate: {
     rotate: 360,
-    originX: "0%",
-    originY: "100%",
+    originX: "50%",
+    originY: "50%",
   },
 };
 
@@ -87,6 +92,7 @@ const ClockIcon = forwardRef<ClockIconHandle, ClockIconProps>(
             animate={controls}
             d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
             initial="normal"
+            transition={HAND_TRANSITION}
             variants={HAND_VARIANTS}
           />
         </svg>

@@ -18,21 +18,18 @@ interface ShieldCheckIconProps extends HTMLAttributes<HTMLDivElement> {
 
 const PATH_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
     pathLength: 1,
-    scale: 1,
+    opacity: 1,
     transition: {
       duration: 0.3,
-      opacity: { duration: 0.1 },
     },
   },
   animate: {
-    opacity: [0, 1],
     pathLength: [0, 1],
-    scale: [0.5, 1],
+    opacity: [0, 1],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      pathLength: { duration: 0.4, ease: "easeInOut" },
+      opacity: { duration: 0.4, ease: "easeInOut" },
     },
   },
 };
@@ -91,9 +88,11 @@ const ShieldCheckIcon = forwardRef<ShieldCheckIconHandle, ShieldCheckIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M12 2.71411C9.8495 4.75073 6.94563 5.99986 3.75 5.99986C3.69922 5.99986 3.64852 5.99955 3.59789 5.99892C3.2099 7.17903 3 8.43995 3 9.74991C3 15.3414 6.82432 20.0397 12 21.3719C17.1757 20.0397 21 15.3414 21 9.74991C21 8.43995 20.7901 7.17903 20.4021 5.99892C20.3515 5.99955 20.3008 5.99986 20.25 5.99986C17.0544 5.99986 14.1505 4.75073 12 2.71411Z" />
           <motion.path
             animate={controls}
-            d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+            d="M9 12.7498L11.25 14.9998L15 9.74985"
+            initial="normal"
             variants={PATH_VARIANTS}
           />
         </svg>

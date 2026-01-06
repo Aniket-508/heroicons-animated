@@ -1,6 +1,6 @@
 "use client";
 
-import type { Variants } from "motion/react";
+import type { Transition, Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
@@ -16,26 +16,14 @@ interface FolderArrowDownIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+const ARROW_VARIANTS: Variants = {
+  normal: { y: 0 },
+  animate: { y: [0, 2, 0] },
+};
+
+const ARROW_TRANSITION: Transition = {
+  times: [0, 0.4, 1],
+  duration: 0.5,
 };
 
 const FolderArrowDownIcon = forwardRef<
@@ -83,24 +71,27 @@ const FolderArrowDownIcon = forwardRef<
       onMouseLeave={handleMouseLeave}
       {...props}
     >
-      <svg
-        fill="none"
-        height={size}
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        viewBox="0 0 24 24"
-        width={size}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <motion.path
-          animate={controls}
-          d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
-          initial="normal"
-          variants={VARIANTS}
-        />
-      </svg>
+        <svg
+          fill="none"
+          height={size}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13.0607 6.31066L10.9393 4.18934C10.658 3.90804 10.2765 3.75 9.87868 3.75H4.5C3.25736 3.75 2.25 4.75736 2.25 6V18C2.25 19.2426 3.25736 20.25 4.5 20.25H19.5C20.7426 20.25 21.75 19.2426 21.75 18V9C21.75 7.75736 20.7426 6.75 19.5 6.75H14.1213C13.7235 6.75 13.342 6.59197 13.0607 6.31066Z" />
+          <motion.g
+            animate={controls}
+            initial="normal"
+            transition={ARROW_TRANSITION}
+            variants={ARROW_VARIANTS}
+          >
+            <path d="M9 13.5L12 16.5M12 16.5L15 13.5M12 16.5L12 10.5" />
+          </motion.g>
+        </svg>
     </div>
   );
 });

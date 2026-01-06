@@ -16,27 +16,31 @@ interface BuildingOffice2IconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const WINDOW_VARIANTS: Variants = {
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
-  animate: {
+  animate: (custom: number) => ({
     opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "linear",
-      opacity: { duration: 0.1 },
+      delay: 0.1 + custom * 0.15,
     },
-  },
+  }),
 };
+
+const WINDOWS = [
+  { path: "M6.75 12.75h.75", index: 0 },
+  { path: "M6.75 9.75h.75", index: 1 },
+  { path: "M6.75 6.75h.75", index: 2 },
+  { path: "M10.5 12.75h.75", index: 0 },
+  { path: "M10.5 9.75h.75", index: 1 },
+  { path: "M10.5 6.75h.75", index: 2 },
+  { path: "M17.25 17h.008v.008h-.008v-.008Z", index: 0 },
+  { path: "M17.25 14h.008v.008h-.008v-.008Z", index: 1 },
+  { path: "M17.25 11h.008v.008h-.008v-.008Z", index: 2 },
+] as const;
 
 const BuildingOffice2Icon = forwardRef<
   BuildingOffice2IconHandle,
@@ -94,12 +98,19 @@ const BuildingOffice2Icon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        <path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21" />
+        {WINDOWS.map((window, index) => {
+          return (
+            <motion.path
+              animate={controls}
+              custom={window.index}
+              d={window.path}
+              initial="normal"
+              key={`${window.path}-${index}`}
+              variants={WINDOW_VARIANTS}
+            />
+          );
+        })}
       </svg>
     </div>
   );

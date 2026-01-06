@@ -16,24 +16,15 @@ interface ExclamationTriangleIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const EXCLAMATION_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    opacity: [1, 0.4, 1],
+    scale: [1, 1.1, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.8,
+      repeat: Number.POSITIVE_INFINITY,
+      ease: "easeInOut",
     },
   },
 };
@@ -94,12 +85,16 @@ const ExclamationTriangleIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
+        <path d="M2.697 16.126c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126Z" />
+        <motion.g
           animate={controls}
-          d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
           initial="normal"
-          variants={VARIANTS}
-        />
+          style={{ originX: "50%", originY: "50%" }}
+          variants={EXCLAMATION_VARIANTS}
+        >
+          <path d="M12 9v3.75" />
+          <path d="M12 15.75h.007v.008H12v-.008Z" />
+        </motion.g>
       </svg>
     </div>
   );

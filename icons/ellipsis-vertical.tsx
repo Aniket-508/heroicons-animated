@@ -16,26 +16,18 @@ interface EllipsisVerticalIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const DOT_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+    scale: 1,
+  },
+  animate: (custom: number) => ({
+    scale: [1, 1.3, 1],
     transition: {
       duration: 0.4,
-      opacity: { duration: 0.1 },
+      delay: custom * 0.05,
+      ease: "easeInOut",
     },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+  }),
 };
 
 const EllipsisVerticalIcon = forwardRef<
@@ -94,12 +86,29 @@ const EllipsisVerticalIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        {[
+          {
+            d: "M12 6.75C11.5858 6.75 11.25 6.41421 11.25 6C11.25 5.58579 11.5858 5.25 12 5.25C12.4142 5.25 12.75 5.58579 12.75 6C12.75 6.41421 12.4142 6.75 12 6.75Z",
+            index: 0,
+          },
+          {
+            d: "M12 12.75C11.5858 12.75 11.25 12.4142 11.25 12C11.25 11.5858 11.5858 11.25 12 11.25C12.4142 11.25 12.75 11.5858 12.75 12C12.75 12.4142 12.4142 12.75 12 12.75Z",
+            index: 1,
+          },
+          {
+            d: "M12 18.75C11.5858 18.75 11.25 18.4142 11.25 18C11.25 17.5858 11.5858 17.25 12 17.25C12.4142 17.25 12.75 17.5858 12.75 18C12.75 18.4142 12.4142 18.75 12 18.75Z",
+            index: 2,
+          },
+        ].map((dot) => (
+          <motion.path
+            animate={controls}
+            custom={dot.index}
+            d={dot.d}
+            initial="normal"
+            key={dot.index}
+            variants={DOT_VARIANTS}
+          />
+        ))}
       </svg>
     </div>
   );

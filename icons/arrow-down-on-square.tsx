@@ -19,10 +19,10 @@ interface ArrowDownOnSquareIconProps extends HTMLAttributes<HTMLDivElement> {
 const ARROW_VARIANTS: Variants = {
   normal: { translateY: 0 },
   animate: {
-    translateY: [0, 2, 0],
+    translateY: [0, -2, 2, 0],
     transition: {
-      duration: 0.5,
-      times: [0, 0.4, 1],
+      duration: 0.4,
+      ease: "easeInOut",
     },
   },
 };
@@ -84,9 +84,11 @@ const ArrowDownOnSquareIcon = forwardRef<
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15" />
-        <motion.g animate={controls} variants={ARROW_VARIANTS}>
-          <path d="M9 12l3 3m0 0 3-3m-3 3V2.25" />
-        </motion.g>
+        <motion.path
+          animate={controls}
+          d="M9 12l3 3m0 0 3-3m-3 3V2.25"
+          variants={ARROW_VARIANTS}
+        />
       </svg>
     </div>
   );

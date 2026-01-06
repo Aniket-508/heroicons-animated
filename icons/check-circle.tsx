@@ -18,21 +18,18 @@ interface CheckCircleIconProps extends HTMLAttributes<HTMLDivElement> {
 
 const PATH_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
     pathLength: 1,
-    scale: 1,
+    opacity: 1,
     transition: {
       duration: 0.3,
-      opacity: { duration: 0.1 },
     },
   },
   animate: {
-    opacity: [0, 1],
     pathLength: [0, 1],
-    scale: [0.5, 1],
+    opacity: [0, 1],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      pathLength: { duration: 0.4, ease: "easeInOut" },
+      opacity: { duration: 0.4, ease: "easeInOut" },
     },
   },
 };
@@ -91,9 +88,10 @@ const CheckCircleIcon = forwardRef<CheckCircleIconHandle, CheckCircleIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           <motion.path
             animate={controls}
-            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            d="M9 12.75 11.25 15 15 9.75"
             variants={PATH_VARIANTS}
           />
         </svg>

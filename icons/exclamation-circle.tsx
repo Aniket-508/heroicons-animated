@@ -16,24 +16,15 @@ interface ExclamationCircleIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const EXCLAMATION_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    opacity: [1, 0.4, 1],
+    scale: [1, 1.1, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.8,
+      repeat: Number.POSITIVE_INFINITY,
+      ease: "easeInOut",
     },
   },
 };
@@ -94,12 +85,16 @@ const ExclamationCircleIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
+        <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        <motion.g
           animate={controls}
-          d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
           initial="normal"
-          variants={VARIANTS}
-        />
+          style={{ originX: "50%", originY: "50%" }}
+          variants={EXCLAMATION_VARIANTS}
+        >
+          <path d="M12 9v3.75" />
+          <path d="M12 15.75h.008v.008H12v-.008Z" />
+        </motion.g>
       </svg>
     </div>
   );

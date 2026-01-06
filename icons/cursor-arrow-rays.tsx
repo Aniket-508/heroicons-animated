@@ -16,41 +16,53 @@ interface CursorArrowRaysIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const CURSOR_VARIANTS: Variants = {
+  normal: { x: 0, y: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    x: [0, 0, -3, 0],
+    y: [0, -4, 0, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 1,
+      bounce: 0.3,
     },
   },
+};
+
+const RAY_VARIANTS: Variants = {
+  normal: { opacity: 1, x: 0, y: 0 },
+  spread: (custom: { x: number; y: number }) => ({
+    opacity: [0, 1, 0, 0, 0, 0, 1],
+    x: [0, custom.x, 0, 0],
+    y: [0, custom.y, 0, 0],
+    transition: {
+      type: "spring",
+      stiffness: 70,
+      damping: 10,
+      mass: 0.4,
+    },
+  }),
 };
 
 const CursorArrowRaysIcon = forwardRef<
   CursorArrowRaysIconHandle,
   CursorArrowRaysIconProps
 >(({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
-  const controls = useAnimation();
+  const cursorControls = useAnimation();
+  const rayControls = useAnimation();
   const isControlledRef = useRef(false);
 
   useImperativeHandle(ref, () => {
     isControlledRef.current = true;
 
     return {
-      startAnimation: () => controls.start("animate"),
-      stopAnimation: () => controls.start("normal"),
+      startAnimation: () => {
+        cursorControls.start("animate");
+        rayControls.start("spread", { delay: 1.3 });
+      },
+      stopAnimation: () => {
+        cursorControls.start("normal");
+        rayControls.start("normal");
+      },
     };
   });
 
@@ -59,10 +71,11 @@ const CursorArrowRaysIcon = forwardRef<
       if (isControlledRef.current) {
         onMouseEnter?.(e);
       } else {
-        controls.start("animate");
+        cursorControls.start("animate");
+        rayControls.start("spread", { delay: 1.3 });
       }
     },
-    [controls, onMouseEnter]
+    [cursorControls, rayControls, onMouseEnter]
   );
 
   const handleMouseLeave = useCallback(
@@ -70,10 +83,11 @@ const CursorArrowRaysIcon = forwardRef<
       if (isControlledRef.current) {
         onMouseLeave?.(e);
       } else {
-        controls.start("normal");
+        cursorControls.start("normal");
+        rayControls.start("normal");
       }
     },
-    [controls, onMouseLeave]
+    [cursorControls, rayControls, onMouseLeave]
   );
 
   return (
@@ -95,10 +109,52 @@ const CursorArrowRaysIcon = forwardRef<
         xmlns="http://www.w3.org/2000/svg"
       >
         <motion.path
-          animate={controls}
-          d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
+          animate={cursorControls}
+          d="M15.0423 21.6718L13.6835 16.6007M13.6835 16.6007L11.1741 18.826L11.7425 9.35623L16.9697 17.2731L13.6835 16.6007Z"
           initial="normal"
-          variants={VARIANTS}
+          variants={CURSOR_VARIANTS}
+        />
+        <motion.path
+          animate={rayControls}
+          custom={{ x: 0, y: -2 }}
+          d="M12 2.25V4.5"
+          initial="normal"
+          variants={RAY_VARIANTS}
+        />
+        <motion.path
+          animate={rayControls}
+          custom={{ x: 2, y: -2 }}
+          d="M17.8336 4.66637L16.2426 6.25736"
+          initial="normal"
+          variants={RAY_VARIANTS}
+        />
+        <motion.path
+          animate={rayControls}
+          custom={{ x: 2, y: 0 }}
+          d="M20.25 10.5H18"
+          initial="normal"
+          variants={RAY_VARIANTS}
+        />
+        <motion.path
+          animate={rayControls}
+          custom={{ x: -2, y: 2 }}
+          d="M7.75736 14.7426L6.16637 16.3336"
+          initial="normal"
+          variants={RAY_VARIANTS}
+        />
+        <motion.path
+          animate={rayControls}
+          custom={{ x: -2, y: 0 }}
+          d="M6 10.5H3.75"
+          initial="normal"
+          variants={RAY_VARIANTS}
+        />
+        <motion.path
+          animate={rayControls}
+          custom={{ x: -2, y: -2 }}
+          d="M7.75736 6.25736L6.16637 4.66637"
+          initial="normal"
+          variants={RAY_VARIANTS}
         />
       </svg>
     </div>

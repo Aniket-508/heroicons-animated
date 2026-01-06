@@ -1,6 +1,6 @@
 "use client";
 
-import type { Variants } from "motion/react";
+import type { Transition, Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
@@ -16,6 +16,12 @@ interface CpuChipIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
+const TRANSITION: Transition = {
+  duration: 0.5,
+  ease: "easeInOut",
+  repeat: 1,
+};
+
 const Y_VARIANTS: Variants = {
   normal: {
     scale: 1,
@@ -24,6 +30,18 @@ const Y_VARIANTS: Variants = {
   },
   animate: {
     scaleY: [1, 1.5, 1],
+    opacity: [1, 0.8, 1],
+  },
+};
+
+const X_VARIANTS: Variants = {
+  normal: {
+    scale: 1,
+    rotate: 0,
+    opacity: 1,
+  },
+  animate: {
+    scaleX: [1, 1.5, 1],
     opacity: [1, 0.8, 1],
   },
 };
@@ -82,12 +100,84 @@ const CpuChipIcon = forwardRef<CpuChipIconHandle, CpuChipIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Top pins */}
           <motion.path
             animate={controls}
-            d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
-            initial="normal"
+            d="M8.25 3V4.5"
+            transition={TRANSITION}
             variants={Y_VARIANTS}
           />
+          <motion.path
+            animate={controls}
+            d="M12 3V4.5"
+            transition={TRANSITION}
+            variants={Y_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M15.75 3V4.5"
+            transition={TRANSITION}
+            variants={Y_VARIANTS}
+          />
+          {/* Left pins */}
+          <motion.path
+            animate={controls}
+            d="M4.5 8.25H3"
+            transition={TRANSITION}
+            variants={X_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M4.5 12H3"
+            transition={TRANSITION}
+            variants={X_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M4.5 15.75H3"
+            transition={TRANSITION}
+            variants={X_VARIANTS}
+          />
+          {/* Right pins */}
+          <motion.path
+            animate={controls}
+            d="M21 8.25H19.5"
+            transition={TRANSITION}
+            variants={X_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M21 12H19.5"
+            transition={TRANSITION}
+            variants={X_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M21 15.75H19.5"
+            transition={TRANSITION}
+            variants={X_VARIANTS}
+          />
+          {/* Bottom pins */}
+          <motion.path
+            animate={controls}
+            d="M8.25 19.5V21"
+            transition={TRANSITION}
+            variants={Y_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M12 19.5V21"
+            transition={TRANSITION}
+            variants={Y_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M15.75 19.5V21"
+            transition={TRANSITION}
+            variants={Y_VARIANTS}
+          />
+          {/* Main chip body */}
+          <path d="M6.75 19.5H17.25C18.4926 19.5 19.5 18.4926 19.5 17.25V6.75C19.5 5.50736 18.4926 4.5 17.25 4.5H6.75C5.50736 4.5 4.5 5.50736 4.5 6.75V17.25C4.5 18.4926 5.50736 19.5 6.75 19.5ZM7.5 7.5H16.5V16.5H7.5V7.5Z" />
         </svg>
       </div>
     );

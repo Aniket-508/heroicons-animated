@@ -16,24 +16,13 @@ interface MicrophoneIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const CAPSULE_VARIANTS: Variants = {
+  normal: { y: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    y: [0, -3, 0, -2, 0],
     transition: {
       duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      ease: "easeInOut",
     },
   },
 };
@@ -84,6 +73,7 @@ const MicrophoneIcon = forwardRef<MicrophoneIconHandle, MicrophoneIconProps>(
         <svg
           fill="none"
           height={size}
+          overflow="visible"
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -92,12 +82,14 @@ const MicrophoneIcon = forwardRef<MicrophoneIconHandle, MicrophoneIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
+          <path d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5" />
+          <motion.g
             animate={controls}
-            d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"
             initial="normal"
-            variants={VARIANTS}
-          />
+            variants={CAPSULE_VARIANTS}
+          >
+            <path d="M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+          </motion.g>
         </svg>
       </div>
     );

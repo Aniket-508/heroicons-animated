@@ -16,24 +16,15 @@ interface QuestionMarkCircleIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const QUESTION_MARK_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    opacity: [1, 0.4, 1],
+    scale: [1, 1.1, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.8,
+      repeat: Number.POSITIVE_INFINITY,
+      ease: "easeInOut",
     },
   },
 };
@@ -94,12 +85,16 @@ const QuestionMarkCircleIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
+        <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
+        <motion.g
           animate={controls}
-          d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
           initial="normal"
-          variants={VARIANTS}
-        />
+          style={{ originX: "50%", originY: "50%" }}
+          variants={QUESTION_MARK_VARIANTS}
+        >
+          <path d="M9.87891 7.51884C11.0505 6.49372 12.95 6.49372 14.1215 7.51884C15.2931 8.54397 15.2931 10.206 14.1215 11.2312C13.9176 11.4096 13.6917 11.5569 13.4513 11.6733C12.7056 12.0341 12.0002 12.6716 12.0002 13.5V14.25" />
+          <path d="M12 17.25H12.0075V17.2575H12V17.25Z" />
+        </motion.g>
       </svg>
     </div>
   );

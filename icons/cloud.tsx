@@ -16,26 +16,9 @@ interface CloudIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+const PATH_VARIANTS: Variants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: { translateX: 1.1, translateY: -1.1 },
 };
 
 const CloudIcon = forwardRef<CloudIconHandle, CloudIconProps>(
@@ -96,7 +79,13 @@ const CloudIcon = forwardRef<CloudIconHandle, CloudIconProps>(
             animate={controls}
             d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"
             initial="normal"
-            variants={VARIANTS}
+            transition={{
+              type: "spring",
+              stiffness: 250,
+              damping: 15,
+              bounce: 0.6,
+            }}
+            variants={PATH_VARIANTS}
           />
         </svg>
       </div>

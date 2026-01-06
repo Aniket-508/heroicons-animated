@@ -16,24 +16,44 @@ interface ViewfinderCircleIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const CORNER_VARIANTS: Variants = {
   normal: {
+    scale: 1,
+    rotate: 0,
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      type: "spring",
+      stiffness: 200,
+      damping: 20,
     },
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    scale: 1.2,
+    rotate: 45,
+    opacity: 0,
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      type: "spring",
+      stiffness: 200,
+      damping: 20,
+    },
+  },
+};
+
+const CIRCLE_VARIANTS: Variants = {
+  normal: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      delay: 0.1,
+    },
+  },
+  animate: {
+    scale: 0.8,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      delay: 0.1,
     },
   },
 };
@@ -49,17 +69,21 @@ const ViewfinderCircleIcon = forwardRef<
     isControlledRef.current = true;
 
     return {
-      startAnimation: () => controls.start("animate"),
+      startAnimation: async () => {
+        await controls.start("animate");
+        await controls.start("normal");
+      },
       stopAnimation: () => controls.start("normal"),
     };
   });
 
   const handleMouseEnter = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
+    async (e: React.MouseEvent<HTMLDivElement>) => {
       if (isControlledRef.current) {
         onMouseEnter?.(e);
       } else {
-        controls.start("animate");
+        await controls.start("animate");
+        await controls.start("normal");
       }
     },
     [controls, onMouseEnter]
@@ -96,9 +120,33 @@ const ViewfinderCircleIcon = forwardRef<
       >
         <motion.path
           animate={controls}
-          d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          d="M7.5 3.75H6C4.75736 3.75 3.75 4.75736 3.75 6V7.5"
           initial="normal"
-          variants={VARIANTS}
+          variants={CORNER_VARIANTS}
+        />
+        <motion.path
+          animate={controls}
+          d="M16.5 3.75H18C19.2426 3.75 20.25 4.75736 20.25 6V7.5"
+          initial="normal"
+          variants={CORNER_VARIANTS}
+        />
+        <motion.path
+          animate={controls}
+          d="M20.25 16.5V18C20.25 19.2426 19.2426 20.25 18 20.25H16.5"
+          initial="normal"
+          variants={CORNER_VARIANTS}
+        />
+        <motion.path
+          animate={controls}
+          d="M7.5 20.25H6C4.75736 20.25 3.75 19.2426 3.75 18V16.5"
+          initial="normal"
+          variants={CORNER_VARIANTS}
+        />
+        <motion.path
+          animate={controls}
+          d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+          initial="normal"
+          variants={CIRCLE_VARIANTS}
         />
       </svg>
     </div>

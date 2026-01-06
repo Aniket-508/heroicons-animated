@@ -16,27 +16,29 @@ interface QueueListIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const ITEM_DURATION = 0.2;
+const INITIAL_DELAY = 0.1;
+const STAGGER_DELAY = 0.15;
+
+const createItemVariants = (delay: number): Variants => ({
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
   animate: {
     opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: ITEM_DURATION,
+      ease: "easeOut",
+      delay,
     },
   },
-};
+});
+
+const LIST_ITEMS = [
+  { y: 19.5, path: "M3.75 19.5H20.25" },
+  { y: 15.75, path: "M3.75 15.75H20.25" },
+  { y: 12, path: "M3.75 12H20.25" },
+] as const;
 
 const QueueListIcon = forwardRef<QueueListIconHandle, QueueListIconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
@@ -92,12 +94,20 @@ const QueueListIcon = forwardRef<QueueListIconHandle, QueueListIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z"
-            initial="normal"
-            variants={VARIANTS}
-          />
+          <path d="M5.625 4.5H18.375C19.4105 4.5 20.25 5.33947 20.25 6.375C20.25 7.41053 19.4105 8.25 18.375 8.25H5.625C4.58947 8.25 3.75 7.41053 3.75 6.375C3.75 5.33947 4.58947 4.5 5.625 4.5Z" />
+          {LIST_ITEMS.map((item, index) => {
+            const delay =
+              INITIAL_DELAY + (LIST_ITEMS.length - 1 - index) * STAGGER_DELAY;
+            return (
+              <motion.path
+                animate={controls}
+                d={item.path}
+                initial="normal"
+                key={item.y}
+                variants={createItemVariants(delay)}
+              />
+            );
+          })}
         </svg>
       </div>
     );

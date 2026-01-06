@@ -16,7 +16,7 @@ interface ChartBarSquareIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const createBarVariants = (delay: number): Variants => ({
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -31,12 +31,13 @@ const VARIANTS: Variants = {
     pathLength: [0, 1],
     pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      delay,
+      duration: 0.4,
+      ease: "easeOut",
+      opacity: { duration: 0.1, delay },
     },
   },
-};
+});
 
 const ChartBarSquareIcon = forwardRef<
   ChartBarSquareIconHandle,
@@ -94,11 +95,30 @@ const ChartBarSquareIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
         <motion.path
           animate={controls}
-          d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+          d="M7.5 14.25v2.25"
           initial="normal"
-          variants={VARIANTS}
+          variants={createBarVariants(0)}
+        />
+        <motion.path
+          animate={controls}
+          d="M10.5 12v4.5"
+          initial="normal"
+          variants={createBarVariants(0.15)}
+        />
+        <motion.path
+          animate={controls}
+          d="M13.5 9.75v6.75"
+          initial="normal"
+          variants={createBarVariants(0.3)}
+        />
+        <motion.path
+          animate={controls}
+          d="M16.5 7.5v9"
+          initial="normal"
+          variants={createBarVariants(0.45)}
         />
       </svg>
     </div>

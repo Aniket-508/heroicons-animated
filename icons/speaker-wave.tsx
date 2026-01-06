@@ -16,39 +16,47 @@ interface SpeakerWaveIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const WAVE_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
+  animate: (custom: number) => ({
+    opacity: 0,
+    scale: 0,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      opacity: {
+        duration: 0.2,
+        ease: "easeInOut",
+        repeat: 1,
+        repeatType: "reverse",
+        repeatDelay: 0.2,
+        delay: 0.2 * (custom - 1),
+      },
+      scale: {
+        duration: 0.2,
+        ease: "easeInOut",
+        repeat: 1,
+        repeatType: "reverse",
+        repeatDelay: 0.2,
+        delay: 0.2 * (custom - 1),
+      },
     },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+  }),
 };
 
 const SpeakerWaveIcon = forwardRef<SpeakerWaveIconHandle, SpeakerWaveIconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
-    const controls = useAnimation();
+    const waveControls = useAnimation();
     const isControlledRef = useRef(false);
 
     useImperativeHandle(ref, () => {
       isControlledRef.current = true;
 
       return {
-        startAnimation: () => controls.start("animate"),
-        stopAnimation: () => controls.start("normal"),
+        startAnimation: () => {
+          waveControls.start("animate");
+        },
+        stopAnimation: () => {
+          waveControls.start("normal");
+        },
       };
     });
 
@@ -57,10 +65,10 @@ const SpeakerWaveIcon = forwardRef<SpeakerWaveIconHandle, SpeakerWaveIconProps>(
         if (isControlledRef.current) {
           onMouseEnter?.(e);
         } else {
-          controls.start("animate");
+          waveControls.start("expand");
         }
       },
-      [controls, onMouseEnter]
+      [waveControls, onMouseEnter]
     );
 
     const handleMouseLeave = useCallback(
@@ -68,10 +76,10 @@ const SpeakerWaveIcon = forwardRef<SpeakerWaveIconHandle, SpeakerWaveIconProps>(
         if (isControlledRef.current) {
           onMouseLeave?.(e);
         } else {
-          controls.start("normal");
+          waveControls.start("normal");
         }
       },
-      [controls, onMouseLeave]
+      [waveControls, onMouseLeave]
     );
 
     return (
@@ -92,11 +100,20 @@ const SpeakerWaveIcon = forwardRef<SpeakerWaveIconHandle, SpeakerWaveIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
           <motion.path
-            animate={controls}
-            d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z"
+            animate={waveControls}
+            custom={1}
+            d="M16.463 8.288a5.25 5.25 0 0 1 0 7.424"
             initial="normal"
-            variants={VARIANTS}
+            variants={WAVE_VARIANTS}
+          />
+          <motion.path
+            animate={waveControls}
+            custom={2}
+            d="M19.114 5.636a9 9 0 0 1 0 12.728"
+            initial="normal"
+            variants={WAVE_VARIANTS}
           />
         </svg>
       </div>

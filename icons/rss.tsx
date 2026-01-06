@@ -16,26 +16,30 @@ interface RssIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const WAVE_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
+  animate: (custom: number) => ({
+    opacity: 0,
+    scale: 0,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      opacity: {
+        duration: 0.2,
+        ease: "easeInOut",
+        repeat: 1,
+        repeatType: "reverse",
+        repeatDelay: 0.2,
+        delay: 0.2 * (custom - 1),
+      },
+      scale: {
+        duration: 0.2,
+        ease: "easeInOut",
+        repeat: 1,
+        repeatType: "reverse",
+        repeatDelay: 0.2,
+        delay: 0.2 * (custom - 1),
+      },
     },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+  }),
 };
 
 const RssIcon = forwardRef<RssIconHandle, RssIconProps>(
@@ -92,11 +96,20 @@ const RssIcon = forwardRef<RssIconHandle, RssIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
           <motion.path
             animate={controls}
-            d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            custom={1}
+            d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5"
             initial="normal"
-            variants={VARIANTS}
+            variants={WAVE_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={2}
+            d="M4.5 4.5h.75c7.87 0 14.25 6.38 14.25 14.25v.75"
+            initial="normal"
+            variants={WAVE_VARIANTS}
           />
         </svg>
       </div>

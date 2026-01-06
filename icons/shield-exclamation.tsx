@@ -16,24 +16,15 @@ interface ShieldExclamationIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const EXCLAMATION_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    opacity: [1, 0.4, 1],
+    scale: [1, 1.1, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.8,
+      repeat: Number.POSITIVE_INFINITY,
+      ease: "easeInOut",
     },
   },
 };
@@ -94,12 +85,16 @@ const ShieldExclamationIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
+        <path d="M12 1.964A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Z" />
+        <motion.g
           animate={controls}
-          d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z"
           initial="normal"
-          variants={VARIANTS}
-        />
+          style={{ originX: "50%", originY: "50%" }}
+          variants={EXCLAMATION_VARIANTS}
+        >
+          <path d="M12 9v3.75" />
+          <path d="M12 15.75h.008v.008H12v-.008Z" />
+        </motion.g>
       </svg>
     </div>
   );

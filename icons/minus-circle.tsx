@@ -16,25 +16,13 @@ interface MinusCircleIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
+const SYMBOL_VARIANT: Variants = {
+  normal: { pathLength: 1, opacity: 1, pathOffset: 0 },
   animate: {
-    opacity: [0, 1],
     pathLength: [0, 1],
+    opacity: [0, 1],
     pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
+    transition: { duration: 0.4, ease: "easeInOut" },
   },
 };
 
@@ -92,11 +80,12 @@ const MinusCircleIcon = forwardRef<MinusCircleIconHandle, MinusCircleIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
           <motion.path
             animate={controls}
-            d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            d="M15 12H9"
             initial="normal"
-            variants={VARIANTS}
+            variants={SYMBOL_VARIANT}
           />
         </svg>
       </div>

@@ -17,26 +17,18 @@ interface EllipsisHorizontalCircleIconProps
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const DOT_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+    scale: 1,
+  },
+  animate: (custom: number) => ({
+    scale: [1, 1.2, 1],
     transition: {
       duration: 0.4,
-      opacity: { duration: 0.1 },
+      delay: custom * 0.05,
+      ease: "easeInOut",
     },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
+  }),
 };
 
 const EllipsisHorizontalCircleIcon = forwardRef<
@@ -95,12 +87,30 @@ const EllipsisHorizontalCircleIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
-          animate={controls}
-          d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-          initial="normal"
-          variants={VARIANTS}
-        />
+        {[
+          {
+            d: "M8.625 12C8.625 12.2071 8.45711 12.375 8.25 12.375C8.04289 12.375 7.875 12.2071 7.875 12C7.875 11.7929 8.04289 11.625 8.25 11.625C8.45711 11.625 8.625 11.7929 8.625 12ZM8.625 12H8.25",
+            index: 0,
+          },
+          {
+            d: "M12.375 12C12.375 12.2071 12.2071 12.375 12 12.375C11.7929 12.375 11.625 12.2071 11.625 12C11.625 11.7929 11.7929 11.625 12 11.625C12.2071 11.625 12.375 11.7929 12.375 12ZM12.375 12H12",
+            index: 1,
+          },
+          {
+            d: "M16.125 12C16.125 12.2071 15.9571 12.375 15.75 12.375C15.5429 12.375 15.375 12.2071 15.375 12C15.375 11.7929 15.5429 11.625 15.75 11.625C15.9571 11.625 16.125 11.7929 16.125 12ZM16.125 12H15.75",
+            index: 2,
+          },
+        ].map((dot) => (
+          <motion.path
+            animate={controls}
+            custom={dot.index}
+            d={dot.d}
+            initial="normal"
+            key={dot.index}
+            variants={DOT_VARIANTS}
+          />
+        ))}
+        <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
       </svg>
     </div>
   );

@@ -16,24 +16,21 @@ interface PaperAirplaneIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const AIRPLANE_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
+    scale: 1,
+    x: 0,
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    scale: [1, 0.8, 1, 1, 1],
+    x: [0, "-10%", "125%", "-150%", 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      default: { ease: "easeInOut", duration: 1.2 },
+      x: {
+        ease: "easeInOut",
+        duration: 1.2,
+        times: [0, 0.25, 0.5, 0.5, 1],
+      },
     },
   },
 };
@@ -94,12 +91,13 @@ const PaperAirplaneIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <motion.path
+        <motion.g
           animate={controls}
-          d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
           initial="normal"
-          variants={VARIANTS}
-        />
+          variants={AIRPLANE_VARIANTS}
+        >
+          <path d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+        </motion.g>
       </svg>
     </div>
   );

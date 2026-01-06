@@ -19,20 +19,12 @@ interface MinusIconProps extends HTMLAttributes<HTMLDivElement> {
 const VARIANTS: Variants = {
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
   animate: {
     opacity: [0, 1],
     pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
+      duration: 0.3,
       opacity: { duration: 0.1 },
     },
   },

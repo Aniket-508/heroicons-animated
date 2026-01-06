@@ -1,6 +1,5 @@
 "use client";
 
-import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
@@ -15,28 +14,6 @@ export interface PlusIconHandle {
 interface PlusIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
-
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
-};
 
 const PlusIcon = forwardRef<PlusIconHandle, PlusIconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
@@ -81,24 +58,30 @@ const PlusIcon = forwardRef<PlusIconHandle, PlusIconProps>(
         onMouseLeave={handleMouseLeave}
         {...props}
       >
-        <svg
+        <motion.svg
+          animate={controls}
           fill="none"
           height={size}
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
+          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          variants={{
+            normal: {
+              rotate: 0,
+            },
+            animate: {
+              rotate: 180,
+            },
+          }}
           viewBox="0 0 24 24"
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M12 4.5v15m7.5-7.5h-15"
-            initial="normal"
-            variants={VARIANTS}
-          />
-        </svg>
+          <path d="M5 12h14" />
+          <path d="M12 5v14" />
+        </motion.svg>
       </div>
     );
   }
