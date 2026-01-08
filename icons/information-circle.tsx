@@ -19,10 +19,11 @@ interface InformationCircleIconProps extends HTMLAttributes<HTMLDivElement> {
 const INFO_VARIANTS: Variants = {
   normal: { opacity: 1, scale: 1 },
   animate: {
-    opacity: 1,
+    opacity: [1, 0.4, 1],
     scale: [1, 1.1, 1],
     transition: {
-      duration: 0.6,
+      duration: 0.8,
+      repeat: Number.POSITIVE_INFINITY,
       ease: "easeInOut",
     },
   },

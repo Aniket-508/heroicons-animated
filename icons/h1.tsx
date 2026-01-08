@@ -18,22 +18,19 @@ interface H1IconProps extends HTMLAttributes<HTMLDivElement> {
 
 const VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+    scale: 1,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      type: "spring",
+      stiffness: 500,
+      damping: 25,
     },
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    scale: 1.05,
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      type: "spring",
+      stiffness: 400,
+      damping: 15,
     },
   },
 };
@@ -92,10 +89,12 @@ const H1Icon = forwardRef<H1IconHandle, H1IconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501" />
           <motion.path
             animate={controls}
-            d="M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501m4.501-8.627 2.25-1.5v10.126m0 0h-2.25m2.25 0h2.25"
+            d="M17.244 10.868l2.25-1.5v10.126h-2.25m2.25 0h2.25"
             initial="normal"
+            style={{ originY: "12px" }}
             variants={VARIANTS}
           />
         </svg>

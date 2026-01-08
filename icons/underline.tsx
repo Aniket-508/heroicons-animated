@@ -16,24 +16,34 @@ interface UnderlineIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const U_VARIANTS: Variants = {
   normal: {
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
   },
   animate: {
     opacity: [0, 1],
     pathLength: [0, 1],
     pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "linear",
       opacity: { duration: 0.1 },
+    },
+  },
+};
+
+const LINE_VARIANTS: Variants = {
+  normal: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    transition: {
+      delay: 0.3,
+      duration: 0.1,
+      ease: "linear",
+      opacity: { duration: 0.1, delay: 0.3 },
     },
   },
 };
@@ -94,9 +104,15 @@ const UnderlineIcon = forwardRef<UnderlineIconHandle, UnderlineIconProps>(
         >
           <motion.path
             animate={controls}
-            d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5"
+            d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5"
             initial="normal"
-            variants={VARIANTS}
+            variants={U_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M3.745 20.246h16.5"
+            initial="normal"
+            variants={LINE_VARIANTS}
           />
         </svg>
       </div>
