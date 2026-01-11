@@ -1,49 +1,16 @@
+"use client";
+
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { unstable_cache } from "next/cache";
+
 import { LINK } from "@/constants";
+import { useGithubStars } from "@/providers/github-stars";
 
-const DEFAULT_STARS = 1;
-const CACHE_TIME = 86_400; // 1 day
-
-const fetchGithubStars = async (): Promise<number> => {
-  try {
-    const res = await fetch(
-      "https://api.github.com/repos/Aniket-508/heroicons-animated",
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        },
-      }
-    );
-
-    if (!res.ok) {
-      return DEFAULT_STARS;
-    }
-
-    const data = await res.json();
-
-    return data.stargazers_count < DEFAULT_STARS
-      ? DEFAULT_STARS
-      : data.stargazers_count;
-  } catch (error) {
-    console.error("Failed to fetch GitHub stars:", error);
-    return DEFAULT_STARS;
-  }
-};
-
-const getGithubStars = unstable_cache(fetchGithubStars, ["github-stars"], {
-  revalidate: CACHE_TIME,
-});
-
-const GithubStartsButton = async () => {
-  const stars =
-    process.env.NODE_ENV === "production"
-      ? await getGithubStars()
-      : DEFAULT_STARS;
+const GithubStarsButton = () => {
+  const { stars } = useGithubStars();
 
   return (
     <a
-      aria-label={`Star on GitHub (${stars.toLocaleString()} stars)`}
+      aria-label={`Star on GitHub${stars ? ` (${stars.toLocaleString()} stars)` : ""}`}
       className="group/github-stars supports-[corner-shape:squircle]:corner-squircle flex items-center gap-2 rounded-[14px] bg-white px-2.5 py-2 focus-within:outline-offset-2 focus-visible:outline-1 focus-visible:outline-primary supports-[corner-shape:squircle]:rounded-[20px] dark:bg-white/10"
       href={LINK.GITHUB}
       rel="noopener noreferrer"
@@ -51,12 +18,14 @@ const GithubStartsButton = async () => {
       target="_blank"
     >
       <GitHubLogoIcon aria-hidden="true" className="size-4" />
-      <span
-        aria-hidden="true"
-        className="font-sans text-black text-sm tabular-nums tracking-[-0.4px] [text-shadow:-0.1px_0_0_currentColor,0.1px_0_0_currentColor] dark:text-white"
-      >
-        {stars.toLocaleString()}
-      </span>
+      {stars !== null && (
+        <span
+          aria-hidden="true"
+          className="font-sans text-black text-sm tabular-nums tracking-[-0.4px] [text-shadow:-0.1px_0_0_currentColor,0.1px_0_0_currentColor] dark:text-white"
+        >
+          {stars.toLocaleString()}
+        </span>
+      )}
       <svg
         aria-hidden="true"
         className="text-neutral-400 transition-colors duration-100 group-hover/github-stars:text-[#e3b341]"
@@ -77,4 +46,4 @@ const GithubStartsButton = async () => {
   );
 };
 
-export { GithubStartsButton };
+export { GithubStarsButton };

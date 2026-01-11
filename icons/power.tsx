@@ -16,24 +16,25 @@ interface PowerIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const CIRCLE_VARIANTS: Variants = {
+  normal: { opacity: 1, scale: 1 },
+  animate: {
+    opacity: [0.5, 1, 0.5, 1],
+    scale: [1, 1.05, 1],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeInOut",
     },
   },
+};
+
+const LINE_VARIANTS: Variants = {
+  normal: { y: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    y: [0, -2, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.3,
+      ease: "easeInOut",
     },
   },
 };
@@ -94,9 +95,16 @@ const PowerIcon = forwardRef<PowerIconHandle, PowerIconProps>(
         >
           <motion.path
             animate={controls}
-            d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9"
+            d="M5.636 5.636a9 9 0 1 0 12.728 0"
             initial="normal"
-            variants={VARIANTS}
+            style={{ transformOrigin: "center center" }}
+            variants={CIRCLE_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            d="M12 3v9"
+            initial="normal"
+            variants={LINE_VARIANTS}
           />
         </svg>
       </div>

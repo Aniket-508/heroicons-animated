@@ -16,19 +16,17 @@ interface TvIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const CCTV_GROUP_VARIANTS: Variants = {
+const SCREEN_VARIANTS: Variants = {
   normal: {
-    rotate: 0,
-    y: 0,
-    x: 0,
+    fillOpacity: 0,
+    fill: "currentColor",
   },
   animate: {
-    rotate: [0, -20, -20, 15, 15, 0],
-    y: [0, -0.5, -0.5, 0, 0, 0],
-    x: [0, 0, 0, 0.5, 0.5, 0],
+    fillOpacity: [0, 1, 0, 1, 0],
     transition: {
-      duration: 1.8,
+      duration: 0.6,
       ease: "easeInOut",
+      times: [0, 0.25, 0.5, 0.75, 1],
     },
   },
 };
@@ -89,10 +87,11 @@ const TvIcon = forwardRef<TvIconHandle, TvIconProps>(
         >
           <motion.path
             animate={controls}
-            d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125Z"
+            d="M3.375 17.25H20.625C21.2463 17.25 21.75 16.7463 21.75 16.125V4.875C21.75 4.25368 21.2463 3.75 20.625 3.75H3.375C2.75368 3.75 2.25 4.25368 2.25 4.875V16.125C2.25 16.7463 2.75368 17.25 3.375 17.25Z"
             initial="normal"
-            variants={CCTV_GROUP_VARIANTS}
+            variants={SCREEN_VARIANTS}
           />
+          <path d="M6 20.25H18M10.5 17.25V20.25M13.5 17.25V20.25M3.375 17.25H20.625C21.2463 17.25 21.75 16.7463 21.75 16.125V4.875C21.75 4.25368 21.2463 3.75 20.625 3.75H3.375C2.75368 3.75 2.25 4.25368 2.25 4.875V16.125C2.25 16.7463 2.75368 17.25 3.375 17.25Z" />
         </svg>
       </div>
     );

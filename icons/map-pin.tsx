@@ -16,15 +16,15 @@ interface MapPinIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const SVG_VARIANTS: Variants = {
+const PIN_VARIANTS: Variants = {
   normal: {
     y: 0,
   },
   animate: {
-    y: [0, -5, -3],
+    y: [0, -4, 0],
     transition: {
-      duration: 0.5,
-      times: [0, 0.6, 1],
+      duration: 0.4,
+      ease: "easeOut",
     },
   },
 };
@@ -72,31 +72,23 @@ const MapPinIcon = forwardRef<MapPinIconHandle, MapPinIconProps>(
         onMouseLeave={handleMouseLeave}
         {...props}
       >
-        <svg
+        <motion.svg
+          animate={controls}
           fill="none"
           height={size}
+          initial="normal"
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
+          variants={PIN_VARIANTS}
           viewBox="0 0 24 24"
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-            initial="normal"
-            variants={SVG_VARIANTS}
-          />
-          <motion.path
-            animate={controls}
-            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-            initial="normal"
-            transition={{ delay: 0.1 }}
-            variants={SVG_VARIANTS}
-          />
-        </svg>
+          <path d="M15 10.5C15 12.1569 13.6569 13.5 12 13.5C10.3431 13.5 9 12.1569 9 10.5C9 8.84315 10.3431 7.5 12 7.5C13.6569 7.5 15 8.84315 15 10.5Z" />
+          <path d="M19.5 10.5C19.5 17.6421 12 21.75 12 21.75C12 21.75 4.5 17.6421 4.5 10.5C4.5 6.35786 7.85786 3 12 3C16.1421 3 19.5 6.35786 19.5 10.5Z" />
+        </motion.svg>
       </div>
     );
   }

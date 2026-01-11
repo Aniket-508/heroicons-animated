@@ -16,24 +16,31 @@ interface ShareIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const NODE_VARIANTS: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+    scale: 1,
+  },
+  animate: (delay: number) => ({
+    scale: [1, 1.3, 1],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      delay,
+      duration: 0.3,
+      ease: "easeOut",
     },
+  }),
+};
+
+const LINE_VARIANTS: Variants = {
+  normal: {
+    pathLength: 1,
+    opacity: 1,
   },
   animate: {
-    opacity: [0, 1],
     pathLength: [0, 1],
-    pathOffset: [1, 0],
+    opacity: [0, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.4,
+      ease: "easeOut",
     },
   },
 };
@@ -94,9 +101,36 @@ const ShareIcon = forwardRef<ShareIconHandle, ShareIconProps>(
         >
           <motion.path
             animate={controls}
-            d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+            d="M7.21721 10.9071C7.39737 11.2307 7.5 11.6034 7.5 12C7.5 12.3966 7.39737 12.7693 7.21721 13.0929M7.21721 10.9071L16.7828 5.5929M7.21721 13.0929L16.7828 18.4071"
             initial="normal"
-            variants={VARIANTS}
+            variants={LINE_VARIANTS}
+          />
+          <motion.circle
+            animate={controls}
+            cx="5.25"
+            cy="12"
+            custom={0}
+            initial="normal"
+            r="2.25"
+            variants={NODE_VARIANTS}
+          />
+          <motion.circle
+            animate={controls}
+            cx="18.75"
+            cy="4.5"
+            custom={0.15}
+            initial="normal"
+            r="2.25"
+            variants={NODE_VARIANTS}
+          />
+          <motion.circle
+            animate={controls}
+            cx="18.75"
+            cy="19.5"
+            custom={0.3}
+            initial="normal"
+            r="2.25"
+            variants={NODE_VARIANTS}
           />
         </svg>
       </div>

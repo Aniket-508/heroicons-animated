@@ -17,19 +17,8 @@ interface CreditCardIconProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const LINE_VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-  },
-  animate: (custom: number) => ({
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    transition: {
-      delay: custom * 0.15,
-      duration: 0.3,
-      ease: "linear",
-      opacity: { duration: 0.1, delay: custom * 0.15 },
-    },
-  }),
+  visible: { pathLength: 1, opacity: 1 },
+  hidden: { pathLength: 0, opacity: 0 },
 };
 
 const CreditCardIcon = forwardRef<CreditCardIconHandle, CreditCardIconProps>(
@@ -41,17 +30,37 @@ const CreditCardIcon = forwardRef<CreditCardIconHandle, CreditCardIconProps>(
       isControlledRef.current = true;
 
       return {
-        startAnimation: () => controls.start("animate"),
-        stopAnimation: () => controls.start("normal"),
+        startAnimation: async () => {
+          await controls.start((i) => ({
+            pathLength: 0,
+            opacity: 0,
+            transition: { delay: i * 0.1, duration: 0.3 },
+          }));
+          await controls.start((i) => ({
+            pathLength: 1,
+            opacity: 1,
+            transition: { delay: i * 0.1, duration: 0.3 },
+          }));
+        },
+        stopAnimation: () => controls.start("visible"),
       };
     });
 
     const handleMouseEnter = useCallback(
-      (e: React.MouseEvent<HTMLDivElement>) => {
+      async (e: React.MouseEvent<HTMLDivElement>) => {
         if (isControlledRef.current) {
           onMouseEnter?.(e);
         } else {
-          controls.start("animate");
+          await controls.start((i) => ({
+            pathLength: 0,
+            opacity: 0,
+            transition: { delay: i * 0.1, duration: 0.3 },
+          }));
+          await controls.start((i) => ({
+            pathLength: 1,
+            opacity: 1,
+            transition: { delay: i * 0.1, duration: 0.3 },
+          }));
         }
       },
       [controls, onMouseEnter]
@@ -62,7 +71,7 @@ const CreditCardIcon = forwardRef<CreditCardIconHandle, CreditCardIconProps>(
         if (isControlledRef.current) {
           onMouseLeave?.(e);
         } else {
-          controls.start("normal");
+          controls.start("visible");
         }
       },
       [controls, onMouseLeave]
@@ -87,20 +96,19 @@ const CreditCardIcon = forwardRef<CreditCardIconHandle, CreditCardIconProps>(
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M2.25 8.25h19.5M2.25 9h19.5M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-          <motion.path
-            animate={controls}
-            custom={0}
-            d="M5.25 14.25h6"
-            initial="normal"
-            variants={LINE_VARIANTS}
-          />
-          <motion.path
-            animate={controls}
-            custom={1}
-            d="M5.25 16.5h3"
-            initial="normal"
-            variants={LINE_VARIANTS}
-          />
+          {[
+            { d: "M5.25 14.25h6", index: 0 },
+            { d: "M5.25 16.5h3", index: 1 },
+          ].map((line) => (
+            <motion.path
+              animate={controls}
+              custom={line.index}
+              d={line.d}
+              initial="visible"
+              key={line.index}
+              variants={LINE_VARIANTS}
+            />
+          ))}
         </svg>
       </div>
     );

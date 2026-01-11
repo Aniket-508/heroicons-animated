@@ -1,6 +1,5 @@
 "use client";
 
-import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
@@ -16,28 +15,6 @@ interface EyeIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
-    transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
-    },
-  },
-  animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
-    },
-  },
-};
-
 const EyeIcon = forwardRef<EyeIconHandle, EyeIconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
     const controls = useAnimation();
@@ -45,7 +22,6 @@ const EyeIcon = forwardRef<EyeIconHandle, EyeIconProps>(
 
     useImperativeHandle(ref, () => {
       isControlledRef.current = true;
-
       return {
         startAnimation: () => controls.start("animate"),
         stopAnimation: () => controls.start("normal"),
@@ -94,16 +70,23 @@ const EyeIcon = forwardRef<EyeIconHandle, EyeIconProps>(
         >
           <motion.path
             animate={controls}
-            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-            initial="normal"
-            variants={VARIANTS}
+            d="M2.03555 12.3224C1.96647 12.1151 1.9664 11.8907 2.03536 11.6834C3.42372 7.50972 7.36079 4.5 12.0008 4.5C16.6387 4.5 20.5742 7.50692 21.9643 11.6776C22.0334 11.8849 22.0335 12.1093 21.9645 12.3166C20.5761 16.4903 16.6391 19.5 11.9991 19.5C7.36119 19.5 3.42564 16.4931 2.03555 12.3224Z"
+            style={{ originY: "50%" }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            variants={{
+              normal: { scaleY: 1, opacity: 1 },
+              animate: { scaleY: [1, 0.1, 1], opacity: [1, 0.3, 1] },
+            }}
           />
           <motion.path
             animate={controls}
-            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-            initial="normal"
-            transition={{ delay: 0.1 }}
-            variants={VARIANTS}
+            d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+            style={{ originX: "50%", originY: "50%" }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            variants={{
+              normal: { scale: 1, opacity: 1 },
+              animate: { scale: [1, 0.3, 1], opacity: [1, 0.3, 1] },
+            }}
           />
         </svg>
       </div>

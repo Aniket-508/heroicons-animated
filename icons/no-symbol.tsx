@@ -16,24 +16,26 @@ interface NoSymbolIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const CIRCLE_VARIANTS: Variants = {
+  normal: { scale: 1 },
+  animate: {
+    scale: [1, 1.1, 1],
     transition: {
       duration: 0.4,
-      opacity: { duration: 0.1 },
+      ease: "easeInOut",
     },
   },
+};
+
+const LINE_VARIANTS: Variants = {
+  normal: { pathLength: 1, opacity: 1 },
   animate: {
-    opacity: [0, 1],
     pathLength: [0, 1],
     pathOffset: [1, 0],
+    opacity: [0, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.3,
+      ease: "easeOut",
     },
   },
 };
@@ -92,11 +94,19 @@ const NoSymbolIcon = forwardRef<NoSymbolIconHandle, NoSymbolIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <motion.g
+            animate={controls}
+            initial="normal"
+            style={{ transformOrigin: "center center" }}
+            variants={CIRCLE_VARIANTS}
+          >
+            <path d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636" />
+          </motion.g>
           <motion.path
             animate={controls}
-            d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636"
+            d="M18.364 18.364L5.636 5.636"
             initial="normal"
-            variants={VARIANTS}
+            variants={LINE_VARIANTS}
           />
         </svg>
       </div>

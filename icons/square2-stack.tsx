@@ -16,24 +16,27 @@ interface Square2StackIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const FRONT_VARIANTS: Variants = {
+  normal: { x: 0, y: 0 },
+  animate: {
+    x: [0, 1, 0],
+    y: [0, 1, 0],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.3,
+      ease: "easeInOut",
     },
   },
+};
+
+const BACK_VARIANTS: Variants = {
+  normal: { x: 0, y: 0, opacity: 1 },
   animate: {
+    x: [-4, 0],
+    y: [-4, 0],
     opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.3,
+      ease: "easeOut",
     },
   },
 };
@@ -94,11 +97,19 @@ const Square2StackIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
+        {/* Behind square (top-left) */}
         <motion.path
           animate={controls}
-          d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+          d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25"
           initial="normal"
-          variants={VARIANTS}
+          variants={BACK_VARIANTS}
+        />
+        {/* Front square (bottom-right) */}
+        <motion.path
+          animate={controls}
+          d="M16.5 8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+          initial="normal"
+          variants={FRONT_VARIANTS}
         />
       </svg>
     </div>

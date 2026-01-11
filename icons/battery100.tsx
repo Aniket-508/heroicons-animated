@@ -3,7 +3,13 @@
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
-import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+import {
+  forwardRef,
+  useCallback,
+  useId,
+  useImperativeHandle,
+  useRef,
+} from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -16,24 +22,19 @@ interface Battery100IconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const clipVariants: Variants = {
   normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+    width: 0,
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeOut",
     },
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    width: 13.5,
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeOut",
     },
   },
 };
@@ -42,6 +43,7 @@ const Battery100Icon = forwardRef<Battery100IconHandle, Battery100IconProps>(
   ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
     const controls = useAnimation();
     const isControlledRef = useRef(false);
+    const clipId = useId();
 
     useImperativeHandle(ref, () => {
       isControlledRef.current = true;
@@ -92,11 +94,30 @@ const Battery100Icon = forwardRef<Battery100IconHandle, Battery100IconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
-            animate={controls}
-            d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z"
-            initial="normal"
-            variants={VARIANTS}
+          <defs>
+            <clipPath id={clipId}>
+              <motion.rect
+                animate={controls}
+                height="4.5"
+                initial="normal"
+                variants={clipVariants}
+                x="4.5"
+                y="10.5"
+              />
+            </clipPath>
+          </defs>
+          {/* Battery cap */}
+          <path d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21" />
+          {/* Battery container */}
+          <path d="M3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z" />
+          {/* Battery fill (100%) - outline */}
+          <path d="M4.5 10.5H18V15H4.5v-4.5Z" />
+          {/* Battery fill (100%) - animated fill */}
+          <path
+            clipPath={`url(#${clipId})`}
+            d="M4.5 10.5H18V15H4.5v-4.5Z"
+            fill="currentColor"
+            stroke="none"
           />
         </svg>
       </div>

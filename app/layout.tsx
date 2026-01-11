@@ -11,6 +11,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
 import { Analytics } from "@/components/analytics";
 import { Header } from "@/components/header";
+import { GithubStarsProvider } from "@/providers/github-stars";
 import { PackageNameProvider } from "@/providers/package-name";
 import { ThemeProvider } from "@/providers/theme";
 import { JsonLdScripts } from "@/seo/json-ld";
@@ -60,7 +61,8 @@ export default function RootLayout({
             disableTransitionOnChange
             enableSystem
           >
-            <PackageNameProvider>
+            <GithubStarsProvider>
+              <PackageNameProvider>
               <Header />
               <NuqsAdapter>
                 {children}
@@ -89,6 +91,7 @@ export default function RootLayout({
                 />
               </NuqsAdapter>
             </PackageNameProvider>
+            </GithubStarsProvider>
             <Analytics />
           </ThemeProvider>
         </div>

@@ -16,24 +16,48 @@ interface CalculatorIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
+const BUTTON_VARIANTS: Variants = {
   normal: {
+    scale: 1,
     opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+  },
+  animate: (delay: number) => ({
+    scale: [1, 1.5, 1],
+    opacity: [1, 0.5, 1],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.15,
+      delay: delay * 0.08,
+      ease: "easeOut",
     },
+  }),
+};
+
+const ENTER_VARIANTS: Variants = {
+  normal: {
+    scale: 1,
+    opacity: 1,
   },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    scale: [1, 1.3, 1],
+    opacity: [1, 0.6, 1],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.2,
+      delay: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const SCREEN_VARIANTS: Variants = {
+  normal: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: [1, 0.4, 1],
+    transition: {
+      duration: 0.2,
+      delay: 0.65,
+      ease: "easeOut",
     },
   },
 };
@@ -92,11 +116,73 @@ const CalculatorIcon = forwardRef<CalculatorIconHandle, CalculatorIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Calculator frame */}
+          <path d="M12 2.25C10.108 2.25 8.24156 2.35947 6.40668 2.57241C5.30608 2.70014 4.5 3.649 4.5 4.75699V19.5C4.5 20.7426 5.50736 21.75 6.75 21.75H17.25C18.4926 21.75 19.5 20.7426 19.5 19.5V4.75699C19.5 3.649 18.6939 2.70014 17.5933 2.57241C15.7584 2.35947 13.892 2.25 12 2.25Z" />
+          {/* Screen - flashes at the end */}
           <motion.path
             animate={controls}
-            d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z"
+            d="M8.25 6H15.75V8.25H8.25V6Z"
             initial="normal"
-            variants={VARIANTS}
+            variants={SCREEN_VARIANTS}
+          />
+          {/* Buttons - animate in sequence */}
+          <motion.path
+            animate={controls}
+            custom={0}
+            d="M8.25 11.25H8.2575V11.2575H8.25V11.25Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={2}
+            d="M10.7476 11.25H10.7551V11.2575H10.7476V11.25Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={1}
+            d="M13.2524 13.5H13.2599V13.5075H13.2524V13.5Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={4}
+            d="M8.25 15.75H8.2575V15.7575H8.25V15.75Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={3}
+            d="M15.75 11.25H15.7575V11.2575H15.75V11.25Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={5}
+            d="M10.7476 18H10.7551V18.0075H10.7476V18Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          {/* Static buttons */}
+          <path d="M8.25 13.5H8.2575V13.5075H8.25V13.5Z" />
+          <path d="M8.25 18H8.2575V18.0075H8.25V18Z" />
+          <path d="M10.7476 13.5H10.7551V13.5075H10.7476V13.5Z" />
+          <path d="M10.7476 15.75H10.7551V15.7575H10.7476V15.75Z" />
+          <path d="M13.2524 11.25H13.2599V11.2575H13.2524V11.25Z" />
+          <path d="M13.2524 15.75H13.2599V15.7575H13.2524V15.75Z" />
+          <path d="M13.2524 18H13.2599V18.0075H13.2524V18Z" />
+          <path d="M15.75 13.5H15.7575V13.5075H15.75V13.5Z" />
+          {/* Enter button - animates last */}
+          <motion.path
+            animate={controls}
+            d="M15.75 15.75V18"
+            initial="normal"
+            variants={ENTER_VARIANTS}
           />
         </svg>
       </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { GithubStartsButton } from "@/components/github-button";
+import { GithubStarsButton } from "@/components/github-button";
 import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LINK } from "@/constants";
@@ -42,7 +42,7 @@ const Header = () => {
           </a>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <GithubStartsButton />
+            <GithubStarsButton />
           </div>
         </div>
       </div>

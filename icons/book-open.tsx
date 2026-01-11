@@ -16,24 +16,24 @@ interface BookOpenIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const VARIANTS: Variants = {
-  normal: {
-    opacity: 1,
-    pathLength: 1,
-    pathOffset: 0,
+const LEFT_PAGE_VARIANTS: Variants = {
+  normal: { rotateY: 0 },
+  animate: {
+    rotateY: [0, 15, 0],
     transition: {
-      duration: 0.4,
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeInOut",
     },
   },
+};
+
+const RIGHT_PAGE_VARIANTS: Variants = {
+  normal: { rotateY: 0 },
   animate: {
-    opacity: [0, 1],
-    pathLength: [0, 1],
-    pathOffset: [1, 0],
+    rotateY: [0, -15, 0],
     transition: {
-      duration: 0.6,
-      ease: "linear",
-      opacity: { duration: 0.1 },
+      duration: 0.5,
+      ease: "easeInOut",
     },
   },
 };
@@ -92,12 +92,23 @@ const BookOpenIcon = forwardRef<BookOpenIconHandle, BookOpenIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
+          <motion.g
             animate={controls}
-            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
             initial="normal"
-            variants={VARIANTS}
-          />
+            style={{ originX: 1, originY: 0.5 }}
+            variants={LEFT_PAGE_VARIANTS}
+          >
+            <path d="M12 6.04168C10.4077 4.61656 8.30506 3.75 6 3.75C4.94809 3.75 3.93834 3.93046 3 4.26212V18.5121C3.93834 18.1805 4.94809 18 6 18C8.30506 18 10.4077 18.8666 12 20.2917" />
+          </motion.g>
+          <motion.g
+            animate={controls}
+            initial="normal"
+            style={{ originX: 0, originY: 0.5 }}
+            variants={RIGHT_PAGE_VARIANTS}
+          >
+            <path d="M12 6.04168C13.5923 4.61656 15.6949 3.75 18 3.75C19.0519 3.75 20.0617 3.93046 21 4.26212V18.5121C20.0617 18.1805 19.0519 18 18 18C15.6949 18 13.5923 18.8666 12 20.2917" />
+          </motion.g>
+          <path d="M12 6.04168V20.2917" />
         </svg>
       </div>
     );

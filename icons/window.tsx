@@ -16,25 +16,18 @@ interface WindowIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const PATH_VARIANTS: Variants = {
-  normal: (custom: number) => ({
-    pathLength: 1,
+const BUTTON_VARIANTS: Variants = {
+  normal: {
+    scale: 1,
     opacity: 1,
-    pathOffset: 0,
+  },
+  animate: (delay: number) => ({
+    scale: [0, 1.3, 1],
+    opacity: [0, 1, 1],
     transition: {
+      delay,
       duration: 0.3,
-      ease: "easeInOut",
-      delay: custom,
-    },
-  }),
-  animate: (custom: number) => ({
-    pathLength: [0, 1],
-    opacity: [0, 1],
-    pathOffset: [1, 0],
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-      delay: custom,
+      ease: "easeOut",
     },
   }),
 };
@@ -93,10 +86,27 @@ const WindowIcon = forwardRef<WindowIconHandle, WindowIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <path d="M3 8.25V18C3 19.2426 4.00736 20.25 5.25 20.25H18.75C19.9926 20.25 21 19.2426 21 18V8.25M3 8.25V6C3 4.75736 4.00736 3.75 5.25 3.75H18.75C19.9926 3.75 21 4.75736 21 6V8.25M3 8.25H21" />
           <motion.path
             animate={controls}
-            d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z"
-            variants={PATH_VARIANTS}
+            custom={0}
+            d="M5.25 6H5.2575V6.0075H5.25V6Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={0.1}
+            d="M7.5 6H7.5075V6.0075H7.5V6Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
+          />
+          <motion.path
+            animate={controls}
+            custom={0.2}
+            d="M9.75 6H9.7575V6.0075H9.75V6Z"
+            initial="normal"
+            variants={BUTTON_VARIANTS}
           />
         </svg>
       </div>
