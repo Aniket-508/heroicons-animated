@@ -102,7 +102,11 @@ const ClipboardDocumentIcon = forwardRef<
           initial="normal"
           variants={CLIPBOARD_VARIANTS}
         />
-        <motion.g animate={controls} initial="normal" variants={DOCUMENT_VARIANTS}>
+        <motion.g
+          animate={controls}
+          initial="normal"
+          variants={DOCUMENT_VARIANTS}
+        >
           <path d="M6.75 7.5H4.875C4.25368 7.5 3.75 8.00368 3.75 8.625V20.625C3.75 21.2463 4.25368 21.75 4.875 21.75H14.625C15.2463 21.75 15.75 21.2463 15.75 20.625V16.5C15.75 11.5294 11.7206 7.5 6.75 7.5Z" />
           <path d="M15.75 18.75V16.875C15.75 15.011 14.239 13.5 12.375 13.5H10.875C10.2537 13.5 9.75 12.9963 9.75 12.375V10.875C9.75 9.01104 8.23896 7.5 6.375 7.5H5.25" />
         </motion.g>

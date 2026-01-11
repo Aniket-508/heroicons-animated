@@ -27,7 +27,7 @@ const SQUARE_VARIANTS: Variants = {
   },
 };
 
-const createLineVariants = (delay: number): Variants => ({
+const CREATE_LINE_VARIANTS = (delay: number): Variants => ({
   normal: { pathLength: 1, opacity: 1 },
   animate: {
     pathLength: [0, 1],
@@ -106,25 +106,25 @@ const NewspaperIcon = forwardRef<NewspaperIconHandle, NewspaperIconProps>(
             animate={controls}
             d="M12 7.5h1.5"
             initial="normal"
-            variants={createLineVariants(0.2)}
+            variants={CREATE_LINE_VARIANTS(0.2)}
           />
           <motion.path
             animate={controls}
             d="M12 10.5h1.5"
             initial="normal"
-            variants={createLineVariants(0.3)}
+            variants={CREATE_LINE_VARIANTS(0.3)}
           />
           <motion.path
             animate={controls}
             d="M6 13.5h7.5"
             initial="normal"
-            variants={createLineVariants(0.4)}
+            variants={CREATE_LINE_VARIANTS(0.4)}
           />
           <motion.path
             animate={controls}
             d="M6 16.5h7.5"
             initial="normal"
-            variants={createLineVariants(0.5)}
+            variants={CREATE_LINE_VARIANTS(0.5)}
           />
         </svg>
       </div>

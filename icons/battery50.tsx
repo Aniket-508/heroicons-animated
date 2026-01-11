@@ -22,7 +22,7 @@ interface Battery50IconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const clipVariants: Variants = {
+const CLIP_VARIANTS: Variants = {
   normal: {
     width: 0,
     transition: {
@@ -100,7 +100,7 @@ const Battery50Icon = forwardRef<Battery50IconHandle, Battery50IconProps>(
                 animate={controls}
                 height="4.5"
                 initial="normal"
-                variants={clipVariants}
+                variants={CLIP_VARIANTS}
                 x="4.5"
                 y="10.5"
               />

@@ -107,27 +107,27 @@ const ShareIcon = forwardRef<ShareIconHandle, ShareIconProps>(
           />
           <motion.circle
             animate={controls}
+            custom={0}
             cx="5.25"
             cy="12"
-            custom={0}
             initial="normal"
             r="2.25"
             variants={NODE_VARIANTS}
           />
           <motion.circle
             animate={controls}
+            custom={0.15}
             cx="18.75"
             cy="4.5"
-            custom={0.15}
             initial="normal"
             r="2.25"
             variants={NODE_VARIANTS}
           />
           <motion.circle
             animate={controls}
+            custom={0.3}
             cx="18.75"
             cy="19.5"
-            custom={0.3}
             initial="normal"
             r="2.25"
             variants={NODE_VARIANTS}

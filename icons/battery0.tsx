@@ -16,7 +16,7 @@ interface Battery0IconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const containerVariants: Variants = {
+const CONTAINER_VARIANTS: Variants = {
   normal: {
     opacity: 1,
   },
@@ -81,7 +81,7 @@ const Battery0Icon = forwardRef<Battery0IconHandle, Battery0IconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
-          variants={containerVariants}
+          variants={CONTAINER_VARIANTS}
           viewBox="0 0 24 24"
           width={size}
           xmlns="http://www.w3.org/2000/svg"
