@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <section
-        className="view-container flex flex-col items-center justify-center border-neutral-200 pt-[60px] xl:border-x dark:border-neutral-800"
+        className="view-container flex flex-col items-center justify-center border-neutral-200 px-0 pt-[60px] xl:border-x dark:border-neutral-800"
         id="hero"
       >
         <h1 className="px-4 text-center font-sans text-[32px] min-[640px]:text-[42px]">

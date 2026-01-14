@@ -122,7 +122,7 @@ const IconPage = async ({ params }: Props) => {
       />
       <IconJsonLd icon={icon} />
 
-      <section className="view-container flex flex-col items-start border-neutral-200 py-12 xl:border-x min-[880px]:pt-[60px] dark:border-neutral-800">
+      <section className="view-container flex flex-col items-start border-neutral-200 pt-12 pb-4 xl:border-x min-[880px]:pt-[60px] dark:border-neutral-800">
         <Link
           className="mb-8 flex items-center gap-2 font-sans text-secondary text-sm transition-[color] duration-100 hover:text-primary focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
           href="/"
