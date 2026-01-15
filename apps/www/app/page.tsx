@@ -1,9 +1,9 @@
+import { LINK } from "@heroicons-animated/shared";
 import { Suspense } from "react";
 import { getIcons } from "@/actions/get-icons";
 import { CliBlock } from "@/components/cli-block";
 import { CommentBlock } from "@/components/comment";
 import { IconsList } from "@/components/list";
-import { LINK } from "@heroicons-animated/shared";
 
 const Home = () => {
   const icons = getIcons();

@@ -1,39 +1,39 @@
 <script lang="ts">
-  export let size: number = 28;
-  let className: string = '';
-  export { className as class };
+export const size = 28;
+const className = "";
+export { className as class };
 
-  let isAnimating = false;
-  let isControlled = false;
+let isAnimating = false;
+let isControlled = false;
 
-  export function startAnimation() {
-    if (!isControlled) {
-      isAnimating = true;
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
+export function startAnimation() {
+  if (!isControlled) {
+    isAnimating = true;
+    setTimeout(() => {
+      isAnimating = false;
+    }, 600);
   }
+}
 
-  export function stopAnimation() {
-    isAnimating = false;
-  }
+export function stopAnimation() {
+  isAnimating = false;
+}
 
-  export function setControlled(value: boolean) {
-    isControlled = value;
-  }
+export function setControlled(value: boolean) {
+  isControlled = value;
+}
 
-  function handleMouseEnter() {
-    if (!isControlled) {
-      startAnimation();
-    }
+function handleMouseEnter() {
+  if (!isControlled) {
+    startAnimation();
   }
+}
 
-  function handleMouseLeave() {
-    if (!isControlled) {
-      stopAnimation();
-    }
+function handleMouseLeave() {
+  if (!isControlled) {
+    stopAnimation();
   }
+}
 </script>
 
 <div
@@ -55,34 +55,36 @@
     class="icon-svg"
     class:currencybangladeshi-animate={isAnimating}
   >
-    <path d="M8.25 7.49997L8.66459 7.29267C9.16327 7.04333 9.75 7.40596 9.75 7.96349V10.5M9.75 10.5H15.75M9.75 10.5H8.25M9.75 10.5V15.9383C9.75 16.2921 9.91144 16.6351 10.2229 16.803C10.7518 17.0882 11.357 17.25 12 17.25C13.8142 17.25 15.3275 15.9617 15.675 14.25C15.7579 13.8414 15.412 13.5 14.995 13.5H14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
+    <path
+      d="M8.25 7.49997L8.66459 7.29267C9.16327 7.04333 9.75 7.40596 9.75 7.96349V10.5M9.75 10.5H15.75M9.75 10.5H8.25M9.75 10.5V15.9383C9.75 16.2921 9.91144 16.6351 10.2229 16.803C10.7518 17.0882 11.357 17.25 12 17.25C13.8142 17.25 15.3275 15.9617 15.675 14.25C15.7579 13.8414 15.412 13.5 14.995 13.5H14.25M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+    />
   </svg>
 </div>
 
 <style>
-  div {
-    display: inline-block;
-  }
+div {
+  display: inline-block;
+}
 
-  .icon-svg {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
+.icon-svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-  .icon-svg.currencybangladeshi-animate {
-    animation: currencybangladeshi-animate 0.6s ease-in-out;
-  }
+.icon-svg.currencybangladeshi-animate {
+  animation: currencybangladeshi-animate 0.6s ease-in-out;
+}
 
-  @keyframes currencybangladeshi-animate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+@keyframes currencybangladeshi-animate {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

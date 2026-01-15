@@ -1,4 +1,4 @@
-import { ICON_LIST } from "@heroicons-animated/react";
+import { ICON_MANIFEST } from "@heroicons-animated/shared";
 
 type DuplicateEntry = {
   name: string;
@@ -13,8 +13,8 @@ type DuplicateReport = {
 const checkDuplicates = (): DuplicateReport => {
   const nameIndexes = new Map<string, number[]>();
 
-  for (let i = 0; i < ICON_LIST.length; i++) {
-    const item = ICON_LIST[i];
+  for (let i = 0; i < ICON_MANIFEST.length; i++) {
+    const item = ICON_MANIFEST[i];
 
     const indexes = nameIndexes.get(item.name) || [];
     indexes.push(i);
@@ -35,8 +35,8 @@ const checkDuplicates = (): DuplicateReport => {
 };
 
 const printReport = () => {
-  console.log("🔍 Checking for duplicates in ICON_LIST...");
-  console.log(`   Total icons: ${ICON_LIST.length}`);
+  console.log("🔍 Checking for duplicates in ICON_MANIFEST...");
+  console.log(`   Total icons: ${ICON_MANIFEST.length}`);
 
   const report = checkDuplicates();
 

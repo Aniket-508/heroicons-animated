@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { Suspense } from "react";
 import { Toaster } from "sonner";
 import { Analytics } from "@/components/analytics";
 import { Header } from "@/components/header";
@@ -62,9 +63,10 @@ export default function RootLayout({
             disableTransitionOnChange
             enableSystem
           >
-            <GithubStarsProvider>
-              <PackageNameProvider>
-                  <NuqsAdapter>
+            <NuqsAdapter>
+              <Suspense>
+                <GithubStarsProvider>
+                  <PackageNameProvider>
                     <FrameworkProvider>
                       <Header />
                       {children}
@@ -92,9 +94,10 @@ export default function RootLayout({
                         }}
                       />
                     </FrameworkProvider>
-                  </NuqsAdapter>
-              </PackageNameProvider>
-            </GithubStarsProvider>
+                  </PackageNameProvider>
+                </GithubStarsProvider>
+              </Suspense>
+            </NuqsAdapter>
             <Analytics />
           </ThemeProvider>
         </div>

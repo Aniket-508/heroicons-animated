@@ -15,31 +15,34 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      {[
-          { d: "M7.5 8.25h9", index: 0 },
-          { d: "M7.5 11.25H12", index: 1 },
-        ].map((line) => (
-          <path
-            custom={line.index}
-            d={line.d}
-            key={line.index} />
-        ))}
-        <Motion is="path" ref="pathRef" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+      <path
+        v-for="line in [
+          { d: 'M7.5 8.25h9', index: 0 },
+          { d: 'M7.5 11.25H12', index: 1 },
+        ]"
+        :key="line.index"
+        :d="line.d"
+      />
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+      />
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ChatBubbleBottomCenterTextIcon',
+  name: "ChatBubbleBottomCenterTextIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -53,14 +56,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

@@ -15,25 +15,29 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15" />
-        <g>
-          <path d="M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-        </g>
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15"
+      />
+      <g>
+        <path d="M12 9l-3 3m0 0 3 3m-3-3h12.75"/>
+      </g>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ArrowLeftEndOnRectangleIcon',
+  name: "ArrowLeftEndOnRectangleIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -47,14 +51,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

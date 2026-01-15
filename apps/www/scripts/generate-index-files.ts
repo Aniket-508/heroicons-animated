@@ -6,7 +6,10 @@ const reactIndexPath = path.join(
   "../../../packages/react/src/icons/index.ts"
 );
 const vueIconsDir = path.join(__dirname, "../../../packages/vue/src/icons");
-const svelteIconsDir = path.join(__dirname, "../../../packages/svelte/src/icons");
+const svelteIconsDir = path.join(
+  __dirname,
+  "../../../packages/svelte/src/icons"
+);
 
 // Read React index to get the icon list structure
 const reactIndex = fs.readFileSync(reactIndexPath, "utf8");
@@ -33,11 +36,8 @@ for (const iconName of icons) {
   );
 }
 
-const vueIndex = vueIndexLines.join("\n") + "\n";
-fs.writeFileSync(
-  path.join(vueIconsDir, "index.ts"),
-  vueIndex
-);
+const vueIndex = `${vueIndexLines.join("\n")}\n`;
+fs.writeFileSync(path.join(vueIconsDir, "index.ts"), vueIndex);
 
 // Generate Svelte index
 const svelteIndexLines: string[] = [];
@@ -54,11 +54,8 @@ for (const iconName of icons) {
   );
 }
 
-const svelteIndex = svelteIndexLines.join("\n") + "\n";
-fs.writeFileSync(
-  path.join(svelteIconsDir, "index.ts"),
-  svelteIndex
-);
+const svelteIndex = `${svelteIndexLines.join("\n")}\n`;
+fs.writeFileSync(path.join(svelteIconsDir, "index.ts"), svelteIndex);
 
 console.log(`✅ Generated index files for ${icons.length} icons`);
 console.log(`   - Vue: ${vueIconsDir}/index.ts`);

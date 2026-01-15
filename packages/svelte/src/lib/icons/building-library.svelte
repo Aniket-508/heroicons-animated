@@ -1,39 +1,39 @@
 <script lang="ts">
-  export let size: number = 28;
-  let className: string = '';
-  export { className as class };
+export const size = 28;
+const className = "";
+export { className as class };
 
-  let isAnimating = false;
-  let isControlled = false;
+let isAnimating = false;
+let isControlled = false;
 
-  export function startAnimation() {
-    if (!isControlled) {
-      isAnimating = true;
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
+export function startAnimation() {
+  if (!isControlled) {
+    isAnimating = true;
+    setTimeout(() => {
+      isAnimating = false;
+    }, 600);
   }
+}
 
-  export function stopAnimation() {
-    isAnimating = false;
-  }
+export function stopAnimation() {
+  isAnimating = false;
+}
 
-  export function setControlled(value: boolean) {
-    isControlled = value;
-  }
+export function setControlled(value: boolean) {
+  isControlled = value;
+}
 
-  function handleMouseEnter() {
-    if (!isControlled) {
-      startAnimation();
-    }
+function handleMouseEnter() {
+  if (!isControlled) {
+    startAnimation();
   }
+}
 
-  function handleMouseLeave() {
-    if (!isControlled) {
-      stopAnimation();
-    }
+function handleMouseLeave() {
+  if (!isControlled) {
+    stopAnimation();
   }
+}
 </script>
 
 <div
@@ -55,37 +55,38 @@
     class="icon-svg"
     class:buildinglibrary-animate={isAnimating}
   >
-    <path d="M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18" />
-        <path
-          d="M12 6.75h.008v.008H12V6.75Z" />
-        <!-- Animation paths removed - needs regeneration -->
+    <path
+      d="M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18"
+    />
+    <path d="M12 6.75h.008v.008H12V6.75Z"/>
+    <!-- Animation paths removed - needs regeneration -->
   </svg>
 </div>
 
 <style>
-  div {
-    display: inline-block;
-  }
+div {
+  display: inline-block;
+}
 
-  .icon-svg {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
+.icon-svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-  .icon-svg.buildinglibrary-animate {
-    animation: buildinglibrary-animate 0.6s ease-in-out;
-  }
+.icon-svg.buildinglibrary-animate {
+  animation: buildinglibrary-animate 0.6s ease-in-out;
+}
 
-  @keyframes buildinglibrary-animate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+@keyframes buildinglibrary-animate {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

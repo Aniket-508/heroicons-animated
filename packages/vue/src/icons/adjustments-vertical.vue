@@ -15,68 +15,32 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <line
-          x1="6"
-          x2="6"
-          y1="3.75"
-          y2="13.5" />
-        <line
-          x1="6"
-          x2="6"
-          y1="16.5"
-          y2="20.25" />
-        <circle
-          cx="6"
-          cy="15"
-          fill="none"
-          r="1.5" />
+      <line x1="6" x2="6" y1="3.75" y2="13.5"/>
+      <line x1="6" x2="6" y1="16.5" y2="20.25"/>
+      <circle cx="6" cy="15" fill="none" r="1.5"/>
 
-        <line
-          x1="12"
-          x2="12"
-          y1="3.75"
-          y2="7.5" />
-        <line
-          x1="12"
-          x2="12"
-          y1="10.5"
-          y2="20.25" />
-        <circle
-          cx="12"
-          cy="9"
-          fill="none"
-          r="1.5" />
+      <line x1="12" x2="12" y1="3.75" y2="7.5"/>
+      <line x1="12" x2="12" y1="10.5" y2="20.25"/>
+      <circle cx="12" cy="9" fill="none" r="1.5"/>
 
-        <line
-          x1="18"
-          x2="18"
-          y1="3.75"
-          y2="13.5" />
-        <line
-          x1="18"
-          x2="18"
-          y1="16.5"
-          y2="20.25" />
-        <circle
-          cx="18"
-          cy="15"
-          fill="none"
-          r="1.5" />
+      <line x1="18" x2="18" y1="3.75" y2="13.5"/>
+      <line x1="18" x2="18" y1="16.5" y2="20.25"/>
+      <circle cx="18" cy="15" fill="none" r="1.5"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'AdjustmentsVerticalIcon',
+  name: "AdjustmentsVerticalIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -90,14 +54,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

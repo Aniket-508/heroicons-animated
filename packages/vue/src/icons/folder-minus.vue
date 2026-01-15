@@ -15,24 +15,27 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M13.0607 6.31066L10.9393 4.18934C10.658 3.90804 10.2765 3.75 9.87868 3.75H4.5C3.25736 3.75 2.25 4.75736 2.25 6V18C2.25 19.2426 3.25736 20.25 4.5 20.25H19.5C20.7426 20.25 21.75 19.2426 21.75 18V9C21.75 7.75736 20.7426 6.75 19.5 6.75H14.1213C13.7235 6.75 13.342 6.59197 13.0607 6.31066Z" />
-          <path
-            d="M15 13.5H9" />
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M13.0607 6.31066L10.9393 4.18934C10.658 3.90804 10.2765 3.75 9.87868 3.75H4.5C3.25736 3.75 2.25 4.75736 2.25 6V18C2.25 19.2426 3.25736 20.25 4.5 20.25H19.5C20.7426 20.25 21.75 19.2426 21.75 18V9C21.75 7.75736 20.7426 6.75 19.5 6.75H14.1213C13.7235 6.75 13.342 6.59197 13.0607 6.31066Z"
+      />
+      <path d="M15 13.5H9"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'FolderMinusIcon',
+  name: "FolderMinusIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -46,14 +49,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

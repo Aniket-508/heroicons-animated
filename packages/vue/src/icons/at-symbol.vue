@@ -15,26 +15,27 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <circle
-            cx="12"
-            cy="12"
-            r="4.5" />
-          <Motion is="path" ref="pathRef" d="M16.5 12c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
+      <circle cx="12" cy="12" r="4.5"/>
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M16.5 12c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+      />
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'AtSymbolIcon',
+  name: "AtSymbolIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -48,14 +49,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

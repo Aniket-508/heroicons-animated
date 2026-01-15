@@ -1,5 +1,13 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true
+  },
   "extends": [
     "ultracite/biome/core",
     "ultracite/biome/react",
@@ -10,7 +18,8 @@
       "style": {
         "useBlockStatements": "off",
         "useConsistentTypeDefinitions": "off",
-        "noNestedTernary": "off"
+        "noNestedTernary": "off",
+        "noExportedImports": "off"
       },
       "complexity": {
         "noForEach": "off"
@@ -22,11 +31,25 @@
       },
       "suspicious": {
         "noArrayIndexKey": "off",
-        "noSparseArray": "off"
+        "noSparseArray": "off",
+        "noExplicitAny": "off"
       },
       "performance": {
-        "noNamespaceImport": "off"
+        "noNamespaceImport": "off",
+        "noBarrelFile": "off"
+      },
+      "correctness": {
+        "useHookAtTopLevel": "off",
+        "noUnusedVariables": "off"
       }
     }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true
   }
 }

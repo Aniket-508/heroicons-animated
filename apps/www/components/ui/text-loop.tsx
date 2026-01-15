@@ -1,10 +1,9 @@
 "use client";
 
+import { cn } from "@heroicons-animated/shared";
 import type { Transition, Variants } from "motion/react";
 import { AnimatePresence, motion } from "motion/react";
 import { Children, useEffect, useState } from "react";
-
-import { cn } from "@/lib/utils";
 
 type TextLoopProps = {
   children: React.ReactNode[];

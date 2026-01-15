@@ -3,9 +3,7 @@
   "name": "ticket",
   "type": "registry:ui",
   "registryDependencies": [],
-  "dependencies": [
-    "@vueuse/motion"
-  ],
+  "dependencies": ["@vueuse/motion"],
   "devDependencies": [],
   "files": [
     {

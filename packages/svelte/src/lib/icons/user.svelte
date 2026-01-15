@@ -1,39 +1,39 @@
 <script lang="ts">
-  export let size: number = 28;
-  let className: string = '';
-  export { className as class };
+export const size = 28;
+const className = "";
+export { className as class };
 
-  let isAnimating = false;
-  let isControlled = false;
+let isAnimating = false;
+let isControlled = false;
 
-  export function startAnimation() {
-    if (!isControlled) {
-      isAnimating = true;
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
+export function startAnimation() {
+  if (!isControlled) {
+    isAnimating = true;
+    setTimeout(() => {
+      isAnimating = false;
+    }, 600);
   }
+}
 
-  export function stopAnimation() {
-    isAnimating = false;
-  }
+export function stopAnimation() {
+  isAnimating = false;
+}
 
-  export function setControlled(value: boolean) {
-    isControlled = value;
-  }
+export function setControlled(value: boolean) {
+  isControlled = value;
+}
 
-  function handleMouseEnter() {
-    if (!isControlled) {
-      startAnimation();
-    }
+function handleMouseEnter() {
+  if (!isControlled) {
+    startAnimation();
   }
+}
 
-  function handleMouseLeave() {
-    if (!isControlled) {
-      stopAnimation();
-    }
+function handleMouseLeave() {
+  if (!isControlled) {
+    stopAnimation();
   }
+}
 </script>
 
 <div
@@ -56,34 +56,35 @@
     class:user-animate={isAnimating}
   >
     <path
-            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+    />
   </svg>
 </div>
 
 <style>
-  div {
-    display: inline-block;
-  }
+div {
+  display: inline-block;
+}
 
-  .icon-svg {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
+.icon-svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-  .icon-svg.user-animate {
-    animation: user-animate 0.6s ease-in-out;
-  }
+.icon-svg.user-animate {
+  animation: user-animate 0.6s ease-in-out;
+}
 
-  @keyframes user-animate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+@keyframes user-animate {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

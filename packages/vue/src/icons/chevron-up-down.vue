@@ -15,24 +15,23 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M8.25 9 12 5.25 15.75 9" />
-        <path
-          d="M8.25 15 12 18.75 15.75 15" />
+      <Motion is="path" ref="pathRef" d="M8.25 9 12 5.25 15.75 9"/>
+      <path d="M8.25 15 12 18.75 15.75 15"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ChevronUpDownIcon',
+  name: "ChevronUpDownIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -46,14 +45,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

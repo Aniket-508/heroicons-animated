@@ -38,7 +38,14 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "arrow-down-on-square-stack",
-    keywords: ["arrow", "down", "on", "square", "stack", "arrow down on square stack",],
+    keywords: [
+      "arrow",
+      "down",
+      "on",
+      "square",
+      "stack",
+      "arrow down on square stack",
+    ],
   },
   {
     name: "arrow-down-on-square",
@@ -62,11 +69,25 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "arrow-left-end-on-rectangle",
-    keywords: ["arrow", "left", "end", "on", "rectangle", "arrow left end on rectangle",],
+    keywords: [
+      "arrow",
+      "left",
+      "end",
+      "on",
+      "rectangle",
+      "arrow left end on rectangle",
+    ],
   },
   {
     name: "arrow-left-start-on-rectangle",
-    keywords: ["arrow", "left", "start", "on", "rectangle", "arrow left start on rectangle",],
+    keywords: [
+      "arrow",
+      "left",
+      "start",
+      "on",
+      "rectangle",
+      "arrow left start on rectangle",
+    ],
   },
   {
     name: "arrow-left",
@@ -90,7 +111,13 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "arrow-path-rounded-square",
-    keywords: ["arrow", "path", "rounded", "square", "arrow path rounded square",],
+    keywords: [
+      "arrow",
+      "path",
+      "rounded",
+      "square",
+      "arrow path rounded square",
+    ],
   },
   {
     name: "arrow-path",
@@ -102,11 +129,25 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "arrow-right-end-on-rectangle",
-    keywords: ["arrow", "right", "end", "on", "rectangle", "arrow right end on rectangle",],
+    keywords: [
+      "arrow",
+      "right",
+      "end",
+      "on",
+      "rectangle",
+      "arrow right end on rectangle",
+    ],
   },
   {
     name: "arrow-right-start-on-rectangle",
-    keywords: ["arrow", "right", "start", "on", "rectangle", "arrow right start on rectangle",],
+    keywords: [
+      "arrow",
+      "right",
+      "start",
+      "on",
+      "rectangle",
+      "arrow right start on rectangle",
+    ],
   },
   {
     name: "arrow-right",
@@ -114,7 +155,14 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "arrow-top-right-on-square",
-    keywords: ["arrow", "top", "right", "on", "square", "arrow top right on square",],
+    keywords: [
+      "arrow",
+      "top",
+      "right",
+      "on",
+      "square",
+      "arrow top right on square",
+    ],
   },
   {
     name: "arrow-trending-down",
@@ -166,7 +214,14 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "arrow-up-on-square-stack",
-    keywords: ["arrow", "up", "on", "square", "stack", "arrow up on square stack",],
+    keywords: [
+      "arrow",
+      "up",
+      "on",
+      "square",
+      "stack",
+      "arrow up on square stack",
+    ],
   },
   {
     name: "arrow-up-on-square",
@@ -386,15 +441,34 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "chat-bubble-bottom-center-text",
-    keywords: ["chat", "bubble", "bottom", "center", "text", "chat bubble bottom center text",],
+    keywords: [
+      "chat",
+      "bubble",
+      "bottom",
+      "center",
+      "text",
+      "chat bubble bottom center text",
+    ],
   },
   {
     name: "chat-bubble-bottom-center",
-    keywords: ["chat", "bubble", "bottom", "center", "chat bubble bottom center",],
+    keywords: [
+      "chat",
+      "bubble",
+      "bottom",
+      "center",
+      "chat bubble bottom center",
+    ],
   },
   {
     name: "chat-bubble-left-ellipsis",
-    keywords: ["chat", "bubble", "left", "ellipsis", "chat bubble left ellipsis",],
+    keywords: [
+      "chat",
+      "bubble",
+      "left",
+      "ellipsis",
+      "chat bubble left ellipsis",
+    ],
   },
   {
     name: "chat-bubble-left-right",
@@ -406,7 +480,14 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "chat-bubble-oval-left-ellipsis",
-    keywords: ["chat", "bubble", "oval", "left", "ellipsis", "chat bubble oval left ellipsis",],
+    keywords: [
+      "chat",
+      "bubble",
+      "oval",
+      "left",
+      "ellipsis",
+      "chat bubble oval left ellipsis",
+    ],
   },
   {
     name: "chat-bubble-oval-left",
@@ -462,7 +543,7 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "circle-stack",
-    keywords: ["circle", "stack", "circle stack"],
+    keywords: ["circle", "stack", "circle_stack"],
   },
   {
     name: "clipboard-document-check",
@@ -602,7 +683,12 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "document-currency-bangladeshi",
-    keywords: ["document", "currency", "bangladeshi", "document currency bangladeshi",],
+    keywords: [
+      "document",
+      "currency",
+      "bangladeshi",
+      "document currency bangladeshi",
+    ],
   },
   {
     name: "document-currency-dollar",
@@ -650,7 +736,12 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "ellipsis-horizontal-circle",
-    keywords: ["ellipsis", "horizontal", "circle", "ellipsis horizontal circle",],
+    keywords: [
+      "ellipsis",
+      "horizontal",
+      "circle",
+      "ellipsis horizontal circle",
+    ],
   },
   {
     name: "ellipsis-horizontal",
@@ -853,10 +944,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
     keywords: ["light", "bulb", "light bulb"],
   },
   {
-    name: "link-slash",
-    keywords: ["link", "slash", "link slash"],
-  },
-  {
     name: "link",
     keywords: ["link"],
   },
@@ -929,10 +1016,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
     keywords: ["no", "symbol", "no symbol"],
   },
   {
-    name: "numbered-list",
-    keywords: ["numbered", "list", "numbered list"],
-  },
-  {
     name: "paint-brush",
     keywords: ["paint", "brush", "paint brush"],
   },
@@ -959,10 +1042,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   {
     name: "pencil",
     keywords: ["pencil"],
-  },
-  {
-    name: "percent-badge",
-    keywords: ["percent", "badge", "percent badge"],
   },
   {
     name: "phone-arrow-down-left",
@@ -1109,10 +1188,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
     keywords: ["signal"],
   },
   {
-    name: "slash",
-    keywords: ["slash"],
-  },
-  {
     name: "sparkles",
     keywords: ["sparkles"],
   },
@@ -1126,19 +1201,19 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   },
   {
     name: "square2-stack",
-    keywords: ["square2", "stack", "square2 stack"],
+    keywords: ["square", "2", "stack", "square 2 stack"],
   },
   {
     name: "square3-stack3-d",
-    keywords: ["square3", "stack3", "d", "square3 stack3 d"],
+    keywords: ["square", "3", "stack", "3d", "square 3 stack 3d"],
+  },
+  {
+    name: "squares2-x2",
+    keywords: ["squares", "2x2"],
   },
   {
     name: "squares-plus",
     keywords: ["squares", "plus", "squares plus"],
-  },
-  {
-    name: "squares2-x2",
-    keywords: ["squares2", "x2", "squares2 x2"],
   },
   {
     name: "star",
@@ -1151,10 +1226,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   {
     name: "stop",
     keywords: ["stop"],
-  },
-  {
-    name: "strikethrough",
-    keywords: ["strikethrough"],
   },
   {
     name: "sun",
@@ -1191,10 +1262,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   {
     name: "tv",
     keywords: ["tv"],
-  },
-  {
-    name: "underline",
-    keywords: ["underline"],
   },
   {
     name: "user-circle",
@@ -1245,10 +1312,6 @@ export const ICON_MANIFEST: IconManifestItem[] = [
     keywords: ["wallet"],
   },
   {
-    name: "wifi",
-    keywords: ["wifi"],
-  },
-  {
     name: "window",
     keywords: ["window"],
   },
@@ -1267,5 +1330,33 @@ export const ICON_MANIFEST: IconManifestItem[] = [
   {
     name: "x-mark",
     keywords: ["x", "mark", "x mark"],
-  }
+  },
+  {
+    name: "link-slash",
+    keywords: ["link", "slash", "link slash"],
+  },
+  {
+    name: "numbered-list",
+    keywords: ["numbered", "list", "numbered list"],
+  },
+  {
+    name: "percent-badge",
+    keywords: ["percent", "badge", "percent badge"],
+  },
+  {
+    name: "slash",
+    keywords: ["slash"],
+  },
+  {
+    name: "strikethrough",
+    keywords: ["strikethrough"],
+  },
+  {
+    name: "underline",
+    keywords: ["underline"],
+  },
+  {
+    name: "wifi",
+    keywords: ["wifi"],
+  },
 ];

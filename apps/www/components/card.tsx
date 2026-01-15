@@ -6,6 +6,7 @@ import {
   PauseIcon,
   PlayIcon,
 } from "@heroicons/react/24/outline";
+import { cn, SITE } from "@heroicons-animated/shared";
 import type { RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
@@ -21,10 +22,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { SITE } from "@heroicons-animated/shared";
 import { useTouchDevice } from "@/hooks/use-touch-device";
 import { getPackageManagerPrefix } from "@/lib/get-package-manager-prefix";
-import { cn } from "@/lib/utils";
 import { useFramework } from "@/providers/framework";
 import { usePackageNameContext } from "@/providers/package-name";
 
@@ -140,16 +139,18 @@ const CopyCLIAction = ({ name }: Pick<Icon, "name">) => {
 
   const getCLICommand = () => {
     const baseUrl = `${SITE.URL}/r`;
-    const registryPath = framework === "react" 
-      ? `${baseUrl}/${name}.json`
-      : `${baseUrl}/${framework}/${name}.json`;
-    
-    const cliCommand = framework === "react"
-      ? "shadcn@latest"
-      : framework === "vue"
-      ? "shadcn-vue@latest"
-      : "shadcn-svelte@latest";
-    
+    const registryPath =
+      framework === "react"
+        ? `${baseUrl}/${name}.json`
+        : `${baseUrl}/${framework}/${name}.json`;
+
+    const cliCommand =
+      framework === "react"
+        ? "shadcn@latest"
+        : framework === "vue"
+          ? "shadcn-vue@latest"
+          : "shadcn-svelte@latest";
+
     return `${getPackageManagerPrefix(packageName)} ${cliCommand} add "${registryPath}"`;
   };
 
@@ -218,7 +219,12 @@ const CopyCodeAction = ({ name }: Pick<Icon, "name">) => {
     try {
       setState("loading");
       if (typeof window !== "undefined" && window.umami) {
-        const ext = framework === "react" ? "tsx" : framework === "vue" ? "vue" : "svelte";
+        const ext =
+          framework === "react"
+            ? "tsx"
+            : framework === "vue"
+              ? "vue"
+              : "svelte";
         window.umami.track(ANALYTIC_EVENT.ICON_COPY, {
           icon: `${name}.${ext}`,
         });
@@ -258,7 +264,12 @@ const CopyCodeAction = ({ name }: Pick<Icon, "name">) => {
       <TooltipContent>
         Copy{" "}
         <code className="rounded-[4px] bg-neutral-50/20 px-1 py-0.5 font-mono">
-          .{framework === "react" ? "tsx" : framework === "vue" ? "vue" : "svelte"}
+          .
+          {framework === "react"
+            ? "tsx"
+            : framework === "vue"
+              ? "vue"
+              : "svelte"}
         </code>{" "}
         code
       </TooltipContent>

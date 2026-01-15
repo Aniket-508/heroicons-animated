@@ -1,39 +1,39 @@
 <script lang="ts">
-  export let size: number = 28;
-  let className: string = '';
-  export { className as class };
+export const size = 28;
+const className = "";
+export { className as class };
 
-  let isAnimating = false;
-  let isControlled = false;
+let isAnimating = false;
+let isControlled = false;
 
-  export function startAnimation() {
-    if (!isControlled) {
-      isAnimating = true;
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
+export function startAnimation() {
+  if (!isControlled) {
+    isAnimating = true;
+    setTimeout(() => {
+      isAnimating = false;
+    }, 600);
   }
+}
 
-  export function stopAnimation() {
-    isAnimating = false;
-  }
+export function stopAnimation() {
+  isAnimating = false;
+}
 
-  export function setControlled(value: boolean) {
-    isControlled = value;
-  }
+export function setControlled(value: boolean) {
+  isControlled = value;
+}
 
-  function handleMouseEnter() {
-    if (!isControlled) {
-      startAnimation();
-    }
+function handleMouseEnter() {
+  if (!isControlled) {
+    startAnimation();
   }
+}
 
-  function handleMouseLeave() {
-    if (!isControlled) {
-      stopAnimation();
-    }
+function handleMouseLeave() {
+  if (!isControlled) {
+    stopAnimation();
   }
+}
 </script>
 
 <div
@@ -55,34 +55,36 @@
     class="icon-svg"
     class:cube-animate={isAnimating}
   >
-    <path d="M21 7.5L12 2.25L3 7.5M21 7.5L12 12.75M21 7.5V16.5L12 21.75M3 7.5L12 12.75M3 7.5V16.5L12 21.75M12 12.75V21.75" />
+    <path
+      d="M21 7.5L12 2.25L3 7.5M21 7.5L12 12.75M21 7.5V16.5L12 21.75M3 7.5L12 12.75M3 7.5V16.5L12 21.75M12 12.75V21.75"
+    />
   </svg>
 </div>
 
 <style>
-  div {
-    display: inline-block;
-  }
+div {
+  display: inline-block;
+}
 
-  .icon-svg {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
+.icon-svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-  .icon-svg.cube-animate {
-    animation: cube-animate 0.6s ease-in-out;
-  }
+.icon-svg.cube-animate {
+  animation: cube-animate 0.6s ease-in-out;
+}
 
-  @keyframes cube-animate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+@keyframes cube-animate {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

@@ -15,30 +15,30 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
-        <path
-          d="M7.5 14.25v2.25" />
-        <path
-          d="M10.5 12v4.5" />
-        <path
-          d="M13.5 9.75v6.75" />
-        <path
-          d="M16.5 7.5v9" />
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+      />
+      <path d="M7.5 14.25v2.25"/>
+      <path d="M10.5 12v4.5"/>
+      <path d="M13.5 9.75v6.75"/>
+      <path d="M16.5 7.5v9"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ChartBarSquareIcon',
+  name: "ChartBarSquareIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -52,14 +52,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

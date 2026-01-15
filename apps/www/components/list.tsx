@@ -7,6 +7,7 @@ import { useQueryState } from "nuqs";
 import { useDeferredValue, useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
 import { Card, CardActions, CardTitle } from "@/components/card";
+import { useFramework } from "@/providers/framework";
 import { SearchInput } from "./search-input";
 
 type Props = {
@@ -24,6 +25,7 @@ const IconItem = ({
   icon: Icon;
   Icon: React.ElementType | undefined;
 }) => {
+  const { framework } = useFramework();
   const animationRef = useRef<{
     startAnimation: () => void;
     stopAnimation: () => void;
@@ -33,10 +35,15 @@ const IconItem = ({
     return null;
   }
 
+  const href =
+    framework === "react"
+      ? `/icons/${icon.name}`
+      : `/icons/${icon.name}?framework=${framework}`;
+
   return (
     <Link
       className="rounded-[20px] focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
-      href={`/icons/${icon.name}`}
+      href={href}
     >
       <Card
         animationRef={animationRef}

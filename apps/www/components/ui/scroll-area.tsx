@@ -1,7 +1,6 @@
 import { ScrollArea as BaseScrollArea } from "@base-ui/react/scroll-area";
+import { cn } from "@heroicons-animated/shared";
 import * as React from "react";
-
-import { cn } from "@/lib/utils";
 
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof BaseScrollArea.Root>,

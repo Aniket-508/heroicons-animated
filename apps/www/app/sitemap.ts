@@ -1,11 +1,9 @@
+import { ICON_MANIFEST, SITE } from "@heroicons-animated/shared";
 import type { MetadataRoute } from "next";
-
-import { SITE } from "@heroicons-animated/shared";
-import { ICON_LIST } from "@heroicons-animated/react";
 
 // biome-ignore lint/suspicious/useAwait: ignore
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const iconPages: MetadataRoute.Sitemap = ICON_LIST.map((icon) => ({
+  const iconPages: MetadataRoute.Sitemap = ICON_MANIFEST.map((icon) => ({
     url: `${SITE.URL}/icons/${icon.name}`,
     lastModified: new Date(),
     changeFrequency: "monthly",

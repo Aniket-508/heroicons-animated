@@ -5,10 +5,7 @@ import type { Schema } from "./registry-schema";
 
 const iconsDir = path.join(__dirname, "../../../packages/vue/src/icons");
 const registryComponents = path.join(__dirname, "../public/r/vue");
-const registryIndexPath = path.join(
-  __dirname,
-  "../public/r/vue/registry.json"
-);
+const registryIndexPath = path.join(__dirname, "../public/r/vue/registry.json");
 
 if (!fs.existsSync(registryComponents)) {
   fs.mkdirSync(registryComponents, { recursive: true });

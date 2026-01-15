@@ -1,39 +1,39 @@
 <script lang="ts">
-  export let size: number = 28;
-  let className: string = '';
-  export { className as class };
+export const size = 28;
+const className = "";
+export { className as class };
 
-  let isAnimating = false;
-  let isControlled = false;
+let isAnimating = false;
+let isControlled = false;
 
-  export function startAnimation() {
-    if (!isControlled) {
-      isAnimating = true;
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
+export function startAnimation() {
+  if (!isControlled) {
+    isAnimating = true;
+    setTimeout(() => {
+      isAnimating = false;
+    }, 600);
   }
+}
 
-  export function stopAnimation() {
-    isAnimating = false;
-  }
+export function stopAnimation() {
+  isAnimating = false;
+}
 
-  export function setControlled(value: boolean) {
-    isControlled = value;
-  }
+export function setControlled(value: boolean) {
+  isControlled = value;
+}
 
-  function handleMouseEnter() {
-    if (!isControlled) {
-      startAnimation();
-    }
+function handleMouseEnter() {
+  if (!isControlled) {
+    startAnimation();
   }
+}
 
-  function handleMouseLeave() {
-    if (!isControlled) {
-      stopAnimation();
-    }
+function handleMouseLeave() {
+  if (!isControlled) {
+    stopAnimation();
   }
+}
 </script>
 
 <div
@@ -55,34 +55,34 @@
     class="icon-svg"
     class:arrowturnleftup-animate={isAnimating}
   >
-    <path d="M11.99 7.5 8.24 3.75m0 0L4.49 7.5m3.75-3.75v16.499h11.25" />
+    <path d="M11.99 7.5 8.24 3.75m0 0L4.49 7.5m3.75-3.75v16.499h11.25"/>
   </svg>
 </div>
 
 <style>
-  div {
-    display: inline-block;
-  }
+div {
+  display: inline-block;
+}
 
-  .icon-svg {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
+.icon-svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-  .icon-svg.arrowturnleftup-animate {
-    animation: arrowturnleftup-animate 0.6s ease-in-out;
-  }
+.icon-svg.arrowturnleftup-animate {
+  animation: arrowturnleftup-animate 0.6s ease-in-out;
+}
 
-  @keyframes arrowturnleftup-animate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+@keyframes arrowturnleftup-animate {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

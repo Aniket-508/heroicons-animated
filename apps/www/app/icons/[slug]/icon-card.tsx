@@ -1,11 +1,10 @@
 "use client";
 
+import { getIconList } from "@heroicons-animated/react";
 import { useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
-
 import { Card, CardActions } from "@/components/card";
 import { useFramework } from "@/providers/framework";
-import { ICON_LIST } from "@heroicons-animated/react";
 
 type Props = {
   icon: Icon;
@@ -21,13 +20,8 @@ const IconCard = ({ icon }: Props) => {
   // For now, we only render React icons
   // Vue and Svelte icons would require a different rendering approach
   const IconComponent = useMemo(() => {
-    if (framework === "react") {
-      return ICON_LIST.find((item) => item.name === icon.name)?.icon;
-    }
-    // For Vue/Svelte, we could show a static SVG preview or placeholder
-    // For now, fallback to React icon
-    return ICON_LIST.find((item) => item.name === icon.name)?.icon;
-  }, [icon.name, framework]);
+    return getIconList().find((item) => item.name === icon.name)?.icon;
+  }, [icon.name]);
 
   if (!IconComponent) {
     return null;

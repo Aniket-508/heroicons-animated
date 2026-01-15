@@ -1,8 +1,7 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
-
 import { PACKAGE_MANAGER } from "@heroicons-animated/shared";
+import { createContext, useContext, useState } from "react";
 
 type PackageManager = (typeof PACKAGE_MANAGER)[keyof typeof PACKAGE_MANAGER];
 

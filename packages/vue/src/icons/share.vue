@@ -15,37 +15,29 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M7.21721 10.9071C7.39737 11.2307 7.5 11.6034 7.5 12C7.5 12.3966 7.39737 12.7693 7.21721 13.0929M7.21721 10.9071L16.7828 5.5929M7.21721 13.0929L16.7828 18.4071" />
-          <circle
-            custom={0}
-            cx="5.25"
-            cy="12"
-            r="2.25" />
-          <circle
-            custom={0.15}
-            cx="18.75"
-            cy="4.5"
-            r="2.25" />
-          <circle
-            custom={0.3}
-            cx="18.75"
-            cy="19.5"
-            r="2.25" />
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M7.21721 10.9071C7.39737 11.2307 7.5 11.6034 7.5 12C7.5 12.3966 7.39737 12.7693 7.21721 13.0929M7.21721 10.9071L16.7828 5.5929M7.21721 13.0929L16.7828 18.4071"
+      />
+      <circle :custom="0" cx="5.25" cy="12" r="2.25"/>
+      <circle :custom="0.15" cx="18.75" cy="4.5" r="2.25"/>
+      <circle :custom="0.3" cx="18.75" cy="19.5" r="2.25"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ShareIcon',
+  name: "ShareIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -59,14 +51,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

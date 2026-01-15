@@ -1,17 +1,17 @@
 "use client";
 
+import { getIconList } from "@heroicons-animated/react";
 import Link from "next/link";
 import { useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
-
 import { Card, CardTitle } from "@/components/card";
-import { ICON_LIST } from "@heroicons-animated/react";
+import { useFramework } from "@/providers/framework";
 
 type Props = {
   currentIcon: Icon;
 };
 
-const ICON_MAP = new Map(ICON_LIST.map((item) => [item.name, item.icon]));
+const ICON_MAP = new Map(getIconList().map((item) => [item.name, item.icon]));
 
 const SimilarIconItem = ({
   icon,
@@ -20,6 +20,7 @@ const SimilarIconItem = ({
   icon: Icon;
   Icon: React.ElementType | undefined;
 }) => {
+  const { framework } = useFramework();
   const animationRef = useRef<{
     startAnimation: () => void;
     stopAnimation: () => void;
@@ -29,10 +30,15 @@ const SimilarIconItem = ({
     return null;
   }
 
+  const href =
+    framework === "react"
+      ? `/icons/${icon.name}`
+      : `/icons/${icon.name}?framework=${framework}`;
+
   return (
     <Link
       className="rounded-[20px] focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
-      href={`/icons/${icon.name}`}
+      href={href}
     >
       <Card
         animationRef={animationRef}
@@ -54,7 +60,8 @@ const SimilarIcons = ({ currentIcon }: Props) => {
   const similarIcons = useMemo(() => {
     const currentKeywords = new Set(currentIcon.keywords);
 
-    const scored = ICON_LIST.filter((icon) => icon.name !== currentIcon.name)
+    const scored = getIconList()
+      .filter((icon) => icon.name !== currentIcon.name)
       .map((icon) => {
         const sharedKeywords = icon.keywords.filter((kw) =>
           currentKeywords.has(kw)

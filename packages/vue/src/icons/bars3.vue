@@ -45,15 +45,15 @@
 
 <script lang="ts">
 export default {
-  name: 'Bars3Icon',
+  name: "Bars3Icon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -67,14 +67,14 @@ const variants = {
     scaleX: 1,
     transition: {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
   animate: (custom: number) => ({
     scaleX: [1, 0.6, 1],
     transition: {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: "easeInOut",
       delay: custom,
     },
   }),
@@ -97,24 +97,24 @@ const motion3 = useMotion(bar3, {
 let isControlled = false;
 
 const startAnimation = () => {
-    // apply variant 'animate' with custom delay?
-    // useMotion's apply doesn't automatically use the 'custom' prop from template if we call it manually?
-    // We need to pass the variant object.
-    
-    // In React: variants=CREATE_BAR_VARIANTS(delay)
-    // Here we defined 'animate' as a function in variants object.
-    // motionInstance.apply(variants.animate) might work if it resolves functions?
-    // Let's manually construct it to be safe.
-    
-    motion1.apply(variants.animate(0));
-    motion2.apply(variants.animate(0.1));
-    motion3.apply(variants.animate(0.2));
+  // apply variant 'animate' with custom delay?
+  // useMotion's apply doesn't automatically use the 'custom' prop from template if we call it manually?
+  // We need to pass the variant object.
+
+  // In React: variants=CREATE_BAR_VARIANTS(delay)
+  // Here we defined 'animate' as a function in variants object.
+  // motionInstance.apply(variants.animate) might work if it resolves functions?
+  // Let's manually construct it to be safe.
+
+  motion1.apply(variants.animate(0));
+  motion2.apply(variants.animate(0.1));
+  motion3.apply(variants.animate(0.2));
 };
 
 const stopAnimation = () => {
-    motion1.apply(variants.normal);
-    motion2.apply(variants.normal);
-    motion3.apply(variants.normal);
+  motion1.apply(variants.normal);
+  motion2.apply(variants.normal);
+  motion3.apply(variants.normal);
 };
 
 const handleMouseEnter = () => {

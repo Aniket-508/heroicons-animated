@@ -1,7 +1,6 @@
 import { Input as BaseInput } from "@base-ui/react/input";
+import { cn } from "@heroicons-animated/shared";
 import type * as React from "react";
-
-import { cn } from "@/lib/utils";
 
 interface InputProps extends React.ComponentProps<typeof BaseInput> {
   inputContainerClassName?: string;

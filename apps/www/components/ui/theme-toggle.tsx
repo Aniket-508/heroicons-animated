@@ -1,16 +1,15 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { useTheme } from "next-themes";
-import { useEffect, useRef, useState } from "react";
-import { useHotkeys } from "react-hotkeys-hook";
-
 import {
   MoonIcon,
   type MoonIconHandle,
   SunIcon,
   type SunIconHandle,
 } from "@heroicons-animated/react";
+import { AnimatePresence, motion } from "motion/react";
+import { useTheme } from "next-themes";
+import { useEffect, useRef, useState } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
 
 type Theme = "light" | "dark" | "system";
 

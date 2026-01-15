@@ -22,6 +22,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
+    "lint": "biome check --apply .",
+    "lint:check": "biome check .",
     "type-check": "vue-tsc --noEmit"
   },
   "peerDependencies": {

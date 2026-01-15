@@ -3,9 +3,7 @@
   "name": "arrow-turn-down-right",
   "type": "registry:ui",
   "registryDependencies": [],
-  "dependencies": [
-    "@vueuse/motion"
-  ],
+  "dependencies": ["@vueuse/motion"],
   "devDependencies": [],
   "files": [
     {

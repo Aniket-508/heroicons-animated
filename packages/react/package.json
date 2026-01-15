@@ -28,6 +28,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "lint": "biome check --apply .",
+    "lint:check": "biome check .",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -35,6 +37,7 @@
     "motion": "^12.0.0"
   },
   "dependencies": {
+    "@heroicons-animated/shared": "workspace:*",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.4.0"
   },

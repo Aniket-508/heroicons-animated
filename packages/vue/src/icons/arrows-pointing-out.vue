@@ -16,32 +16,36 @@
       stroke-linejoin="round"
     >
       <g>
-          <Motion is="path" ref="pathRef" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9" />
-        </g>
-        <g>
-          <path d="M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15" />
-        </g>
-        <g>
-          <path d="M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9" />
-        </g>
-        <g>
-          <path d="M20.25 20.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-        </g>
+        <Motion
+          is="path"
+          ref="pathRef"
+          d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9"
+        />
+      </g>
+      <g>
+        <path d="M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15"/>
+      </g>
+      <g>
+        <path d="M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9"/>
+      </g>
+      <g>
+        <path d="M20.25 20.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/>
+      </g>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ArrowsPointingOutIcon',
+  name: "ArrowsPointingOutIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -55,14 +59,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

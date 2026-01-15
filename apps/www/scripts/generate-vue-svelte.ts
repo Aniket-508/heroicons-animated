@@ -3,7 +3,10 @@ import path from "node:path";
 
 const iconsDir = path.join(__dirname, "../../../packages/react/src/icons");
 const vueOutputDir = path.join(__dirname, "../../../packages/vue/src/icons");
-const svelteOutputDir = path.join(__dirname, "../../../packages/svelte/src/icons");
+const svelteOutputDir = path.join(
+  __dirname,
+  "../../../packages/svelte/src/icons"
+);
 
 // Ensure output directories exist
 if (!fs.existsSync(vueOutputDir)) {
@@ -13,7 +16,7 @@ if (!fs.existsSync(svelteOutputDir)) {
   fs.mkdirSync(svelteOutputDir, { recursive: true });
 }
 
-function toPascalCase(str: string): string {
+function _toPascalCase(str: string): string {
   return str
     .split("-")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
@@ -84,21 +87,24 @@ function generateVueComponent(iconName: string, svgContent: string): string {
   // Find the first path element and wrap it with Motion
   // For simplicity, we'll wrap the first path element found
   let wrappedSvgContent = svgContent;
-  const pathMatch = svgContent.match(/<path\s+([^>]*?)d="([^"]+)"([^>]*?)(\/>|>)/);
+  const pathMatch = svgContent.match(
+    /<path\s+([^>]*?)d="([^"]+)"([^>]*?)(\/>|>)/
+  );
   if (pathMatch) {
     const fullPath = pathMatch[0];
     const attrs = pathMatch[1] + pathMatch[3];
     const d = pathMatch[2];
-    const isSelfClosing = pathMatch[4] === '/>';
-    
+    const isSelfClosing = pathMatch[4] === "/>";
+
     // Extract other attributes from the path
-    const otherAttrs = attrs.replace(/\s*variants=\{[^}]+\}/g, '')
-      .replace(/\s*animate=\{[^}]+\}/g, '')
-      .replace(/\s*initial="[^"]+"/g, '')
-      .replace(/\s*transition=\{[\s\S]*?\}\s*\}/g, '')
+    const otherAttrs = attrs
+      .replace(/\s*variants=\{[^}]+\}/g, "")
+      .replace(/\s*animate=\{[^}]+\}/g, "")
+      .replace(/\s*initial="[^"]+"/g, "")
+      .replace(/\s*transition=\{[\s\S]*?\}\s*\}/g, "")
       .trim();
-    
-    const motionPath = `<Motion is="path" ref="pathRef" d="${d}"${otherAttrs ? ' ' + otherAttrs : ''}${isSelfClosing ? ' />' : '></Motion>'}`;
+
+    const motionPath = `<Motion is="path" ref="pathRef" d="${d}"${otherAttrs ? ` ${otherAttrs}` : ""}${isSelfClosing ? " />" : "></Motion>"}`;
     wrappedSvgContent = svgContent.replace(fullPath, motionPath);
   } else {
     // If no path found, try to wrap the first element (circle, rect, etc.)

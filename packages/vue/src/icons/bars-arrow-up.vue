@@ -15,24 +15,23 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25" />
-          <path
-            d="M13.5 12.75L17.25 9L21 12.75M17.25 9v12" />
+      <Motion is="path" ref="pathRef" d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25"/>
+      <path d="M13.5 12.75L17.25 9L21 12.75M17.25 9v12"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'BarsArrowUpIcon',
+  name: "BarsArrowUpIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -46,14 +45,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { LINK } from "@heroicons-animated/shared";
+import { cn, LINK } from "@heroicons-animated/shared";
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import Link from "next/link";
@@ -8,8 +8,6 @@ import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 import { GithubStarsButton } from "@/components/github-button";
 import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { cn } from "@/lib/utils";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useFramework } from "@/providers/framework";
 
 interface FilledHeartIconHandle {
@@ -108,19 +106,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <Tabs
-          className="w-full"
-          onValueChange={(value) =>
-            setFramework(value as "react" | "vue" | "svelte")
-          }
-          value={framework}
-        >
-          <TabsList className="w-full justify-start">
-            <TabsTrigger value="react">React</TabsTrigger>
-            <TabsTrigger value="vue">Vue</TabsTrigger>
-            <TabsTrigger value="svelte">Svelte</TabsTrigger>
-          </TabsList>
-        </Tabs>
       </div>
     </header>
   );

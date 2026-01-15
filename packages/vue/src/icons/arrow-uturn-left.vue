@@ -15,25 +15,25 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M3 9h12a6 6 0 0 1 0 12h-3" />
-        <g>
-          <path d="M9 15 3 9m0 0 6-6" />
-        </g>
+      <Motion is="path" ref="pathRef" d="M3 9h12a6 6 0 0 1 0 12h-3"/>
+      <g>
+        <path d="M9 15 3 9m0 0 6-6"/>
+      </g>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ArrowUturnLeftIcon',
+  name: "ArrowUturnLeftIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -47,14 +47,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

@@ -1,4 +1,4 @@
-import { ICON_MANIFEST } from "@heroicons-animated/react/manifest";
+import { ICON_MANIFEST } from "@heroicons-animated/shared";
 
 type Icon = {
   name: string;

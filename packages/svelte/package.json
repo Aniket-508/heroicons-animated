@@ -21,6 +21,8 @@
   "scripts": {
     "build": "svelte-package",
     "dev": "svelte-package --watch",
+    "lint": "biome check --apply .",
+    "lint:check": "biome check .",
     "type-check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "peerDependencies": {

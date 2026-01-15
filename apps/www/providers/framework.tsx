@@ -1,7 +1,7 @@
 "use client";
 
 import type { Framework } from "@heroicons-animated/shared";
-import { useQueryState } from "nuqs";
+import { parseAsStringLiteral, useQueryState } from "nuqs";
 import { createContext, type ReactNode, useContext } from "react";
 
 type FrameworkContextType = {
@@ -14,10 +14,12 @@ const FrameworkContext = createContext<FrameworkContextType | undefined>(
 );
 
 export function FrameworkProvider({ children }: { children: ReactNode }) {
-  const [framework, setFramework] = useQueryState<Framework>("framework", {
-    defaultValue: "react",
-    clearOnDefault: false,
-  });
+  const [framework, setFramework] = useQueryState(
+    "framework",
+    parseAsStringLiteral(["react", "vue", "svelte"] as const).withDefault(
+      "react"
+    )
+  );
 
   return (
     <FrameworkContext.Provider value={{ framework, setFramework }}>

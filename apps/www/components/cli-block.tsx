@@ -2,17 +2,15 @@
 
 import { ScrollArea as BaseScrollArea } from "@base-ui/react/scroll-area";
 import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
+import { cn, PACKAGE_MANAGER } from "@heroicons-animated/shared";
 import { useRef, useState, useTransition } from "react";
 import { toast } from "sonner";
 import type { Icon } from "@/actions/get-icons";
 import type { IconStatus } from "@/components/ui/icon-state";
-
 import { IconState } from "@/components/ui/icon-state";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TextLoop } from "@/components/ui/text-loop";
-import { PACKAGE_MANAGER } from "@heroicons-animated/shared";
 import { getPackageManagerPrefix } from "@/lib/get-package-manager-prefix";
-import { cn } from "@/lib/utils";
 import { usePackageNameContext } from "@/providers/package-name";
 
 type CliBlockProps = {

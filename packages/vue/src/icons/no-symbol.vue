@@ -16,25 +16,28 @@
       stroke-linejoin="round"
     >
       <g>
-            <Motion is="path" ref="pathRef" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636" />
-          </g>
-          <path
-            d="M18.364 18.364L5.636 5.636" />
+        <Motion
+          is="path"
+          ref="pathRef"
+          d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636"
+        />
+      </g>
+      <path d="M18.364 18.364L5.636 5.636"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'NoSymbolIcon',
+  name: "NoSymbolIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -48,14 +51,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

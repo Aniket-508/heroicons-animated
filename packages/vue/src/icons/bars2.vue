@@ -37,15 +37,15 @@
 
 <script lang="ts">
 export default {
-  name: 'Bars2Icon',
+  name: "Bars2Icon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -59,14 +59,14 @@ const variants = {
     scaleX: 1,
     transition: {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
   animate: (custom: number) => ({
     scaleX: [1, 0.6, 1],
     transition: {
       duration: 0.3,
-      ease: 'easeInOut',
+      ease: "easeInOut",
       delay: custom,
     },
   }),

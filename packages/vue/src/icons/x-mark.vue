@@ -15,24 +15,23 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M6 6l12 12" />
-          <path
-            d="M18 6l-12 12" />
+      <Motion is="path" ref="pathRef" d="M6 6l12 12"/>
+      <path d="M18 6l-12 12"/>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'XMarkIcon',
+  name: "XMarkIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -46,14 +45,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

@@ -1,11 +1,10 @@
 "use client";
 
 import { Avatar as AvatarBase } from "@base-ui/react/avatar";
+import { cn } from "@heroicons-animated/shared";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 import type * as React from "react";
-
-import { cn } from "@/lib/utils";
 
 const avatarVariants = cva(
   "relative flex shrink-0 overflow-hidden rounded-full",

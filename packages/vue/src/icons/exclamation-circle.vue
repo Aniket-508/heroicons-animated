@@ -15,26 +15,30 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        <g>
-          <path d="M12 9v3.75" />
-          <path d="M12 15.75h.008v.008H12v-.008Z" />
-        </g>
+      <Motion
+        is="path"
+        ref="pathRef"
+        d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+      />
+      <g>
+        <path d="M12 9v3.75"/>
+        <path d="M12 15.75h.008v.008H12v-.008Z"/>
+      </g>
     </svg>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'ExclamationCircleIcon',
+  name: "ExclamationCircleIcon",
 };
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { MotionComponent as Motion, useMotion } from '@vueuse/motion';
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
 
-interface Props {
+export interface Props {
   size?: number;
   class?: string;
 }
@@ -48,14 +52,14 @@ const variants = {
     scale: 1,
     transition: {
       duration: 0.2,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
   animate: {
     scale: [1, 1.08, 1],
     transition: {
       duration: 0.45,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };

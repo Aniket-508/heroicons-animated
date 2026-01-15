@@ -1,44 +1,45 @@
 <script lang="ts">
-  export let size: number = 28;
-  let className: string = '';
-  export { className as class };
+export const size = 28;
+const className = "";
+export { className as class };
 
-  let isAnimating = false;
-  let isControlled = false;
+let isAnimating = false;
+let isControlled = false;
 
-  export function startAnimation() {
-    if (!isControlled) {
-      isAnimating = true;
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
+export function startAnimation() {
+  if (!isControlled) {
+    isAnimating = true;
+    setTimeout(() => {
+      isAnimating = false;
+    }, 600);
   }
+}
 
-  export function stopAnimation() {
-    isAnimating = false;
+export function stopAnimation() {
+  isAnimating = false;
+}
+
+export function setControlled(value: boolean) {
+  isControlled = value;
+}
+
+function handleMouseEnter() {
+  if (!isControlled) {
+    startAnimation();
   }
+}
 
-  export function setControlled(value: boolean) {
-    isControlled = value;
+function handleMouseLeave() {
+  if (!isControlled) {
+    stopAnimation();
   }
+}
 
-  function handleMouseEnter() {
-    if (!isControlled) {
-      startAnimation();
-    }
-  }
-
-  function handleMouseLeave() {
-    if (!isControlled) {
-      stopAnimation();
-  }
-
-  const BARS = [
-    { d: "M3.75 6.75h16.5" },
-    { d: "M3.75 12h16.5" },
-    { d: "M3.75 17.25h16.5" },
-  ];
+const BARS = [
+  { d: "M3.75 6.75h16.5" },
+  { d: "M3.75 12h16.5" },
+  { d: "M3.75 17.25h16.5" },
+];
 </script>
 
 <div
@@ -68,29 +69,29 @@
 </div>
 
 <style>
-  div {
-    display: inline-block;
-  }
+div {
+  display: inline-block;
+}
 
-  .icon-svg {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
+.icon-svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-  .icon-svg.bars3-animate {
-    animation: bars3-animate 0.6s ease-in-out;
-  }
+.icon-svg.bars3-animate {
+  animation: bars3-animate 0.6s ease-in-out;
+}
 
-  @keyframes bars3-animate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+@keyframes bars3-animate {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

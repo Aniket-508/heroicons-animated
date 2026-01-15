@@ -3,9 +3,7 @@
   "name": "bars3-bottom-right",
   "type": "registry:ui",
   "registryDependencies": [],
-  "dependencies": [
-    "@vueuse/motion"
-  ],
+  "dependencies": ["@vueuse/motion"],
   "devDependencies": [],
   "files": [
     {

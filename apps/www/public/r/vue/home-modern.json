@@ -3,9 +3,7 @@
   "name": "home-modern",
   "type": "registry:ui",
   "registryDependencies": [],
-  "dependencies": [
-    "@vueuse/motion"
-  ],
+  "dependencies": ["@vueuse/motion"],
   "devDependencies": [],
   "files": [
     {

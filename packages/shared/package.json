@@ -8,9 +8,17 @@
     ".": "./src/index.ts"
   },
   "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "lint": "biome check --apply .",
+    "lint:check": "biome check .",
     "type-check": "tsc --noEmit"
   },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
+  },
   "devDependencies": {
+    "tsup": "^8.4.1",
     "typescript": "^5.9.3"
   }
 }

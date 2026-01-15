@@ -1,11 +1,9 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { ICON_MANIFEST, LINK, SITE } from "@heroicons-animated/shared";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
 import { CliBlock } from "@/components/cli-block";
-import { LINK, SITE } from "@heroicons-animated/shared";
-import { ICON_LIST } from "@heroicons-animated/react";
 import { kebabToPascalCase } from "@/lib/kebab-to-pascal";
 import { BreadcrumbJsonLd } from "@/seo/json-ld";
 import { baseMetadata } from "@/seo/metadata";
@@ -14,14 +12,15 @@ import { SimilarIcons } from "./similar-icons";
 
 type Props = {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ framework?: string }>;
 };
 
 const getIconBySlug = (slug: string) => {
-  return ICON_LIST.find((icon) => icon.name === slug);
+  return ICON_MANIFEST.find((icon) => icon.name === slug);
 };
 
 export const generateStaticParams = () => {
-  return ICON_LIST.map((icon) => ({
+  return ICON_MANIFEST.map((icon) => ({
     slug: icon.name,
   }));
 };
@@ -73,7 +72,7 @@ export const generateMetadata = async ({
   };
 };
 
-const IconJsonLd = ({ icon }: { icon: (typeof ICON_LIST)[number] }) => {
+const IconJsonLd = ({ icon }: { icon: (typeof ICON_MANIFEST)[number] }) => {
   const pascalName = kebabToPascalCase(icon.name);
 
   const jsonLd = {
@@ -101,8 +100,10 @@ const IconJsonLd = ({ icon }: { icon: (typeof ICON_LIST)[number] }) => {
   );
 };
 
-const IconPage = async ({ params }: Props) => {
+const IconPage = async ({ params, searchParams }: Props) => {
   const { slug } = await params;
+  const searchParamsResolved = await searchParams;
+  const framework = searchParamsResolved.framework;
   const icon = getIconBySlug(slug);
 
   if (!icon) {
@@ -110,6 +111,9 @@ const IconPage = async ({ params }: Props) => {
   }
 
   const pascalName = kebabToPascalCase(slug);
+
+  const backHref =
+    framework && framework !== "react" ? `/?framework=${framework}` : "/";
 
   return (
     <>
@@ -125,7 +129,7 @@ const IconPage = async ({ params }: Props) => {
       <section className="view-container flex flex-col items-start border-neutral-200 py-12 xl:border-x xl:pb-4 min-[880px]:pt-[60px] dark:border-neutral-800">
         <Link
           className="mb-8 flex items-center gap-2 font-sans text-secondary text-sm transition-[color] duration-100 hover:text-primary focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
-          href="/"
+          href={backHref}
         >
           <ArrowLeftIcon className="size-4" />
           Back to all icons

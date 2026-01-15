@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@heroicons-animated/shared";
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
@@ -10,8 +11,6 @@ import {
   useImperativeHandle,
   useRef,
 } from "react";
-
-import { cn } from "../lib/utils";
 
 export interface Battery50IconHandle {
   startAnimation: () => void;

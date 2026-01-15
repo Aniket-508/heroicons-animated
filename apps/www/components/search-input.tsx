@@ -1,7 +1,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useRef } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
-
+import { FrameworkDropdown } from "./framework-dropdown";
 import { Input } from "./ui/input";
 import { Kbd } from "./ui/kbd";
 
@@ -61,7 +61,7 @@ const SearchInput = ({
 
   return (
     <div className="sticky top-0 z-50 border-neutral-200 border-y bg-background/80 backdrop-blur-md dark:border-neutral-800 dark:bg-background/80">
-      <div className="view-container border-neutral-200 py-2 xl:border-x dark:border-neutral-800">
+      <div className="view-container flex items-center gap-2 border-neutral-200 py-2 xl:border-x dark:border-neutral-800">
         <Input
           aria-label="Search icons"
           autoCapitalize="off"
@@ -93,6 +93,7 @@ const SearchInput = ({
           }
           value={searchValue}
         />
+        <FrameworkDropdown />
       </div>
     </div>
   );

@@ -1,8 +1,7 @@
 import { Radio as BaseRadio } from "@base-ui/react/radio";
 import { RadioGroup as BaseRadioGroup } from "@base-ui/react/radio-group";
+import { cn } from "@heroicons-animated/shared";
 import * as React from "react";
-
-import { cn } from "@/lib/utils";
 
 const RadioGroup = ({
   className,
