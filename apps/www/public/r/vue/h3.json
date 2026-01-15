@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "h3",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "h3.vue",
+      "content": "<template>\n  <div\n    class=\"cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n    role=\"button\"\n    tabindex=\"0\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion is=\"path\" ref=\"pathRef\" d=\"M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            d=\"M20.905 14.626a4.52 4.52 0 0 1 .738 3.603c-.154.695-.794 1.143-1.504 1.208a15.194 15.194 0 0 1-3.639-.104m4.405-4.707a4.52 4.52 0 0 0 .738-3.603c-.154-.696-.794-1.144-1.504-1.209a15.19 15.19 0 0 0-3.639.104m4.405 4.708H18\" />\n    </svg>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'H3Icon',\n};\n</script>\n\n<script setup>\nimport { ref } from 'vue';\nimport { MotionComponent as Motion, useMotion } from '@vueuse/motion';\n\ndefineProps({\n  size: {\n    type: Number,\n    default: 28,\n  },\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 200,\n      ease: 'easeOut',\n    },\n  },\n  animate: {\n    scale: [1, 1.1, 1],\n    transition: {\n      duration: 400,\n      ease: 'easeInOut',\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nfunction handleMouseEnter() {\n  motionInstance.apply(variants.animate);\n}\n\nfunction handleMouseLeave() {\n  motionInstance.apply(variants.normal);\n}\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

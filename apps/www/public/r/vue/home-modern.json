@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "home-modern",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "home-modern.vue",
+      "content": "<template>\n  <div\n    class=\"cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n    role=\"button\"\n    tabindex=\"0\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion is=\"path\" ref=\"pathRef\" d=\"M8.25 21V16.125C8.25 15.5037 8.75368 15 9.375 15H11.625C12.2463 15 12.75 15.5037 12.75 16.125V21M12.75 21H17.25V3.54545M12.75 21H20.25V10.75M2.25 21H3.75M21.75 21H3.75M2.25 9L6.75 7.36364M18.75 3L17.25 3.54545M17.25 9.75L20.25 10.75M21.75 11.25L20.25 10.75M6.75 7.36364V3H3.75V21M6.75 7.36364L17.25 3.54545\" />\n    </svg>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'HomeModernIcon',\n};\n</script>\n\n<script setup>\nimport { ref } from 'vue';\nimport { MotionComponent as Motion, useMotion } from '@vueuse/motion';\n\ndefineProps({\n  size: {\n    type: Number,\n    default: 28,\n  },\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 200,\n      ease: 'easeOut',\n    },\n  },\n  animate: {\n    scale: [1, 1.1, 1],\n    transition: {\n      duration: 400,\n      ease: 'easeInOut',\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nfunction handleMouseEnter() {\n  motionInstance.apply(variants.animate);\n}\n\nfunction handleMouseLeave() {\n  motionInstance.apply(variants.normal);\n}\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "speaker-x-mark",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "speaker-x-mark.svelte",
+      "content": "<script>\n\t/**\n\t * @typedef {Object} Props\n\t * @property {string} [color]\n\t * @property {number} [size]\n\t * @property {number} [strokeWidth]\n\t * @property {boolean} [animate]\n\t * @property {string} [class]\n\t */\n\n\t/** @type {Props} */\n\tlet {\n\t\tcolor = 'currentColor',\n\t\tsize = 28,\n\t\tstrokeWidth = 1.5,\n\t\tanimate = false,\n\t\tclass: className = ''\n\t} = $props();\n\n\tfunction handleMouseEnter() {\n\t\tif (!animate) {\n\t\t\tanimate = true;\n\t\t\tsetTimeout(() => {\n\t\t\t\tanimate = false;\n\t\t\t}, 600);\n\t\t}\n\t}\n</script>\n\n<div class={className} aria-label=\"speaker-xmark\" role=\"img\" onmouseenter={handleMouseEnter}>\n\t<svg\n\t\txmlns=\"http://www.w3.org/2000/svg\"\n\t\twidth={size}\n\t\theight={size}\n\t\tviewBox=\"0 0 24 24\"\n\t\tfill=\"none\"\n\t\tstroke={color}\n\t\tstroke-width={strokeWidth}\n\t\tstroke-linecap=\"round\"\n\t\tstroke-linejoin=\"round\"\n\t\tclass=\"speaker-xmark-icon\"\n\t\tclass:animate\n\t>\n\t\t<path class=\"speaker-xmark-path\" d=\"M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z\" />\n        <path class=\"speaker-xmark-path\"\n          d=\"M17.25 9.75L21.75 14.25\" />\n        <path class=\"speaker-xmark-path\"\n          d=\"M21.75 9.75L17.25 14.25\" />\n\t</svg>\n</div>\n\n<style>\n\tdiv {\n\t\tdisplay: inline-block;\n\t}\n\t.speaker-xmark-icon {\n\t\toverflow: visible;\n\t}\n\n\t.speaker-xmark-path {\n\t\ttransform-origin: center;\n\t\ttransition: transform 0.3s ease;\n\t}\n\n\t.speaker-xmark-icon.animate .speaker-xmark-path {\n\t\tanimation: speaker-xmark-animate 0.6s ease-in-out;\n\t}\n\n\t@keyframes speaker-xmark-animate {\n\t\t0% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t\t50% {\n\t\t\ttransform: scale(1.1);\n\t\t}\n\t\t100% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

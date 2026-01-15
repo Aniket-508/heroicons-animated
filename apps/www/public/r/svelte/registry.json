@@ -1,0 +1,4115 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry.json",
+  "name": "heroicons-animated (Svelte)",
+  "homepage": "https://www.heroicons-animated.com",
+  "items": [
+    {
+      "name": "academic-cap",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "academic-cap.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adjustments-horizontal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "adjustments-horizontal.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adjustments-vertical",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "adjustments-vertical.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "archive-box-arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "archive-box-x-mark.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "archive-box.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-on-square-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down-on-square-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down-on-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-tray",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down-tray.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-left-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-end-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-left-end-on-rectangle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-start-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-left-start-on-rectangle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-long-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-long-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-long-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-long-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-path-rounded-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-path-rounded-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-path",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-path.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-right-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-end-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-right-end-on-rectangle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-start-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-right-start-on-rectangle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-top-right-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-top-right-on-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-trending-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-trending-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-trending-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-trending-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-down-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-down-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-down-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-left-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-left-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-left-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-left-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-right-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-right-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-right-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-right-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-up-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-up-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-turn-up-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-on-square-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up-on-square-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up-on-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-tray",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up-tray.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-uturn-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-uturn-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-uturn-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrow-uturn-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-pointing-in",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrows-pointing-in.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-pointing-out",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrows-pointing-out.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-right-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrows-right-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-up-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "arrows-up-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "at-symbol",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "at-symbol.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "backspace",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "backspace.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "backward",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "backward.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banknotes",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "banknotes.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars-arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars-arrow-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars2.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars3-bottom-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars3-bottom-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars3-bottom-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars3-bottom-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars3-center-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars3-center-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars3",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars3.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars4",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bars4.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery0",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "battery0.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery100",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "battery100.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery50",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "battery50.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "beaker",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "beaker.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-alert",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bell-alert.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bell-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-snooze",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bell-snooze.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bell.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bold",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bold.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bolt-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bolt-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bolt",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bolt.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "book-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "book-open.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bookmark-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bookmark-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bookmark.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "briefcase",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "briefcase.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bug-ant",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "bug-ant.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-library",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "building-library.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-office",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "building-office.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-office2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "building-office2.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-storefront",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "building-storefront.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cake",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cake.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calculator",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "calculator.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar-date-range",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "calendar-date-range.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar-days",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "calendar-days.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "calendar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "camera",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "camera.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-bar-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chart-bar-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chart-bar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-pie",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chart-pie.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-bottom-center-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-bottom-center-text.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-bottom-center",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-bottom-center.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left-ellipsis",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-left-ellipsis.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-left-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-oval-left-ellipsis",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-oval-left-ellipsis.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-oval-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chat-bubble-oval-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check-badge",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "check-badge.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "check-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "check.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-double-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-double-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-double-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-double-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-up-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-up-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "chevron-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "circle-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "circle-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "clipboard-document-check.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "clipboard-document-list.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "clipboard-document.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "clipboard.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clock",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "clock.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cloud-arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cloud-arrow-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cloud.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-bracket-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "code-bracket-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-bracket",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "code-bracket.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cog.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog6-tooth",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cog6-tooth.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog8-tooth",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cog8-tooth.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-line",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "command-line.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "computer-desktop",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "computer-desktop.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cpu-chip",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cpu-chip.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "credit-card",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "credit-card.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cube-transparent",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cube-transparent.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cube",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cube.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-bangladeshi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "currency-bangladeshi.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-dollar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "currency-dollar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-euro",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "currency-euro.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-pound",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "currency-pound.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-rupee",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "currency-rupee.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-yen",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "currency-yen.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cursor-arrow-rays",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cursor-arrow-rays.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cursor-arrow-ripple",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "cursor-arrow-ripple.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-phone-mobile",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "device-phone-mobile.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-tablet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "device-tablet.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "divide",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "divide.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-arrow-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-chart-bar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-check.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-bangladeshi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-currency-bangladeshi.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-dollar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-currency-dollar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-euro",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-currency-euro.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-pound",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-currency-pound.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-rupee",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-currency-rupee.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-yen",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-currency-yen.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-duplicate",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-duplicate.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-magnifying-glass",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-magnifying-glass.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-minus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-plus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document-text.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "document.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-horizontal-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "ellipsis-horizontal-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-horizontal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "ellipsis-horizontal.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-vertical",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "ellipsis-vertical.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "envelope-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "envelope-open.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "envelope",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "envelope.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "equals",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "equals.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "exclamation-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "exclamation-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "exclamation-triangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "exclamation-triangle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye-dropper",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "eye-dropper.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "eye-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "eye.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "face-frown",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "face-frown.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "face-smile",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "face-smile.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "film",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "film.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "finger-print",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "finger-print.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fire",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "fire.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "flag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "flag.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "folder-arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "folder-minus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "folder-open.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "folder-plus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "folder.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "forward",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "forward.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "funnel",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "funnel.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gif",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "gif.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gift-top",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "gift-top.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gift",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "gift.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-alt",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "globe-alt.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-americas",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "globe-americas.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-asia-australia",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "globe-asia-australia.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-europe-africa",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "globe-europe-africa.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h1",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "h1.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "h2.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h3",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "h3.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-raised",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "hand-raised.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-thumb-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "hand-thumb-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-thumb-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "hand-thumb-up.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hashtag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "hashtag.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "heart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "heart.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "home-modern",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "home-modern.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "home.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "identification",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "identification.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "inbox-arrow-down.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "inbox-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "inbox.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "information-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "information-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "italic",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "italic.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "key",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "key.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "language",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "language.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lifebuoy",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "lifebuoy.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "light-bulb",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "light-bulb.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "link-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "link.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-bullet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "list-bullet.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lock-closed",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "lock-closed.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lock-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "lock-open.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "magnifying-glass-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "magnifying-glass-minus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "magnifying-glass-plus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "magnifying-glass.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map-pin",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "map-pin.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "map.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "megaphone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "megaphone.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "microphone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "microphone.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "minus-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "minus-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "minus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "moon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "moon.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "musical-note",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "musical-note.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "newspaper",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "newspaper.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "no-symbol",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "no-symbol.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "numbered-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "numbered-list.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paint-brush",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "paint-brush.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paper-airplane",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "paper-airplane.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paper-clip",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "paper-clip.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pause-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "pause-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "pause.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pencil-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "pencil-square.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pencil",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "pencil.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "percent-badge",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "percent-badge.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-arrow-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "phone-arrow-down-left.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-arrow-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "phone-arrow-up-right.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "phone-x-mark.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "phone.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "photo",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "photo.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "play-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play-pause",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "play-pause.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "play.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plus-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "plus-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "plus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "power",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "power.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presentation-chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "presentation-chart-bar.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presentation-chart-line",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "presentation-chart-line.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "printer",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "printer.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "puzzle-piece",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "puzzle-piece.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "qr-code",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "qr-code.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "question-mark-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "question-mark-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "queue-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "queue-list.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "radio.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "receipt-percent",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "receipt-percent.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "receipt-refund",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "receipt-refund.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rectangle-group",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "rectangle-group.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rectangle-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "rectangle-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rocket-launch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "rocket-launch.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rss",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "rss.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scale",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "scale.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scissors",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "scissors.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "server-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "server-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "server",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "server.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "share",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "share.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shield-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "shield-check.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shield-exclamation",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "shield-exclamation.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shopping-bag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "shopping-bag.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shopping-cart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "shopping-cart.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signal-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "signal-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "signal.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sparkles",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "sparkles.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speaker-wave",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "speaker-wave.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speaker-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "speaker-x-mark.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "square2-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "square2-stack.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "square3-stack3-d",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "square3-stack3-d.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "squares-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "squares-plus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "squares2-x2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "squares2-x2.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "star",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "star.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stop-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "stop-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stop",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "stop.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "strikethrough",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "strikethrough.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sun",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "sun.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swatch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "swatch.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-cells",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "table-cells.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "tag.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ticket",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "ticket.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "trash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trophy",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "trophy.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "truck",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "truck.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tv",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "tv.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "underline",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "underline.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "user-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-group",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "user-group.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "user-minus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "user-plus.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "user.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "users.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "variable",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "variable.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-camera-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "video-camera-slash.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-camera",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "video-camera.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "view-columns",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "view-columns.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "viewfinder-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "viewfinder-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wallet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "wallet.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wifi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "wifi.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "window",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "window.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wrench-screwdriver",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "wrench-screwdriver.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wrench",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "wrench.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "x-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "x-circle.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "x-mark.svelte",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

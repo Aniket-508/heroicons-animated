@@ -1,0 +1,15 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "receipt-percent",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "receipt-percent.svelte",
+      "content": "<script>\n\t/**\n\t * @typedef {Object} Props\n\t * @property {string} [color]\n\t * @property {number} [size]\n\t * @property {number} [strokeWidth]\n\t * @property {boolean} [animate]\n\t * @property {string} [class]\n\t */\n\n\t/** @type {Props} */\n\tlet {\n\t\tcolor = 'currentColor',\n\t\tsize = 28,\n\t\tstrokeWidth = 1.5,\n\t\tanimate = false,\n\t\tclass: className = ''\n\t} = $props();\n\n\tfunction handleMouseEnter() {\n\t\tif (!animate) {\n\t\t\tanimate = true;\n\t\t\tsetTimeout(() => {\n\t\t\t\tanimate = false;\n\t\t\t}, 600);\n\t\t}\n\t}\n</script>\n\n<div class={className} aria-label=\"receipt-percent\" role=\"img\" onmouseenter={handleMouseEnter}>\n\t<svg\n\t\txmlns=\"http://www.w3.org/2000/svg\"\n\t\twidth={size}\n\t\theight={size}\n\t\tviewBox=\"0 0 24 24\"\n\t\tfill=\"none\"\n\t\tstroke={color}\n\t\tstroke-width={strokeWidth}\n\t\tstroke-linecap=\"round\"\n\t\tstroke-linejoin=\"round\"\n\t\tclass=\"receipt-percent-icon\"\n\t\tclass:animate\n\t>\n\t\t<path class=\"receipt-percent-path\" d=\"M19.5 4.75699V21.75L15.75 20.25L12 21.75L8.25 20.25L4.5 21.75V4.75699C4.5 3.649 5.30608 2.70014 6.40668 2.57241C8.24156 2.35947 10.108 2.25 12 2.25C13.892 2.25 15.7584 2.35947 17.5933 2.57241C18.6939 2.70014 19.5 3.649 19.5 4.75699Z\" />\n        <path class=\"receipt-percent-path\"\n          d=\"M9 14.25L15 8.25\" />\n        <path class=\"receipt-percent-path\"\n          custom={0.2}\n          d=\"M9.75 9H9.7575V9.0075H9.75V9ZM10.125 9C10.125 9.20711 9.95711 9.375 9.75 9.375C9.54289 9.375 9.375 9.20711 9.375 9C9.375 8.79289 9.54289 8.625 9.75 8.625C9.95711 8.625 10.125 8.79289 10.125 9Z\" />\n        <path class=\"receipt-percent-path\"\n          custom={0.35}\n          d=\"M14.25 13.5H14.2575V13.5075H14.25V13.5ZM14.625 13.5C14.625 13.7071 14.4571 13.875 14.25 13.875C14.0429 13.875 13.875 13.7071 13.875 13.5C13.875 13.2929 14.0429 13.125 14.25 13.125C14.4571 13.125 14.625 13.2929 14.625 13.5Z\" />\n\t</svg>\n</div>\n\n<style>\n\tdiv {\n\t\tdisplay: inline-block;\n\t}\n\t.receipt-percent-icon {\n\t\toverflow: visible;\n\t}\n\n\t.receipt-percent-path {\n\t\ttransform-origin: center;\n\t\ttransition: transform 0.3s ease;\n\t}\n\n\t.receipt-percent-icon.animate .receipt-percent-path {\n\t\tanimation: receipt-percent-animate 0.6s ease-in-out;\n\t}\n\n\t@keyframes receipt-percent-animate {\n\t\t0% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t\t50% {\n\t\t\ttransform: scale(1.1);\n\t\t}\n\t\t100% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

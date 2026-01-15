@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "share",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "share.vue",
+      "content": "<template>\n  <div\n    class=\"cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n    role=\"button\"\n    tabindex=\"0\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion is=\"path\" ref=\"pathRef\"\n            d=\"M7.21721 10.9071C7.39737 11.2307 7.5 11.6034 7.5 12C7.5 12.3966 7.39737 12.7693 7.21721 13.0929M7.21721 10.9071L16.7828 5.5929M7.21721 13.0929L16.7828 18.4071\" />\n          <circle\n            custom={0}\n            cx=\"5.25\"\n            cy=\"12\"\n            r=\"2.25\" />\n          <circle\n            custom={0.15}\n            cx=\"18.75\"\n            cy=\"4.5\"\n            r=\"2.25\" />\n          <circle\n            custom={0.3}\n            cx=\"18.75\"\n            cy=\"19.5\"\n            r=\"2.25\" />\n    </svg>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'ShareIcon',\n};\n</script>\n\n<script setup>\nimport { ref } from 'vue';\nimport { MotionComponent as Motion, useMotion } from '@vueuse/motion';\n\ndefineProps({\n  size: {\n    type: Number,\n    default: 28,\n  },\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 200,\n      ease: 'easeOut',\n    },\n  },\n  animate: {\n    scale: [1, 1.1, 1],\n    transition: {\n      duration: 400,\n      ease: 'easeInOut',\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nfunction handleMouseEnter() {\n  motionInstance.apply(variants.animate);\n}\n\nfunction handleMouseLeave() {\n  motionInstance.apply(variants.normal);\n}\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

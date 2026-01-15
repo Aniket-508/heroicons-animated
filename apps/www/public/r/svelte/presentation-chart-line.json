@@ -1,0 +1,15 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "presentation-chart-line",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "presentation-chart-line.svelte",
+      "content": "<script>\n\t/**\n\t * @typedef {Object} Props\n\t * @property {string} [color]\n\t * @property {number} [size]\n\t * @property {number} [strokeWidth]\n\t * @property {boolean} [animate]\n\t * @property {string} [class]\n\t */\n\n\t/** @type {Props} */\n\tlet {\n\t\tcolor = 'currentColor',\n\t\tsize = 28,\n\t\tstrokeWidth = 1.5,\n\t\tanimate = false,\n\t\tclass: className = ''\n\t} = $props();\n\n\tfunction handleMouseEnter() {\n\t\tif (!animate) {\n\t\t\tanimate = true;\n\t\t\tsetTimeout(() => {\n\t\t\t\tanimate = false;\n\t\t\t}, 600);\n\t\t}\n\t}\n</script>\n\n<div class={className} aria-label=\"presentation-chart-line\" role=\"img\" onmouseenter={handleMouseEnter}>\n\t<svg\n\t\txmlns=\"http://www.w3.org/2000/svg\"\n\t\twidth={size}\n\t\theight={size}\n\t\tviewBox=\"0 0 24 24\"\n\t\tfill=\"none\"\n\t\tstroke={color}\n\t\tstroke-width={strokeWidth}\n\t\tstroke-linecap=\"round\"\n\t\tstroke-linejoin=\"round\"\n\t\tclass=\"presentation-chart-line-icon\"\n\t\tclass:animate\n\t>\n\t\t<path class=\"presentation-chart-line-path\" d=\"M3.75 3V14.25C3.75 15.4926 4.75736 16.5 6 16.5H8.25M3.75 3H2.25M3.75 3H20.25M20.25 3H21.75M20.25 3V14.25C20.25 15.4926 19.2426 16.5 18 16.5H15.75M8.25 16.5H15.75M8.25 16.5L7.25 19.5M15.75 16.5L16.75 19.5M16.75 19.5L17.25 21M16.75 19.5H7.25M7.25 19.5L6.75 21\" />\n        <path class=\"presentation-chart-line-path\"\n          d=\"M7.5 12L10.5 9L12.6476 11.1476C13.6542 9.70301 14.9704 8.49023 16.5 7.60539\" />\n\t</svg>\n</div>\n\n<style>\n\tdiv {\n\t\tdisplay: inline-block;\n\t}\n\t.presentation-chart-line-icon {\n\t\toverflow: visible;\n\t}\n\n\t.presentation-chart-line-path {\n\t\ttransform-origin: center;\n\t\ttransition: transform 0.3s ease;\n\t}\n\n\t.presentation-chart-line-icon.animate .presentation-chart-line-path {\n\t\tanimation: presentation-chart-line-animate 0.6s ease-in-out;\n\t}\n\n\t@keyframes presentation-chart-line-animate {\n\t\t0% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t\t50% {\n\t\t\ttransform: scale(1.1);\n\t\t}\n\t\t100% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

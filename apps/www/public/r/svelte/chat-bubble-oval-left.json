@@ -1,0 +1,15 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "chat-bubble-oval-left",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "chat-bubble-oval-left.svelte",
+      "content": "<script>\n\t/**\n\t * @typedef {Object} Props\n\t * @property {string} [color]\n\t * @property {number} [size]\n\t * @property {number} [strokeWidth]\n\t * @property {boolean} [animate]\n\t * @property {string} [class]\n\t */\n\n\t/** @type {Props} */\n\tlet {\n\t\tcolor = 'currentColor',\n\t\tsize = 28,\n\t\tstrokeWidth = 1.5,\n\t\tanimate = false,\n\t\tclass: className = ''\n\t} = $props();\n\n\tfunction handleMouseEnter() {\n\t\tif (!animate) {\n\t\t\tanimate = true;\n\t\t\tsetTimeout(() => {\n\t\t\t\tanimate = false;\n\t\t\t}, 600);\n\t\t}\n\t}\n</script>\n\n<div class={className} aria-label=\"chat-bubble-oval-left\" role=\"img\" onmouseenter={handleMouseEnter}>\n\t<svg\n\t\txmlns=\"http://www.w3.org/2000/svg\"\n\t\twidth={size}\n\t\theight={size}\n\t\tviewBox=\"0 0 24 24\"\n\t\tfill=\"none\"\n\t\tstroke={color}\n\t\tstroke-width={strokeWidth}\n\t\tstroke-linecap=\"round\"\n\t\tstroke-linejoin=\"round\"\n\t\tclass=\"chat-bubble-oval-left-icon\"\n\t\tclass:animate\n\t>\n\t\t<path class=\"chat-bubble-oval-left-path\" d=\"M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z\" />\n\t</svg>\n</div>\n\n<style>\n\tdiv {\n\t\tdisplay: inline-block;\n\t}\n\t.chat-bubble-oval-left-icon {\n\t\toverflow: visible;\n\t}\n\n\t.chat-bubble-oval-left-path {\n\t\ttransform-origin: center;\n\t\ttransition: transform 0.3s ease;\n\t}\n\n\t.chat-bubble-oval-left-icon.animate .chat-bubble-oval-left-path {\n\t\tanimation: chat-bubble-oval-left-animate 0.6s ease-in-out;\n\t}\n\n\t@keyframes chat-bubble-oval-left-animate {\n\t\t0% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t\t50% {\n\t\t\ttransform: scale(1.1);\n\t\t}\n\t\t100% {\n\t\t\ttransform: scale(1);\n\t\t}\n\t}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

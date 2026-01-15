@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "shopping-bag",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "shopping-bag.vue",
+      "content": "<template>\n  <div\n    class=\"cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n    role=\"button\"\n    tabindex=\"0\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion is=\"path\" ref=\"pathRef\" d=\"M15.75 10.5V6C15.75 3.92893 14.0711 2.25 12 2.25C9.92893 2.25 8.25 3.92893 8.25 6V10.5M19.606 8.50723L20.8692 20.5072C20.9391 21.1715 20.4183 21.75 19.7504 21.75H4.24963C3.58172 21.75 3.06089 21.1715 3.13081 20.5072L4.39397 8.50723C4.45424 7.93466 4.93706 7.5 5.51279 7.5H18.4872C19.0629 7.5 19.5458 7.93466 19.606 8.50723ZM8.625 10.5C8.625 10.7071 8.4571 10.875 8.25 10.875C8.04289 10.875 7.875 10.7071 7.875 10.5C7.875 10.2929 8.04289 10.125 8.25 10.125C8.4571 10.125 8.625 10.2929 8.625 10.5ZM16.125 10.5C16.125 10.7071 15.9571 10.875 15.75 10.875C15.5429 10.875 15.375 10.7071 15.375 10.5C15.375 10.2929 15.5429 10.125 15.75 10.125C15.9571 10.125 16.125 10.2929 16.125 10.5Z\" />\n    </svg>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'ShoppingBagIcon',\n};\n</script>\n\n<script setup>\nimport { ref } from 'vue';\nimport { MotionComponent as Motion, useMotion } from '@vueuse/motion';\n\ndefineProps({\n  size: {\n    type: Number,\n    default: 28,\n  },\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 200,\n      ease: 'easeOut',\n    },\n  },\n  animate: {\n    scale: [1, 1.1, 1],\n    transition: {\n      duration: 400,\n      ease: 'easeInOut',\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nfunction handleMouseEnter() {\n  motionInstance.apply(variants.animate);\n}\n\nfunction handleMouseLeave() {\n  motionInstance.apply(variants.normal);\n}\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

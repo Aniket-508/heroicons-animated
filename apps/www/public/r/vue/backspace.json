@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "backspace",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "backspace.vue",
+      "content": "<template>\n  <div\n    class=\"cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n    role=\"button\"\n    tabindex=\"0\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion is=\"path\" ref=\"pathRef\" d=\"M12 9.75L14.25 12M14.25 12L16.5 14.25M14.25 12L16.5 9.75M14.25 12L12 14.25M9.42051 19.1705L3.04551 12.7955C2.60617 12.3562 2.60617 11.6438 3.04551 11.2045L9.42051 4.82951C9.63149 4.61853 9.91764 4.5 10.216 4.5L19.5 4.5C20.7427 4.5 21.75 5.50736 21.75 6.75V17.25C21.75 18.4926 20.7427 19.5 19.5 19.5H10.216C9.91764 19.5 9.63149 19.3815 9.42051 19.1705Z\" />\n    </svg>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'BackspaceIcon',\n};\n</script>\n\n<script setup>\nimport { ref } from 'vue';\nimport { MotionComponent as Motion, useMotion } from '@vueuse/motion';\n\ndefineProps({\n  size: {\n    type: Number,\n    default: 28,\n  },\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 200,\n      ease: 'easeOut',\n    },\n  },\n  animate: {\n    scale: [1, 1.1, 1],\n    transition: {\n      duration: 400,\n      ease: 'easeInOut',\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nfunction handleMouseEnter() {\n  motionInstance.apply(variants.animate);\n}\n\nfunction handleMouseLeave() {\n  motionInstance.apply(variants.normal);\n}\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

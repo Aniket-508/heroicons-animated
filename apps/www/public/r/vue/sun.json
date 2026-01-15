@@ -1,0 +1,17 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "sun",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "sun.vue",
+      "content": "<template>\n  <div\n    class=\"cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n    role=\"button\"\n    tabindex=\"0\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"size\"\n      :height=\"size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <circle cx=\"12\" cy=\"12\" r=\"3.75\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={0}\n            d=\"M12 3V5.25\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={1}\n            d=\"M18.364 5.63604L16.773 7.22703\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={2}\n            d=\"M21 12H18.75\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={3}\n            d=\"M18.364 18.364L16.773 16.773\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={4}\n            d=\"M12 18.75V21\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={5}\n            d=\"M7.22703 16.773L5.63604 18.364\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={6}\n            d=\"M5.25 12H3\" />\n          <Motion is=\"path\" ref=\"pathRef\"\n            custom={7}\n            d=\"M7.22703 7.22703L5.63604 5.63604\" />\n    </svg>\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'SunIcon',\n};\n</script>\n\n<script setup>\nimport { ref } from 'vue';\nimport { MotionComponent as Motion, useMotion } from '@vueuse/motion';\n\ndefineProps({\n  size: {\n    type: Number,\n    default: 28,\n  },\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 200,\n      ease: 'easeOut',\n    },\n  },\n  animate: {\n    scale: [1, 1.1, 1],\n    transition: {\n      duration: 400,\n      ease: 'easeInOut',\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nfunction handleMouseEnter() {\n  motionInstance.apply(variants.animate);\n}\n\nfunction handleMouseLeave() {\n  motionInstance.apply(variants.normal);\n}\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}
