@@ -1,12 +1,16 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { ICON_MANIFEST, LINK, SITE } from "@heroicons-animated/shared";
+import {
+  type Framework,
+  ICON_MANIFEST,
+  LINK,
+  SITE,
+} from "@heroicons-animated/shared";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CliBlock } from "@/components/cli-block";
 import { getFrameworkName } from "@/lib/cli";
 import { kebabToPascalCase } from "@/lib/kebab-to-pascal";
-import { useFramework } from "@/providers/framework";
 import { BreadcrumbJsonLd } from "@/seo/json-ld";
 import { baseMetadata } from "@/seo/metadata";
 import { IconCard } from "./icon-card";
@@ -106,9 +110,10 @@ const IconJsonLd = ({ icon }: { icon: (typeof ICON_MANIFEST)[number] }) => {
   );
 };
 
-const IconPage = async ({ params }: Props) => {
-  const { framework } = useFramework();
+const IconPage = async ({ params, searchParams }: Props) => {
   const { slug } = await params;
+  const searchParamsResolved = await searchParams;
+  const framework = searchParamsResolved.framework as Framework;
   const icon = getIconBySlug(slug);
 
   if (!icon) {
