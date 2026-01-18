@@ -9,8 +9,6 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
-    "lint": "biome check --apply .",
-    "lint:check": "biome check .",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {

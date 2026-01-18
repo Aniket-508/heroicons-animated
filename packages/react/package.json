@@ -28,8 +28,6 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "biome check --apply .",
-    "lint:check": "biome check .",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {

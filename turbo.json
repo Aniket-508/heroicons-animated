@@ -13,11 +13,9 @@
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "lint:check": {
-      "dependsOn": ["^lint:check"]
+    "//#lint:check": {},
+    "//#lint": {
+      "cache": false
     },
     "type-check": {
       "dependsOn": ["^type-check"]

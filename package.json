@@ -6,8 +6,8 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "start": "turbo run start",
-    "lint": "biome check --write . && turbo run lint",
-    "lint:check": "biome check . && turbo run lint:check",
+    "lint": "ultracite fix",
+    "lint:check": "ultracite check",
     "type-check": "turbo run type-check"
   },
   "devDependencies": {
