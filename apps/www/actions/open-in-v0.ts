@@ -1,6 +1,6 @@
 "use server";
 
-import { SITE } from "@heroicons-animated/shared";
+import { SITE } from "@/constants";
 import { getIconForV0 } from "@/helpers/get-icon-for-v0";
 
 export async function openInV0Action(name: string) {

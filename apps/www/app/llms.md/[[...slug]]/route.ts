@@ -1,6 +1,7 @@
-import { ICON_MANIFEST, LINK, SITE } from "@heroicons-animated/shared";
+import { ICON_MANIFEST } from "@heroicons-animated/shared";
 import type { NextRequest } from "next/server";
 import { getIcons } from "@/actions/get-icons";
+import { LINK, SITE } from "@/constants";
 import { kebabToPascalCase } from "@/lib/kebab-to-pascal";
 
 type RouteContext = {

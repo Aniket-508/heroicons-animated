@@ -1,7 +1,7 @@
 "use client";
 
-import { LINK } from "@heroicons-animated/shared";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { LINK } from "@/constants";
 import { useGithubStars } from "@/providers/github-stars";
 
 const GithubStarsButton = () => {

@@ -1,14 +1,10 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import {
-  type Framework,
-  ICON_MANIFEST,
-  LINK,
-  SITE,
-} from "@heroicons-animated/shared";
+import { type Framework, ICON_MANIFEST } from "@heroicons-animated/shared";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CliBlock } from "@/components/cli-block";
+import { LINK, SITE } from "@/constants";
 import { getFrameworkName } from "@/lib/cli";
 import { kebabToPascalCase } from "@/lib/kebab-to-pascal";
 import { BreadcrumbJsonLd } from "@/seo/json-ld";

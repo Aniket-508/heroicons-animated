@@ -2,7 +2,7 @@
 
 import { ScrollArea as BaseScrollArea } from "@base-ui/react/scroll-area";
 import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
-import { cn, PACKAGE_MANAGER, SITE } from "@heroicons-animated/shared";
+import { cn } from "@heroicons-animated/shared";
 import { useRef, useState, useTransition } from "react";
 import { toast } from "sonner";
 import type { Icon } from "@/actions/get-icons";
@@ -10,6 +10,7 @@ import type { IconStatus } from "@/components/ui/icon-state";
 import { IconState } from "@/components/ui/icon-state";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TextLoop } from "@/components/ui/text-loop";
+import { PACKAGE_MANAGER, SITE } from "@/constants";
 import { getCLICommand, getRegistryPathPrefix, getShadcnCLI } from "@/lib/cli";
 import { getPackageManagerPrefix } from "@/lib/get-package-manager-prefix";
 import { useFramework } from "@/providers/framework";

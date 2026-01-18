@@ -1,5 +1,5 @@
-import { LINK, SITE } from "@heroicons-animated/shared";
 import type { Metadata } from "next";
+import { LINK, SITE } from "@/constants";
 
 type CreateMetadataOptions = {
   title?: string;

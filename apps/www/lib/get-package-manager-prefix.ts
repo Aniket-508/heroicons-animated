@@ -1,4 +1,4 @@
-import { PACKAGE_MANAGER } from "@heroicons-animated/shared";
+import { PACKAGE_MANAGER } from "@/constants";
 
 const getPackageManagerPrefix = (
   packageManager: (typeof PACKAGE_MANAGER)[keyof typeof PACKAGE_MANAGER]

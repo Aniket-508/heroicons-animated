@@ -1,5 +1,5 @@
 /** biome-ignore-all lint/suspicious/noTemplateCurlyInString: ignore */
-import { SITE } from "@heroicons-animated/shared";
+import { SITE } from "@/constants";
 
 const getIconForV0 = async (name: string) => {
   try {

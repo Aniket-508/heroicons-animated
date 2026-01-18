@@ -4,21 +4,17 @@ import { getIconList } from "@heroicons-animated/react";
 import { useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
 import { Card, CardActions } from "@/components/card";
-import { useFramework } from "@/providers/framework";
 
 type Props = {
   icon: Icon;
 };
 
 const IconCard = ({ icon }: Props) => {
-  const { framework } = useFramework();
   const animationRef = useRef<{
     startAnimation: () => void;
     stopAnimation: () => void;
   }>(null);
 
-  // For now, we only render React icons
-  // Vue and Svelte icons would require a different rendering approach
   const IconComponent = useMemo(() => {
     return getIconList().find((item) => item.name === icon.name)?.icon;
   }, [icon.name]);

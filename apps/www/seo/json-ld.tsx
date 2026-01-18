@@ -1,5 +1,5 @@
-import { LINK, SITE } from "@heroicons-animated/shared";
 import { getIcons } from "@/actions/get-icons";
+import { LINK, SITE } from "@/constants";
 
 const WebsiteJsonLd = () => {
   const jsonLd = {

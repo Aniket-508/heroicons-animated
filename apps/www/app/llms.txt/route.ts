@@ -1,5 +1,5 @@
-import { LINK, SITE } from "@heroicons-animated/shared";
 import { getIcons } from "@/actions/get-icons";
+import { LINK, SITE } from "@/constants";
 
 export function GET() {
   const icons = getIcons();
@@ -16,6 +16,11 @@ ${SITE.NAME} is an open-source (MIT License) collection of smooth animated ${ico
 - Website: ${SITE.URL}
 - GitHub: ${LINK.GITHUB}
 - Author: ${SITE.AUTHOR.TWITTER} (${LINK.TWITTER})
+
+## Documentation
+
+- API Reference: ${SITE.URL}/docs/api
+- shadcn/ui Integration: ${SITE.URL}/docs/shadcn-ui
 
 ## Packages
 
