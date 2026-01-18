@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "phone-arrow-down-left",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "phone-arrow-down-left.svelte",
+      "content": "<script lang=\"ts\">\nexport const size = 28;\nconst className = \"\";\nexport { className as class };\n\nlet isAnimating = false;\nlet isControlled = false;\n\nexport function startAnimation() {\n  if (!isControlled) {\n    isAnimating = true;\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n}\n\nexport function stopAnimation() {\n  isAnimating = false;\n}\n\nexport function setControlled(value: boolean) {\n  isControlled = value;\n}\n\nfunction handleMouseEnter() {\n  if (!isControlled) {\n    startAnimation();\n  }\n}\n\nfunction handleMouseLeave() {\n  if (!isControlled) {\n    stopAnimation();\n  }\n}\n</script>\n\n<div\n  class={className}\n  on:mouseenter={handleMouseEnter}\n  on:mouseleave={handleMouseLeave}\n  role=\"img\"\n>\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={size}\n    height={size}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    class=\"icon-svg\"\n    class:phonearrowdownleft-animate={isAnimating}\n  >\n    <path\n      d=\"M17.25 21.75c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z\"\n    />\n    <path d=\"M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6\" />\n  </svg>\n</div>\n\n<style>\ndiv {\n  display: inline-block;\n}\n\n.icon-svg {\n  transform-box: fill-box;\n  transform-origin: center;\n  transition: transform 0.3s ease;\n}\n\n.icon-svg.phonearrowdownleft-animate {\n  animation: phonearrowdownleft-animate 0.6s ease-in-out;\n}\n\n@keyframes phonearrowdownleft-animate {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

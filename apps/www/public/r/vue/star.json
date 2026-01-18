@@ -1,0 +1,16 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "star",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "files": [
+    {
+      "path": "star.vue",
+      "content": "<template>\n  <div\n    :class=\"props.class\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"props.size\"\n      :height=\"props.size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion\n        is=\"path\"\n        ref=\"pathRef\"\n        d=\"M11.4806 3.4987C11.6728 3.03673 12.3272 3.03673 12.5193 3.4987L14.6453 8.61016C14.7263 8.80492 14.9095 8.93799 15.1197 8.95485L20.638 9.39724C21.1367 9.43722 21.339 10.0596 20.959 10.3851L16.7546 13.9866C16.5945 14.1238 16.5245 14.3391 16.5734 14.5443L17.8579 19.9292C17.974 20.4159 17.4446 20.8005 17.0176 20.5397L12.2932 17.6541C12.1132 17.5441 11.8868 17.5441 11.7068 17.6541L6.98238 20.5397C6.55539 20.8005 6.02594 20.4159 6.14203 19.9292L7.42652 14.5443C7.47546 14.3391 7.4055 14.1238 7.24531 13.9866L3.04099 10.3851C2.661 10.0596 2.86323 9.43722 3.36197 9.39724L8.88022 8.95485C9.09048 8.93799 9.27363 8.80492 9.35464 8.61016L11.4806 3.4987Z\"\n      />\n    </svg>\n  </div>\n</template>\n\n<script lang=\"ts\">\nexport default {\n  name: \"StarIcon\",\n};\n</script>\n\n<script setup lang=\"ts\">\nimport { useMotion } from \"@vueuse/motion\";\nimport { ref } from \"vue\";\n\nexport interface Props {\n  size?: number;\n  class?: string;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  size: 28,\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 0.2,\n      ease: \"easeOut\",\n    },\n  },\n  animate: {\n    scale: [1, 1.08, 1],\n    transition: {\n      duration: 0.45,\n      ease: \"easeInOut\",\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nlet isControlled = false;\n\nconst startAnimation = () => {\n  motionInstance.apply(variants.animate);\n};\n\nconst stopAnimation = () => {\n  motionInstance.apply(variants.normal);\n};\n\nconst handleMouseEnter = () => {\n  if (!isControlled) {\n    startAnimation();\n  }\n};\n\nconst handleMouseLeave = () => {\n  if (!isControlled) {\n    stopAnimation();\n  }\n};\n\nconst setControlled = (value: boolean) => {\n  isControlled = value;\n};\n\ndefineExpose({\n  startAnimation,\n  stopAnimation,\n  setControlled,\n});\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

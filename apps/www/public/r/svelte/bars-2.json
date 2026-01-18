@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "bars-2",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "bars-2.svelte",
+      "content": "<script lang=\"ts\">\nexport const size = 28;\nconst className = \"\";\nexport { className as class };\n\nlet isAnimating = false;\nlet isControlled = false;\n\nexport function startAnimation() {\n  if (!isControlled) {\n    isAnimating = true;\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n}\n\nexport function stopAnimation() {\n  isAnimating = false;\n}\n\nexport function setControlled(value: boolean) {\n  isControlled = value;\n}\n\nfunction handleMouseEnter() {\n  if (!isControlled) {\n    startAnimation();\n  }\n}\n\nfunction handleMouseLeave() {\n  if (!isControlled) {\n    stopAnimation();\n  }\n}\n\nconst BARS = [{ d: \"M3.75 9h16.5\" }, { d: \"M3.75 15.75h16.5\" }];\n</script>\n\n<div\n  class={className}\n  on:mouseenter={handleMouseEnter}\n  on:mouseleave={handleMouseLeave}\n  role=\"img\"\n>\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={size}\n    height={size}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    class=\"icon-svg\"\n    class:bars2-animate={isAnimating}\n  >\n    {#each BARS as bar}\n      <path d={bar.d} />\n    {/each}\n  </svg>\n</div>\n\n<style>\ndiv {\n  display: inline-block;\n}\n\n.icon-svg {\n  transform-box: fill-box;\n  transform-origin: center;\n  transition: transform 0.3s ease;\n}\n\n.icon-svg.bars2-animate {\n  animation: bars2-animate 0.6s ease-in-out;\n}\n\n@keyframes bars2-animate {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "building-office-2",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "files": [
+    {
+      "path": "building-office-2.vue",
+      "content": "<template>\n  <div\n    :class=\"props.class\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"props.size\"\n      :height=\"props.size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path\n        d=\"M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21\"\n      />\n      <path\n        v-for=\"(window, index) in WINDOWS\"\n        :key=\"index\"\n        :d=\"window.path\"\n        ref=\"windowRefs\"\n      />\n    </svg>\n  </div>\n</template>\n\n<script lang=\"ts\">\nexport default {\n  name: \"BuildingOffice2Icon\",\n};\n</script>\n\n<script setup lang=\"ts\">\nimport { useMotion } from \"@vueuse/motion\";\nimport { onMounted, ref } from \"vue\";\n\nexport interface Props {\n  size?: number;\n  class?: string;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  size: 28,\n});\n\nconst windowVariants = (custom: number) => ({\n  normal: {\n    opacity: 1,\n  },\n  animate: {\n    opacity: [0, 1],\n    transition: {\n      duration: 300,\n      ease: \"linear\",\n      delay: 100 + custom * 150,\n    },\n  },\n});\n\nconst WINDOWS = [\n  { path: \"M6.75 12.75h.75\", index: 0 },\n  { path: \"M6.75 9.75h.75\", index: 1 },\n  { path: \"M6.75 6.75h.75\", index: 2 },\n  { path: \"M10.5 12.75h.75\", index: 0 },\n  { path: \"M10.5 9.75h.75\", index: 1 },\n  { path: \"M10.5 6.75h.75\", index: 2 },\n  { path: \"M17.25 17h.008v.008h-.008v-.008Z\", index: 0 },\n  { path: \"M17.25 14h.008v.008h-.008v-.008Z\", index: 1 },\n  { path: \"M17.25 11h.008v.008h-.008v-.008Z\", index: 2 },\n];\n\nconst windowRefs = ref<SVGPathElement[]>([]);\nconst windowMotions: any[] = [];\n\nonMounted(() => {\n  windowRefs.value.forEach((el, index) => {\n    windowMotions[index] = useMotion(el, {\n      initial: windowVariants(WINDOWS[index].index).normal,\n    });\n  });\n});\n\nlet isControlled = false;\n\nconst startAnimation = () => {\n  WINDOWS.forEach((win, index) => {\n    windowMotions[index]?.apply(windowVariants(win.index).animate);\n  });\n};\n\nconst stopAnimation = () => {\n  WINDOWS.forEach((win, index) => {\n    windowMotions[index]?.apply(windowVariants(win.index).normal);\n  });\n};\n\nconst handleMouseEnter = () => {\n  if (!isControlled) {\n    startAnimation();\n  }\n};\n\nconst handleMouseLeave = () => {\n  if (!isControlled) {\n    stopAnimation();\n  }\n};\n\nconst setControlled = (value: boolean) => {\n  isControlled = value;\n};\n\ndefineExpose({\n  startAnimation,\n  stopAnimation,\n  setControlled,\n});\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

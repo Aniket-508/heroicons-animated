@@ -1,0 +1,16 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "window",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "files": [
+    {
+      "path": "window.vue",
+      "content": "<template>\n  <div\n    :class=\"props.class\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"props.size\"\n      :height=\"props.size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion\n        is=\"path\"\n        ref=\"pathRef\"\n        d=\"M3 8.25V18C3 19.2426 4.00736 20.25 5.25 20.25H18.75C19.9926 20.25 21 19.2426 21 18V8.25M3 8.25V6C3 4.75736 4.00736 3.75 5.25 3.75H18.75C19.9926 3.75 21 4.75736 21 6V8.25M3 8.25H21\"\n      />\n      <path :custom=\"0\" d=\"M5.25 6H5.2575V6.0075H5.25V6Z\" />\n      <path :custom=\"0.1\" d=\"M7.5 6H7.5075V6.0075H7.5V6Z\" />\n      <path :custom=\"0.2\" d=\"M9.75 6H9.7575V6.0075H9.75V6Z\" />\n    </svg>\n  </div>\n</template>\n\n<script lang=\"ts\">\nexport default {\n  name: \"WindowIcon\",\n};\n</script>\n\n<script setup lang=\"ts\">\nimport { useMotion } from \"@vueuse/motion\";\nimport { ref } from \"vue\";\n\nexport interface Props {\n  size?: number;\n  class?: string;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  size: 28,\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 0.2,\n      ease: \"easeOut\",\n    },\n  },\n  animate: {\n    scale: [1, 1.08, 1],\n    transition: {\n      duration: 0.45,\n      ease: \"easeInOut\",\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nlet isControlled = false;\n\nconst startAnimation = () => {\n  motionInstance.apply(variants.animate);\n};\n\nconst stopAnimation = () => {\n  motionInstance.apply(variants.normal);\n};\n\nconst handleMouseEnter = () => {\n  if (!isControlled) {\n    startAnimation();\n  }\n};\n\nconst handleMouseLeave = () => {\n  if (!isControlled) {\n    stopAnimation();\n  }\n};\n\nconst setControlled = (value: boolean) => {\n  isControlled = value;\n};\n\ndefineExpose({\n  startAnimation,\n  stopAnimation,\n  setControlled,\n});\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

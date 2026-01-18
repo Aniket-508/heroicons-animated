@@ -1,0 +1,16 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "video-camera",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "files": [
+    {
+      "path": "video-camera.vue",
+      "content": "<template>\n  <div\n    :class=\"props.class\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"props.size\"\n      :height=\"props.size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <Motion\n        is=\"path\"\n        ref=\"pathRef\"\n        d=\"M15.75 10.5L20.4697 5.78033C20.9421 5.30786 21.75 5.64248 21.75 6.31066V17.6893C21.75 18.3575 20.9421 18.6921 20.4697 18.2197L15.75 13.5M4.5 18.75H13.5C14.7426 18.75 15.75 17.7426 15.75 16.5V7.5C15.75 6.25736 14.7426 5.25 13.5 5.25H4.5C3.25736 5.25 2.25 6.25736 2.25 7.5V16.5C2.25 17.7426 3.25736 18.75 4.5 18.75Z\"\n      />\n      <circle cx=\"5\" cy=\"7.5\" fill=\"red\" r=\"1\" stroke=\"none\" />\n    </svg>\n  </div>\n</template>\n\n<script lang=\"ts\">\nexport default {\n  name: \"VideoCameraIcon\",\n};\n</script>\n\n<script setup lang=\"ts\">\nimport { useMotion } from \"@vueuse/motion\";\nimport { ref } from \"vue\";\n\nexport interface Props {\n  size?: number;\n  class?: string;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  size: 28,\n});\n\nconst variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      duration: 0.2,\n      ease: \"easeOut\",\n    },\n  },\n  animate: {\n    scale: [1, 1.08, 1],\n    transition: {\n      duration: 0.45,\n      ease: \"easeInOut\",\n    },\n  },\n};\n\nconst pathRef = ref();\nconst motionInstance = useMotion(pathRef, {\n  initial: variants.normal,\n  enter: variants.normal,\n});\n\nlet isControlled = false;\n\nconst startAnimation = () => {\n  motionInstance.apply(variants.animate);\n};\n\nconst stopAnimation = () => {\n  motionInstance.apply(variants.normal);\n};\n\nconst handleMouseEnter = () => {\n  if (!isControlled) {\n    startAnimation();\n  }\n};\n\nconst handleMouseLeave = () => {\n  if (!isControlled) {\n    stopAnimation();\n  }\n};\n\nconst setControlled = (value: boolean) => {\n  isControlled = value;\n};\n\ndefineExpose({\n  startAnimation,\n  stopAnimation,\n  setControlled,\n});\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

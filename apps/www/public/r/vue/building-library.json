@@ -1,0 +1,16 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "building-library",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "files": [
+    {
+      "path": "building-library.vue",
+      "content": "<template>\n  <div\n    :class=\"props.class\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"props.size\"\n      :height=\"props.size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path\n        d=\"M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18\"\n      />\n      <Motion is=\"path\" ref=\"dotRef\" d=\"M12 6.75h.008v.008H12V6.75Z\" />\n      <path\n        v-for=\"(pillar, index) in PILLARS\"\n        :key=\"index\"\n        :d=\"pillar.d\"\n        ref=\"pillarRefs\"\n      />\n    </svg>\n  </div>\n</template>\n\n<script lang=\"ts\">\nexport default {\n  name: \"BuildingLibraryIcon\",\n};\n</script>\n\n<script setup lang=\"ts\">\nimport { useMotion } from \"@vueuse/motion\";\nimport { onMounted, ref } from \"vue\";\n\nexport interface Props {\n  size?: number;\n  class?: string;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  size: 28,\n});\n\nconst dotVariants = {\n  normal: {\n    opacity: 1,\n  },\n  animate: {\n    opacity: [0, 1],\n    transition: {\n      delay: 100,\n      duration: 100,\n    },\n  },\n};\n\nconst pillarVariants = (custom: number) => ({\n  normal: {\n    pathLength: 1,\n    opacity: 1,\n  },\n  animate: {\n    pathLength: [0, 1],\n    opacity: [0, 1],\n    transition: {\n      delay: 200 + custom * 150,\n      duration: 300,\n      ease: \"linear\",\n    },\n  },\n});\n\nconst PILLARS = [\n  { d: \"M8.25 12.75v8.25\", index: 0 },\n  { d: \"M12 12.75v8.25\", index: 1 },\n  { d: \"M15.75 12.75v8.25\", index: 2 },\n];\n\nconst dotRef = ref();\nconst pillarRefs = ref<SVGPathElement[]>([]);\n\nconst dotMotion = useMotion(dotRef, {\n  initial: dotVariants.normal,\n});\n\nconst pillarMotions: any[] = [];\n\nonMounted(() => {\n  pillarRefs.value.forEach((el, index) => {\n    pillarMotions[index] = useMotion(el, {\n      initial: pillarVariants(index).normal,\n    });\n  });\n});\n\nlet isControlled = false;\n\nconst startAnimation = () => {\n  dotMotion.apply(dotVariants.animate);\n  pillarRefs.value.forEach((_, index) => {\n    pillarMotions[index]?.apply(pillarVariants(index).animate);\n  });\n};\n\nconst stopAnimation = () => {\n  dotMotion.apply(dotVariants.normal);\n  pillarRefs.value.forEach((_, index) => {\n    pillarMotions[index]?.apply(pillarVariants(index).normal);\n  });\n};\n\nconst handleMouseEnter = () => {\n  if (!isControlled) {\n    startAnimation();\n  }\n};\n\nconst handleMouseLeave = () => {\n  if (!isControlled) {\n    stopAnimation();\n  }\n};\n\nconst setControlled = (value: boolean) => {\n  isControlled = value;\n};\n\ndefineExpose({\n  startAnimation,\n  stopAnimation,\n  setControlled,\n});\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

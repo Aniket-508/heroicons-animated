@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "shield-exclamation",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "shield-exclamation.svelte",
+      "content": "<script lang=\"ts\">\nexport const size = 28;\nconst className = \"\";\nexport { className as class };\n\nlet isAnimating = false;\nlet isControlled = false;\n\nexport function startAnimation() {\n  if (!isControlled) {\n    isAnimating = true;\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n}\n\nexport function stopAnimation() {\n  isAnimating = false;\n}\n\nexport function setControlled(value: boolean) {\n  isControlled = value;\n}\n\nfunction handleMouseEnter() {\n  if (!isControlled) {\n    startAnimation();\n  }\n}\n\nfunction handleMouseLeave() {\n  if (!isControlled) {\n    stopAnimation();\n  }\n}\n</script>\n\n<div\n  class={className}\n  on:mouseenter={handleMouseEnter}\n  on:mouseleave={handleMouseLeave}\n  role=\"img\"\n>\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={size}\n    height={size}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    class=\"icon-svg\"\n    class:shieldexclamation-animate={isAnimating}\n  >\n    <path\n      d=\"M12 1.964A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Z\"\n    />\n    <g>\n      <path d=\"M12 9v3.75\" />\n      <path d=\"M12 15.75h.008v.008H12v-.008Z\" />\n    </g>\n  </svg>\n</div>\n\n<style>\ndiv {\n  display: inline-block;\n}\n\n.icon-svg {\n  transform-box: fill-box;\n  transform-origin: center;\n  transition: transform 0.3s ease;\n}\n\n.icon-svg.shieldexclamation-animate {\n  animation: shieldexclamation-animate 0.6s ease-in-out;\n}\n\n@keyframes shieldexclamation-animate {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

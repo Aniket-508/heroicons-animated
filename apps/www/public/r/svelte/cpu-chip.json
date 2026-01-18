@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "cpu-chip",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "cpu-chip.svelte",
+      "content": "<script lang=\"ts\">\nexport const size = 28;\nconst className = \"\";\nexport { className as class };\n\nlet isAnimating = false;\nlet isControlled = false;\n\nexport function startAnimation() {\n  if (!isControlled) {\n    isAnimating = true;\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n}\n\nexport function stopAnimation() {\n  isAnimating = false;\n}\n\nexport function setControlled(value: boolean) {\n  isControlled = value;\n}\n\nfunction handleMouseEnter() {\n  if (!isControlled) {\n    startAnimation();\n  }\n}\n\nfunction handleMouseLeave() {\n  if (!isControlled) {\n    stopAnimation();\n  }\n}\n</script>\n\n<div\n  class={className}\n  on:mouseenter={handleMouseEnter}\n  on:mouseleave={handleMouseLeave}\n  role=\"img\"\n>\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={size}\n    height={size}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    class=\"icon-svg\"\n    class:cpuchip-animate={isAnimating}\n  >\n    <path d=\"M8.25 3V4.5\" />\n    <path d=\"M12 3V4.5\" />\n    <path d=\"M15.75 3V4.5\" />\n    <path d=\"M4.5 8.25H3\" />\n    <path d=\"M4.5 12H3\" />\n    <path d=\"M4.5 15.75H3\" />\n    <path d=\"M21 8.25H19.5\" />\n    <path d=\"M21 12H19.5\" />\n    <path d=\"M21 15.75H19.5\" />\n    <path d=\"M8.25 19.5V21\" />\n    <path d=\"M12 19.5V21\" />\n    <path d=\"M15.75 19.5V21\" />\n    <path\n      d=\"M6.75 19.5H17.25C18.4926 19.5 19.5 18.4926 19.5 17.25V6.75C19.5 5.50736 18.4926 4.5 17.25 4.5H6.75C5.50736 4.5 4.5 5.50736 4.5 6.75V17.25C4.5 18.4926 5.50736 19.5 6.75 19.5ZM7.5 7.5H16.5V16.5H7.5V7.5Z\"\n    />\n  </svg>\n</div>\n\n<style>\ndiv {\n  display: inline-block;\n}\n\n.icon-svg {\n  transform-box: fill-box;\n  transform-origin: center;\n  transition: transform 0.3s ease;\n}\n\n.icon-svg.cpuchip-animate {\n  animation: cpuchip-animate 0.6s ease-in-out;\n}\n\n@keyframes cpuchip-animate {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,4431 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "heroicons-animated",
+  "homepage": "https://www.heroicons-animated.com",
+  "items": [
+    {
+      "name": "academic-cap",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "academic-cap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adjustments-horizontal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "adjustments-horizontal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adjustments-vertical",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "adjustments-vertical.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "archive-box-arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "archive-box-x-mark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "archive-box.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-on-square-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-on-square-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-on-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-tray",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-tray.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-end-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left-end-on-rectangle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-start-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left-start-on-rectangle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-path-rounded-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-path-rounded-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-path",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-path.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-end-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right-end-on-rectangle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-start-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right-start-on-rectangle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-top-right-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-top-right-on-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-trending-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-trending-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-trending-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-trending-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-down-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-down-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-down-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-left-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-left-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-left-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-left-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-right-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-right-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-right-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-right-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-up-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-up-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-up-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-on-square-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-on-square-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-on-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-tray",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-tray.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-pointing-in",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-pointing-in.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-pointing-out",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-pointing-out.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-right-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-right-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-up-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-up-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "at-symbol",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "at-symbol.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "backspace",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "backspace.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "backward",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "backward.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banknotes",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "banknotes.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-2.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3-bottom-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3-bottom-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3-bottom-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3-bottom-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3-center-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3-center-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-4",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-4.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bars-arrow-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery-0",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "battery-0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery-100",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "battery-100.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery-50",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "battery-50.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "beaker",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "beaker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-alert",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bell-alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bell-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-snooze",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bell-snooze.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bold",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bold.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bolt-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bolt-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bolt",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bolt.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "book-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "book-open.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bookmark-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bookmark-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bookmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "briefcase",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "briefcase.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bug-ant",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "bug-ant.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-library",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "building-library.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-office-2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "building-office-2.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-office",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "building-office.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-storefront",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "building-storefront.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cake",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cake.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calculator",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "calculator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar-date-range",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "calendar-date-range.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar-days",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "calendar-days.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "camera",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "camera.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-bar-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chart-bar-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chart-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-pie",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chart-pie.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-bottom-center-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-bottom-center-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-bottom-center",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-bottom-center.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left-ellipsis",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-left-ellipsis.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-left-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-oval-left-ellipsis",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-oval-left-ellipsis.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-oval-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-oval-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check-badge",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "check-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "check-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "check.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-up-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-up-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "circle-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "circle-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard-document-check.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard-document-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard-document.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clock",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "clock.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cloud-arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cloud-arrow-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cloud.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-bracket-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "code-bracket-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-bracket",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "code-bracket.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog-6-tooth",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cog-6-tooth.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog-8-tooth",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cog-8-tooth.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-line",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "command-line.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "computer-desktop",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "computer-desktop.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cpu-chip",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cpu-chip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "credit-card",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "credit-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cube-transparent",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cube-transparent.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cube",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cube.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-bangladeshi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "currency-bangladeshi.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-dollar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "currency-dollar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-euro",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "currency-euro.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-pound",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "currency-pound.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-rupee",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "currency-rupee.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-yen",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "currency-yen.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cursor-arrow-rays",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cursor-arrow-rays.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cursor-arrow-ripple",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "cursor-arrow-ripple.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-phone-mobile",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "device-phone-mobile.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-tablet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "device-tablet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "divide",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "divide.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-arrow-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-chart-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-check.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-bangladeshi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-bangladeshi.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-dollar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-dollar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-euro",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-euro.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-pound",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-pound.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-rupee",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-rupee.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-yen",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-yen.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-duplicate",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-duplicate.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-magnifying-glass",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-magnifying-glass.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-minus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "document.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-horizontal-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "ellipsis-horizontal-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-horizontal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "ellipsis-horizontal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-vertical",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "ellipsis-vertical.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "envelope-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "envelope-open.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "envelope",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "envelope.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "equals",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "equals.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "exclamation-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "exclamation-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "exclamation-triangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "exclamation-triangle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye-dropper",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "eye-dropper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "eye-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "eye.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "face-frown",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "face-frown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "face-smile",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "face-smile.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "film",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "film.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "finger-print",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "finger-print.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fire",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "fire.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "flag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "flag.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "folder-arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "folder-minus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "folder-open.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "folder-plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "folder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "forward",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "forward.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "funnel",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "funnel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gif",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "gif.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gift-top",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "gift-top.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gift",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "gift.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-alt",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "globe-alt.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-americas",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "globe-americas.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-asia-australia",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "globe-asia-australia.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-europe-africa",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "globe-europe-africa.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h1",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "h1.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "h2.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h3",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "h3.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-raised",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "hand-raised.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-thumb-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "hand-thumb-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-thumb-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "hand-thumb-up.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hashtag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "hashtag.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "heart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "heart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "home-modern",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "home-modern.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "home.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "identification",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "identification.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "inbox-arrow-down.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "inbox-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "inbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "information-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "information-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "italic",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "italic.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "key",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "key.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "language",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "language.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lifebuoy",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "lifebuoy.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "light-bulb",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "light-bulb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "link-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-bullet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "list-bullet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lock-closed",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "lock-closed.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lock-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "lock-open.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass-minus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass-plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map-pin",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "map-pin.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "map.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "megaphone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "megaphone.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "microphone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "microphone.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "minus-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "minus-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "minus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "moon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "moon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "musical-note",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "musical-note.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "newspaper",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "newspaper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "no-symbol",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "no-symbol.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "numbered-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "numbered-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paint-brush",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "paint-brush.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paper-airplane",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "paper-airplane.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paper-clip",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "paper-clip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pause-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "pause-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "pause.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pencil-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "pencil-square.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pencil",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "pencil.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "percent-badge",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "percent-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-arrow-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "phone-arrow-down-left.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-arrow-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "phone-arrow-up-right.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "phone-x-mark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "phone.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "photo",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "photo.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "play-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play-pause",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "play-pause.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "play.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plus-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "plus-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "power",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "power.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presentation-chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "presentation-chart-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presentation-chart-line",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "presentation-chart-line.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "printer",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "printer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "puzzle-piece",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "puzzle-piece.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "qr-code",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "qr-code.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "question-mark-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "question-mark-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "queue-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "queue-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "radio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "receipt-percent",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "receipt-percent.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "receipt-refund",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "receipt-refund.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rectangle-group",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "rectangle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rectangle-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "rectangle-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rocket-launch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "rocket-launch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rss",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "rss.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scale",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "scale.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scissors",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "scissors.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "server-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "server-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "server",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "server.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "share",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "share.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shield-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "shield-check.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shield-exclamation",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "shield-exclamation.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shopping-bag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "shopping-bag.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shopping-cart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "shopping-cart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signal-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "signal-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "signal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sparkles",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "sparkles.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speaker-wave",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "speaker-wave.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speaker-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "speaker-x-mark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "square-2-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "square-2-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "square-3-stack-3d",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "square-3-stack-3d.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "squares-2x2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "squares-2x2.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "squares-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "squares-plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "star",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "star.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stop-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "stop-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stop",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "stop.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "strikethrough",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "strikethrough.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sun",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "sun.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swatch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "swatch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-cells",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "table-cells.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "tag.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ticket",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "ticket.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "trash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trophy",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "trophy.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "truck",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "truck.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tv",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "tv.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "underline",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "underline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "user-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-group",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "user-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "user-minus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "user-plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "user.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "users.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "variable",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "variable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-camera-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "video-camera-slash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-camera",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "video-camera.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "view-columns",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "view-columns.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "viewfinder-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "viewfinder-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wallet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "wallet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wifi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "wifi.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "window",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "window.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wrench-screwdriver",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "wrench-screwdriver.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wrench",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "wrench.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "x-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "x-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "x-mark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

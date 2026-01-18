@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "presentation-chart-line",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "presentation-chart-line.svelte",
+      "content": "<script lang=\"ts\">\nexport const size = 28;\nconst className = \"\";\nexport { className as class };\n\nlet isAnimating = false;\nlet isControlled = false;\n\nexport function startAnimation() {\n  if (!isControlled) {\n    isAnimating = true;\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n}\n\nexport function stopAnimation() {\n  isAnimating = false;\n}\n\nexport function setControlled(value: boolean) {\n  isControlled = value;\n}\n\nfunction handleMouseEnter() {\n  if (!isControlled) {\n    startAnimation();\n  }\n}\n\nfunction handleMouseLeave() {\n  if (!isControlled) {\n    stopAnimation();\n  }\n}\n</script>\n\n<div\n  class={className}\n  on:mouseenter={handleMouseEnter}\n  on:mouseleave={handleMouseLeave}\n  role=\"img\"\n>\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={size}\n    height={size}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    class=\"icon-svg\"\n    class:presentationchartline-animate={isAnimating}\n  >\n    <path\n      d=\"M3.75 3V14.25C3.75 15.4926 4.75736 16.5 6 16.5H8.25M3.75 3H2.25M3.75 3H20.25M20.25 3H21.75M20.25 3V14.25C20.25 15.4926 19.2426 16.5 18 16.5H15.75M8.25 16.5H15.75M8.25 16.5L7.25 19.5M15.75 16.5L16.75 19.5M16.75 19.5L17.25 21M16.75 19.5H7.25M7.25 19.5L6.75 21\"\n    />\n    <path\n      d=\"M7.5 12L10.5 9L12.6476 11.1476C13.6542 9.70301 14.9704 8.49023 16.5 7.60539\"\n    />\n  </svg>\n</div>\n\n<style>\ndiv {\n  display: inline-block;\n}\n\n.icon-svg {\n  transform-box: fill-box;\n  transform-origin: center;\n  transition: transform 0.3s ease;\n}\n\n.icon-svg.presentationchartline-animate {\n  animation: presentationchartline-animate 0.6s ease-in-out;\n}\n\n@keyframes presentationchartline-animate {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

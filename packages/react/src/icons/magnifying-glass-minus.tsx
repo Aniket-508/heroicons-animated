@@ -1,0 +1,98 @@
+"use client";
+
+import { cn } from "@heroicons-animated/shared";
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+export interface MagnifyingGlassMinusIconHandle {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+}
+
+interface MagnifyingGlassMinusIconProps extends HTMLAttributes<HTMLDivElement> {
+  size?: number;
+}
+
+const SYMBOL_VARIANT: Variants = {
+  normal: { pathLength: 1, opacity: 1, pathOffset: 0 },
+  animate: {
+    pathLength: [0, 1],
+    opacity: [0, 1],
+    pathOffset: [1, 0],
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+};
+
+const MagnifyingGlassMinusIcon = forwardRef<
+  MagnifyingGlassMinusIconHandle,
+  MagnifyingGlassMinusIconProps
+>(({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
+  const controls = useAnimation();
+  const isControlledRef = useRef(false);
+
+  useImperativeHandle(ref, () => {
+    isControlledRef.current = true;
+
+    return {
+      startAnimation: () => controls.start("animate"),
+      stopAnimation: () => controls.start("normal"),
+    };
+  });
+
+  const handleMouseEnter = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (isControlledRef.current) {
+        onMouseEnter?.(e);
+      } else {
+        controls.start("animate");
+      }
+    },
+    [controls, onMouseEnter]
+  );
+
+  const handleMouseLeave = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (isControlledRef.current) {
+        onMouseLeave?.(e);
+      } else {
+        controls.start("normal");
+      }
+    },
+    [controls, onMouseLeave]
+  );
+
+  return (
+    <div
+      className={cn(className)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      {...props}
+    >
+      <svg
+        fill="none"
+        height={size}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        viewBox="0 0 24 24"
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z" />
+        <motion.path
+          animate={controls}
+          d="M13.5 10.5H7.5"
+          initial="normal"
+          variants={SYMBOL_VARIANT}
+        />
+      </svg>
+    </div>
+  );
+});
+
+MagnifyingGlassMinusIcon.displayName = "MagnifyingGlassMinusIcon";
+
+export { MagnifyingGlassMinusIcon };

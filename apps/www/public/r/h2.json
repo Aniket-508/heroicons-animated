@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "h2",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "h2.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@heroicons-animated/shared\";\nimport type { Variants } from \"motion/react\";\nimport { motion, useAnimation } from \"motion/react\";\nimport type { HTMLAttributes } from \"react\";\nimport { forwardRef, useCallback, useImperativeHandle, useRef } from \"react\";\n\nexport interface H2IconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n\ninterface H2IconProps extends HTMLAttributes<HTMLDivElement> {\n  size?: number;\n}\n\nconst VARIANTS: Variants = {\n  normal: {\n    scale: 1,\n    transition: {\n      type: \"spring\",\n      stiffness: 500,\n      damping: 25,\n    },\n  },\n  animate: {\n    scale: 0.9,\n    transition: {\n      type: \"spring\",\n      stiffness: 400,\n      damping: 15,\n    },\n  },\n};\n\nconst H2Icon = forwardRef<H2IconHandle, H2IconProps>(\n  ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {\n    const controls = useAnimation();\n    const isControlledRef = useRef(false);\n\n    useImperativeHandle(ref, () => {\n      isControlledRef.current = true;\n\n      return {\n        startAnimation: () => controls.start(\"animate\"),\n        stopAnimation: () => controls.start(\"normal\"),\n      };\n    });\n\n    const handleMouseEnter = useCallback(\n      (e: React.MouseEvent<HTMLDivElement>) => {\n        if (isControlledRef.current) {\n          onMouseEnter?.(e);\n        } else {\n          controls.start(\"animate\");\n        }\n      },\n      [controls, onMouseEnter]\n    );\n\n    const handleMouseLeave = useCallback(\n      (e: React.MouseEvent<HTMLDivElement>) => {\n        if (isControlledRef.current) {\n          onMouseLeave?.(e);\n        } else {\n          controls.start(\"normal\");\n        }\n      },\n      [controls, onMouseLeave]\n    );\n\n    return (\n      <div\n        className={cn(className)}\n        onMouseEnter={handleMouseEnter}\n        onMouseLeave={handleMouseLeave}\n        {...props}\n      >\n        <svg\n          fill=\"none\"\n          height={size}\n          stroke=\"currentColor\"\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n          strokeWidth=\"1.5\"\n          viewBox=\"0 0 24 24\"\n          width={size}\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <path d=\"M2.243 4.492v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501\" />\n          <motion.path\n            animate={controls}\n            d=\"M21.75 19.5H16.5v-1.609a2.25 2.25 0 0 1 1.244-2.012l2.89-1.445c.651-.326 1.116-.955 1.116-1.683 0-.498-.04-.987-.118-1.463-.135-.825-.835-1.422-1.668-1.489a15.202 15.202 0 0 0-3.464.12\"\n            initial=\"normal\"\n            style={{ originY: \"12px\" }}\n            variants={VARIANTS}\n          />\n        </svg>\n      </div>\n    );\n  }\n);\n\nH2Icon.displayName = \"H2Icon\";\n\nexport { H2Icon };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

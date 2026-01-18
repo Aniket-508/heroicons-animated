@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pencil-square",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "pencil-square.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@heroicons-animated/shared\";\nimport type { Variants } from \"motion/react\";\nimport { motion, useAnimation } from \"motion/react\";\nimport type { HTMLAttributes } from \"react\";\nimport { forwardRef, useCallback, useImperativeHandle, useRef } from \"react\";\n\nexport interface PencilSquareIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n\ninterface PencilSquareIconProps extends HTMLAttributes<HTMLDivElement> {\n  size?: number;\n}\n\nconst PEN_VARIANTS: Variants = {\n  normal: {\n    rotate: 0,\n    x: 0,\n    y: 0,\n  },\n  animate: {\n    rotate: [-0.5, 0.5, -0.5],\n    x: [0, -1, 1, 0],\n    y: [0, 1, -1, 0],\n    transition: {\n      duration: 0.6,\n      ease: \"easeInOut\",\n    },\n  },\n};\n\nconst PencilSquareIcon = forwardRef<\n  PencilSquareIconHandle,\n  PencilSquareIconProps\n>(({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {\n  const controls = useAnimation();\n  const isControlledRef = useRef(false);\n\n  useImperativeHandle(ref, () => {\n    isControlledRef.current = true;\n\n    return {\n      startAnimation: () => controls.start(\"animate\"),\n      stopAnimation: () => controls.start(\"normal\"),\n    };\n  });\n\n  const handleMouseEnter = useCallback(\n    (e: React.MouseEvent<HTMLDivElement>) => {\n      if (isControlledRef.current) {\n        onMouseEnter?.(e);\n      } else {\n        controls.start(\"animate\");\n      }\n    },\n    [controls, onMouseEnter]\n  );\n\n  const handleMouseLeave = useCallback(\n    (e: React.MouseEvent<HTMLDivElement>) => {\n      if (isControlledRef.current) {\n        onMouseLeave?.(e);\n      } else {\n        controls.start(\"normal\");\n      }\n    },\n    [controls, onMouseLeave]\n  );\n\n  return (\n    <div\n      className={cn(className)}\n      onMouseEnter={handleMouseEnter}\n      onMouseLeave={handleMouseLeave}\n      {...props}\n    >\n      <svg\n        fill=\"none\"\n        height={size}\n        stroke=\"currentColor\"\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        strokeWidth=\"1.5\"\n        style={{ overflow: \"visible\" }}\n        viewBox=\"0 0 24 24\"\n        width={size}\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path d=\"M18 14V18.75C18 19.9926 16.9926 21 15.75 21H5.25C4.00736 21 3 19.9926 3 18.75V8.24999C3 7.00735 4.00736 5.99999 5.25 5.99999H10\" />\n        <motion.path\n          animate={controls}\n          d=\"M16.8617 4.48667L18.5492 2.79917C19.2814 2.06694 20.4686 2.06694 21.2008 2.79917C21.9331 3.53141 21.9331 4.71859 21.2008 5.45083L10.5822 16.0695C10.0535 16.5981 9.40144 16.9868 8.68489 17.2002L6 18L6.79978 15.3151C7.01323 14.5986 7.40185 13.9465 7.93052 13.4178L16.8617 4.48667ZM16.8617 4.48667L19.5 7.12499\"\n          initial=\"normal\"\n          variants={PEN_VARIANTS}\n        />\n      </svg>\n    </div>\n  );\n});\n\nPencilSquareIcon.displayName = \"PencilSquareIcon\";\n\nexport { PencilSquareIcon };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

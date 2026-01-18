@@ -1,0 +1,16 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "calendar-days",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "@vueuse/motion"
+  ],
+  "files": [
+    {
+      "path": "calendar-days.vue",
+      "content": "<template>\n  <div\n    :class=\"props.class\"\n    @mouseenter=\"handleMouseEnter\"\n    @mouseleave=\"handleMouseLeave\"\n  >\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      :width=\"props.size\"\n      :height=\"props.size\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"1.5\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n    >\n      <path\n        d=\"M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5\"\n      />\n      <path\n        v-for=\"(dot, index) in DOTS\"\n        :key=\"index\"\n        :d=\"dot.d\"\n        ref=\"dotRefs\"\n      />\n    </svg>\n  </div>\n</template>\n\n<script lang=\"ts\">\nexport default {\n  name: \"CalendarDaysIcon\",\n};\n</script>\n\n<script setup lang=\"ts\">\nimport { useMotion } from \"@vueuse/motion\";\nimport { onMounted, ref } from \"vue\";\n\nexport interface Props {\n  size?: number;\n  class?: string;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  size: 28,\n});\n\nconst dotVariants = (custom: number) => ({\n  normal: {\n    opacity: 1,\n    transition: {\n      duration: 200,\n    },\n  },\n  animate: {\n    opacity: [1, 0.3, 1],\n    transition: {\n      delay: custom * 100,\n      duration: 400,\n    },\n  },\n});\n\nconst DOTS = [\n  { d: \"M12 12.75h.008v.008H12v-.008Z\", index: 0 },\n  { d: \"M14.25 12.75h.008v.008h-.008v-.008Z\", index: 1 },\n  { d: \"M16.5 12.75h.008v.008H16.5v-.008Z\", index: 2 },\n  { d: \"M7.5 15h.008v.008H7.5V15Z\", index: 3 },\n  { d: \"M9.75 15h.008v.008H9.75V15Z\", index: 4 },\n  { d: \"M12 15h.008v.008H12V15Z\", index: 5 },\n  { d: \"M14.25 15h.008v.008h-.008V15Z\", index: 6 },\n  { d: \"M16.5 15h.008v.008H16.5V15Z\", index: 7 },\n  { d: \"M7.5 17.25h.008v.008H7.5v-.008Z\", index: 8 },\n  { d: \"M9.75 17.25h.008v.008H9.75v-.008Z\", index: 9 },\n  { d: \"M12 17.25h.008v.008H12v-.008Z\", index: 10 },\n  { d: \"M14.25 17.25h.008v.008h-.008v-.008Z\", index: 11 },\n];\n\nconst dotRefs = ref<SVGPathElement[]>([]);\nconst dotMotions: any[] = [];\n\nonMounted(() => {\n  dotRefs.value.forEach((el, index) => {\n    dotMotions[index] = useMotion(el, {\n      initial: dotVariants(index).normal,\n    });\n  });\n});\n\nlet isControlled = false;\n\nconst startAnimation = () => {\n  DOTS.forEach((_, index) => {\n    dotMotions[index]?.apply(dotVariants(index).animate);\n  });\n};\n\nconst stopAnimation = () => {\n  DOTS.forEach((_, index) => {\n    dotMotions[index]?.apply(dotVariants(index).normal);\n  });\n};\n\nconst handleMouseEnter = () => {\n  if (!isControlled) {\n    startAnimation();\n  }\n};\n\nconst handleMouseLeave = () => {\n  if (!isControlled) {\n    stopAnimation();\n  }\n};\n\nconst setControlled = (value: boolean) => {\n  isControlled = value;\n};\n\ndefineExpose({\n  startAnimation,\n  stopAnimation,\n  setControlled,\n});\n</script>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

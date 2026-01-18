@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+  "name": "variable",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "variable.svelte",
+      "content": "<script lang=\"ts\">\nexport const size = 28;\nconst className = \"\";\nexport { className as class };\n\nlet isAnimating = false;\nlet isControlled = false;\n\nexport function startAnimation() {\n  if (!isControlled) {\n    isAnimating = true;\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n}\n\nexport function stopAnimation() {\n  isAnimating = false;\n}\n\nexport function setControlled(value: boolean) {\n  isControlled = value;\n}\n\nfunction handleMouseEnter() {\n  if (!isControlled) {\n    startAnimation();\n  }\n}\n\nfunction handleMouseLeave() {\n  if (!isControlled) {\n    stopAnimation();\n  }\n}\n</script>\n\n<div\n  class={className}\n  on:mouseenter={handleMouseEnter}\n  on:mouseleave={handleMouseLeave}\n  role=\"img\"\n>\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={size}\n    height={size}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    class=\"icon-svg\"\n    class:variable-animate={isAnimating}\n  >\n    <path\n      d=\"M4.74455 3C3.61952 5.77929 3 8.8173 3 12C3 15.1827 3.61952 18.2207 4.74455 21M19.5 3C20.4673 5.77929 21 8.8173 21 12C21 15.1827 20.4673 18.2207 19.5 21M8.25 8.88462L9.6945 7.99569C10.1061 7.74241 10.6463 7.93879 10.7991 8.39726L13.2009 15.6027C13.3537 16.0612 13.8939 16.2576 14.3055 16.0043L15.75 15.1154M7.5 15.8654L7.71335 15.9556C8.45981 16.2715 9.32536 16.012 9.77495 15.3376L14.225 8.66243C14.6746 7.98804 15.5402 7.72854 16.2867 8.04435L16.5 8.13462\"\n    />\n  </svg>\n</div>\n\n<style>\ndiv {\n  display: inline-block;\n}\n\n.icon-svg {\n  transform-box: fill-box;\n  transform-origin: center;\n  transition: transform 0.3s ease;\n}\n\n.icon-svg.variable-animate {\n  animation: variable-animate 0.6s ease-in-out;\n}\n\n@keyframes variable-animate {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n</style>\n",
+      "type": "registry:ui"
+    }
+  ]
+}

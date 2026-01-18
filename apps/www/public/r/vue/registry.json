@@ -1,0 +1,4431 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry.json",
+  "name": "heroicons-animated",
+  "homepage": "https://www.heroicons-animated.com",
+  "items": [
+    {
+      "name": "academic-cap",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "academic-cap.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adjustments-horizontal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "adjustments-horizontal.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adjustments-vertical",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "adjustments-vertical.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "archive-box-arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "archive-box-x-mark.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "archive-box",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "archive-box.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-on-square-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-on-square-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-on-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down-tray",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down-tray.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-end-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left-end-on-rectangle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left-start-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left-start-on-rectangle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-long-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-long-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-path-rounded-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-path-rounded-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-path",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-path.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-end-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right-end-on-rectangle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right-start-on-rectangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right-start-on-rectangle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-top-right-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-top-right-on-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-trending-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-trending-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-trending-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-trending-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-down-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-down-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-down-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-left-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-left-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-left-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-left-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-right-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-right-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-right-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-right-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-up-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-up-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-turn-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-turn-up-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-on-square-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-on-square-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-on-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-on-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up-tray",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up-tray.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrow-uturn-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrow-uturn-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-pointing-in",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-pointing-in.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-pointing-out",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-pointing-out.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-right-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-right-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "arrows-up-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "arrows-up-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "at-symbol",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "at-symbol.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "backspace",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "backspace.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "backward",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "backward.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banknotes",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "banknotes.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-2.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3-bottom-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3-bottom-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3-bottom-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3-bottom-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3-center-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3-center-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-3",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-3.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-4",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-4.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bars-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bars-arrow-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery-0",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "battery-0.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery-100",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "battery-100.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "battery-50",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "battery-50.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "beaker",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "beaker.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-alert",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bell-alert.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bell-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell-snooze",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bell-snooze.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bell",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bell.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bold",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bold.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bolt-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bolt-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bolt",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bolt.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "book-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "book-open.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bookmark-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bookmark-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bookmark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bookmark.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "briefcase",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "briefcase.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bug-ant",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "bug-ant.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-library",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "building-library.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-office-2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "building-office-2.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-office",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "building-office.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "building-storefront",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "building-storefront.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cake",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cake.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calculator",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "calculator.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar-date-range",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "calendar-date-range.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar-days",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "calendar-days.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "calendar.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "camera",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "camera.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-bar-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chart-bar-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chart-bar.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-pie",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chart-pie.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-bottom-center-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-bottom-center-text.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-bottom-center",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-bottom-center.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left-ellipsis",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-left-ellipsis.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-left-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-oval-left-ellipsis",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-oval-left-ellipsis.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble-oval-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble-oval-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check-badge",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "check-badge.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "check-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "check.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-double-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-double-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-up-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-up-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chevron-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "chevron-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "circle-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "circle-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard-document-check.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard-document-list.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-document",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard-document.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clipboard",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "clipboard.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "clock",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "clock.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cloud-arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cloud-arrow-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cloud.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-bracket-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "code-bracket-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-bracket",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "code-bracket.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog-6-tooth",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cog-6-tooth.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog-8-tooth",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cog-8-tooth.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cog",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cog.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-line",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "command-line.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "computer-desktop",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "computer-desktop.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cpu-chip",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cpu-chip.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "credit-card",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "credit-card.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cube-transparent",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cube-transparent.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cube",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cube.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-bangladeshi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "currency-bangladeshi.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-dollar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "currency-dollar.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-euro",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "currency-euro.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-pound",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "currency-pound.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-rupee",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "currency-rupee.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-yen",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "currency-yen.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cursor-arrow-rays",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cursor-arrow-rays.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cursor-arrow-ripple",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "cursor-arrow-ripple.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-phone-mobile",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "device-phone-mobile.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-tablet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "device-tablet.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "divide",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "divide.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-arrow-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-arrow-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-chart-bar.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-check.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-bangladeshi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-bangladeshi.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-dollar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-dollar.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-euro",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-euro.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-pound",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-pound.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-rupee",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-rupee.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-currency-yen",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-currency-yen.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-duplicate",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-duplicate.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-magnifying-glass",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-magnifying-glass.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-minus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-plus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document-text.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "document.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-horizontal-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "ellipsis-horizontal-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-horizontal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "ellipsis-horizontal.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ellipsis-vertical",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "ellipsis-vertical.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "envelope-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "envelope-open.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "envelope",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "envelope.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "equals",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "equals.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "exclamation-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "exclamation-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "exclamation-triangle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "exclamation-triangle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye-dropper",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "eye-dropper.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "eye-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "eye",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "eye.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "face-frown",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "face-frown.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "face-smile",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "face-smile.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "film",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "film.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "finger-print",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "finger-print.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fire",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "fire.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "flag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "flag.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "folder-arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "folder-minus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "folder-open.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "folder-plus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "folder",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "folder.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "forward",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "forward.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "funnel",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "funnel.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gif",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "gif.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gift-top",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "gift-top.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gift",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "gift.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-alt",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "globe-alt.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-americas",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "globe-americas.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-asia-australia",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "globe-asia-australia.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe-europe-africa",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "globe-europe-africa.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h1",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "h1.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "h2.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "h3",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "h3.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-raised",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "hand-raised.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-thumb-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "hand-thumb-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hand-thumb-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "hand-thumb-up.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hashtag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "hashtag.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "heart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "heart.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "home-modern",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "home-modern.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "home.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "identification",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "identification.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox-arrow-down",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "inbox-arrow-down.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "inbox-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inbox",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "inbox.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "information-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "information-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "italic",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "italic.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "key",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "key.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "language",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "language.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lifebuoy",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "lifebuoy.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "light-bulb",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "light-bulb.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "link-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "link.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-bullet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "list-bullet.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lock-closed",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "lock-closed.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lock-open",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "lock-open.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass-minus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass-plus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnifying-glass",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "magnifying-glass.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map-pin",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "map-pin.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "map.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "megaphone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "megaphone.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "microphone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "microphone.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "minus-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "minus-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "minus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "moon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "moon.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "musical-note",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "musical-note.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "newspaper",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "newspaper.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "no-symbol",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "no-symbol.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "numbered-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "numbered-list.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paint-brush",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "paint-brush.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paper-airplane",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "paper-airplane.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paper-clip",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "paper-clip.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pause-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "pause-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "pause.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pencil-square",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "pencil-square.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pencil",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "pencil.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "percent-badge",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "percent-badge.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-arrow-down-left",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "phone-arrow-down-left.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-arrow-up-right",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "phone-arrow-up-right.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "phone-x-mark.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "phone.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "photo",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "photo.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "play-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play-pause",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "play-pause.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "play",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "play.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plus-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "plus-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "plus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "power",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "power.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presentation-chart-bar",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "presentation-chart-bar.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presentation-chart-line",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "presentation-chart-line.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "printer",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "printer.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "puzzle-piece",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "puzzle-piece.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "qr-code",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "qr-code.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "question-mark-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "question-mark-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "queue-list",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "queue-list.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "radio.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "receipt-percent",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "receipt-percent.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "receipt-refund",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "receipt-refund.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rectangle-group",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "rectangle-group.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rectangle-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "rectangle-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rocket-launch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "rocket-launch.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rss",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "rss.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scale",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "scale.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scissors",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "scissors.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "server-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "server-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "server",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "server.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "share",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "share.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shield-check",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "shield-check.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shield-exclamation",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "shield-exclamation.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shopping-bag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "shopping-bag.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shopping-cart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "shopping-cart.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signal-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "signal-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signal",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "signal.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sparkles",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "sparkles.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speaker-wave",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "speaker-wave.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speaker-x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "speaker-x-mark.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "square-2-stack",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "square-2-stack.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "square-3-stack-3d",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "square-3-stack-3d.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "squares-2x2",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "squares-2x2.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "squares-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "squares-plus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "star",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "star.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stop-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "stop-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stop",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "stop.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "strikethrough",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "strikethrough.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sun",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "sun.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swatch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "swatch.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-cells",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "table-cells.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "tag.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ticket",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "ticket.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "trash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trophy",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "trophy.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "truck",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "truck.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tv",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "tv.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "underline",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "underline.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "user-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-group",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "user-group.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-minus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "user-minus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-plus",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "user-plus.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "user.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "users.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "variable",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "variable.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-camera-slash",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "video-camera-slash.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-camera",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "video-camera.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "view-columns",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "view-columns.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "viewfinder-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "viewfinder-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wallet",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "wallet.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wifi",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "wifi.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "window",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "window.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wrench-screwdriver",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "wrench-screwdriver.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wrench",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "wrench.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "x-circle",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "x-circle.vue",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "x-mark",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "@vueuse/motion"
+      ],
+      "files": [
+        {
+          "path": "x-mark.vue",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

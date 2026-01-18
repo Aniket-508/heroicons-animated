@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "rectangle-stack",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "rectangle-stack.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@heroicons-animated/shared\";\nimport type { Variants } from \"motion/react\";\nimport { motion, useAnimation } from \"motion/react\";\nimport type { HTMLAttributes } from \"react\";\nimport { forwardRef, useCallback, useImperativeHandle, useRef } from \"react\";\n\nexport interface RectangleStackIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n\ninterface RectangleStackIconProps extends HTMLAttributes<HTMLDivElement> {\n  size?: number;\n}\n\nconst STACK_VARIANTS: Variants = {\n  normal: { scaleY: 1 },\n  animate: {\n    scaleY: [1, 1.08, 1],\n    transition: {\n      duration: 0.4,\n      ease: \"easeInOut\",\n    },\n  },\n};\n\nconst RectangleStackIcon = forwardRef<\n  RectangleStackIconHandle,\n  RectangleStackIconProps\n>(({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {\n  const controls = useAnimation();\n  const isControlledRef = useRef(false);\n\n  useImperativeHandle(ref, () => {\n    isControlledRef.current = true;\n\n    return {\n      startAnimation: () => controls.start(\"animate\"),\n      stopAnimation: () => controls.start(\"normal\"),\n    };\n  });\n\n  const handleMouseEnter = useCallback(\n    (e: React.MouseEvent<HTMLDivElement>) => {\n      if (isControlledRef.current) {\n        onMouseEnter?.(e);\n      } else {\n        controls.start(\"animate\");\n      }\n    },\n    [controls, onMouseEnter]\n  );\n\n  const handleMouseLeave = useCallback(\n    (e: React.MouseEvent<HTMLDivElement>) => {\n      if (isControlledRef.current) {\n        onMouseLeave?.(e);\n      } else {\n        controls.start(\"normal\");\n      }\n    },\n    [controls, onMouseLeave]\n  );\n\n  return (\n    <div\n      className={cn(className)}\n      onMouseEnter={handleMouseEnter}\n      onMouseLeave={handleMouseLeave}\n      {...props}\n    >\n      <motion.svg\n        animate={controls}\n        fill=\"none\"\n        height={size}\n        initial=\"normal\"\n        stroke=\"currentColor\"\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        strokeWidth=\"1.5\"\n        variants={STACK_VARIANTS}\n        viewBox=\"0 0 24 24\"\n        width={size}\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path d=\"M6 6.87803V6C6 4.75736 7.00736 3.75 8.25 3.75H15.75C16.9926 3.75 18 4.75736 18 6V6.87803M6 6.87803C6.23458 6.79512 6.48702 6.75 6.75 6.75H17.25C17.513 6.75 17.7654 6.79512 18 6.87803M6 6.87803C5.12611 7.18691 4.5 8.02034 4.5 9V9.87803M18 6.87803C18.8739 7.18691 19.5 8.02034 19.5 9V9.87803M19.5 9.87803C19.2654 9.79512 19.013 9.75 18.75 9.75H5.25C4.98702 9.75 4.73458 9.79512 4.5 9.87803M19.5 9.87803C20.3739 10.1869 21 11.0203 21 12V18C21 19.2426 19.9926 20.25 18.75 20.25H5.25C4.00736 20.25 3 19.2426 3 18V12C3 11.0203 3.62611 10.1869 4.5 9.87803\" />\n      </motion.svg>\n    </div>\n  );\n});\n\nRectangleStackIcon.displayName = \"RectangleStackIcon\";\n\nexport { RectangleStackIcon };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

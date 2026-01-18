@@ -1,0 +1,22 @@
+{
+  "name": "@heroicons-animated/shared",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "catalog:",
+    "tailwind-merge": "catalog:"
+  },
+  "devDependencies": {
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}

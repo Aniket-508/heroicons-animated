@@ -1,0 +1,38 @@
+{
+  "name": "@heroicons-animated/svelte",
+  "version": "0.1.0",
+  "description": "Animated Svelte icons built with CSS animations",
+  "type": "module",
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./icons/*": {
+      "svelte": "./dist/icons/*.js",
+      "types": "./dist/icons/*.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "svelte-package",
+    "dev": "svelte-package --watch",
+    "type-check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@sveltejs/package": "^2.3.4",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "svelte": "^5.20.0",
+    "svelte-check": "^4.0.7",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

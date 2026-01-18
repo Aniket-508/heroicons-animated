@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "variable",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "variable.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@heroicons-animated/shared\";\nimport type { Variants } from \"motion/react\";\nimport { motion, useAnimation } from \"motion/react\";\nimport type { HTMLAttributes } from \"react\";\nimport { forwardRef, useCallback, useImperativeHandle, useRef } from \"react\";\n\nexport interface VariableIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n\ninterface VariableIconProps extends HTMLAttributes<HTMLDivElement> {\n  size?: number;\n}\n\nconst VARIABLE_VARIANTS: Variants = {\n  normal: {\n    scaleX: 1,\n  },\n  animate: {\n    scaleX: [1, 1.1, 0.9, 1],\n    transition: {\n      duration: 0.5,\n      ease: \"easeInOut\",\n    },\n  },\n};\n\nconst VariableIcon = forwardRef<VariableIconHandle, VariableIconProps>(\n  ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {\n    const controls = useAnimation();\n    const isControlledRef = useRef(false);\n\n    useImperativeHandle(ref, () => {\n      isControlledRef.current = true;\n\n      return {\n        startAnimation: () => controls.start(\"animate\"),\n        stopAnimation: () => controls.start(\"normal\"),\n      };\n    });\n\n    const handleMouseEnter = useCallback(\n      (e: React.MouseEvent<HTMLDivElement>) => {\n        if (isControlledRef.current) {\n          onMouseEnter?.(e);\n        } else {\n          controls.start(\"animate\");\n        }\n      },\n      [controls, onMouseEnter]\n    );\n\n    const handleMouseLeave = useCallback(\n      (e: React.MouseEvent<HTMLDivElement>) => {\n        if (isControlledRef.current) {\n          onMouseLeave?.(e);\n        } else {\n          controls.start(\"normal\");\n        }\n      },\n      [controls, onMouseLeave]\n    );\n\n    return (\n      <div\n        className={cn(className)}\n        onMouseEnter={handleMouseEnter}\n        onMouseLeave={handleMouseLeave}\n        {...props}\n      >\n        <motion.svg\n          animate={controls}\n          fill=\"none\"\n          height={size}\n          initial=\"normal\"\n          stroke=\"currentColor\"\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n          strokeWidth=\"1.5\"\n          style={{ originX: \"50%\", originY: \"50%\" }}\n          variants={VARIABLE_VARIANTS}\n          viewBox=\"0 0 24 24\"\n          width={size}\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <path d=\"M4.74455 3C3.61952 5.77929 3 8.8173 3 12C3 15.1827 3.61952 18.2207 4.74455 21M19.5 3C20.4673 5.77929 21 8.8173 21 12C21 15.1827 20.4673 18.2207 19.5 21M8.25 8.88462L9.6945 7.99569C10.1061 7.74241 10.6463 7.93879 10.7991 8.39726L13.2009 15.6027C13.3537 16.0612 13.8939 16.2576 14.3055 16.0043L15.75 15.1154M7.5 15.8654L7.71335 15.9556C8.45981 16.2715 9.32536 16.012 9.77495 15.3376L14.225 8.66243C14.6746 7.98804 15.5402 7.72854 16.2867 8.04435L16.5 8.13462\" />\n        </motion.svg>\n      </div>\n    );\n  }\n);\n\nVariableIcon.displayName = \"VariableIcon\";\n\nexport { VariableIcon };\n",
+      "type": "registry:ui"
+    }
+  ]
+}
