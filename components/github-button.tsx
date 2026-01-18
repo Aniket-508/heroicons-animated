@@ -11,7 +11,7 @@ const GithubStarsButton = () => {
   return (
     <a
       aria-label={`Star on GitHub${stars ? ` (${stars.toLocaleString()} stars)` : ""}`}
-      className="group/github-stars supports-[corner-shape:squircle]:corner-squircle flex items-center gap-2 rounded-[14px] bg-white px-2.5 py-2 focus-within:outline-offset-2 focus-visible:outline-1 focus-visible:outline-primary supports-[corner-shape:squircle]:rounded-[20px] dark:bg-white/10"
+      className="group/github-stars supports-[corner-shape:squircle]:corner-squircle flex size-9 items-center justify-center gap-2 rounded-[14px] bg-white focus-within:outline-offset-2 focus-visible:outline-1 focus-visible:outline-primary supports-[corner-shape:squircle]:rounded-[20px] sm:size-auto sm:px-2.5 sm:py-2 dark:bg-white/10"
       href={LINK.GITHUB}
       rel="noopener noreferrer"
       tabIndex={0}
@@ -21,14 +21,14 @@ const GithubStarsButton = () => {
       {stars !== null && (
         <span
           aria-hidden="true"
-          className="font-sans text-black text-sm tabular-nums tracking-[-0.4px] [text-shadow:-0.1px_0_0_currentColor,0.1px_0_0_currentColor] dark:text-white"
+          className="hidden font-sans text-black text-sm tabular-nums tracking-[-0.4px] [text-shadow:-0.1px_0_0_currentColor,0.1px_0_0_currentColor] sm:inline dark:text-white"
         >
           {stars.toLocaleString()}
         </span>
       )}
       <svg
         aria-hidden="true"
-        className="text-neutral-400 transition-colors duration-100 group-hover/github-stars:text-[#e3b341]"
+        className="hidden text-neutral-400 transition-colors duration-100 group-hover/github-stars:text-[#e3b341] sm:block"
         fill="none"
         height="13"
         viewBox="0 0 13 13"

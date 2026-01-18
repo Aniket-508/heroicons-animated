@@ -122,53 +122,55 @@ const IconPage = async ({ params }: Props) => {
       />
       <IconJsonLd icon={icon} />
 
-      <section className="view-container flex flex-col items-start border-neutral-200 py-12 xl:border-x xl:pb-4 min-[880px]:pt-[60px] dark:border-neutral-800">
-        <Link
-          className="mb-8 flex items-center gap-2 font-sans text-secondary text-sm transition-[color] duration-100 hover:text-primary focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
-          href="/"
-        >
-          <ArrowLeftIcon className="size-4" />
-          Back to all icons
-        </Link>
+      <section className="flex min-h-[calc(100vh-var(--header-height))] flex-col">
+        <div className="view-container flex flex-col items-start border-neutral-200 py-12 xl:border-x xl:pb-4 min-[880px]:pt-[60px] dark:border-neutral-800">
+          <Link
+            className="mb-8 flex items-center gap-2 font-sans text-secondary text-sm transition-[color] duration-100 hover:text-primary focus-visible:outline-1 focus-visible:outline-primary focus-visible:outline-offset-2"
+            href="/"
+          >
+            <ArrowLeftIcon className="size-4" />
+            Back to all icons
+          </Link>
 
-        <div className="flex w-full flex-col gap-6 min-[880px]:flex-row min-[880px]:items-center">
-          <IconCard icon={icon} />
+          <div className="flex w-full flex-col gap-6 min-[880px]:flex-row min-[880px]:items-center">
+            <IconCard icon={icon} />
 
-          <div className="flex h-full flex-col gap-1">
-            <h1 className="font-sans text-[28px] min-[640px]:text-[36px]">
-              {pascalName}
-            </h1>
-            <p className="font-mono text-secondary text-sm">
-              Animated {icon.name.replace(/-/g, " ")} icon for React
-            </p>
-            <CliBlock
-              className="mt-7 hidden px-0 min-[880px]:flex"
-              staticIconName={slug}
-            />
+            <div className="flex h-full flex-col gap-1">
+              <h1 className="font-sans text-[28px] min-[640px]:text-[36px]">
+                {pascalName}
+              </h1>
+              <p className="font-mono text-secondary text-sm">
+                Animated {icon.name.replace(/-/g, " ")} icon for React
+              </p>
+              <CliBlock
+                className="mt-7 hidden px-0 min-[880px]:flex"
+                staticIconName={slug}
+              />
+            </div>
+          </div>
+
+          <CliBlock
+            className="mt-8 flex px-0 min-[880px]:hidden"
+            staticIconName={slug}
+          />
+        </div>
+
+        <div className="view-container border-neutral-200 py-4 xl:border dark:border-neutral-800">
+          <h2 className="mb-3 font-sans text-xl">Keywords</h2>
+          <div className="flex flex-wrap gap-2">
+            {icon.keywords.map((keyword, index) => (
+              <span
+                className="supports-[corner-shape:squircle]:corner-squircle rounded-[12px] bg-neutral-200 px-3 py-1 font-mono text-secondary text-sm supports-[corner-shape:squircle]:rounded-[20px] dark:bg-[#262626]"
+                key={`${keyword}-${index}`}
+              >
+                {keyword}
+              </span>
+            ))}
           </div>
         </div>
 
-        <CliBlock
-          className="mt-8 flex px-0 min-[880px]:hidden"
-          staticIconName={slug}
-        />
+        <SimilarIcons currentIcon={icon} />
       </section>
-
-      <section className="view-container border-neutral-200 py-4 xl:border dark:border-neutral-800">
-        <h2 className="mb-3 font-sans text-xl">Keywords</h2>
-        <div className="flex flex-wrap gap-2">
-          {icon.keywords.map((keyword, index) => (
-            <span
-              className="supports-[corner-shape:squircle]:corner-squircle rounded-[12px] bg-neutral-200 px-3 py-1 font-mono text-secondary text-sm supports-[corner-shape:squircle]:rounded-[20px] dark:bg-[#262626]"
-              key={`${keyword}-${index}`}
-            >
-              {keyword}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <SimilarIcons currentIcon={icon} />
     </>
   );
 };

@@ -69,11 +69,13 @@ const SimilarIcons = ({ currentIcon }: Props) => {
   }, [currentIcon]);
 
   if (similarIcons.length === 0) {
-    return null;
+    return (
+      <div className="view-container flex-1 border-neutral-200 pb-[60px] xl:border-x dark:border-neutral-800" />
+    );
   }
 
   return (
-    <section className="view-container border-neutral-200 pt-12 pb-[60px] xl:border-x xl:pt-4 dark:border-neutral-800">
+    <div className="view-container border-neutral-200 pt-12 pb-[60px] xl:border-x xl:pt-4 dark:border-neutral-800">
       <h2 className="mb-4 font-sans text-xl">Similar Icons</h2>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-2">
         {similarIcons.map((icon) => (
@@ -84,7 +86,7 @@ const SimilarIcons = ({ currentIcon }: Props) => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
