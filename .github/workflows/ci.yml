@@ -28,7 +28,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Check imports
-        run: pnpm check-imports
+        run: pnpm --filter @repo/www check-imports
 
   check-duplicates:
     name: Check Duplicates
@@ -51,4 +51,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Check duplicates
-        run: pnpm check-duplicates
+        run: pnpm --filter @repo/www check-duplicates

@@ -83,7 +83,15 @@ const fixFile = (filePath: string, issues: Issue[]): boolean => {
 
 const run = () => {
   const shouldFix = process.argv.includes("--fix");
-  const iconsDir = join(process.cwd(), "..", "..", "packages", "react", "src", "icons");
+  const iconsDir = join(
+    process.cwd(),
+    "..",
+    "..",
+    "packages",
+    "react",
+    "src",
+    "icons"
+  );
   const files = readdirSync(iconsDir).filter((f) => f.endsWith(".tsx"));
 
   console.log("🔍 Checking icon style (UPPER_CASE constants)...\n");

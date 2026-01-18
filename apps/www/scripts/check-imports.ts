@@ -9,7 +9,15 @@ interface CheckResult {
 }
 
 const getAllIconFiles = (): string[] => {
-  const iconsDir = join(process.cwd(), "..", "..", "packages", "react", "src", "icons");
+  const iconsDir = join(
+    process.cwd(),
+    "..",
+    "..",
+    "packages",
+    "react",
+    "src",
+    "icons"
+  );
   const files = readdirSync(iconsDir);
 
   return files
@@ -19,13 +27,21 @@ const getAllIconFiles = (): string[] => {
 };
 
 const getImportsFromIndex = (): Set<string> => {
-  const indexPath = join(process.cwd(), "..", "..", "packages", "react", "src", "icons", "index.ts");
+  const indexPath = join(
+    process.cwd(),
+    "..",
+    "..",
+    "packages",
+    "react",
+    "src",
+    "icons",
+    "index.ts"
+  );
   const content = readFileSync(indexPath, "utf-8");
 
   const imports = new Set<string>();
 
-  const importRegex =
-    /import\s+{[^}]+}\s+from\s+['"]\.\/([^'"]+)['"]/g;
+  const importRegex = /import\s+{[^}]+}\s+from\s+['"]\.\/([^'"]+)['"]/g;
 
   let match: RegExpExecArray | null = null;
   // biome-ignore lint/suspicious/noAssignInExpressions: ignore
@@ -38,7 +54,16 @@ const getImportsFromIndex = (): Set<string> => {
 };
 
 const getIconsUsedInList = (): Set<string> => {
-  const indexPath = join(process.cwd(), "..", "..", "packages", "react", "src", "icons", "index.ts");
+  const indexPath = join(
+    process.cwd(),
+    "..",
+    "..",
+    "packages",
+    "react",
+    "src",
+    "icons",
+    "index.ts"
+  );
   const content = readFileSync(indexPath, "utf-8");
 
   const iconsInList = new Set<string>();
