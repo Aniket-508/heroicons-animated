@@ -8,7 +8,7 @@
     "start": "turbo run start",
     "lint": "ultracite fix",
     "lint:check": "ultracite check",
-    "type-check": "turbo run type-check"
+    "type-check": "turbo run type-check --continue"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",

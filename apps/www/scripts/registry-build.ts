@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { SITE } from "@heroicons-animated/shared";
+import { SITE } from "@/constants";
 import type { Schema } from "./registry-schema";
 
 type Framework = "react" | "vue" | "svelte";
