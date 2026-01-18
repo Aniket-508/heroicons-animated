@@ -7,9 +7,9 @@ export function GET() {
 
   const content = `# ${SITE.NAME}
 
-> Beautifully animated heroicons
+> Beautifully animated heroicons for React, Vue, and Svelte
 
-${SITE.NAME} is an open-source (MIT License) collection of smooth animated 316 icons for React projects.
+${SITE.NAME} is an open-source (MIT License) collection of smooth animated ${icons.length} icons for React, Vue, and Svelte projects.
 
 ## Overview
 
@@ -17,16 +17,75 @@ ${SITE.NAME} is an open-source (MIT License) collection of smooth animated 316 i
 - GitHub: ${LINK.GITHUB}
 - Author: ${SITE.AUTHOR.TWITTER} (${LINK.TWITTER})
 
-## Tech Stack
+## Packages
 
-- React components with TypeScript
-- Animations powered by Motion (${LINK.MOTION})
-- Based on Heroicons (${LINK.HEROICONS})
+| Package | Framework | Animation Engine |
+|---------|-----------|------------------|
+| @heroicons-animated/react | React 18/19 | Motion |
+| @heroicons-animated/vue | Vue 3 | @vueuse/motion |
+| @heroicons-animated/svelte | Svelte 5 | CSS animations |
 
 ## Installation
 
+### React
+
+\`\`\`bash
+npm install @heroicons-animated/react motion
+\`\`\`
+
+\`\`\`tsx
+import { BeakerIcon } from '@heroicons-animated/react'
+
+export default function App() {
+  return <BeakerIcon className="size-6" />
+}
+\`\`\`
+
+### Vue
+
+\`\`\`bash
+npm install @heroicons-animated/vue @vueuse/motion
+\`\`\`
+
+\`\`\`vue
+<script setup>
+import { BeakerIcon } from '@heroicons-animated/vue'
+</script>
+
+<template>
+  <BeakerIcon class="size-6" />
+</template>
+\`\`\`
+
+### Svelte
+
+\`\`\`bash
+npm install @heroicons-animated/svelte
+\`\`\`
+
+\`\`\`svelte
+<script>
+  import { BeakerIcon } from '@heroicons-animated/svelte'
+</script>
+
+<BeakerIcon class="size-6" />
+\`\`\`
+
+### Copy-paste via CLI
+
+#### React
 \`\`\`bash
 npx shadcn@latest add "${SITE.URL}/r/{icon-name}.json"
+\`\`\`
+
+#### Vue
+\`\`\`bash
+npx shadcn-vue@latest add "${SITE.URL}/r/vue/{icon-name}.json"
+\`\`\`
+
+#### Svelte
+\`\`\`bash
+npx shadcn-svelte@latest add "${SITE.URL}/r/svelte/{icon-name}.json"
 \`\`\`
 
 Replace {icon-name} with the desired icon name (kebab-case).
@@ -35,17 +94,14 @@ Replace {icon-name} with the desired icon name (kebab-case).
 
 ${iconNames}
 
-## Usage
+## Icon Page URLs
 
-Each icon is a React component that animates on hover. Example:
+Each icon has a dedicated page at: ${SITE.URL}/icons/{icon-name}
 
-\`\`\`tsx
-import { Activity } from '@/components/icons/activity';
-
-export function MyComponent() {
-  return <Activity className="size-6" />;
-}
-\`\`\`
+For example:
+- ${SITE.URL}/icons/beaker
+- ${SITE.URL}/icons/academic-cap
+- ${SITE.URL}/icons/arrow-down
 
 ## License
 
@@ -53,7 +109,7 @@ MIT License - free for personal and commercial use.
 
 ## Contributing
 
-Contributions welcome! See CONTRIBUTING.md for guidelines.
+Contributions welcome! See ${LINK.GITHUB}/blob/main/CONTRIBUTING.md for guidelines.
 `;
 
   return new Response(content, {
