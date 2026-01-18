@@ -1,6 +1,6 @@
 ## `heroicons-animated` is beautifully animated heroicons.
 
-![preview](./public/og.png)
+![preview](./apps/www/public/og.png)
 
 **Demo** → [heroicons-animated](https://www.heroicons-animated.com)
 
