@@ -19,11 +19,11 @@
     },
     "type-check": {
       "dependsOn": ["^type-check"]
-    },
-    "globalEnv": [
-      "GITHUB_TOKEN",
-      "V0_API_KEY",
-      "NEXT_PUBLIC_WANDRY_ANALYTICS_TOKEN"
-    ]
-  }
+    }
+  },
+  "globalEnv": [
+    "GITHUB_TOKEN",
+    "V0_API_KEY",
+    "NEXT_PUBLIC_WANDRY_ANALYTICS_TOKEN"
+  ]
 }
