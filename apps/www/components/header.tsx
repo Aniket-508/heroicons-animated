@@ -60,7 +60,6 @@ FilledHeartIcon.displayName = "FilledHeartIcon";
 
 const Header = () => {
   const heartRef = useRef<FilledHeartIconHandle>(null);
-  const { framework, setFramework } = useFramework();
 
   const handleMouseEnter = useCallback(() => {
     heartRef.current?.startAnimation();
