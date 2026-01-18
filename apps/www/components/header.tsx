@@ -1,6 +1,6 @@
 "use client";
 
-import { cn, LINK } from "@heroicons-animated/shared";
+import { cn } from "@heroicons-animated/shared";
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import Link from "next/link";
