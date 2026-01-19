@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "minus",
+  "title": "minus",
+  "description": "Animated minus icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

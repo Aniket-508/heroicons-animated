@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "currency-pound",
+  "title": "currency-pound",
+  "description": "Animated currency-pound icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

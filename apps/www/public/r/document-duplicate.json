@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "document-duplicate",
+  "title": "document-duplicate",
+  "description": "Animated document-duplicate icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

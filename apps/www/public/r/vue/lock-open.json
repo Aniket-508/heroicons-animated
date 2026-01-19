@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "lock-open",
+  "title": "lock-open",
+  "description": "Animated lock-open icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

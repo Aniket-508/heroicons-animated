@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "device-phone-mobile",
+  "title": "device-phone-mobile",
+  "description": "Animated device-phone-mobile icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

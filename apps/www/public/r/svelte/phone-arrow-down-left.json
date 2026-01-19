@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "phone-arrow-down-left",
+  "title": "phone-arrow-down-left",
+  "description": "Animated phone-arrow-down-left icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

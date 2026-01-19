@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrow-left",
+  "title": "arrow-left",
+  "description": "Animated arrow-left icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

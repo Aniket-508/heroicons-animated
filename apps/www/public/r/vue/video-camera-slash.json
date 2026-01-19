@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "video-camera-slash",
+  "title": "video-camera-slash",
+  "description": "Animated video-camera-slash icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

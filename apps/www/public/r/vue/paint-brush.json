@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "paint-brush",
+  "title": "paint-brush",
+  "description": "Animated paint-brush icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

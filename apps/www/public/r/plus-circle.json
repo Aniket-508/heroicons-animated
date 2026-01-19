@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "plus-circle",
+  "title": "plus-circle",
+  "description": "Animated plus-circle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "phone-x-mark",
+  "title": "phone-x-mark",
+  "description": "Animated phone-x-mark icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

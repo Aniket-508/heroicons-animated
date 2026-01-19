@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "user-plus",
+  "title": "user-plus",
+  "description": "Animated user-plus icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

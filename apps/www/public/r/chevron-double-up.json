@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chevron-double-up",
+  "title": "chevron-double-up",
+  "description": "Animated chevron-double-up icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

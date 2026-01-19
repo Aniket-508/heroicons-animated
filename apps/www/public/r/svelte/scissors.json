@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "scissors",
+  "title": "scissors",
+  "description": "Animated scissors icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "document-text",
+  "title": "document-text",
+  "description": "Animated document-text icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

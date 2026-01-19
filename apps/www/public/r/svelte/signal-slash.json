@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "signal-slash",
+  "title": "signal-slash",
+  "description": "Animated signal-slash icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

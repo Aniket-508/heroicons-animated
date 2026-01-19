@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "chart-bar-square",
+  "title": "chart-bar-square",
+  "description": "Animated chart-bar-square icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "at-symbol",
+  "title": "at-symbol",
+  "description": "Animated at-symbol icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

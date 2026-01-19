@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chart-bar",
+  "title": "chart-bar",
+  "description": "Animated chart-bar icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

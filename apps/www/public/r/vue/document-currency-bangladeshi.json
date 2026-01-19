@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "document-currency-bangladeshi",
+  "title": "document-currency-bangladeshi",
+  "description": "Animated document-currency-bangladeshi icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-left-circle",
+  "title": "arrow-left-circle",
+  "description": "Animated arrow-left-circle icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "check",
+  "title": "check",
+  "description": "Animated check icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

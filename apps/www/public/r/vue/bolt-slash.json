@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "bolt-slash",
+  "title": "bolt-slash",
+  "description": "Animated bolt-slash icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

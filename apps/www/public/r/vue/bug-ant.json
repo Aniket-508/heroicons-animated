@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "bug-ant",
+  "title": "bug-ant",
+  "description": "Animated bug-ant icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

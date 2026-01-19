@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "lifebuoy",
+  "title": "lifebuoy",
+  "description": "Animated lifebuoy icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

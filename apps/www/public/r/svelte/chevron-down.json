@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "chevron-down",
+  "title": "chevron-down",
+  "description": "Animated chevron-down icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

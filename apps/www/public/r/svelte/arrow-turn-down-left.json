@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-turn-down-left",
+  "title": "arrow-turn-down-left",
+  "description": "Animated arrow-turn-down-left icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

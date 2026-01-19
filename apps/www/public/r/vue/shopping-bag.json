@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "shopping-bag",
+  "title": "shopping-bag",
+  "description": "Animated shopping-bag icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

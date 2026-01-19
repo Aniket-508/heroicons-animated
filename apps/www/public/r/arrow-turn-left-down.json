@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-turn-left-down",
+  "title": "arrow-turn-left-down",
+  "description": "Animated arrow-turn-left-down icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

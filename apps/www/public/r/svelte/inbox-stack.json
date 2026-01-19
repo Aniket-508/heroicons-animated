@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "inbox-stack",
+  "title": "inbox-stack",
+  "description": "Animated inbox-stack icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

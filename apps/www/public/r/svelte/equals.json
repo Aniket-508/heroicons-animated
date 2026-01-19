@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "equals",
+  "title": "equals",
+  "description": "Animated equals icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

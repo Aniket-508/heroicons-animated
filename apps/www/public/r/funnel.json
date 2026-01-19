@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "funnel",
+  "title": "funnel",
+  "description": "Animated funnel icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

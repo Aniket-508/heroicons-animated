@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "cloud",
+  "title": "cloud",
+  "description": "Animated cloud icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

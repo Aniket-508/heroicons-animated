@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "hand-raised",
+  "title": "hand-raised",
+  "description": "Animated hand-raised icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

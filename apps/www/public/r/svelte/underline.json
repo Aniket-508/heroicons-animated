@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "underline",
+  "title": "underline",
+  "description": "Animated underline icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

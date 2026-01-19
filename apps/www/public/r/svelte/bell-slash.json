@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "bell-slash",
+  "title": "bell-slash",
+  "description": "Animated bell-slash icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

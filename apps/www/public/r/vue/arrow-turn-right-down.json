@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrow-turn-right-down",
+  "title": "arrow-turn-right-down",
+  "description": "Animated arrow-turn-right-down icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "circle-stack",
+  "title": "circle-stack",
+  "description": "Animated circle-stack icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

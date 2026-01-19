@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "battery-50",
+  "title": "battery-50",
+  "description": "Animated battery-50 icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

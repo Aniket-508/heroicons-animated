@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "document-plus",
+  "title": "document-plus",
+  "description": "Animated document-plus icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

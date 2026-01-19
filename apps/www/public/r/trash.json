@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "trash",
+  "title": "trash",
+  "description": "Animated trash icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

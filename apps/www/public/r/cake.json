@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cake",
+  "title": "cake",
+  "description": "Animated cake icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

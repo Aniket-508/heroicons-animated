@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "light-bulb",
+  "title": "light-bulb",
+  "description": "Animated light-bulb icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "microphone",
+  "title": "microphone",
+  "description": "Animated microphone icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

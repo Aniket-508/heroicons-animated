@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "archive-box-arrow-down",
+  "title": "archive-box-arrow-down",
+  "description": "Animated archive-box-arrow-down icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

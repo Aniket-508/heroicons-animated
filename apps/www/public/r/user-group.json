@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "user-group",
+  "title": "user-group",
+  "description": "Animated user-group icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

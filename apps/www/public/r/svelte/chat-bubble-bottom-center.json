@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "chat-bubble-bottom-center",
+  "title": "chat-bubble-bottom-center",
+  "description": "Animated chat-bubble-bottom-center icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

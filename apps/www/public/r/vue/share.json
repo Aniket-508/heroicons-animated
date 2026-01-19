@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "share",
+  "title": "share",
+  "description": "Animated share icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

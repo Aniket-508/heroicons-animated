@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "battery-50",
+  "title": "battery-50",
+  "description": "Animated battery-50 icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

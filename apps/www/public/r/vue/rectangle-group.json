@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "rectangle-group",
+  "title": "rectangle-group",
+  "description": "Animated rectangle-group icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

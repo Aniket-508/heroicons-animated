@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cube-transparent",
+  "title": "cube-transparent",
+  "description": "Animated cube-transparent icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

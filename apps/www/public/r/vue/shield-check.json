@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "shield-check",
+  "title": "shield-check",
+  "description": "Animated shield-check icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

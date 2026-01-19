@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "h1",
+  "title": "h1",
+  "description": "Animated h1 icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

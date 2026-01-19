@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "chat-bubble-oval-left-ellipsis",
+  "title": "chat-bubble-oval-left-ellipsis",
+  "description": "Animated chat-bubble-oval-left-ellipsis icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

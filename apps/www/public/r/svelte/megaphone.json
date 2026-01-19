@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "megaphone",
+  "title": "megaphone",
+  "description": "Animated megaphone icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

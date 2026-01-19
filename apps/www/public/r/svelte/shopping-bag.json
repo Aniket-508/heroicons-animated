@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "shopping-bag",
+  "title": "shopping-bag",
+  "description": "Animated shopping-bag icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

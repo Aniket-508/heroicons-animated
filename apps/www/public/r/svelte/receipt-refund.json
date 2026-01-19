@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "receipt-refund",
+  "title": "receipt-refund",
+  "description": "Animated receipt-refund icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

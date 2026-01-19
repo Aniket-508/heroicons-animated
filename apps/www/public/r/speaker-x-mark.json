@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "speaker-x-mark",
+  "title": "speaker-x-mark",
+  "description": "Animated speaker-x-mark icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

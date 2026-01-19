@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "clipboard-document-check",
+  "title": "clipboard-document-check",
+  "description": "Animated clipboard-document-check icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "phone-arrow-up-right",
+  "title": "phone-arrow-up-right",
+  "description": "Animated phone-arrow-up-right icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

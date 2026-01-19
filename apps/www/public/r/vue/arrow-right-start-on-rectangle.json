@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrow-right-start-on-rectangle",
+  "title": "arrow-right-start-on-rectangle",
+  "description": "Animated arrow-right-start-on-rectangle icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "camera",
+  "title": "camera",
+  "description": "Animated camera icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

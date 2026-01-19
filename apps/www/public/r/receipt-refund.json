@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "receipt-refund",
+  "title": "receipt-refund",
+  "description": "Animated receipt-refund icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

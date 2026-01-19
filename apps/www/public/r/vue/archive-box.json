@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "archive-box",
+  "title": "archive-box",
+  "description": "Animated archive-box icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

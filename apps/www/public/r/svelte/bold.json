@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "bold",
+  "title": "bold",
+  "description": "Animated bold icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

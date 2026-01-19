@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "globe-asia-australia",
+  "title": "globe-asia-australia",
+  "description": "Animated globe-asia-australia icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

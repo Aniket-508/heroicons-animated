@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "chevron-up-down",
+  "title": "chevron-up-down",
+  "description": "Animated chevron-up-down icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

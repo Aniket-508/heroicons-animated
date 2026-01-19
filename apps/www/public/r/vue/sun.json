@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "sun",
+  "title": "sun",
+  "description": "Animated sun icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

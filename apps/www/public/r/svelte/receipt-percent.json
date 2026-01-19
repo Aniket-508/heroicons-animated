@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "receipt-percent",
+  "title": "receipt-percent",
+  "description": "Animated receipt-percent icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

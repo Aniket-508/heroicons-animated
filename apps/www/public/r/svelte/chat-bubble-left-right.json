@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "chat-bubble-left-right",
+  "title": "chat-bubble-left-right",
+  "description": "Animated chat-bubble-left-right icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "credit-card",
+  "title": "credit-card",
+  "description": "Animated credit-card icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "calendar-days",
+  "title": "calendar-days",
+  "description": "Animated calendar-days icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

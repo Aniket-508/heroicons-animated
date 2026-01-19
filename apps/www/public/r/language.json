@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "language",
+  "title": "language",
+  "description": "Animated language icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

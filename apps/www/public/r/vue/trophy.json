@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "trophy",
+  "title": "trophy",
+  "description": "Animated trophy icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

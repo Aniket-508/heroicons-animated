@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "italic",
+  "title": "italic",
+  "description": "Animated italic icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-long-right",
+  "title": "arrow-long-right",
+  "description": "Animated arrow-long-right icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

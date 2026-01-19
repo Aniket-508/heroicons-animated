@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "stop-circle",
+  "title": "stop-circle",
+  "description": "Animated stop-circle icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

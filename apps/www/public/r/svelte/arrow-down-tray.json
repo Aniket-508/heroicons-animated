@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-down-tray",
+  "title": "arrow-down-tray",
+  "description": "Animated arrow-down-tray icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

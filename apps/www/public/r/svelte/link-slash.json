@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "link-slash",
+  "title": "link-slash",
+  "description": "Animated link-slash icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

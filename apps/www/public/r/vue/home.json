@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "home",
+  "title": "home",
+  "description": "Animated home icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

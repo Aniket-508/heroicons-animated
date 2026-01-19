@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bell",
+  "title": "bell",
+  "description": "Animated bell icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

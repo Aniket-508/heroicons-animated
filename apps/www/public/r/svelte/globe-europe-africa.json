@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "globe-europe-africa",
+  "title": "globe-europe-africa",
+  "description": "Animated globe-europe-africa icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

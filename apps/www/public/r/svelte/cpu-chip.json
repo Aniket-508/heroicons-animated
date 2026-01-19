@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "cpu-chip",
+  "title": "cpu-chip",
+  "description": "Animated cpu-chip icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

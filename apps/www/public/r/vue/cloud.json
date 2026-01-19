@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "cloud",
+  "title": "cloud",
+  "description": "Animated cloud icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

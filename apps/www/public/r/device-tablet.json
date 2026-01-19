@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "device-tablet",
+  "title": "device-tablet",
+  "description": "Animated device-tablet icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

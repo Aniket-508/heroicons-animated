@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "wifi",
+  "title": "wifi",
+  "description": "Animated wifi icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

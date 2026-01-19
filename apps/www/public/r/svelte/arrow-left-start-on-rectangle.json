@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-left-start-on-rectangle",
+  "title": "arrow-left-start-on-rectangle",
+  "description": "Animated arrow-left-start-on-rectangle icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

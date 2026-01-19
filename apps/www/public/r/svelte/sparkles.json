@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "sparkles",
+  "title": "sparkles",
+  "description": "Animated sparkles icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

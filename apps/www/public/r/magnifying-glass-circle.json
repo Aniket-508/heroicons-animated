@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "magnifying-glass-circle",
+  "title": "magnifying-glass-circle",
+  "description": "Animated magnifying-glass-circle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

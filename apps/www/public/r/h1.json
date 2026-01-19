@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "h1",
+  "title": "h1",
+  "description": "Animated h1 icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "table-cells",
+  "title": "table-cells",
+  "description": "Animated table-cells icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "exclamation-triangle",
+  "title": "exclamation-triangle",
+  "description": "Animated exclamation-triangle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

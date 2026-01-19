@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "user-group",
+  "title": "user-group",
+  "description": "Animated user-group icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

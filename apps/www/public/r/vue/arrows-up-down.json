@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrows-up-down",
+  "title": "arrows-up-down",
+  "description": "Animated arrows-up-down icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

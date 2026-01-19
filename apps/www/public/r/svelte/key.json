@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "key",
+  "title": "key",
+  "description": "Animated key icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

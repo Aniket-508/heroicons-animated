@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "truck",
+  "title": "truck",
+  "description": "Animated truck icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

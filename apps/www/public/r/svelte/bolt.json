@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "bolt",
+  "title": "bolt",
+  "description": "Animated bolt icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

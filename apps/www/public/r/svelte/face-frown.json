@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "face-frown",
+  "title": "face-frown",
+  "description": "Animated face-frown icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

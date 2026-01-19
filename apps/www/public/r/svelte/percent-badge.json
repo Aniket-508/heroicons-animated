@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "percent-badge",
+  "title": "percent-badge",
+  "description": "Animated percent-badge icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

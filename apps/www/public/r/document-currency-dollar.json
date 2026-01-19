@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "document-currency-dollar",
+  "title": "document-currency-dollar",
+  "description": "Animated document-currency-dollar icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

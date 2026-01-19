@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-up-on-square",
+  "title": "arrow-up-on-square",
+  "description": "Animated arrow-up-on-square icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

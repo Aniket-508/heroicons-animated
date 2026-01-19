@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "pencil-square",
+  "title": "pencil-square",
+  "description": "Animated pencil-square icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

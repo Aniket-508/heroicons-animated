@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "scissors",
+  "title": "scissors",
+  "description": "Animated scissors icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

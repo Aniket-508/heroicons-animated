@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "phone-x-mark",
+  "title": "phone-x-mark",
+  "description": "Animated phone-x-mark icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pause",
+  "title": "pause",
+  "description": "Animated pause icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

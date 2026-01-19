@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "lock-open",
+  "title": "lock-open",
+  "description": "Animated lock-open icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

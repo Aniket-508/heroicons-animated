@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "computer-desktop",
+  "title": "computer-desktop",
+  "description": "Animated computer-desktop icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

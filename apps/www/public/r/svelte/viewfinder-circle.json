@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "viewfinder-circle",
+  "title": "viewfinder-circle",
+  "description": "Animated viewfinder-circle icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

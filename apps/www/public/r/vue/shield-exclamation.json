@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "shield-exclamation",
+  "title": "shield-exclamation",
+  "description": "Animated shield-exclamation icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

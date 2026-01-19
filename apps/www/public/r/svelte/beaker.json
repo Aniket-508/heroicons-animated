@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "beaker",
+  "title": "beaker",
+  "description": "Animated beaker icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

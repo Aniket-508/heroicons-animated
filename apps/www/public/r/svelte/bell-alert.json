@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "bell-alert",
+  "title": "bell-alert",
+  "description": "Animated bell-alert icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "minus-circle",
+  "title": "minus-circle",
+  "description": "Animated minus-circle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

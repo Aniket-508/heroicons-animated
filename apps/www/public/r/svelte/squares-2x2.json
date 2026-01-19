@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "squares-2x2",
+  "title": "squares-2x2",
+  "description": "Animated squares-2x2 icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

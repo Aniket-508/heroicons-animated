@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "adjustments-vertical",
+  "title": "adjustments-vertical",
+  "description": "Animated adjustments-vertical icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "square-2-stack",
+  "title": "square-2-stack",
+  "description": "Animated square-2-stack icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

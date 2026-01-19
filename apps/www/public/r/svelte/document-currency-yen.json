@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "document-currency-yen",
+  "title": "document-currency-yen",
+  "description": "Animated document-currency-yen icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

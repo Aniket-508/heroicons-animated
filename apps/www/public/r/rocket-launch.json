@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "rocket-launch",
+  "title": "rocket-launch",
+  "description": "Animated rocket-launch icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

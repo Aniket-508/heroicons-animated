@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "document-currency-euro",
+  "title": "document-currency-euro",
+  "description": "Animated document-currency-euro icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

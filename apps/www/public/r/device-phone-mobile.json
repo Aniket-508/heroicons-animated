@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "device-phone-mobile",
+  "title": "device-phone-mobile",
+  "description": "Animated device-phone-mobile icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

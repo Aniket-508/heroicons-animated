@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "document-currency-rupee",
+  "title": "document-currency-rupee",
+  "description": "Animated document-currency-rupee icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

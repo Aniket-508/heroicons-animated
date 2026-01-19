@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "link-slash",
+  "title": "link-slash",
+  "description": "Animated link-slash icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

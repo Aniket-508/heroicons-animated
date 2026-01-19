@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "x-circle",
+  "title": "x-circle",
+  "description": "Animated x-circle icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

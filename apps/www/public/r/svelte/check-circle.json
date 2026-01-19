@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "check-circle",
+  "title": "check-circle",
+  "description": "Animated check-circle icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

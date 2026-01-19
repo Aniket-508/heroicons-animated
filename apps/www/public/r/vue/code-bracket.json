@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "code-bracket",
+  "title": "code-bracket",
+  "description": "Animated code-bracket icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

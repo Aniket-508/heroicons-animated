@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "folder-plus",
+  "title": "folder-plus",
+  "description": "Animated folder-plus icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "tag",
+  "title": "tag",
+  "description": "Animated tag icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

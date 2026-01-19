@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "academic-cap",
+  "title": "academic-cap",
+  "description": "Animated academic-cap icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

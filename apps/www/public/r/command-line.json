@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "command-line",
+  "title": "command-line",
+  "description": "Animated command-line icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

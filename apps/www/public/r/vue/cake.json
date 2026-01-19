@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "cake",
+  "title": "cake",
+  "description": "Animated cake icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

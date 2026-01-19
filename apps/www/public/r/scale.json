@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "scale",
+  "title": "scale",
+  "description": "Animated scale icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

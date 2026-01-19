@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chat-bubble-left-ellipsis",
+  "title": "chat-bubble-left-ellipsis",
+  "description": "Animated chat-bubble-left-ellipsis icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

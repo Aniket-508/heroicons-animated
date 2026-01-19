@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "signal-slash",
+  "title": "signal-slash",
+  "description": "Animated signal-slash icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

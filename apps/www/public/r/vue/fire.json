@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "fire",
+  "title": "fire",
+  "description": "Animated fire icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

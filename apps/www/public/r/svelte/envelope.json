@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "envelope",
+  "title": "envelope",
+  "description": "Animated envelope icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

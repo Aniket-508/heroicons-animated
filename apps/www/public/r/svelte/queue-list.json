@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "queue-list",
+  "title": "queue-list",
+  "description": "Animated queue-list icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

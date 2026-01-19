@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "eye-slash",
+  "title": "eye-slash",
+  "description": "Animated eye-slash icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

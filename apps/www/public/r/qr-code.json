@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "qr-code",
+  "title": "qr-code",
+  "description": "Animated qr-code icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

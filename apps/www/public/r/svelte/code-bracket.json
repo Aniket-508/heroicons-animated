@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "code-bracket",
+  "title": "code-bracket",
+  "description": "Animated code-bracket icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

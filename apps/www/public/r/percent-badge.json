@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "percent-badge",
+  "title": "percent-badge",
+  "description": "Animated percent-badge icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

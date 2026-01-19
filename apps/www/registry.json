@@ -5,6 +5,8 @@
   "items": [
     {
       "name": "academic-cap",
+      "title": "academic-cap",
+      "description": "Animated academic-cap icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -17,6 +19,8 @@
     },
     {
       "name": "adjustments-horizontal",
+      "title": "adjustments-horizontal",
+      "description": "Animated adjustments-horizontal icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -29,6 +33,8 @@
     },
     {
       "name": "adjustments-vertical",
+      "title": "adjustments-vertical",
+      "description": "Animated adjustments-vertical icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -41,6 +47,8 @@
     },
     {
       "name": "archive-box-arrow-down",
+      "title": "archive-box-arrow-down",
+      "description": "Animated archive-box-arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -53,6 +61,8 @@
     },
     {
       "name": "archive-box-x-mark",
+      "title": "archive-box-x-mark",
+      "description": "Animated archive-box-x-mark icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -65,6 +75,8 @@
     },
     {
       "name": "archive-box",
+      "title": "archive-box",
+      "description": "Animated archive-box icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -77,6 +89,8 @@
     },
     {
       "name": "arrow-down-circle",
+      "title": "arrow-down-circle",
+      "description": "Animated arrow-down-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -89,6 +103,8 @@
     },
     {
       "name": "arrow-down-left",
+      "title": "arrow-down-left",
+      "description": "Animated arrow-down-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -101,6 +117,8 @@
     },
     {
       "name": "arrow-down-on-square-stack",
+      "title": "arrow-down-on-square-stack",
+      "description": "Animated arrow-down-on-square-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -113,6 +131,8 @@
     },
     {
       "name": "arrow-down-on-square",
+      "title": "arrow-down-on-square",
+      "description": "Animated arrow-down-on-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -125,6 +145,8 @@
     },
     {
       "name": "arrow-down-right",
+      "title": "arrow-down-right",
+      "description": "Animated arrow-down-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -137,6 +159,8 @@
     },
     {
       "name": "arrow-down-tray",
+      "title": "arrow-down-tray",
+      "description": "Animated arrow-down-tray icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -149,6 +173,8 @@
     },
     {
       "name": "arrow-down",
+      "title": "arrow-down",
+      "description": "Animated arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -161,6 +187,8 @@
     },
     {
       "name": "arrow-left-circle",
+      "title": "arrow-left-circle",
+      "description": "Animated arrow-left-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -173,6 +201,8 @@
     },
     {
       "name": "arrow-left-end-on-rectangle",
+      "title": "arrow-left-end-on-rectangle",
+      "description": "Animated arrow-left-end-on-rectangle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -185,6 +215,8 @@
     },
     {
       "name": "arrow-left-start-on-rectangle",
+      "title": "arrow-left-start-on-rectangle",
+      "description": "Animated arrow-left-start-on-rectangle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -197,6 +229,8 @@
     },
     {
       "name": "arrow-left",
+      "title": "arrow-left",
+      "description": "Animated arrow-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -209,6 +243,8 @@
     },
     {
       "name": "arrow-long-down",
+      "title": "arrow-long-down",
+      "description": "Animated arrow-long-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -221,6 +257,8 @@
     },
     {
       "name": "arrow-long-left",
+      "title": "arrow-long-left",
+      "description": "Animated arrow-long-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -233,6 +271,8 @@
     },
     {
       "name": "arrow-long-right",
+      "title": "arrow-long-right",
+      "description": "Animated arrow-long-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -245,6 +285,8 @@
     },
     {
       "name": "arrow-long-up",
+      "title": "arrow-long-up",
+      "description": "Animated arrow-long-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -257,6 +299,8 @@
     },
     {
       "name": "arrow-path-rounded-square",
+      "title": "arrow-path-rounded-square",
+      "description": "Animated arrow-path-rounded-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -269,6 +313,8 @@
     },
     {
       "name": "arrow-path",
+      "title": "arrow-path",
+      "description": "Animated arrow-path icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -281,6 +327,8 @@
     },
     {
       "name": "arrow-right-circle",
+      "title": "arrow-right-circle",
+      "description": "Animated arrow-right-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -293,6 +341,8 @@
     },
     {
       "name": "arrow-right-end-on-rectangle",
+      "title": "arrow-right-end-on-rectangle",
+      "description": "Animated arrow-right-end-on-rectangle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -305,6 +355,8 @@
     },
     {
       "name": "arrow-right-start-on-rectangle",
+      "title": "arrow-right-start-on-rectangle",
+      "description": "Animated arrow-right-start-on-rectangle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -317,6 +369,8 @@
     },
     {
       "name": "arrow-right",
+      "title": "arrow-right",
+      "description": "Animated arrow-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -329,6 +383,8 @@
     },
     {
       "name": "arrow-top-right-on-square",
+      "title": "arrow-top-right-on-square",
+      "description": "Animated arrow-top-right-on-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -341,6 +397,8 @@
     },
     {
       "name": "arrow-trending-down",
+      "title": "arrow-trending-down",
+      "description": "Animated arrow-trending-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -353,6 +411,8 @@
     },
     {
       "name": "arrow-trending-up",
+      "title": "arrow-trending-up",
+      "description": "Animated arrow-trending-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -365,6 +425,8 @@
     },
     {
       "name": "arrow-turn-down-left",
+      "title": "arrow-turn-down-left",
+      "description": "Animated arrow-turn-down-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -377,6 +439,8 @@
     },
     {
       "name": "arrow-turn-down-right",
+      "title": "arrow-turn-down-right",
+      "description": "Animated arrow-turn-down-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -389,6 +453,8 @@
     },
     {
       "name": "arrow-turn-left-down",
+      "title": "arrow-turn-left-down",
+      "description": "Animated arrow-turn-left-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -401,6 +467,8 @@
     },
     {
       "name": "arrow-turn-left-up",
+      "title": "arrow-turn-left-up",
+      "description": "Animated arrow-turn-left-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -413,6 +481,8 @@
     },
     {
       "name": "arrow-turn-right-down",
+      "title": "arrow-turn-right-down",
+      "description": "Animated arrow-turn-right-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -425,6 +495,8 @@
     },
     {
       "name": "arrow-turn-right-up",
+      "title": "arrow-turn-right-up",
+      "description": "Animated arrow-turn-right-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -437,6 +509,8 @@
     },
     {
       "name": "arrow-turn-up-left",
+      "title": "arrow-turn-up-left",
+      "description": "Animated arrow-turn-up-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -449,6 +523,8 @@
     },
     {
       "name": "arrow-turn-up-right",
+      "title": "arrow-turn-up-right",
+      "description": "Animated arrow-turn-up-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -461,6 +537,8 @@
     },
     {
       "name": "arrow-up-circle",
+      "title": "arrow-up-circle",
+      "description": "Animated arrow-up-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -473,6 +551,8 @@
     },
     {
       "name": "arrow-up-left",
+      "title": "arrow-up-left",
+      "description": "Animated arrow-up-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -485,6 +565,8 @@
     },
     {
       "name": "arrow-up-on-square-stack",
+      "title": "arrow-up-on-square-stack",
+      "description": "Animated arrow-up-on-square-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -497,6 +579,8 @@
     },
     {
       "name": "arrow-up-on-square",
+      "title": "arrow-up-on-square",
+      "description": "Animated arrow-up-on-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -509,6 +593,8 @@
     },
     {
       "name": "arrow-up-right",
+      "title": "arrow-up-right",
+      "description": "Animated arrow-up-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -521,6 +607,8 @@
     },
     {
       "name": "arrow-up-tray",
+      "title": "arrow-up-tray",
+      "description": "Animated arrow-up-tray icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -533,6 +621,8 @@
     },
     {
       "name": "arrow-up",
+      "title": "arrow-up",
+      "description": "Animated arrow-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -545,6 +635,8 @@
     },
     {
       "name": "arrow-uturn-down",
+      "title": "arrow-uturn-down",
+      "description": "Animated arrow-uturn-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -557,6 +649,8 @@
     },
     {
       "name": "arrow-uturn-left",
+      "title": "arrow-uturn-left",
+      "description": "Animated arrow-uturn-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -569,6 +663,8 @@
     },
     {
       "name": "arrow-uturn-right",
+      "title": "arrow-uturn-right",
+      "description": "Animated arrow-uturn-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -581,6 +677,8 @@
     },
     {
       "name": "arrow-uturn-up",
+      "title": "arrow-uturn-up",
+      "description": "Animated arrow-uturn-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -593,6 +691,8 @@
     },
     {
       "name": "arrows-pointing-in",
+      "title": "arrows-pointing-in",
+      "description": "Animated arrows-pointing-in icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -605,6 +705,8 @@
     },
     {
       "name": "arrows-pointing-out",
+      "title": "arrows-pointing-out",
+      "description": "Animated arrows-pointing-out icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -617,6 +719,8 @@
     },
     {
       "name": "arrows-right-left",
+      "title": "arrows-right-left",
+      "description": "Animated arrows-right-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -629,6 +733,8 @@
     },
     {
       "name": "arrows-up-down",
+      "title": "arrows-up-down",
+      "description": "Animated arrows-up-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -641,6 +747,8 @@
     },
     {
       "name": "at-symbol",
+      "title": "at-symbol",
+      "description": "Animated at-symbol icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -653,6 +761,8 @@
     },
     {
       "name": "backspace",
+      "title": "backspace",
+      "description": "Animated backspace icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -665,6 +775,8 @@
     },
     {
       "name": "backward",
+      "title": "backward",
+      "description": "Animated backward icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -677,6 +789,8 @@
     },
     {
       "name": "banknotes",
+      "title": "banknotes",
+      "description": "Animated banknotes icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -689,6 +803,8 @@
     },
     {
       "name": "bars-2",
+      "title": "bars-2",
+      "description": "Animated bars-2 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -701,6 +817,8 @@
     },
     {
       "name": "bars-3-bottom-left",
+      "title": "bars-3-bottom-left",
+      "description": "Animated bars-3-bottom-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -713,6 +831,8 @@
     },
     {
       "name": "bars-3-bottom-right",
+      "title": "bars-3-bottom-right",
+      "description": "Animated bars-3-bottom-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -725,6 +845,8 @@
     },
     {
       "name": "bars-3-center-left",
+      "title": "bars-3-center-left",
+      "description": "Animated bars-3-center-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -737,6 +859,8 @@
     },
     {
       "name": "bars-3",
+      "title": "bars-3",
+      "description": "Animated bars-3 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -749,6 +873,8 @@
     },
     {
       "name": "bars-4",
+      "title": "bars-4",
+      "description": "Animated bars-4 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -761,6 +887,8 @@
     },
     {
       "name": "bars-arrow-down",
+      "title": "bars-arrow-down",
+      "description": "Animated bars-arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -773,6 +901,8 @@
     },
     {
       "name": "bars-arrow-up",
+      "title": "bars-arrow-up",
+      "description": "Animated bars-arrow-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -785,6 +915,8 @@
     },
     {
       "name": "battery-0",
+      "title": "battery-0",
+      "description": "Animated battery-0 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -797,6 +929,8 @@
     },
     {
       "name": "battery-100",
+      "title": "battery-100",
+      "description": "Animated battery-100 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -809,6 +943,8 @@
     },
     {
       "name": "battery-50",
+      "title": "battery-50",
+      "description": "Animated battery-50 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -821,6 +957,8 @@
     },
     {
       "name": "beaker",
+      "title": "beaker",
+      "description": "Animated beaker icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -833,6 +971,8 @@
     },
     {
       "name": "bell-alert",
+      "title": "bell-alert",
+      "description": "Animated bell-alert icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -845,6 +985,8 @@
     },
     {
       "name": "bell-slash",
+      "title": "bell-slash",
+      "description": "Animated bell-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -857,6 +999,8 @@
     },
     {
       "name": "bell-snooze",
+      "title": "bell-snooze",
+      "description": "Animated bell-snooze icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -869,6 +1013,8 @@
     },
     {
       "name": "bell",
+      "title": "bell",
+      "description": "Animated bell icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -881,6 +1027,8 @@
     },
     {
       "name": "bold",
+      "title": "bold",
+      "description": "Animated bold icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -893,6 +1041,8 @@
     },
     {
       "name": "bolt-slash",
+      "title": "bolt-slash",
+      "description": "Animated bolt-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -905,6 +1055,8 @@
     },
     {
       "name": "bolt",
+      "title": "bolt",
+      "description": "Animated bolt icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -917,6 +1069,8 @@
     },
     {
       "name": "book-open",
+      "title": "book-open",
+      "description": "Animated book-open icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -929,6 +1083,8 @@
     },
     {
       "name": "bookmark-slash",
+      "title": "bookmark-slash",
+      "description": "Animated bookmark-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -941,6 +1097,8 @@
     },
     {
       "name": "bookmark-square",
+      "title": "bookmark-square",
+      "description": "Animated bookmark-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -953,6 +1111,8 @@
     },
     {
       "name": "bookmark",
+      "title": "bookmark",
+      "description": "Animated bookmark icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -965,6 +1125,8 @@
     },
     {
       "name": "briefcase",
+      "title": "briefcase",
+      "description": "Animated briefcase icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -977,6 +1139,8 @@
     },
     {
       "name": "bug-ant",
+      "title": "bug-ant",
+      "description": "Animated bug-ant icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -989,6 +1153,8 @@
     },
     {
       "name": "building-library",
+      "title": "building-library",
+      "description": "Animated building-library icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1001,6 +1167,8 @@
     },
     {
       "name": "building-office-2",
+      "title": "building-office-2",
+      "description": "Animated building-office-2 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1013,6 +1181,8 @@
     },
     {
       "name": "building-office",
+      "title": "building-office",
+      "description": "Animated building-office icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1025,6 +1195,8 @@
     },
     {
       "name": "building-storefront",
+      "title": "building-storefront",
+      "description": "Animated building-storefront icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1037,6 +1209,8 @@
     },
     {
       "name": "cake",
+      "title": "cake",
+      "description": "Animated cake icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1049,6 +1223,8 @@
     },
     {
       "name": "calculator",
+      "title": "calculator",
+      "description": "Animated calculator icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1061,6 +1237,8 @@
     },
     {
       "name": "calendar-date-range",
+      "title": "calendar-date-range",
+      "description": "Animated calendar-date-range icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1073,6 +1251,8 @@
     },
     {
       "name": "calendar-days",
+      "title": "calendar-days",
+      "description": "Animated calendar-days icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1085,6 +1265,8 @@
     },
     {
       "name": "calendar",
+      "title": "calendar",
+      "description": "Animated calendar icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1097,6 +1279,8 @@
     },
     {
       "name": "camera",
+      "title": "camera",
+      "description": "Animated camera icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1109,6 +1293,8 @@
     },
     {
       "name": "chart-bar-square",
+      "title": "chart-bar-square",
+      "description": "Animated chart-bar-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1121,6 +1307,8 @@
     },
     {
       "name": "chart-bar",
+      "title": "chart-bar",
+      "description": "Animated chart-bar icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1133,6 +1321,8 @@
     },
     {
       "name": "chart-pie",
+      "title": "chart-pie",
+      "description": "Animated chart-pie icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1145,6 +1335,8 @@
     },
     {
       "name": "chat-bubble-bottom-center-text",
+      "title": "chat-bubble-bottom-center-text",
+      "description": "Animated chat-bubble-bottom-center-text icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1157,6 +1349,8 @@
     },
     {
       "name": "chat-bubble-bottom-center",
+      "title": "chat-bubble-bottom-center",
+      "description": "Animated chat-bubble-bottom-center icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1169,6 +1363,8 @@
     },
     {
       "name": "chat-bubble-left-ellipsis",
+      "title": "chat-bubble-left-ellipsis",
+      "description": "Animated chat-bubble-left-ellipsis icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1181,6 +1377,8 @@
     },
     {
       "name": "chat-bubble-left-right",
+      "title": "chat-bubble-left-right",
+      "description": "Animated chat-bubble-left-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1193,6 +1391,8 @@
     },
     {
       "name": "chat-bubble-left",
+      "title": "chat-bubble-left",
+      "description": "Animated chat-bubble-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1205,6 +1405,8 @@
     },
     {
       "name": "chat-bubble-oval-left-ellipsis",
+      "title": "chat-bubble-oval-left-ellipsis",
+      "description": "Animated chat-bubble-oval-left-ellipsis icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1217,6 +1419,8 @@
     },
     {
       "name": "chat-bubble-oval-left",
+      "title": "chat-bubble-oval-left",
+      "description": "Animated chat-bubble-oval-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1229,6 +1433,8 @@
     },
     {
       "name": "check-badge",
+      "title": "check-badge",
+      "description": "Animated check-badge icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1241,6 +1447,8 @@
     },
     {
       "name": "check-circle",
+      "title": "check-circle",
+      "description": "Animated check-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1253,6 +1461,8 @@
     },
     {
       "name": "check",
+      "title": "check",
+      "description": "Animated check icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1265,6 +1475,8 @@
     },
     {
       "name": "chevron-double-down",
+      "title": "chevron-double-down",
+      "description": "Animated chevron-double-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1277,6 +1489,8 @@
     },
     {
       "name": "chevron-double-left",
+      "title": "chevron-double-left",
+      "description": "Animated chevron-double-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1289,6 +1503,8 @@
     },
     {
       "name": "chevron-double-right",
+      "title": "chevron-double-right",
+      "description": "Animated chevron-double-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1301,6 +1517,8 @@
     },
     {
       "name": "chevron-double-up",
+      "title": "chevron-double-up",
+      "description": "Animated chevron-double-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1313,6 +1531,8 @@
     },
     {
       "name": "chevron-down",
+      "title": "chevron-down",
+      "description": "Animated chevron-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1325,6 +1545,8 @@
     },
     {
       "name": "chevron-left",
+      "title": "chevron-left",
+      "description": "Animated chevron-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1337,6 +1559,8 @@
     },
     {
       "name": "chevron-right",
+      "title": "chevron-right",
+      "description": "Animated chevron-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1349,6 +1573,8 @@
     },
     {
       "name": "chevron-up-down",
+      "title": "chevron-up-down",
+      "description": "Animated chevron-up-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1361,6 +1587,8 @@
     },
     {
       "name": "chevron-up",
+      "title": "chevron-up",
+      "description": "Animated chevron-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1373,6 +1601,8 @@
     },
     {
       "name": "circle-stack",
+      "title": "circle-stack",
+      "description": "Animated circle-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1385,6 +1615,8 @@
     },
     {
       "name": "clipboard-document-check",
+      "title": "clipboard-document-check",
+      "description": "Animated clipboard-document-check icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1397,6 +1629,8 @@
     },
     {
       "name": "clipboard-document-list",
+      "title": "clipboard-document-list",
+      "description": "Animated clipboard-document-list icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1409,6 +1643,8 @@
     },
     {
       "name": "clipboard-document",
+      "title": "clipboard-document",
+      "description": "Animated clipboard-document icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1421,6 +1657,8 @@
     },
     {
       "name": "clipboard",
+      "title": "clipboard",
+      "description": "Animated clipboard icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1433,6 +1671,8 @@
     },
     {
       "name": "clock",
+      "title": "clock",
+      "description": "Animated clock icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1445,6 +1685,8 @@
     },
     {
       "name": "cloud-arrow-down",
+      "title": "cloud-arrow-down",
+      "description": "Animated cloud-arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1457,6 +1699,8 @@
     },
     {
       "name": "cloud-arrow-up",
+      "title": "cloud-arrow-up",
+      "description": "Animated cloud-arrow-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1469,6 +1713,8 @@
     },
     {
       "name": "cloud",
+      "title": "cloud",
+      "description": "Animated cloud icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1481,6 +1727,8 @@
     },
     {
       "name": "code-bracket-square",
+      "title": "code-bracket-square",
+      "description": "Animated code-bracket-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1493,6 +1741,8 @@
     },
     {
       "name": "code-bracket",
+      "title": "code-bracket",
+      "description": "Animated code-bracket icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1505,6 +1755,8 @@
     },
     {
       "name": "cog-6-tooth",
+      "title": "cog-6-tooth",
+      "description": "Animated cog-6-tooth icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1517,6 +1769,8 @@
     },
     {
       "name": "cog-8-tooth",
+      "title": "cog-8-tooth",
+      "description": "Animated cog-8-tooth icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1529,6 +1783,8 @@
     },
     {
       "name": "cog",
+      "title": "cog",
+      "description": "Animated cog icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1541,6 +1797,8 @@
     },
     {
       "name": "command-line",
+      "title": "command-line",
+      "description": "Animated command-line icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1553,6 +1811,8 @@
     },
     {
       "name": "computer-desktop",
+      "title": "computer-desktop",
+      "description": "Animated computer-desktop icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1565,6 +1825,8 @@
     },
     {
       "name": "cpu-chip",
+      "title": "cpu-chip",
+      "description": "Animated cpu-chip icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1577,6 +1839,8 @@
     },
     {
       "name": "credit-card",
+      "title": "credit-card",
+      "description": "Animated credit-card icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1589,6 +1853,8 @@
     },
     {
       "name": "cube-transparent",
+      "title": "cube-transparent",
+      "description": "Animated cube-transparent icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1601,6 +1867,8 @@
     },
     {
       "name": "cube",
+      "title": "cube",
+      "description": "Animated cube icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1613,6 +1881,8 @@
     },
     {
       "name": "currency-bangladeshi",
+      "title": "currency-bangladeshi",
+      "description": "Animated currency-bangladeshi icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1625,6 +1895,8 @@
     },
     {
       "name": "currency-dollar",
+      "title": "currency-dollar",
+      "description": "Animated currency-dollar icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1637,6 +1909,8 @@
     },
     {
       "name": "currency-euro",
+      "title": "currency-euro",
+      "description": "Animated currency-euro icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1649,6 +1923,8 @@
     },
     {
       "name": "currency-pound",
+      "title": "currency-pound",
+      "description": "Animated currency-pound icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1661,6 +1937,8 @@
     },
     {
       "name": "currency-rupee",
+      "title": "currency-rupee",
+      "description": "Animated currency-rupee icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1673,6 +1951,8 @@
     },
     {
       "name": "currency-yen",
+      "title": "currency-yen",
+      "description": "Animated currency-yen icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1685,6 +1965,8 @@
     },
     {
       "name": "cursor-arrow-rays",
+      "title": "cursor-arrow-rays",
+      "description": "Animated cursor-arrow-rays icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1697,6 +1979,8 @@
     },
     {
       "name": "cursor-arrow-ripple",
+      "title": "cursor-arrow-ripple",
+      "description": "Animated cursor-arrow-ripple icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1709,6 +1993,8 @@
     },
     {
       "name": "device-phone-mobile",
+      "title": "device-phone-mobile",
+      "description": "Animated device-phone-mobile icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1721,6 +2007,8 @@
     },
     {
       "name": "device-tablet",
+      "title": "device-tablet",
+      "description": "Animated device-tablet icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1733,6 +2021,8 @@
     },
     {
       "name": "divide",
+      "title": "divide",
+      "description": "Animated divide icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1745,6 +2035,8 @@
     },
     {
       "name": "document-arrow-down",
+      "title": "document-arrow-down",
+      "description": "Animated document-arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1757,6 +2049,8 @@
     },
     {
       "name": "document-arrow-up",
+      "title": "document-arrow-up",
+      "description": "Animated document-arrow-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1769,6 +2063,8 @@
     },
     {
       "name": "document-chart-bar",
+      "title": "document-chart-bar",
+      "description": "Animated document-chart-bar icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1781,6 +2077,8 @@
     },
     {
       "name": "document-check",
+      "title": "document-check",
+      "description": "Animated document-check icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1793,6 +2091,8 @@
     },
     {
       "name": "document-currency-bangladeshi",
+      "title": "document-currency-bangladeshi",
+      "description": "Animated document-currency-bangladeshi icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1805,6 +2105,8 @@
     },
     {
       "name": "document-currency-dollar",
+      "title": "document-currency-dollar",
+      "description": "Animated document-currency-dollar icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1817,6 +2119,8 @@
     },
     {
       "name": "document-currency-euro",
+      "title": "document-currency-euro",
+      "description": "Animated document-currency-euro icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1829,6 +2133,8 @@
     },
     {
       "name": "document-currency-pound",
+      "title": "document-currency-pound",
+      "description": "Animated document-currency-pound icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1841,6 +2147,8 @@
     },
     {
       "name": "document-currency-rupee",
+      "title": "document-currency-rupee",
+      "description": "Animated document-currency-rupee icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1853,6 +2161,8 @@
     },
     {
       "name": "document-currency-yen",
+      "title": "document-currency-yen",
+      "description": "Animated document-currency-yen icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1865,6 +2175,8 @@
     },
     {
       "name": "document-duplicate",
+      "title": "document-duplicate",
+      "description": "Animated document-duplicate icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1877,6 +2189,8 @@
     },
     {
       "name": "document-magnifying-glass",
+      "title": "document-magnifying-glass",
+      "description": "Animated document-magnifying-glass icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1889,6 +2203,8 @@
     },
     {
       "name": "document-minus",
+      "title": "document-minus",
+      "description": "Animated document-minus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1901,6 +2217,8 @@
     },
     {
       "name": "document-plus",
+      "title": "document-plus",
+      "description": "Animated document-plus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1913,6 +2231,8 @@
     },
     {
       "name": "document-text",
+      "title": "document-text",
+      "description": "Animated document-text icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1925,6 +2245,8 @@
     },
     {
       "name": "document",
+      "title": "document",
+      "description": "Animated document icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1937,6 +2259,8 @@
     },
     {
       "name": "ellipsis-horizontal-circle",
+      "title": "ellipsis-horizontal-circle",
+      "description": "Animated ellipsis-horizontal-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1949,6 +2273,8 @@
     },
     {
       "name": "ellipsis-horizontal",
+      "title": "ellipsis-horizontal",
+      "description": "Animated ellipsis-horizontal icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1961,6 +2287,8 @@
     },
     {
       "name": "ellipsis-vertical",
+      "title": "ellipsis-vertical",
+      "description": "Animated ellipsis-vertical icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1973,6 +2301,8 @@
     },
     {
       "name": "envelope-open",
+      "title": "envelope-open",
+      "description": "Animated envelope-open icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1985,6 +2315,8 @@
     },
     {
       "name": "envelope",
+      "title": "envelope",
+      "description": "Animated envelope icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -1997,6 +2329,8 @@
     },
     {
       "name": "equals",
+      "title": "equals",
+      "description": "Animated equals icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2009,6 +2343,8 @@
     },
     {
       "name": "exclamation-circle",
+      "title": "exclamation-circle",
+      "description": "Animated exclamation-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2021,6 +2357,8 @@
     },
     {
       "name": "exclamation-triangle",
+      "title": "exclamation-triangle",
+      "description": "Animated exclamation-triangle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2033,6 +2371,8 @@
     },
     {
       "name": "eye-dropper",
+      "title": "eye-dropper",
+      "description": "Animated eye-dropper icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2045,6 +2385,8 @@
     },
     {
       "name": "eye-slash",
+      "title": "eye-slash",
+      "description": "Animated eye-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2057,6 +2399,8 @@
     },
     {
       "name": "eye",
+      "title": "eye",
+      "description": "Animated eye icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2069,6 +2413,8 @@
     },
     {
       "name": "face-frown",
+      "title": "face-frown",
+      "description": "Animated face-frown icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2081,6 +2427,8 @@
     },
     {
       "name": "face-smile",
+      "title": "face-smile",
+      "description": "Animated face-smile icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2093,6 +2441,8 @@
     },
     {
       "name": "film",
+      "title": "film",
+      "description": "Animated film icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2105,6 +2455,8 @@
     },
     {
       "name": "finger-print",
+      "title": "finger-print",
+      "description": "Animated finger-print icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2117,6 +2469,8 @@
     },
     {
       "name": "fire",
+      "title": "fire",
+      "description": "Animated fire icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2129,6 +2483,8 @@
     },
     {
       "name": "flag",
+      "title": "flag",
+      "description": "Animated flag icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2141,6 +2497,8 @@
     },
     {
       "name": "folder-arrow-down",
+      "title": "folder-arrow-down",
+      "description": "Animated folder-arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2153,6 +2511,8 @@
     },
     {
       "name": "folder-minus",
+      "title": "folder-minus",
+      "description": "Animated folder-minus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2165,6 +2525,8 @@
     },
     {
       "name": "folder-open",
+      "title": "folder-open",
+      "description": "Animated folder-open icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2177,6 +2539,8 @@
     },
     {
       "name": "folder-plus",
+      "title": "folder-plus",
+      "description": "Animated folder-plus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2189,6 +2553,8 @@
     },
     {
       "name": "folder",
+      "title": "folder",
+      "description": "Animated folder icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2201,6 +2567,8 @@
     },
     {
       "name": "forward",
+      "title": "forward",
+      "description": "Animated forward icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2213,6 +2581,8 @@
     },
     {
       "name": "funnel",
+      "title": "funnel",
+      "description": "Animated funnel icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2225,6 +2595,8 @@
     },
     {
       "name": "gif",
+      "title": "gif",
+      "description": "Animated gif icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2237,6 +2609,8 @@
     },
     {
       "name": "gift-top",
+      "title": "gift-top",
+      "description": "Animated gift-top icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2249,6 +2623,8 @@
     },
     {
       "name": "gift",
+      "title": "gift",
+      "description": "Animated gift icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2261,6 +2637,8 @@
     },
     {
       "name": "globe-alt",
+      "title": "globe-alt",
+      "description": "Animated globe-alt icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2273,6 +2651,8 @@
     },
     {
       "name": "globe-americas",
+      "title": "globe-americas",
+      "description": "Animated globe-americas icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2285,6 +2665,8 @@
     },
     {
       "name": "globe-asia-australia",
+      "title": "globe-asia-australia",
+      "description": "Animated globe-asia-australia icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2297,6 +2679,8 @@
     },
     {
       "name": "globe-europe-africa",
+      "title": "globe-europe-africa",
+      "description": "Animated globe-europe-africa icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2309,6 +2693,8 @@
     },
     {
       "name": "h1",
+      "title": "h1",
+      "description": "Animated h1 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2321,6 +2707,8 @@
     },
     {
       "name": "h2",
+      "title": "h2",
+      "description": "Animated h2 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2333,6 +2721,8 @@
     },
     {
       "name": "h3",
+      "title": "h3",
+      "description": "Animated h3 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2345,6 +2735,8 @@
     },
     {
       "name": "hand-raised",
+      "title": "hand-raised",
+      "description": "Animated hand-raised icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2357,6 +2749,8 @@
     },
     {
       "name": "hand-thumb-down",
+      "title": "hand-thumb-down",
+      "description": "Animated hand-thumb-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2369,6 +2763,8 @@
     },
     {
       "name": "hand-thumb-up",
+      "title": "hand-thumb-up",
+      "description": "Animated hand-thumb-up icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2381,6 +2777,8 @@
     },
     {
       "name": "hashtag",
+      "title": "hashtag",
+      "description": "Animated hashtag icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2393,6 +2791,8 @@
     },
     {
       "name": "heart",
+      "title": "heart",
+      "description": "Animated heart icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2405,6 +2805,8 @@
     },
     {
       "name": "home-modern",
+      "title": "home-modern",
+      "description": "Animated home-modern icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2417,6 +2819,8 @@
     },
     {
       "name": "home",
+      "title": "home",
+      "description": "Animated home icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2429,6 +2833,8 @@
     },
     {
       "name": "identification",
+      "title": "identification",
+      "description": "Animated identification icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2441,6 +2847,8 @@
     },
     {
       "name": "inbox-arrow-down",
+      "title": "inbox-arrow-down",
+      "description": "Animated inbox-arrow-down icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2453,6 +2861,8 @@
     },
     {
       "name": "inbox-stack",
+      "title": "inbox-stack",
+      "description": "Animated inbox-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2465,6 +2875,8 @@
     },
     {
       "name": "inbox",
+      "title": "inbox",
+      "description": "Animated inbox icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2477,6 +2889,8 @@
     },
     {
       "name": "information-circle",
+      "title": "information-circle",
+      "description": "Animated information-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2489,6 +2903,8 @@
     },
     {
       "name": "italic",
+      "title": "italic",
+      "description": "Animated italic icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2501,6 +2917,8 @@
     },
     {
       "name": "key",
+      "title": "key",
+      "description": "Animated key icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2513,6 +2931,8 @@
     },
     {
       "name": "language",
+      "title": "language",
+      "description": "Animated language icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2525,6 +2945,8 @@
     },
     {
       "name": "lifebuoy",
+      "title": "lifebuoy",
+      "description": "Animated lifebuoy icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2537,6 +2959,8 @@
     },
     {
       "name": "light-bulb",
+      "title": "light-bulb",
+      "description": "Animated light-bulb icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2549,6 +2973,8 @@
     },
     {
       "name": "link-slash",
+      "title": "link-slash",
+      "description": "Animated link-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2561,6 +2987,8 @@
     },
     {
       "name": "link",
+      "title": "link",
+      "description": "Animated link icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2573,6 +3001,8 @@
     },
     {
       "name": "list-bullet",
+      "title": "list-bullet",
+      "description": "Animated list-bullet icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2585,6 +3015,8 @@
     },
     {
       "name": "lock-closed",
+      "title": "lock-closed",
+      "description": "Animated lock-closed icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2597,6 +3029,8 @@
     },
     {
       "name": "lock-open",
+      "title": "lock-open",
+      "description": "Animated lock-open icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2609,6 +3043,8 @@
     },
     {
       "name": "magnifying-glass-circle",
+      "title": "magnifying-glass-circle",
+      "description": "Animated magnifying-glass-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2621,6 +3057,8 @@
     },
     {
       "name": "magnifying-glass-minus",
+      "title": "magnifying-glass-minus",
+      "description": "Animated magnifying-glass-minus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2633,6 +3071,8 @@
     },
     {
       "name": "magnifying-glass-plus",
+      "title": "magnifying-glass-plus",
+      "description": "Animated magnifying-glass-plus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2645,6 +3085,8 @@
     },
     {
       "name": "magnifying-glass",
+      "title": "magnifying-glass",
+      "description": "Animated magnifying-glass icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2657,6 +3099,8 @@
     },
     {
       "name": "map-pin",
+      "title": "map-pin",
+      "description": "Animated map-pin icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2669,6 +3113,8 @@
     },
     {
       "name": "map",
+      "title": "map",
+      "description": "Animated map icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2681,6 +3127,8 @@
     },
     {
       "name": "megaphone",
+      "title": "megaphone",
+      "description": "Animated megaphone icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2693,6 +3141,8 @@
     },
     {
       "name": "microphone",
+      "title": "microphone",
+      "description": "Animated microphone icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2705,6 +3155,8 @@
     },
     {
       "name": "minus-circle",
+      "title": "minus-circle",
+      "description": "Animated minus-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2717,6 +3169,8 @@
     },
     {
       "name": "minus",
+      "title": "minus",
+      "description": "Animated minus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2729,6 +3183,8 @@
     },
     {
       "name": "moon",
+      "title": "moon",
+      "description": "Animated moon icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2741,6 +3197,8 @@
     },
     {
       "name": "musical-note",
+      "title": "musical-note",
+      "description": "Animated musical-note icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2753,6 +3211,8 @@
     },
     {
       "name": "newspaper",
+      "title": "newspaper",
+      "description": "Animated newspaper icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2765,6 +3225,8 @@
     },
     {
       "name": "no-symbol",
+      "title": "no-symbol",
+      "description": "Animated no-symbol icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2777,6 +3239,8 @@
     },
     {
       "name": "numbered-list",
+      "title": "numbered-list",
+      "description": "Animated numbered-list icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2789,6 +3253,8 @@
     },
     {
       "name": "paint-brush",
+      "title": "paint-brush",
+      "description": "Animated paint-brush icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2801,6 +3267,8 @@
     },
     {
       "name": "paper-airplane",
+      "title": "paper-airplane",
+      "description": "Animated paper-airplane icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2813,6 +3281,8 @@
     },
     {
       "name": "paper-clip",
+      "title": "paper-clip",
+      "description": "Animated paper-clip icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2825,6 +3295,8 @@
     },
     {
       "name": "pause-circle",
+      "title": "pause-circle",
+      "description": "Animated pause-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2837,6 +3309,8 @@
     },
     {
       "name": "pause",
+      "title": "pause",
+      "description": "Animated pause icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2849,6 +3323,8 @@
     },
     {
       "name": "pencil-square",
+      "title": "pencil-square",
+      "description": "Animated pencil-square icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2861,6 +3337,8 @@
     },
     {
       "name": "pencil",
+      "title": "pencil",
+      "description": "Animated pencil icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2873,6 +3351,8 @@
     },
     {
       "name": "percent-badge",
+      "title": "percent-badge",
+      "description": "Animated percent-badge icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2885,6 +3365,8 @@
     },
     {
       "name": "phone-arrow-down-left",
+      "title": "phone-arrow-down-left",
+      "description": "Animated phone-arrow-down-left icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2897,6 +3379,8 @@
     },
     {
       "name": "phone-arrow-up-right",
+      "title": "phone-arrow-up-right",
+      "description": "Animated phone-arrow-up-right icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2909,6 +3393,8 @@
     },
     {
       "name": "phone-x-mark",
+      "title": "phone-x-mark",
+      "description": "Animated phone-x-mark icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2921,6 +3407,8 @@
     },
     {
       "name": "phone",
+      "title": "phone",
+      "description": "Animated phone icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2933,6 +3421,8 @@
     },
     {
       "name": "photo",
+      "title": "photo",
+      "description": "Animated photo icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2945,6 +3435,8 @@
     },
     {
       "name": "play-circle",
+      "title": "play-circle",
+      "description": "Animated play-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2957,6 +3449,8 @@
     },
     {
       "name": "play-pause",
+      "title": "play-pause",
+      "description": "Animated play-pause icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2969,6 +3463,8 @@
     },
     {
       "name": "play",
+      "title": "play",
+      "description": "Animated play icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2981,6 +3477,8 @@
     },
     {
       "name": "plus-circle",
+      "title": "plus-circle",
+      "description": "Animated plus-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -2993,6 +3491,8 @@
     },
     {
       "name": "plus",
+      "title": "plus",
+      "description": "Animated plus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3005,6 +3505,8 @@
     },
     {
       "name": "power",
+      "title": "power",
+      "description": "Animated power icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3017,6 +3519,8 @@
     },
     {
       "name": "presentation-chart-bar",
+      "title": "presentation-chart-bar",
+      "description": "Animated presentation-chart-bar icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3029,6 +3533,8 @@
     },
     {
       "name": "presentation-chart-line",
+      "title": "presentation-chart-line",
+      "description": "Animated presentation-chart-line icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3041,6 +3547,8 @@
     },
     {
       "name": "printer",
+      "title": "printer",
+      "description": "Animated printer icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3053,6 +3561,8 @@
     },
     {
       "name": "puzzle-piece",
+      "title": "puzzle-piece",
+      "description": "Animated puzzle-piece icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3065,6 +3575,8 @@
     },
     {
       "name": "qr-code",
+      "title": "qr-code",
+      "description": "Animated qr-code icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3077,6 +3589,8 @@
     },
     {
       "name": "question-mark-circle",
+      "title": "question-mark-circle",
+      "description": "Animated question-mark-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3089,6 +3603,8 @@
     },
     {
       "name": "queue-list",
+      "title": "queue-list",
+      "description": "Animated queue-list icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3101,6 +3617,8 @@
     },
     {
       "name": "radio",
+      "title": "radio",
+      "description": "Animated radio icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3113,6 +3631,8 @@
     },
     {
       "name": "receipt-percent",
+      "title": "receipt-percent",
+      "description": "Animated receipt-percent icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3125,6 +3645,8 @@
     },
     {
       "name": "receipt-refund",
+      "title": "receipt-refund",
+      "description": "Animated receipt-refund icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3137,6 +3659,8 @@
     },
     {
       "name": "rectangle-group",
+      "title": "rectangle-group",
+      "description": "Animated rectangle-group icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3149,6 +3673,8 @@
     },
     {
       "name": "rectangle-stack",
+      "title": "rectangle-stack",
+      "description": "Animated rectangle-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3161,6 +3687,8 @@
     },
     {
       "name": "rocket-launch",
+      "title": "rocket-launch",
+      "description": "Animated rocket-launch icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3173,6 +3701,8 @@
     },
     {
       "name": "rss",
+      "title": "rss",
+      "description": "Animated rss icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3185,6 +3715,8 @@
     },
     {
       "name": "scale",
+      "title": "scale",
+      "description": "Animated scale icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3197,6 +3729,8 @@
     },
     {
       "name": "scissors",
+      "title": "scissors",
+      "description": "Animated scissors icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3209,6 +3743,8 @@
     },
     {
       "name": "server-stack",
+      "title": "server-stack",
+      "description": "Animated server-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3221,6 +3757,8 @@
     },
     {
       "name": "server",
+      "title": "server",
+      "description": "Animated server icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3233,6 +3771,8 @@
     },
     {
       "name": "share",
+      "title": "share",
+      "description": "Animated share icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3245,6 +3785,8 @@
     },
     {
       "name": "shield-check",
+      "title": "shield-check",
+      "description": "Animated shield-check icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3257,6 +3799,8 @@
     },
     {
       "name": "shield-exclamation",
+      "title": "shield-exclamation",
+      "description": "Animated shield-exclamation icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3269,6 +3813,8 @@
     },
     {
       "name": "shopping-bag",
+      "title": "shopping-bag",
+      "description": "Animated shopping-bag icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3281,6 +3827,8 @@
     },
     {
       "name": "shopping-cart",
+      "title": "shopping-cart",
+      "description": "Animated shopping-cart icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3293,6 +3841,8 @@
     },
     {
       "name": "signal-slash",
+      "title": "signal-slash",
+      "description": "Animated signal-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3305,6 +3855,8 @@
     },
     {
       "name": "signal",
+      "title": "signal",
+      "description": "Animated signal icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3317,6 +3869,8 @@
     },
     {
       "name": "slash",
+      "title": "slash",
+      "description": "Animated slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3329,6 +3883,8 @@
     },
     {
       "name": "sparkles",
+      "title": "sparkles",
+      "description": "Animated sparkles icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3341,6 +3897,8 @@
     },
     {
       "name": "speaker-wave",
+      "title": "speaker-wave",
+      "description": "Animated speaker-wave icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3353,6 +3911,8 @@
     },
     {
       "name": "speaker-x-mark",
+      "title": "speaker-x-mark",
+      "description": "Animated speaker-x-mark icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3365,6 +3925,8 @@
     },
     {
       "name": "square-2-stack",
+      "title": "square-2-stack",
+      "description": "Animated square-2-stack icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3377,6 +3939,8 @@
     },
     {
       "name": "square-3-stack-3d",
+      "title": "square-3-stack-3d",
+      "description": "Animated square-3-stack-3d icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3389,6 +3953,8 @@
     },
     {
       "name": "squares-2x2",
+      "title": "squares-2x2",
+      "description": "Animated squares-2x2 icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3401,6 +3967,8 @@
     },
     {
       "name": "squares-plus",
+      "title": "squares-plus",
+      "description": "Animated squares-plus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3413,6 +3981,8 @@
     },
     {
       "name": "star",
+      "title": "star",
+      "description": "Animated star icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3425,6 +3995,8 @@
     },
     {
       "name": "stop-circle",
+      "title": "stop-circle",
+      "description": "Animated stop-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3437,6 +4009,8 @@
     },
     {
       "name": "stop",
+      "title": "stop",
+      "description": "Animated stop icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3449,6 +4023,8 @@
     },
     {
       "name": "strikethrough",
+      "title": "strikethrough",
+      "description": "Animated strikethrough icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3461,6 +4037,8 @@
     },
     {
       "name": "sun",
+      "title": "sun",
+      "description": "Animated sun icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3473,6 +4051,8 @@
     },
     {
       "name": "swatch",
+      "title": "swatch",
+      "description": "Animated swatch icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3485,6 +4065,8 @@
     },
     {
       "name": "table-cells",
+      "title": "table-cells",
+      "description": "Animated table-cells icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3497,6 +4079,8 @@
     },
     {
       "name": "tag",
+      "title": "tag",
+      "description": "Animated tag icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3509,6 +4093,8 @@
     },
     {
       "name": "ticket",
+      "title": "ticket",
+      "description": "Animated ticket icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3521,6 +4107,8 @@
     },
     {
       "name": "trash",
+      "title": "trash",
+      "description": "Animated trash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3533,6 +4121,8 @@
     },
     {
       "name": "trophy",
+      "title": "trophy",
+      "description": "Animated trophy icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3545,6 +4135,8 @@
     },
     {
       "name": "truck",
+      "title": "truck",
+      "description": "Animated truck icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3557,6 +4149,8 @@
     },
     {
       "name": "tv",
+      "title": "tv",
+      "description": "Animated tv icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3569,6 +4163,8 @@
     },
     {
       "name": "underline",
+      "title": "underline",
+      "description": "Animated underline icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3581,6 +4177,8 @@
     },
     {
       "name": "user-circle",
+      "title": "user-circle",
+      "description": "Animated user-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3593,6 +4191,8 @@
     },
     {
       "name": "user-group",
+      "title": "user-group",
+      "description": "Animated user-group icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3605,6 +4205,8 @@
     },
     {
       "name": "user-minus",
+      "title": "user-minus",
+      "description": "Animated user-minus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3617,6 +4219,8 @@
     },
     {
       "name": "user-plus",
+      "title": "user-plus",
+      "description": "Animated user-plus icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3629,6 +4233,8 @@
     },
     {
       "name": "user",
+      "title": "user",
+      "description": "Animated user icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3641,6 +4247,8 @@
     },
     {
       "name": "users",
+      "title": "users",
+      "description": "Animated users icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3653,6 +4261,8 @@
     },
     {
       "name": "variable",
+      "title": "variable",
+      "description": "Animated variable icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3665,6 +4275,8 @@
     },
     {
       "name": "video-camera-slash",
+      "title": "video-camera-slash",
+      "description": "Animated video-camera-slash icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3677,6 +4289,8 @@
     },
     {
       "name": "video-camera",
+      "title": "video-camera",
+      "description": "Animated video-camera icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3689,6 +4303,8 @@
     },
     {
       "name": "view-columns",
+      "title": "view-columns",
+      "description": "Animated view-columns icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3701,6 +4317,8 @@
     },
     {
       "name": "viewfinder-circle",
+      "title": "viewfinder-circle",
+      "description": "Animated viewfinder-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3713,6 +4331,8 @@
     },
     {
       "name": "wallet",
+      "title": "wallet",
+      "description": "Animated wallet icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3725,6 +4345,8 @@
     },
     {
       "name": "wifi",
+      "title": "wifi",
+      "description": "Animated wifi icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3737,6 +4359,8 @@
     },
     {
       "name": "window",
+      "title": "window",
+      "description": "Animated window icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3749,6 +4373,8 @@
     },
     {
       "name": "wrench-screwdriver",
+      "title": "wrench-screwdriver",
+      "description": "Animated wrench-screwdriver icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3761,6 +4387,8 @@
     },
     {
       "name": "wrench",
+      "title": "wrench",
+      "description": "Animated wrench icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3773,6 +4401,8 @@
     },
     {
       "name": "x-circle",
+      "title": "x-circle",
+      "description": "Animated x-circle icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -3785,6 +4415,8 @@
     },
     {
       "name": "x-mark",
+      "title": "x-mark",
+      "description": "Animated x-mark icon for React",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],

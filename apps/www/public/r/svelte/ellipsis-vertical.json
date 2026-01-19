@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "ellipsis-vertical",
+  "title": "ellipsis-vertical",
+  "description": "Animated ellipsis-vertical icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "numbered-list",
+  "title": "numbered-list",
+  "description": "Animated numbered-list icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "building-office",
+  "title": "building-office",
+  "description": "Animated building-office icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "document-arrow-down",
+  "title": "document-arrow-down",
+  "description": "Animated document-arrow-down icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

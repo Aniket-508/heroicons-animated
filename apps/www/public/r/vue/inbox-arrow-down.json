@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "inbox-arrow-down",
+  "title": "inbox-arrow-down",
+  "description": "Animated inbox-arrow-down icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

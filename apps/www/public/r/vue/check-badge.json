@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "check-badge",
+  "title": "check-badge",
+  "description": "Animated check-badge icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

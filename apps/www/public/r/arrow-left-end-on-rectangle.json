@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-left-end-on-rectangle",
+  "title": "arrow-left-end-on-rectangle",
+  "description": "Animated arrow-left-end-on-rectangle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

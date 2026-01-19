@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "stop-circle",
+  "title": "stop-circle",
+  "description": "Animated stop-circle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

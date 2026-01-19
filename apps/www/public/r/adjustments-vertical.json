@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "adjustments-vertical",
+  "title": "adjustments-vertical",
+  "description": "Animated adjustments-vertical icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

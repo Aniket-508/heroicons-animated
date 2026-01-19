@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "clipboard-document-check",
+  "title": "clipboard-document-check",
+  "description": "Animated clipboard-document-check icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "language",
+  "title": "language",
+  "description": "Animated language icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

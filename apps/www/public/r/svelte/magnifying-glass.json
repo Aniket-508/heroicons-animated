@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "magnifying-glass",
+  "title": "magnifying-glass",
+  "description": "Animated magnifying-glass icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrow-down-on-square-stack",
+  "title": "arrow-down-on-square-stack",
+  "description": "Animated arrow-down-on-square-stack icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

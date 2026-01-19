@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "lifebuoy",
+  "title": "lifebuoy",
+  "description": "Animated lifebuoy icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

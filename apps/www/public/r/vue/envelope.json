@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "envelope",
+  "title": "envelope",
+  "description": "Animated envelope icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "h1",
+  "title": "h1",
+  "description": "Animated h1 icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

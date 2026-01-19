@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "chat-bubble-bottom-center-text",
+  "title": "chat-bubble-bottom-center-text",
+  "description": "Animated chat-bubble-bottom-center-text icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "cube-transparent",
+  "title": "cube-transparent",
+  "description": "Animated cube-transparent icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

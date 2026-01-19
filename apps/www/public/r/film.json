@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "film",
+  "title": "film",
+  "description": "Animated film icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

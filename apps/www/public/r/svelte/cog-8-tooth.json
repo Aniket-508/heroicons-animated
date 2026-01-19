@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "cog-8-tooth",
+  "title": "cog-8-tooth",
+  "description": "Animated cog-8-tooth icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

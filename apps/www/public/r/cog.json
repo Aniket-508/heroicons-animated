@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cog",
+  "title": "cog",
+  "description": "Animated cog icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

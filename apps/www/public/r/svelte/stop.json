@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "stop",
+  "title": "stop",
+  "description": "Animated stop icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

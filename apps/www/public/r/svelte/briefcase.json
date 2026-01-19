@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "briefcase",
+  "title": "briefcase",
+  "description": "Animated briefcase icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "code-bracket-square",
+  "title": "code-bracket-square",
+  "description": "Animated code-bracket-square icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

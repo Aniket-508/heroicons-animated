@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "globe-asia-australia",
+  "title": "globe-asia-australia",
+  "description": "Animated globe-asia-australia icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "light-bulb",
+  "title": "light-bulb",
+  "description": "Animated light-bulb icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

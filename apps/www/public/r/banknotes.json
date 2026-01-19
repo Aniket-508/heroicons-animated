@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "banknotes",
+  "title": "banknotes",
+  "description": "Animated banknotes icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

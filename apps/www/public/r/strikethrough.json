@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "strikethrough",
+  "title": "strikethrough",
+  "description": "Animated strikethrough icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hand-raised",
+  "title": "hand-raised",
+  "description": "Animated hand-raised icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "computer-desktop",
+  "title": "computer-desktop",
+  "description": "Animated computer-desktop icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

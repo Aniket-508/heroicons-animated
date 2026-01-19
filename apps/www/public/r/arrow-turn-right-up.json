@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-turn-right-up",
+  "title": "arrow-turn-right-up",
+  "description": "Animated arrow-turn-right-up icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

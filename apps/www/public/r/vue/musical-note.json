@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "musical-note",
+  "title": "musical-note",
+  "description": "Animated musical-note icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

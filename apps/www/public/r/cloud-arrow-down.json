@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cloud-arrow-down",
+  "title": "cloud-arrow-down",
+  "description": "Animated cloud-arrow-down icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

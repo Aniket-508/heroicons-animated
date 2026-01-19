@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "document-currency-rupee",
+  "title": "document-currency-rupee",
+  "description": "Animated document-currency-rupee icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

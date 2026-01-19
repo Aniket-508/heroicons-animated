@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "chevron-double-up",
+  "title": "chevron-double-up",
+  "description": "Animated chevron-double-up icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

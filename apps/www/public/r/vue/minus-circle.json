@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "minus-circle",
+  "title": "minus-circle",
+  "description": "Animated minus-circle icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

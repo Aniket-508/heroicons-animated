@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "queue-list",
+  "title": "queue-list",
+  "description": "Animated queue-list icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

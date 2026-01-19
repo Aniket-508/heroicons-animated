@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chevron-up-down",
+  "title": "chevron-up-down",
+  "description": "Animated chevron-up-down icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

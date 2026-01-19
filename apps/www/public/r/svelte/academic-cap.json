@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "academic-cap",
+  "title": "academic-cap",
+  "description": "Animated academic-cap icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

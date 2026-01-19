@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "folder-arrow-down",
+  "title": "folder-arrow-down",
+  "description": "Animated folder-arrow-down icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "ellipsis-horizontal",
+  "title": "ellipsis-horizontal",
+  "description": "Animated ellipsis-horizontal icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

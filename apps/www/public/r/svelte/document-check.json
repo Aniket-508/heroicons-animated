@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "document-check",
+  "title": "document-check",
+  "description": "Animated document-check icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

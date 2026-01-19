@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "video-camera-slash",
+  "title": "video-camera-slash",
+  "description": "Animated video-camera-slash icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

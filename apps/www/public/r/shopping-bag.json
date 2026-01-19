@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shopping-bag",
+  "title": "shopping-bag",
+  "description": "Animated shopping-bag icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

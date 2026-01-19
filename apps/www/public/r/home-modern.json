@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "home-modern",
+  "title": "home-modern",
+  "description": "Animated home-modern icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

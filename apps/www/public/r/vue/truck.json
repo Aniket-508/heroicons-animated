@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "truck",
+  "title": "truck",
+  "description": "Animated truck icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

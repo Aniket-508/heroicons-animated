@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "phone-arrow-up-right",
+  "title": "phone-arrow-up-right",
+  "description": "Animated phone-arrow-up-right icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

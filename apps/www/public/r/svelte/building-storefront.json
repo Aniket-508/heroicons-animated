@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "building-storefront",
+  "title": "building-storefront",
+  "description": "Animated building-storefront icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

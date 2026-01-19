@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "divide",
+  "title": "divide",
+  "description": "Animated divide icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

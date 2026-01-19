@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "speaker-wave",
+  "title": "speaker-wave",
+  "description": "Animated speaker-wave icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

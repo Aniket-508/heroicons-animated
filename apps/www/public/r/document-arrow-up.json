@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "document-arrow-up",
+  "title": "document-arrow-up",
+  "description": "Animated document-arrow-up icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

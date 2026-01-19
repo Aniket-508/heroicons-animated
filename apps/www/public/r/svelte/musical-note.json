@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "musical-note",
+  "title": "musical-note",
+  "description": "Animated musical-note icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

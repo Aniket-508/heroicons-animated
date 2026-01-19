@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "pause-circle",
+  "title": "pause-circle",
+  "description": "Animated pause-circle icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

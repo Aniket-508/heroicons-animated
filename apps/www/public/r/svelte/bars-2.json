@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "bars-2",
+  "title": "bars-2",
+  "description": "Animated bars-2 icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

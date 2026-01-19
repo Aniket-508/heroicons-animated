@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "paint-brush",
+  "title": "paint-brush",
+  "description": "Animated paint-brush icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

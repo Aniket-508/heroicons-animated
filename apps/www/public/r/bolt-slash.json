@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bolt-slash",
+  "title": "bolt-slash",
+  "description": "Animated bolt-slash icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

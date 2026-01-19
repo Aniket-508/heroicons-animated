@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "plus-circle",
+  "title": "plus-circle",
+  "description": "Animated plus-circle icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

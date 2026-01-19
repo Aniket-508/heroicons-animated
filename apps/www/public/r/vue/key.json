@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "key",
+  "title": "key",
+  "description": "Animated key icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

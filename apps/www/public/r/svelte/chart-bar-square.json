@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "chart-bar-square",
+  "title": "chart-bar-square",
+  "description": "Animated chart-bar-square icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

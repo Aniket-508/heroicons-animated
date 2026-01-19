@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "gift-top",
+  "title": "gift-top",
+  "description": "Animated gift-top icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

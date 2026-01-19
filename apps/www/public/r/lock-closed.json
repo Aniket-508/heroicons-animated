@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "lock-closed",
+  "title": "lock-closed",
+  "description": "Animated lock-closed icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

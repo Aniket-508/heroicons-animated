@@ -102,6 +102,8 @@ const buildRegistryItems = (config: FrameworkConfig): Schema[] => {
     const schema: Schema = {
       $schema: config.schemaUrl,
       name,
+      title: name,
+      description: `Animated ${name} icon for ${config.name}`,
       type: "registry:ui",
       registryDependencies: [],
       dependencies: config.dependencies,

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "camera",
+  "title": "camera",
+  "description": "Animated camera icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

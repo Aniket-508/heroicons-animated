@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "user-plus",
+  "title": "user-plus",
+  "description": "Animated user-plus icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "megaphone",
+  "title": "megaphone",
+  "description": "Animated megaphone icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

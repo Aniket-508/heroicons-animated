@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "eye-dropper",
+  "title": "eye-dropper",
+  "description": "Animated eye-dropper icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

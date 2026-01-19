@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "face-smile",
+  "title": "face-smile",
+  "description": "Animated face-smile icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

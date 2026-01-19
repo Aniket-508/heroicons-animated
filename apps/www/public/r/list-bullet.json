@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "list-bullet",
+  "title": "list-bullet",
+  "description": "Animated list-bullet icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

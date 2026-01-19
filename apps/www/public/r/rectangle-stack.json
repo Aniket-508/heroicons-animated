@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "rectangle-stack",
+  "title": "rectangle-stack",
+  "description": "Animated rectangle-stack icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

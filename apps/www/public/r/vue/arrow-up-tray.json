@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrow-up-tray",
+  "title": "arrow-up-tray",
+  "description": "Animated arrow-up-tray icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

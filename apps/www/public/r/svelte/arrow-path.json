@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-path",
+  "title": "arrow-path",
+  "description": "Animated arrow-path icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

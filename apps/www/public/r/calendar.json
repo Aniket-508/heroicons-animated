@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "calendar",
+  "title": "calendar",
+  "description": "Animated calendar icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

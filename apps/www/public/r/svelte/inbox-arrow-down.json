@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "inbox-arrow-down",
+  "title": "inbox-arrow-down",
+  "description": "Animated inbox-arrow-down icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

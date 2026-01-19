@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "swatch",
+  "title": "swatch",
+  "description": "Animated swatch icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "magnifying-glass-circle",
+  "title": "magnifying-glass-circle",
+  "description": "Animated magnifying-glass-circle icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

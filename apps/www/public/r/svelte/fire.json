@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "fire",
+  "title": "fire",
+  "description": "Animated fire icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

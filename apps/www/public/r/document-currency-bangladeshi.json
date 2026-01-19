@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "document-currency-bangladeshi",
+  "title": "document-currency-bangladeshi",
+  "description": "Animated document-currency-bangladeshi icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

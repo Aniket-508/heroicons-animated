@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "clipboard-document-list",
+  "title": "clipboard-document-list",
+  "description": "Animated clipboard-document-list icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "puzzle-piece",
+  "title": "puzzle-piece",
+  "description": "Animated puzzle-piece icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

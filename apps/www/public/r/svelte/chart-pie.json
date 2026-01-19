@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "chart-pie",
+  "title": "chart-pie",
+  "description": "Animated chart-pie icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "chevron-left",
+  "title": "chevron-left",
+  "description": "Animated chevron-left icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "shopping-cart",
+  "title": "shopping-cart",
+  "description": "Animated shopping-cart icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

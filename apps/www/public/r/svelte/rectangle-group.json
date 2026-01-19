@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "rectangle-group",
+  "title": "rectangle-group",
+  "description": "Animated rectangle-group icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

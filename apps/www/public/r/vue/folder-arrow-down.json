@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "folder-arrow-down",
+  "title": "folder-arrow-down",
+  "description": "Animated folder-arrow-down icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "archive-box-x-mark",
+  "title": "archive-box-x-mark",
+  "description": "Animated archive-box-x-mark icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

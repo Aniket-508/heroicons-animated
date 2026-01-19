@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "rectangle-stack",
+  "title": "rectangle-stack",
+  "description": "Animated rectangle-stack icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

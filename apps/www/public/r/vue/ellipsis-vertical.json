@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "ellipsis-vertical",
+  "title": "ellipsis-vertical",
+  "description": "Animated ellipsis-vertical icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

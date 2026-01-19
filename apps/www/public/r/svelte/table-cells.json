@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "table-cells",
+  "title": "table-cells",
+  "description": "Animated table-cells icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

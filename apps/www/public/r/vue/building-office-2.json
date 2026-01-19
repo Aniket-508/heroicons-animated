@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "building-office-2",
+  "title": "building-office-2",
+  "description": "Animated building-office-2 icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

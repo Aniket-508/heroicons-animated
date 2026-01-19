@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "calendar-date-range",
+  "title": "calendar-date-range",
+  "description": "Animated calendar-date-range icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

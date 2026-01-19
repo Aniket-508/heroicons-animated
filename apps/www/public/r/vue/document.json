@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "document",
+  "title": "document",
+  "description": "Animated document icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

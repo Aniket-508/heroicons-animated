@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shield-check",
+  "title": "shield-check",
+  "description": "Animated shield-check icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

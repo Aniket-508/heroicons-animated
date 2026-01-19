@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "italic",
+  "title": "italic",
+  "description": "Animated italic icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

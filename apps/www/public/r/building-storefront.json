@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "building-storefront",
+  "title": "building-storefront",
+  "description": "Animated building-storefront icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

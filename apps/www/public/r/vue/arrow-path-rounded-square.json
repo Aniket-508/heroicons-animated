@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "arrow-path-rounded-square",
+  "title": "arrow-path-rounded-square",
+  "description": "Animated arrow-path-rounded-square icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrows-pointing-in",
+  "title": "arrows-pointing-in",
+  "description": "Animated arrows-pointing-in icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

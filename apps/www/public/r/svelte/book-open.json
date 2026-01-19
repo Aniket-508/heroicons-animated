@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "book-open",
+  "title": "book-open",
+  "description": "Animated book-open icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shopping-cart",
+  "title": "shopping-cart",
+  "description": "Animated shopping-cart icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

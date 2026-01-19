@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "document-arrow-up",
+  "title": "document-arrow-up",
+  "description": "Animated document-arrow-up icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bars-3-bottom-right",
+  "title": "bars-3-bottom-right",
+  "description": "Animated bars-3-bottom-right icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

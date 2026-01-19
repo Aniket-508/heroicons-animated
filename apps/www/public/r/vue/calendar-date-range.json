@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "calendar-date-range",
+  "title": "calendar-date-range",
+  "description": "Animated calendar-date-range icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

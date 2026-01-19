@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-up",
+  "title": "arrow-up",
+  "description": "Animated arrow-up icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

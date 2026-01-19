@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "light-bulb",
+  "title": "light-bulb",
+  "description": "Animated light-bulb icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "device-tablet",
+  "title": "device-tablet",
+  "description": "Animated device-tablet icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "receipt-percent",
+  "title": "receipt-percent",
+  "description": "Animated receipt-percent icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

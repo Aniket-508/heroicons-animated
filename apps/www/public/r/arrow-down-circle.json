@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-down-circle",
+  "title": "arrow-down-circle",
+  "description": "Animated arrow-down-circle icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

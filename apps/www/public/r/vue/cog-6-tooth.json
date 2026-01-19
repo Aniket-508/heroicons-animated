@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "cog-6-tooth",
+  "title": "cog-6-tooth",
+  "description": "Animated cog-6-tooth icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

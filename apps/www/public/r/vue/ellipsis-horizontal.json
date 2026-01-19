@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "ellipsis-horizontal",
+  "title": "ellipsis-horizontal",
+  "description": "Animated ellipsis-horizontal icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

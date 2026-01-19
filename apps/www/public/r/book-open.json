@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "book-open",
+  "title": "book-open",
+  "description": "Animated book-open icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

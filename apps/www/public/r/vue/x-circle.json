@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "x-circle",
+  "title": "x-circle",
+  "description": "Animated x-circle icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

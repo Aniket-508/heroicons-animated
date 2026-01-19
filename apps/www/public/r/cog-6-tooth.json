@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cog-6-tooth",
+  "title": "cog-6-tooth",
+  "description": "Animated cog-6-tooth icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

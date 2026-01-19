@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "adjustments-vertical",
+  "title": "adjustments-vertical",
+  "description": "Animated adjustments-vertical icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

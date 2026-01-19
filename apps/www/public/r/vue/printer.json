@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-vue.com/schema/registry-item.json",
   "name": "printer",
+  "title": "printer",
+  "description": "Animated printer icon for Vue",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

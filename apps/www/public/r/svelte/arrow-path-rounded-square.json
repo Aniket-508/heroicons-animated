@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "arrow-path-rounded-square",
+  "title": "arrow-path-rounded-square",
+  "description": "Animated arrow-path-rounded-square icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],

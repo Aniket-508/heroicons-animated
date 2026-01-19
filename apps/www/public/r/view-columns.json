@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "view-columns",
+  "title": "view-columns",
+  "description": "Animated view-columns icon for React",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [

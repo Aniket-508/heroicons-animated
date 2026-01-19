@@ -1,6 +1,8 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
   "name": "bookmark",
+  "title": "bookmark",
+  "description": "Animated bookmark icon for Svelte",
   "type": "registry:ui",
   "registryDependencies": [],
   "dependencies": [],
