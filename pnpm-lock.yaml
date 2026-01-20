@@ -74,9 +74,6 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
       fuse.js:
         specifier: ^7.1.0
         version: 7.1.0
@@ -104,9 +101,6 @@ importers:
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      tailwind-merge:
-        specifier: 'catalog:'
-        version: 3.4.0
       tsx:
         specifier: ^4.21.0
         version: 4.21.0
@@ -150,15 +144,9 @@ importers:
       '@heroicons-animated/shared':
         specifier: workspace:*
         version: link:../shared
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
       motion:
         specifier: ^12.0.0
         version: 12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      tailwind-merge:
-        specifier: 'catalog:'
-        version: 3.4.0
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*

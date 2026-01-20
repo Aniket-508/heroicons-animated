@@ -43,9 +43,11 @@
     "type-check": "vue-tsc --noEmit"
   },
   "peerDependencies": {
-    "@heroicons-animated/shared": "workspace:*",
     "vue": "^3.0.0",
     "@vueuse/motion": "^2.0.0"
+  },
+  "dependencies": {
+    "@heroicons-animated/shared": "workspace:*"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
