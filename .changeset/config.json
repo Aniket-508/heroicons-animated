@@ -1,0 +1,23 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.2/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "Aniket-508/heroicons-animated" }
+  ],
+  "commit": false,
+  "fixed": [],
+  "linked": [
+    [
+      "@heroicons-animated/react",
+      "@heroicons-animated/vue",
+      "@heroicons-animated/svelte"
+    ]
+  ],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": ["@heroicons-animated/shared", "@repo/www"],
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  }
+}

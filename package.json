@@ -2,18 +2,52 @@
   "name": "heroicons-animated",
   "version": "0.1.0",
   "private": true,
+  "description": "Beautifully animated heroicons",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aniket-508/heroicons-animated",
+    "directory": "heroicons-animated"
+  },
+  "bugs": {
+    "url": "https://github.com/Aniket-508/heroicons-animated/issues"
+  },
+  "keywords": [
+    "heroicons",
+    "animated",
+    "icons",
+    "react",
+    "vue",
+    "svelte"
+  ],
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
     "start": "turbo run start",
     "lint": "ultracite fix",
     "lint:check": "ultracite check",
-    "type-check": "turbo run type-check --continue"
+    "type-check": "turbo run type-check --continue",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8",
     "turbo": "^2.3.3",
     "ultracite": "catalog:"
   },
+  "engines": {
+    "node": ">=20.x",
+    "pnpm": ">=10.x"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
   "packageManager": "pnpm@10.28.0"
 }
