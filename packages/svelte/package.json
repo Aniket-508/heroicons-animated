@@ -1,7 +1,7 @@
 {
   "name": "@heroicons-animated/svelte",
   "version": "0.1.0",
-  "description": "Animated Svelte icons built with CSS animations",
+  "description": "Animated Heroicons for Svelte, built with CSS animations",
   "author": "Aniket-508",
   "license": "MIT",
   "homepage": "https://heroicons-animated.com",
@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/Aniket-508/heroicons-animated",
     "directory": "packages/svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/Aniket-508/heroicons-animated/issues"
   },
   "keywords": [
     "heroicons",

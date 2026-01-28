@@ -1,7 +1,7 @@
 {
   "name": "@heroicons-animated/react",
   "version": "0.1.0",
-  "description": "Animated React icons built with Motion",
+  "description": "Animated Heroicons for React, built with Motion",
   "author": "Aniket-508",
   "license": "MIT",
   "homepage": "https://heroicons-animated.com",
@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/Aniket-508/heroicons-animated",
     "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/Aniket-508/heroicons-animated/issues"
   },
   "keywords": [
     "heroicons",
