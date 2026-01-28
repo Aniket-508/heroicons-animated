@@ -43,3 +43,6 @@ dist/
 
 # turbo
 .turbo
+
+# agents
+AGENTS.md
