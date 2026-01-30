@@ -1,8 +1,9 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+let arrowPath: SVGPathElement;
 let isAnimating = false;
 let isControlled = false;
 
@@ -11,7 +12,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -53,10 +54,9 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:barsarrowup-animate={isAnimating}
   >
     <path d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25" />
-    <path d="M13.5 12.75L17.25 9L21 12.75M17.25 9v12" />
+    <path bind:this={arrowPath} class="arrow-path" class:animate={isAnimating} d="M13.5 12.75L17.25 9L21 12.75M17.25 9v12" />
   </svg>
 </div>
 
@@ -68,22 +68,27 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.barsarrowup-animate {
-  animation: barsarrowup-animate 0.6s ease-in-out;
+.arrow-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes barsarrowup-animate {
+.arrow-path.animate {
+  animation: arrow-translate 0.5s ease-in-out forwards;
+}
+
+@keyframes arrow-translate {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
-  50% {
-    transform: scale(1.1);
+  40% {
+    transform: translateY(-2px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 </style>

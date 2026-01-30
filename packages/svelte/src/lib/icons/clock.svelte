@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,9 +54,12 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:clock-animate={isAnimating}
   >
-    <path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    <path
+      class="clock-path"
+      class:clock-path-animate={isAnimating}
+      d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+    />
   </svg>
 </div>
 
@@ -67,22 +71,24 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.clock-animate {
-  animation: clock-animate 0.6s ease-in-out;
+/* rotate 0→360, 0.6s cubic-bezier(0.4, 0, 0.2, 1) (matches React HAND_VARIANTS) */
+.clock-path {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
 }
 
-@keyframes clock-animate {
+.clock-path.clock-path-animate {
+  animation: clock-rotate 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes clock-rotate {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(360deg);
   }
 }
 </style>

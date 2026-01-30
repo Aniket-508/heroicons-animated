@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,11 +20,12 @@
         d="M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18"
       />
       <Motion is="path" ref="dotRef" d="M12 6.75h.008v.008H12V6.75Z" />
-      <path
+      <Motion
         v-for="(pillar, index) in PILLARS"
         :key="index"
+        is="path"
+        :ref="(el: SVGPathElement | null) => setPillarRef(el, index)"
         :d="pillar.d"
-        ref="pillarRefs"
       />
     </svg>
   </div>
@@ -37,44 +39,16 @@ export default {
 
 <script setup lang="ts">
 import { useMotion } from "@vueuse/motion";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
-});
-
-const dotVariants = {
-  normal: {
-    opacity: 1,
-  },
-  animate: {
-    opacity: [0, 1],
-    transition: {
-      delay: 100,
-      duration: 100,
-    },
-  },
-};
-
-const pillarVariants = (custom: number) => ({
-  normal: {
-    pathLength: 1,
-    opacity: 1,
-  },
-  animate: {
-    pathLength: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      delay: 200 + custom * 150,
-      duration: 300,
-      ease: "linear",
-    },
-  },
 });
 
 const PILLARS = [
@@ -83,36 +57,75 @@ const PILLARS = [
   { d: "M15.75 12.75v8.25", index: 2 },
 ];
 
-const dotRef = ref();
-const pillarRefs = ref<SVGPathElement[]>([]);
+const dotVariants = {
+  normal: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: [0, 1],
+    transition: {
+      delay: 0.1,
+      duration: 0.1,
+    },
+  },
+};
+
+const createPillarVariants = (custom: number) => ({
+  normal: {
+    pathLength: 1,
+    opacity: 1,
+  },
+  animate: {
+    pathLength: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      delay: 0.2 + custom * 0.15,
+      duration: 0.3,
+      ease: "linear",
+    },
+  },
+});
+
+const dotRef = ref<SVGPathElement>();
+const pillarRefs = ref<(SVGPathElement | null)[]>([]);
+const pillarMotions = ref<any[]>([]);
+
+const setPillarRef = (el: SVGPathElement | null, index: number) => {
+  if (el) {
+    pillarRefs.value[index] = el;
+    pillarMotions.value[index] = useMotion(el, {
+      initial: createPillarVariants(PILLARS[index].index).normal,
+      enter: createPillarVariants(PILLARS[index].index).normal,
+    });
+  }
+};
 
 const dotMotion = useMotion(dotRef, {
   initial: dotVariants.normal,
-});
-
-const pillarMotions: any[] = [];
-
-onMounted(() => {
-  pillarRefs.value.forEach((el, index) => {
-    pillarMotions[index] = useMotion(el, {
-      initial: pillarVariants(index).normal,
-    });
-  });
+  enter: dotVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
   dotMotion.apply(dotVariants.animate);
-  pillarRefs.value.forEach((_, index) => {
-    pillarMotions[index]?.apply(pillarVariants(index).animate);
+  PILLARS.forEach((pillar, index) => {
+    if (pillarMotions.value[index]) {
+      pillarMotions.value[index].apply(
+        createPillarVariants(pillar.index).animate,
+      );
+    }
   });
 };
 
 const stopAnimation = () => {
   dotMotion.apply(dotVariants.normal);
-  pillarRefs.value.forEach((_, index) => {
-    pillarMotions[index]?.apply(pillarVariants(index).normal);
+  PILLARS.forEach((pillar, index) => {
+    if (pillarMotions.value[index]) {
+      pillarMotions.value[index].apply(
+        createPillarVariants(pillar.index).normal,
+      );
+    }
   });
 };
 

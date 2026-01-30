@@ -1,22 +1,51 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+let headPath: SVGPathElement;
+let linePath: SVGPathElement;
+let lineAnimation: Animation | null = null;
 let isAnimating = false;
 let isControlled = false;
 
 export function startAnimation() {
   if (!isControlled) {
     isAnimating = true;
+    
+    // Animate line path morphing using Web Animations API
+    if (linePath) {
+      lineAnimation = linePath.animate(
+        [
+          { d: "M12 3v18" },
+          { d: "M12 6v15" },
+          { d: "M12 3v18" },
+        ],
+        {
+          duration: 400,
+          easing: "ease-in-out",
+          fill: "forwards",
+        }
+      );
+    }
+    
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
 export function stopAnimation() {
   isAnimating = false;
+  
+  if (lineAnimation) {
+    lineAnimation.cancel();
+    lineAnimation = null;
+  }
+  
+  if (linePath) {
+    linePath.setAttribute("d", "M12 3v18");
+  }
 }
 
 export function setControlled(value: boolean) {
@@ -53,10 +82,9 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:arrowup-animate={isAnimating}
   >
-    <path d="M4.5 10.5 12 3m0 0 7.5 7.5" />
-    <path d="M12 3v18" />
+    <path bind:this={headPath} class="head-path" class:animate={isAnimating} d="M4.5 10.5 12 3m0 0 7.5 7.5" />
+    <path bind:this={linePath} d="M12 3v18" />
   </svg>
 </div>
 
@@ -68,22 +96,27 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.arrowup-animate {
-  animation: arrowup-animate 0.6s ease-in-out;
+.head-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
 }
 
-@keyframes arrowup-animate {
+.head-path.animate {
+  animation: head-translate 0.4s ease-in-out forwards;
+}
+
+@keyframes head-translate {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.1);
+    transform: translateY(3px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 </style>

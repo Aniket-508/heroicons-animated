@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 2000);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,17 +54,18 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:cursorarrowrays-animate={isAnimating}
   >
     <path
       d="M15.0423 21.6718L13.6835 16.6007M13.6835 16.6007L11.1741 18.826L11.7425 9.35623L16.9697 17.2731L13.6835 16.6007Z"
+      class="cursor-rays-cursor"
+      class:cursor-move={isAnimating}
     />
-    <path d="M12 2.25V4.5" />
-    <path d="M17.8336 4.66637L16.2426 6.25736" />
-    <path d="M20.25 10.5H18" />
-    <path d="M7.75736 14.7426L6.16637 16.3336" />
-    <path d="M6 10.5H3.75" />
-    <path d="M7.75736 6.25736L6.16637 4.66637" />
+    <path d="M12 2.25V4.5" class="ray ray0" class:ray-spread={isAnimating} />
+    <path d="M17.8336 4.66637L16.2426 6.25736" class="ray ray1" class:ray-spread={isAnimating} />
+    <path d="M20.25 10.5H18" class="ray ray2" class:ray-spread={isAnimating} />
+    <path d="M7.75736 14.7426L6.16637 16.3336" class="ray ray3" class:ray-spread={isAnimating} />
+    <path d="M6 10.5H3.75" class="ray ray4" class:ray-spread={isAnimating} />
+    <path d="M7.75736 6.25736L6.16637 4.66637" class="ray ray5" class:ray-spread={isAnimating} />
   </svg>
 </div>
 
@@ -75,22 +77,59 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.cursorarrowrays-animate {
-  animation: cursorarrowrays-animate 0.6s ease-in-out;
+.cursor-rays-cursor.cursor-move {
+  animation: cursor-rays-move 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-@keyframes cursorarrowrays-animate {
+@keyframes cursor-rays-move {
   0% {
-    transform: scale(1);
+    transform: translate(0, 0);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    transform: translate(0, -4px);
+  }
+  66% {
+    transform: translate(-3px, 0);
   }
   100% {
-    transform: scale(1);
+    transform: translate(0, 0);
   }
 }
+
+.ray {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.ray.ray-spread {
+  animation: ray-spread 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.3s forwards;
+  opacity: 0;
+}
+
+@keyframes ray-spread {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  14% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+    transform: translate(var(--ray-x, 0), var(--ray-y, 0));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.ray0.ray-spread { --ray-x: 0; --ray-y: -2px; }
+.ray1.ray-spread { --ray-x: 2px; --ray-y: -2px; }
+.ray2.ray-spread { --ray-x: 2px; --ray-y: 0; }
+.ray3.ray-spread { --ray-x: -2px; --ray-y: 2px; }
+.ray4.ray-spread { --ray-x: -2px; --ray-y: 0; }
+.ray5.ray-spread { --ray-x: -2px; --ray-y: -2px; }
 </style>

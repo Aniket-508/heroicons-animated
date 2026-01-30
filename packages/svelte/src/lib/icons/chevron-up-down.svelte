@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,10 +54,17 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:chevronupdown-animate={isAnimating}
   >
-    <path d="M8.25 9 12 5.25 15.75 9" />
-    <path d="M8.25 15 12 18.75 15.75 15" />
+    <path
+      class="chevron-path chevron-up"
+      class:chevron-animate={isAnimating}
+      d="M8.25 9 12 5.25 15.75 9"
+    />
+    <path
+      class="chevron-path chevron-down"
+      class:chevron-animate={isAnimating}
+      d="M8.25 15 12 18.75 15.75 15"
+    />
   </svg>
 </div>
 
@@ -71,19 +79,23 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.chevronupdown-animate {
-  animation: chevronupdown-animate 0.6s ease-in-out;
+.chevron-up.chevron-animate {
+  animation: chevron-up-animate 0.5s ease-out forwards;
 }
 
-@keyframes chevronupdown-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.chevron-down.chevron-animate {
+  animation: chevron-down-animate 0.5s ease-out forwards;
+}
+
+@keyframes chevron-up-animate {
+  0% { transform: translateY(0); }
+  40% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes chevron-down-animate {
+  0% { transform: translateY(0); }
+  40% { transform: translateY(2px); }
+  100% { transform: translateY(0); }
 }
 </style>

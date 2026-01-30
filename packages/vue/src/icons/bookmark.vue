@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,43 +38,42 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const bookmarkVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    scaleY: 1,
+    scaleX: 1,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    scaleY: [1, 1.3, 0.9, 1.05, 1],
+    scaleX: [1, 0.9, 1.1, 0.95, 1],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.6,
+      ease: "easeOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const pathRef = ref<SVGPathElement>();
+const pathMotion = useMotion(pathRef, {
+  initial: bookmarkVariants.normal,
+  enter: bookmarkVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  pathMotion.apply(bookmarkVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  pathMotion.apply(bookmarkVariants.normal);
 };
 
 const handleMouseEnter = () => {

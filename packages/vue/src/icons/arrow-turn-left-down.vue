@@ -4,7 +4,9 @@
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-    <svg
+    <Motion
+      ref="svgRef"
+      tag="svg"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -15,12 +17,8 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
-        d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25"
-      />
-    </svg>
+      <path d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
+    </Motion>
   </div>
 </template>
 
@@ -45,23 +43,19 @@ const props = withDefaults(defineProps<Props>(), {
 
 const variants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    scaleY: 1,
+    y: 0,
+    transition: { duration: 0.2, ease: "easeOut" },
   },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    scaleY: [1, 1.15, 1],
+    y: [0, 2, 0],
+    transition: { duration: 0.45, ease: "easeInOut" },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const svgRef = ref();
+const motionInstance = useMotion(svgRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -46,6 +47,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -54,22 +56,22 @@ const props = withDefaults(defineProps<Props>(), {
 
 const variants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    fillOpacity: 0,
+    fill: "currentColor",
+    transition: { duration: 0.2, ease: "easeOut" },
   },
   animate: {
-    scale: [1, 1.08, 1],
+    fillOpacity: [0, 1, 0, 1, 0],
+    fill: "currentColor",
     transition: {
-      duration: 0.45,
+      duration: 0.6,
       ease: "easeInOut",
+      times: [0, 0.25, 0.5, 0.75, 1],
     },
   },
 };
 
-const pathRef = ref();
+const pathRef = ref<SVGPathElement | null>();
 const motionInstance = useMotion(pathRef, {
   initial: variants.normal,
   enter: variants.normal,

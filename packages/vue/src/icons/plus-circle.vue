@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,13 +16,9 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
-        d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z"
-      />
-      <path d="M12 9v6" />
-      <path d="M9 12h6" />
+      <path d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z" />
+      <Motion is="path" ref="verticalRef" d="M12 9v6" />
+      <Motion is="path" ref="horizontalRef" d="M9 12h6" />
     </svg>
   </div>
 </template>
@@ -45,37 +42,54 @@ const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+const verticalVariants = {
+  normal: { opacity: 1, pathLength: 1 },
   animate: {
-    scale: [1, 1.08, 1],
+    opacity: [0, 1],
+    pathLength: [0, 1],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      delay: 0.3,
+      duration: 0.2,
+      opacity: { duration: 0.1, delay: 0.3 },
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const horizontalVariants = {
+  normal: { opacity: 1, pathLength: 1 },
+  animate: {
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    transition: {
+      delay: 0.6,
+      duration: 0.2,
+      opacity: { duration: 0.1, delay: 0.6 },
+    },
+  },
+};
+
+const verticalRef = ref<SVGPathElement | null>();
+const horizontalRef = ref<SVGPathElement | null>();
+const verticalMotion = useMotion(verticalRef, {
+  initial: verticalVariants.normal,
+  enter: verticalVariants.normal,
+});
+const horizontalMotion = useMotion(horizontalRef, {
+  initial: horizontalVariants.normal,
+  enter: horizontalVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  verticalMotion.apply(verticalVariants.animate);
+  horizontalMotion.apply(horizontalVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  const lineNormal = { opacity: 1, pathLength: 1 };
+  verticalMotion.apply(lineNormal);
+  horizontalMotion.apply(lineNormal);
 };
 
 const handleMouseEnter = () => {

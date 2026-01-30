@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:currencyyen-animate={isAnimating}
+    class:currencyyen-flip={isAnimating}
   >
     <path
       d="M9 7.5L12 12M12 12L15 7.5M12 12V17.25M15 12H9M15 15H9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
@@ -68,23 +69,20 @@ div {
 
 .icon-svg {
   transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
-.icon-svg.currencyyen-animate {
-  animation: currencyyen-animate 0.6s ease-in-out;
+.icon-svg.currencyyen-flip {
+  animation: currencyyen-flip 0.6s ease-in-out;
 }
 
-@keyframes currencyyen-animate {
-  0% {
-    transform: scale(1);
+@keyframes currencyyen-flip {
+  0%,
+  100% {
+    transform: scaleX(1);
   }
   50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+    transform: scaleX(-1);
   }
 }
 </style>

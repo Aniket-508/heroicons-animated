@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,12 +54,15 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:magnifyingglassminus-animate={isAnimating}
   >
     <path
       d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
     />
-    <path d="M13.5 10.5H7.5" />
+    <path
+      class="magnifyingglassminus-line"
+      class:magnifyingglassminus-draw={isAnimating}
+      d="M13.5 10.5H7.5"
+    />
   </svg>
 </div>
 
@@ -73,19 +77,24 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.magnifyingglassminus-animate {
-  animation: magnifyingglassminus-animate 0.6s ease-in-out;
+.magnifyingglassminus-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-@keyframes magnifyingglassminus-animate {
+.magnifyingglassminus-line.magnifyingglassminus-draw {
+  animation: magnifyingglassminus-draw 0.4s ease-in-out forwards;
+}
+
+@keyframes magnifyingglassminus-draw {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

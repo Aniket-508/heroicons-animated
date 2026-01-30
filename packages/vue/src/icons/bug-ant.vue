@@ -3,8 +3,11 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
-    <svg
+    <Motion
+      is="svg"
+      ref="svgRef"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -15,9 +18,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M11.9997 12.75C13.1482 12.75 14.2778 12.8307 15.3833 12.9867C16.4196 13.1329 17.2493 13.9534 17.2493 15C17.2493 18.7279 14.8988 21.75 11.9993 21.75C9.09977 21.75 6.74927 18.7279 6.74927 15C6.74927 13.9535 7.57879 13.1331 8.61502 12.9868C9.72081 12.8307 10.8508 12.75 11.9997 12.75Z"
       />
       <path
@@ -38,7 +39,7 @@
       <path
         d="M4.92097 6C4.71594 7.08086 4.58339 8.18738 4.52856 9.3143C6.19671 9.86025 7.94538 10.2283 9.75214 10.3961M19.0786 6C19.2836 7.08086 19.4162 8.18738 19.471 9.3143C17.8029 9.86024 16.0542 10.2283 14.2475 10.3961"
       />
-    </svg>
+    </Motion>
   </div>
 </template>
 
@@ -55,43 +56,42 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const svgVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    x: 0,
+    rotate: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    x: [0, -1, 1, -1, 1, 0],
+    rotate: [0, -2, 2, -2, 2, 0],
     transition: {
-      duration: 0.45,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const svgRef = ref<SVGSVGElement>();
+const svgMotion = useMotion(svgRef, {
+  initial: svgVariants.normal,
+  enter: svgVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  svgMotion.apply(svgVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  svgMotion.apply(svgVariants.normal);
 };
 
 const handleMouseEnter = () => {

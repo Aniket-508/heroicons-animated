@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,13 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
+      <path d="M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501" />
       <Motion
         is="path"
-        ref="pathRef"
-        d="M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501"
-      />
-      <path
+        ref="charRef"
         d="M20.905 14.626a4.52 4.52 0 0 1 .738 3.603c-.154.695-.794 1.143-1.504 1.208a15.194 15.194 0 0 1-3.639-.104m4.405-4.707a4.52 4.52 0 0 0 .738-3.603c-.154-.696-.794-1.144-1.504-1.209a15.19 15.19 0 0 0-3.639.104m4.405 4.708H18"
+        style="transform-origin: 50% 12px"
       />
     </svg>
   </div>
@@ -40,6 +40,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -49,22 +50,16 @@ const props = withDefaults(defineProps<Props>(), {
 const variants = {
   normal: {
     scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    transition: { type: "spring", stiffness: 500, damping: 25 },
   },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    scale: 0.75,
+    transition: { type: "spring", stiffness: 400, damping: 15 },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const charRef = ref<SVGPathElement | null>();
+const motionInstance = useMotion(charRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

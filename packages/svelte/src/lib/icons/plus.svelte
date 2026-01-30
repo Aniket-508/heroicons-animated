@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -68,22 +68,18 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
 .icon-svg.plus-animate {
-  animation: plus-animate 0.6s ease-in-out;
+  animation: plus-rotate 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-@keyframes plus-animate {
+@keyframes plus-rotate {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(180deg);
   }
 }
 </style>

@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,12 +16,9 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <path
-        v-for="(dot, index) in DOTS"
-        :key="index"
-        :custom="dot.index"
-        :d="dot.d"
-      />
+      <Motion is="path" ref="dot0Ref" :d="DOTS[0].d" />
+      <Motion is="path" ref="dot1Ref" :d="DOTS[1].d" />
+      <Motion is="path" ref="dot2Ref" :d="DOTS[2].d" />
     </svg>
   </div>
 </template>
@@ -38,6 +36,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -59,37 +58,44 @@ const DOTS = [
   },
 ];
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+// Match React: 3 dots scale [1, 1.3, 1], delay custom*0.05, 0.4s easeInOut
+const dotVariants = (i: number) => ({
+  normal: { scale: 1 },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    scale: [1, 1.3, 1],
+    transition: { duration: 0.4, delay: i * 0.05, ease: "easeInOut" },
   },
-};
-
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
 });
+
+const dot0Ref = ref<SVGPathElement | null>(null);
+const dot1Ref = ref<SVGPathElement | null>(null);
+const dot2Ref = ref<SVGPathElement | null>(null);
+const motion0 = useMotion(dot0Ref, {
+  initial: { scale: 1 },
+  enter: { scale: 1 },
+});
+const motion1 = useMotion(dot1Ref, {
+  initial: { scale: 1 },
+  enter: { scale: 1 },
+});
+const motion2 = useMotion(dot2Ref, {
+  initial: { scale: 1 },
+  enter: { scale: 1 },
+});
+const motions = [motion0, motion1, motion2];
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  motions[0].apply(dotVariants(0).animate);
+  motions[1].apply(dotVariants(1).animate);
+  motions[2].apply(dotVariants(2).animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  motions[0].apply({ scale: 1 });
+  motions[1].apply({ scale: 1 });
+  motions[2].apply({ scale: 1 });
 };
 
 const handleMouseEnter = () => {

@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -73,18 +74,27 @@ div {
 }
 
 .icon-svg.gifttop-animate {
-  animation: gifttop-animate 0.6s ease-in-out;
+  animation: gifttop-animate 0.5s ease-in-out;
 }
 
 @keyframes gifttop-animate {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg) scale(1);
   }
-  50% {
-    transform: scale(1.1);
+  20% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  40% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  60% {
+    transform: rotate(-3deg) scale(1.05);
+  }
+  80% {
+    transform: rotate(3deg) scale(1.05);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(0deg) scale(1);
   }
 }
 </style>

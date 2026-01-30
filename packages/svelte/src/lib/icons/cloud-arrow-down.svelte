@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,12 +54,15 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:cloudarrowdown-animate={isAnimating}
   >
     <path
       d="M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z"
     />
-    <path d="M12 9.75v6.75m0 0-3-3m3 3 3-3" />
+    <path
+      class="arrow-path"
+      class:arrow-animate={isAnimating}
+      d="M12 9.75v6.75m0 0-3-3m3 3 3-3"
+    />
   </svg>
 </div>
 
@@ -73,19 +77,14 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.cloudarrowdown-animate {
-  animation: cloudarrowdown-animate 0.6s ease-in-out;
+/* arrow path translateY [0,2,0] times [0,0.4,1] 0.5s (matches React ARROW_VARIANTS) */
+.arrow-path.arrow-animate {
+  animation: arrow-down-animate 0.5s ease-out forwards;
 }
 
-@keyframes cloudarrowdown-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+@keyframes arrow-down-animate {
+  0% { transform: translateY(0); }
+  40% { transform: translateY(2px); }
+  100% { transform: translateY(0); }
 }
 </style>

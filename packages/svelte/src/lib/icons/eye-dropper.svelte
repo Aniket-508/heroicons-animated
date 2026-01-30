@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -69,22 +70,18 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
 .icon-svg.eyedropper-animate {
-  animation: eyedropper-animate 0.6s ease-in-out;
+  animation: eyedropper-animate 0.4s ease-in-out forwards;
 }
 
 @keyframes eyedropper-animate {
-  0% {
-    transform: scale(1);
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+    transform: translateY(2px) rotate(-3deg);
   }
 }
 </style>

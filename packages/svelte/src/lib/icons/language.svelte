@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,10 +54,11 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:language-animate={isAnimating}
   >
     <path
       d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
+      class="language-path"
+      class:language-draw={isAnimating}
     />
   </svg>
 </div>
@@ -69,22 +71,26 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.language-animate {
-  animation: language-animate 0.6s ease-in-out;
+.language-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-@keyframes language-animate {
+.language-path.language-draw {
+  animation: language-draw 0.5s ease-out forwards;
+}
+
+@keyframes language-draw {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -36,14 +37,15 @@ import { onMounted, ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const NUMBER_DURATION = 200;
-const LINE_DURATION = 300;
+const NUMBER_DURATION = 0.2;
+const LINE_DURATION = 0.3;
 
 const LIST_ITEMS = [
   {
@@ -93,8 +95,16 @@ const startAnimation = () => {
       pathLength: [0, 1],
       opacity: [0, 1],
       transition: {
-        duration: NUMBER_DURATION,
-        delay: numberDelay,
+        pathLength: {
+          duration: NUMBER_DURATION,
+          ease: "easeInOut",
+          delay: numberDelay,
+        },
+        opacity: {
+          duration: NUMBER_DURATION,
+          ease: "easeInOut",
+          delay: numberDelay,
+        },
       },
     });
 
@@ -102,8 +112,16 @@ const startAnimation = () => {
       pathLength: [0, 1],
       opacity: [0, 1],
       transition: {
-        duration: LINE_DURATION,
-        delay: lineDelay,
+        pathLength: {
+          duration: LINE_DURATION,
+          ease: "easeInOut",
+          delay: lineDelay,
+        },
+        opacity: {
+          duration: LINE_DURATION,
+          ease: "easeInOut",
+          delay: lineDelay,
+        },
       },
     });
   });

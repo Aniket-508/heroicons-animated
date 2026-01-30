@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 450);
   }
 }
 
@@ -71,18 +71,18 @@ div {
 }
 
 .icon-svg.arrowturndownleft-animate {
-  animation: arrowturndownleft-animate 0.6s ease-in-out;
+  animation: arrowturndownleft-animate 0.45s ease-in-out;
 }
 
 @keyframes arrowturndownleft-animate {
   0% {
-    transform: scale(1);
+    transform: scaleX(1) translateX(0);
   }
   50% {
-    transform: scale(1.1);
+    transform: scaleX(1.15) translateX(-2px);
   }
   100% {
-    transform: scale(1);
+    transform: scaleX(1) translateX(0);
   }
 }
 </style>

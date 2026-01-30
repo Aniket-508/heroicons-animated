@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,18 +16,16 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <g>
-        <Motion
-          is="path"
-          ref="pathRef"
+      <Motion is="g" ref="leftPageRef" style="transform-origin: 100% 50%">
+        <path
           d="M12 6.04168C10.4077 4.61656 8.30506 3.75 6 3.75C4.94809 3.75 3.93834 3.93046 3 4.26212V18.5121C3.93834 18.1805 4.94809 18 6 18C8.30506 18 10.4077 18.8666 12 20.2917"
         />
-      </g>
-      <g>
+      </Motion>
+      <Motion is="g" ref="rightPageRef" style="transform-origin: 0% 50%">
         <path
           d="M12 6.04168C13.5923 4.61656 15.6949 3.75 18 3.75C19.0519 3.75 20.0617 3.93046 21 4.26212V18.5121C20.0617 18.1805 19.0519 18 18 18C15.6949 18 13.5923 18.8666 12 20.2917"
         />
-      </g>
+      </Motion>
       <path d="M12 6.04168V20.2917" />
     </svg>
   </div>
@@ -45,43 +44,62 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const leftPageVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    rotateY: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    rotateY: [0, 15, 0],
     transition: {
-      duration: 0.45,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const rightPageVariants = {
+  normal: {
+    rotateY: 0,
+  },
+  animate: {
+    rotateY: [0, -15, 0],
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const leftPageRef = ref<SVGGElement>();
+const rightPageRef = ref<SVGGElement>();
+
+const leftPageMotion = useMotion(leftPageRef, {
+  initial: leftPageVariants.normal,
+  enter: leftPageVariants.normal,
+});
+
+const rightPageMotion = useMotion(rightPageRef, {
+  initial: rightPageVariants.normal,
+  enter: rightPageVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  leftPageMotion.apply(leftPageVariants.animate);
+  rightPageMotion.apply(rightPageVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  leftPageMotion.apply(leftPageVariants.normal);
+  rightPageMotion.apply(rightPageVariants.normal);
 };
 
 const handleMouseEnter = () => {

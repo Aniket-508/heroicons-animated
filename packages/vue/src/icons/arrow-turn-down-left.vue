@@ -3,8 +3,11 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
-    <svg
+    <Motion
+      is="svg"
+      ref="svgRef"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -15,12 +18,8 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
-        d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499"
-      />
-    </svg>
+      <path d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
+    </Motion>
   </div>
 </template>
 
@@ -43,16 +42,20 @@ const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
+// Must match React STRETCH_VARIANTS exactly: scaleX [1, 1.15, 1], x [0, -2, 0], 0.45s
 const variants = {
   normal: {
-    scale: 1,
+    scaleX: 1,
+    x: 0,
+    opacity: 1,
     transition: {
       duration: 0.2,
       ease: "easeOut",
     },
   },
   animate: {
-    scale: [1, 1.08, 1],
+    scaleX: [1, 1.15, 1],
+    x: [0, -2, 0],
     transition: {
       duration: 0.45,
       ease: "easeInOut",
@@ -60,8 +63,8 @@ const variants = {
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const svgRef = ref();
+const motionInstance = useMotion(svgRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -54,6 +55,7 @@ function handleMouseLeave() {
     stroke-linejoin="round"
     class="icon-svg"
     class:fire-animate={isAnimating}
+    style="transform-origin: 50% 100%"
   >
     <path
       d="M15.3622 5.21361C18.2427 6.50069 20.25 9.39075 20.25 12.7497C20.25 17.306 16.5563 20.9997 12 20.9997C7.44365 20.9997 3.75 17.306 3.75 12.7497C3.75 10.5376 4.62058 8.52889 6.03781 7.04746C6.8043 8.11787 7.82048 8.99731 9.00121 9.60064C9.04632 6.82497 10.348 4.35478 12.3621 2.73413C13.1255 3.75788 14.1379 4.61821 15.3622 5.21361Z"
@@ -76,18 +78,24 @@ div {
 }
 
 .icon-svg.fire-animate {
-  animation: fire-animate 0.6s ease-in-out;
+  animation: fire-animate 0.5s ease-in-out forwards;
 }
 
 @keyframes fire-animate {
-  0% {
-    transform: scale(1);
+  0%, 100% {
+    transform: rotate(0deg) scaleX(1);
   }
-  50% {
-    transform: scale(1.1);
+  20% {
+    transform: rotate(-3deg) scaleX(0.95);
   }
-  100% {
-    transform: scale(1);
+  40% {
+    transform: rotate(3deg) scaleX(1.05);
+  }
+  60% {
+    transform: rotate(-2deg) scaleX(0.98);
+  }
+  80% {
+    transform: rotate(2deg) scaleX(1);
   }
 }
 </style>

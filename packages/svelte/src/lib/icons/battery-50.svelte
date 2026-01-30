@@ -1,23 +1,50 @@
 <script lang="ts">
-const _clipId = `clip-${Math.random().toString(36).substr(2, 9)}`;
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+const clipId = `battery-clip-${Math.random().toString(36).substr(2, 9)}`;
+
+let clipRect: SVGRectElement;
+let clipAnimation: Animation | null = null;
 let isAnimating = false;
 let isControlled = false;
 
 export function startAnimation() {
   if (!isControlled) {
     isAnimating = true;
+    
+    if (clipRect) {
+      clipAnimation = clipRect.animate(
+        [
+          { width: 0 },
+          { width: 6.75 },
+        ],
+        {
+          duration: 400,
+          easing: "ease-out",
+          fill: "forwards",
+        }
+      );
+    }
+    
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
 export function stopAnimation() {
   isAnimating = false;
+  
+  if (clipAnimation) {
+    clipAnimation.cancel();
+    clipAnimation = null;
+  }
+  
+  if (clipRect) {
+    clipRect.setAttribute("width", "0");
+  }
 }
 
 export function setControlled(value: boolean) {
@@ -54,11 +81,10 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:battery50-animate={isAnimating}
   >
     <defs>
       <clipPath id={clipId}>
-        <rect height="4.5" x="4.5" y="10.5" />
+        <rect bind:this={clipRect} height="4.5" x="4.5" y="10.5" width="0" />
       </clipPath>
     </defs>
     <path
@@ -85,22 +111,5 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
-}
-
-.icon-svg.battery50-animate {
-  animation: battery50-animate 0.6s ease-in-out;
-}
-
-@keyframes battery50-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 </style>

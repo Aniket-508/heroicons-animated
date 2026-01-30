@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,14 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5"
       />
-      <g>
+      <Motion is="g" ref="arrowGroupRef">
         <path d="M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-      </g>
+      </Motion>
     </svg>
   </div>
 </template>
@@ -40,43 +39,40 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const arrowVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    translateY: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const arrowGroupRef = ref();
+const arrowMotion = useMotion(arrowGroupRef, {
+  initial: arrowVariants.normal,
+  enter: arrowVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  arrowMotion.apply(arrowVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  arrowMotion.apply(arrowVariants.normal);
 };
 
 const handleMouseEnter = () => {

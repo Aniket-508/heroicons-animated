@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:devicetablet-animate={isAnimating}
+    class:devicetablet-shake={isAnimating}
   >
     <path
       d="M10.5 19.5H13.5M6.75 21.75H17.25C18.4926 21.75 19.5 20.7426 19.5 19.5V4.5C19.5 3.25736 18.4926 2.25 17.25 2.25H6.75C5.50736 2.25 4.5 3.25736 4.5 4.5V19.5C4.5 20.7426 5.50736 21.75 6.75 21.75Z"
@@ -68,23 +69,34 @@ div {
 
 .icon-svg {
   transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
-.icon-svg.devicetablet-animate {
-  animation: devicetablet-animate 0.6s ease-in-out;
+.icon-svg.devicetablet-shake {
+  animation: devicetablet-shake 0.5s ease-in-out;
 }
 
-@keyframes devicetablet-animate {
-  0% {
-    transform: scale(1);
+@keyframes devicetablet-shake {
+  0%, 100% {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: scale(1.1);
+  14% {
+    transform: rotate(-3deg);
   }
-  100% {
-    transform: scale(1);
+  28% {
+    transform: rotate(3deg);
+  }
+  42% {
+    transform: rotate(-3deg);
+  }
+  57% {
+    transform: rotate(3deg);
+  }
+  71% {
+    transform: rotate(-2deg);
+  }
+  85% {
+    transform: rotate(2deg);
   }
 }
 </style>

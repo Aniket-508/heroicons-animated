@@ -1,8 +1,9 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+let pathElement: SVGPathElement;
 let isAnimating = false;
 let isControlled = false;
 
@@ -11,7 +12,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -53,9 +54,11 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:bell-animate={isAnimating}
   >
     <path
+      bind:this={pathElement}
+      class="bell-path"
+      class:animate={isAnimating}
       d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
     />
   </svg>
@@ -69,22 +72,33 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.bell-animate {
-  animation: bell-animate 0.6s ease-in-out;
+.bell-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes bell-animate {
+.bell-path.animate {
+  animation: bell-ring 0.5s ease-in-out forwards;
+}
+
+@keyframes bell-ring {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
   }
   50% {
-    transform: scale(1.1);
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
 }
 </style>

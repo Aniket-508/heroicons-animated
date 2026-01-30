@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -68,23 +69,25 @@ div {
 
 .icon-svg {
   transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: top right;
 }
 
 .icon-svg.pencil-animate {
-  animation: pencil-animate 0.6s ease-in-out;
+  animation: pencil-animate 0.6s ease-in-out forwards;
 }
 
 @keyframes pencil-animate {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    transform: rotate(-6deg);
+  }
+  66% {
+    transform: rotate(6deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
 }
 </style>

@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,15 +16,13 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
       />
-      <path d="M7.5 14.25v2.25" />
-      <path d="M10.5 12v4.5" />
-      <path d="M13.5 9.75v6.75" />
-      <path d="M16.5 7.5v9" />
+      <Motion is="path" ref="bar1Ref" d="M7.5 14.25v2.25" />
+      <Motion is="path" ref="bar2Ref" d="M10.5 12v4.5" />
+      <Motion is="path" ref="bar3Ref" d="M13.5 9.75v6.75" />
+      <Motion is="path" ref="bar4Ref" d="M16.5 7.5v9" />
     </svg>
   </div>
 </template>
@@ -41,64 +40,82 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const createBarVariants = (delay: number) => ({
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    opacity: 1,
+    pathLength: 1,
+    pathOffset: 0,
+    transition: { duration: 0.4, opacity: { duration: 0.1 } },
   },
   animate: {
-    scale: [1, 1.08, 1],
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    pathOffset: [1, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      delay,
+      duration: 0.4,
+      ease: "easeOut",
+      opacity: { duration: 0.1, delay },
     },
   },
-};
+});
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const bar1Ref = ref<SVGPathElement | null>();
+const bar2Ref = ref<SVGPathElement | null>();
+const bar3Ref = ref<SVGPathElement | null>();
+const bar4Ref = ref<SVGPathElement | null>();
+
+const motion1 = useMotion(bar1Ref, {
+  initial: createBarVariants(0).normal,
+  enter: createBarVariants(0).normal,
+});
+const motion2 = useMotion(bar2Ref, {
+  initial: createBarVariants(0.15).normal,
+  enter: createBarVariants(0.15).normal,
+});
+const motion3 = useMotion(bar3Ref, {
+  initial: createBarVariants(0.3).normal,
+  enter: createBarVariants(0.3).normal,
+});
+const motion4 = useMotion(bar4Ref, {
+  initial: createBarVariants(0.45).normal,
+  enter: createBarVariants(0.45).normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  motion1.apply(createBarVariants(0).animate);
+  motion2.apply(createBarVariants(0.15).animate);
+  motion3.apply(createBarVariants(0.3).animate);
+  motion4.apply(createBarVariants(0.45).animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  motion1.apply(createBarVariants(0).normal);
+  motion2.apply(createBarVariants(0.15).normal);
+  motion3.apply(createBarVariants(0.3).normal);
+  motion4.apply(createBarVariants(0.45).normal);
 };
 
 const handleMouseEnter = () => {
-  if (!isControlled) {
-    startAnimation();
-  }
+  if (!isControlled) startAnimation();
 };
 
 const handleMouseLeave = () => {
-  if (!isControlled) {
-    stopAnimation();
-  }
+  if (!isControlled) stopAnimation();
 };
 
 const setControlled = (value: boolean) => {
   isControlled = value;
 };
 
-defineExpose({
-  startAnimation,
-  stopAnimation,
-  setControlled,
-});
+defineExpose({ startAnimation, stopAnimation, setControlled });
 </script>

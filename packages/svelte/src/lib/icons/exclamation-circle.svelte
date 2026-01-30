@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -9,9 +9,6 @@ let isControlled = false;
 export function startAnimation() {
   if (!isControlled) {
     isAnimating = true;
-    setTimeout(() => {
-      isAnimating = false;
-    }, 600);
   }
 }
 
@@ -37,6 +34,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,10 +51,12 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:exclamationcircle-animate={isAnimating}
   >
     <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-    <g>
+    <g
+      class="exclamationcircle-inner"
+      class:exclamationcircle-pulse={isAnimating}
+    >
       <path d="M12 9v3.75" />
       <path d="M12 15.75h.008v.008H12v-.008Z" />
     </g>
@@ -71,22 +71,24 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.exclamationcircle-animate {
-  animation: exclamationcircle-animate 0.6s ease-in-out;
+.exclamationcircle-inner {
+  transform-origin: 50% 50%;
 }
 
-@keyframes exclamationcircle-animate {
-  0% {
+.exclamationcircle-inner.exclamationcircle-pulse {
+  animation: exclamationcircle-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes exclamationcircle-pulse {
+  0%, 100% {
+    opacity: 1;
     transform: scale(1);
   }
   50% {
+    opacity: 0.4;
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 </style>

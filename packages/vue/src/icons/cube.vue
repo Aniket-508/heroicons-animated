@@ -3,8 +3,11 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
-    <svg
+    <Motion
+      is="svg"
+      ref="svgRef"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -14,13 +17,12 @@
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
+      style="transform-origin: 50% 50%"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M21 7.5L12 2.25L3 7.5M21 7.5L12 12.75M21 7.5V16.5L12 21.75M3 7.5L12 12.75M3 7.5V16.5L12 21.75M12 12.75V21.75"
       />
-    </svg>
+    </Motion>
   </div>
 </template>
 
@@ -37,64 +39,44 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
+// Match React CUBE_VARIANTS: svg rotateY [0, 15, -15, 0], 0.6s easeInOut
 const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+  normal: { rotateY: 0 },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    rotateY: [0, 15, -15, 0],
+    transition: { duration: 0.6, ease: "easeInOut" },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const svgRef = ref<SVGSVGElement | null>();
+const motionInstance = useMotion(svgRef, {
   initial: variants.normal,
   enter: variants.normal,
 });
 
 let isControlled = false;
 
-const startAnimation = () => {
-  motionInstance.apply(variants.animate);
-};
-
-const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
-};
+const startAnimation = () => motionInstance.apply(variants.animate);
+const stopAnimation = () => motionInstance.apply(variants.normal);
 
 const handleMouseEnter = () => {
-  if (!isControlled) {
-    startAnimation();
-  }
+  if (!isControlled) startAnimation();
 };
 
 const handleMouseLeave = () => {
-  if (!isControlled) {
-    stopAnimation();
-  }
+  if (!isControlled) stopAnimation();
 };
 
 const setControlled = (value: boolean) => {
   isControlled = value;
 };
 
-defineExpose({
-  startAnimation,
-  stopAnimation,
-  setControlled,
-});
+defineExpose({ startAnimation, stopAnimation, setControlled });
 </script>

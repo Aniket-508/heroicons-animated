@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -73,18 +74,21 @@ div {
 }
 
 .icon-svg.handthumbup-animate {
-  animation: handthumbup-animate 0.6s ease-in-out;
+  animation: handthumbup-wiggle 0.6s ease-in-out;
 }
 
-@keyframes handthumbup-animate {
+@keyframes handthumbup-wiggle {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    transform: rotate(-10deg);
+  }
+  66% {
+    transform: rotate(5deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
 }
 </style>

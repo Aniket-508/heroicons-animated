@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,12 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
+      <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
       <Motion
         is="path"
-        ref="pathRef"
-        d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
+        ref="wedgeRef"
+        d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
       />
-      <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
     </svg>
   </div>
 </template>
@@ -38,6 +39,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -45,24 +47,21 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+  normal: { translateX: 0, translateY: 0 },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: 1.1,
+    translateY: -1.1,
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      type: "spring",
+      stiffness: 250,
+      damping: 15,
+      bounce: 0.6,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const wedgeRef = ref<SVGPathElement | null>();
+const motionInstance = useMotion(wedgeRef, {
   initial: variants.normal,
   enter: variants.normal,
 });
@@ -78,24 +77,16 @@ const stopAnimation = () => {
 };
 
 const handleMouseEnter = () => {
-  if (!isControlled) {
-    startAnimation();
-  }
+  if (!isControlled) startAnimation();
 };
 
 const handleMouseLeave = () => {
-  if (!isControlled) {
-    stopAnimation();
-  }
+  if (!isControlled) stopAnimation();
 };
 
 const setControlled = (value: boolean) => {
   isControlled = value;
 };
 
-defineExpose({
-  startAnimation,
-  stopAnimation,
-  setControlled,
-});
+defineExpose({ startAnimation, stopAnimation, setControlled });
 </script>

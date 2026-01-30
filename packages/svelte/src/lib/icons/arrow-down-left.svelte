@@ -1,5 +1,5 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -53,9 +53,8 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:arrowdownleft-animate={isAnimating}
   >
-    <path d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+    <path class="head-path" class:animate={isAnimating} d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
   </svg>
 </div>
 
@@ -67,22 +66,27 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.arrowdownleft-animate {
-  animation: arrowdownleft-animate 0.6s ease-in-out;
+.head-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes arrowdownleft-animate {
+.head-path.animate {
+  animation: head-move 0.5s ease-in-out forwards;
+}
+
+@keyframes head-move {
   0% {
-    transform: scale(1);
+    transform: translate(0, 0);
   }
   50% {
-    transform: scale(1.1);
+    transform: translate(3px, -3px);
   }
   100% {
-    transform: scale(1);
+    transform: translate(0, 0);
   }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,8 +16,13 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M5.636 5.636a9 9 0 1 0 12.728 0" />
-      <path d="M12 3v9" />
+      <Motion
+        is="path"
+        ref="circleRef"
+        d="M5.636 5.636a9 9 0 1 0 12.728 0"
+        style="transform-origin: center center"
+      />
+      <Motion is="path" ref="lineRef" d="M12 3v9" />
     </svg>
   </div>
 </template>
@@ -40,37 +46,50 @@ const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+const circleVariants = {
+  normal: { opacity: 1, scale: 1 },
   animate: {
-    scale: [1, 1.08, 1],
+    opacity: [0.5, 1, 0.5, 1],
+    scale: [1, 1.05, 1],
     transition: {
-      duration: 0.45,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const lineVariants = {
+  normal: { y: 0 },
+  animate: {
+    y: [0, -2, 0],
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const circleRef = ref<SVGPathElement | null>();
+const lineRef = ref<SVGPathElement | null>();
+const circleMotion = useMotion(circleRef, {
+  initial: circleVariants.normal,
+  enter: circleVariants.normal,
+});
+const lineMotion = useMotion(lineRef, {
+  initial: lineVariants.normal,
+  enter: lineVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  circleMotion.apply(circleVariants.animate);
+  lineMotion.apply(lineVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  circleMotion.apply(circleVariants.normal);
+  lineMotion.apply(lineVariants.normal);
 };
 
 const handleMouseEnter = () => {

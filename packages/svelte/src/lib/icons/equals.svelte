@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -55,7 +56,11 @@ function handleMouseLeave() {
     class="icon-svg"
     class:equals-animate={isAnimating}
   >
-    <path d="M4.499 8.248h15m-15 7.501h15" />
+    <path
+      d="M4.499 8.248h15m-15 7.501h15"
+      class="equals-path"
+      class:equals-draw={isAnimating}
+    />
   </svg>
 </div>
 
@@ -67,22 +72,33 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.equals-animate {
-  animation: equals-animate 0.6s ease-in-out;
+.equals-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-@keyframes equals-animate {
+.equals-path.equals-draw {
+  animation: equals-draw 0.4s linear forwards;
+}
+.equals-path:not(.equals-draw) {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+@keyframes equals-draw {
   0% {
-    transform: scale(1);
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.1);
+  25% {
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

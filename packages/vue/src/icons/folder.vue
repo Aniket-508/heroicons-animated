@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,30 +38,23 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
+// Match React: path y [0, -2, 0] (ARROW_VARIANTS)
 const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+  normal: { y: 0 },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    y: [0, -2, 0],
+    transition: { duration: 0.4, ease: "easeInOut" },
   },
 };
 
-const pathRef = ref();
+const pathRef = ref<SVGPathElement | null>(null);
 const motionInstance = useMotion(pathRef, {
   initial: variants.normal,
   enter: variants.normal,

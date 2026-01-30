@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,9 +16,9 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M3.75 6.75h16.5" />
-      <path d="M3.75 12h16.5" />
-      <path d="M12 17.25h8.25" />
+      <Motion is="path" ref="topBarRef" d="M3.75 6.75h16.5" />
+      <Motion is="path" ref="middleBarRef" d="M3.75 12h16.5" />
+      <Motion is="path" ref="bottomBarRef" d="M12 17.25h8.25" />
     </svg>
   </div>
 </template>
@@ -35,43 +36,115 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const createSlideVariants = (delay: number) => ({
   normal: {
-    scale: 1,
+    translateX: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.3,
       ease: "easeOut",
     },
   },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: [0, 3, 0],
     transition: {
-      duration: 0.45,
+      duration: 0.4,
       ease: "easeInOut",
+      delay,
+    },
+  },
+});
+
+const bottomBarVariants = {
+  normal: {
+    translateX: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+  animate: {
+    translateX: [0, 2, 0],
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+      delay: 0.15,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const topBarRef = ref<SVGPathElement>();
+const middleBarRef = ref<SVGPathElement>();
+const bottomBarRef = ref<SVGPathElement>();
+
+const topBarVariants = createSlideVariants(0);
+const middleBarVariants = createSlideVariants(0.05);
+
+const topBarMotion = useMotion(topBarRef, {
+  initial: topBarVariants.normal,
+  enter: topBarVariants.normal,
+});
+
+const middleBarMotion = useMotion(middleBarRef, {
+  initial: middleBarVariants.normal,
+  enter: middleBarVariants.normal,
+});
+
+const bottomBarMotion = useMotion(bottomBarRef, {
+  initial: bottomBarVariants.normal,
+  enter: bottomBarVariants.normal,
 });
 
 let isControlled = false;
+let bottomBarAnimation: Animation | null = null;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  topBarMotion.apply(topBarVariants.animate);
+  middleBarMotion.apply(middleBarVariants.animate);
+  bottomBarMotion.apply(bottomBarVariants.animate);
+
+  // Animate pathLength and pathOffset using Web Animations API
+  if (bottomBarRef.value) {
+    const pathLength = bottomBarRef.value.getTotalLength();
+    bottomBarRef.value.style.strokeDasharray = `${pathLength}`;
+    bottomBarRef.value.style.strokeDashoffset = "0";
+
+    bottomBarAnimation = bottomBarRef.value.animate(
+      [
+        { strokeDashoffset: 0 },
+        { strokeDashoffset: pathLength * 0.5 },
+        { strokeDashoffset: 0 },
+      ],
+      {
+        duration: 500,
+        easing: "ease-in-out",
+        delay: 150,
+        fill: "forwards",
+      },
+    );
+  }
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  topBarMotion.apply(topBarVariants.normal);
+  middleBarMotion.apply(middleBarVariants.normal);
+  bottomBarMotion.apply(bottomBarVariants.normal);
+
+  if (bottomBarAnimation) {
+    bottomBarAnimation.cancel();
+    bottomBarAnimation = null;
+  }
+
+  if (bottomBarRef.value) {
+    bottomBarRef.value.style.strokeDasharray = "";
+    bottomBarRef.value.style.strokeDashoffset = "";
+  }
 };
 
 const handleMouseEnter = () => {

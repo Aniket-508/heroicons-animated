@@ -3,8 +3,11 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
-    <svg
+    <Motion
+      is="svg"
+      ref="svgRef"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -15,12 +18,10 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z"
       />
-    </svg>
+    </Motion>
   </div>
 </template>
 
@@ -37,43 +38,44 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const pathVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    x: 0,
+    rotate: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    x: [0, 1, -2, 0],
+    rotate: [0, 10, 0, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.5,
+      times: [0, 0.2, 0.5, 1],
+      stiffness: 260,
+      damping: 20,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const svgRef = ref<SVGSVGElement>();
+const svgMotion = useMotion(svgRef, {
+  initial: pathVariants.normal,
+  enter: pathVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  svgMotion.apply(pathVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  svgMotion.apply(pathVariants.normal);
 };
 
 const handleMouseEnter = () => {

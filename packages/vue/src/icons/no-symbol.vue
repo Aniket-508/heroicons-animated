@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,14 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <g>
-        <Motion
-          is="path"
-          ref="pathRef"
+      <Motion is="g" ref="circleRef" style="transform-origin: center center">
+        <path
           d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636"
         />
-      </g>
-      <path d="M18.364 18.364L5.636 5.636" />
+      </Motion>
+      <Motion is="path" ref="lineRef" d="M18.364 18.364L5.636 5.636" />
     </svg>
   </div>
 </template>
@@ -40,43 +39,52 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+const circleVariants = {
+  normal: { scale: 1 },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    scale: [1, 1.1, 1],
+    transition: { duration: 0.4, ease: "easeInOut" },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const lineVariants = {
+  normal: { pathLength: 1, opacity: 1 },
+  animate: {
+    pathLength: [0, 1],
+    pathOffset: [1, 0],
+    opacity: [0, 1],
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
+};
+
+const circleRef = ref<SVGGElement | null>();
+const lineRef = ref<SVGPathElement | null>();
+const circleMotion = useMotion(circleRef, {
+  initial: circleVariants.normal,
+  enter: circleVariants.normal,
+});
+const lineMotion = useMotion(lineRef, {
+  initial: lineVariants.normal,
+  enter: lineVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  circleMotion.apply(circleVariants.animate);
+  lineMotion.apply(lineVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  circleMotion.apply(circleVariants.normal);
+  lineMotion.apply(lineVariants.normal);
 };
 
 const handleMouseEnter = () => {

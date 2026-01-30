@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -73,18 +74,24 @@ div {
 }
 
 .icon-svg.eyeslash-animate {
-  animation: eyeslash-animate 0.6s ease-in-out;
+  animation: eyeslash-animate 0.6s ease-in-out forwards;
 }
 
 @keyframes eyeslash-animate {
-  0% {
-    transform: scale(1);
+  0%, 100% {
+    transform: translateX(0);
   }
-  50% {
-    transform: scale(1.1);
+  20% {
+    transform: translateX(-7%);
   }
-  100% {
-    transform: scale(1);
+  40% {
+    transform: translateX(7%);
+  }
+  60% {
+    transform: translateX(-7%);
+  }
+  80% {
+    transform: translateX(7%);
   }
 }
 </style>

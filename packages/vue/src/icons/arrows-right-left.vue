@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,16 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <g>
-        <Motion
-          is="path"
-          ref="pathRef"
-          d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5"
-        />
-      </g>
-      <g>
+      <Motion is="g" ref="leftArrowRef">
+        <path d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5" />
+      </Motion>
+      <Motion is="g" ref="rightArrowRef">
         <path d="M16.5 3L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-      </g>
+      </Motion>
     </svg>
   </div>
 </template>
@@ -42,43 +39,58 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+const leftArrowVariants = {
+  normal: { translateX: 0 },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: [0, -2, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const rightArrowVariants = {
+  normal: { translateX: 0 },
+  animate: {
+    translateX: [0, 2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const leftArrowRef = ref();
+const rightArrowRef = ref();
+
+const leftArrowMotion = useMotion(leftArrowRef, {
+  initial: leftArrowVariants.normal,
+  enter: leftArrowVariants.normal,
+});
+
+const rightArrowMotion = useMotion(rightArrowRef, {
+  initial: rightArrowVariants.normal,
+  enter: rightArrowVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  leftArrowMotion.apply(leftArrowVariants.animate);
+  rightArrowMotion.apply(rightArrowVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  leftArrowMotion.apply(leftArrowVariants.normal);
+  rightArrowMotion.apply(rightArrowVariants.normal);
 };
 
 const handleMouseEnter = () => {

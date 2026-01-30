@@ -1,22 +1,67 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+let pathElement: SVGPathElement;
+let pathAnimation: Animation | null = null;
 let isAnimating = false;
 let isControlled = false;
 
+// Must match React PATH_VARIANTS exactly: pathLength [0,1], opacity [0,1], scale [0.5,1], duration 0.4s
 export function startAnimation() {
   if (!isControlled) {
     isAnimating = true;
+
+    if (pathElement) {
+      const len = pathElement.getTotalLength();
+      pathElement.style.strokeDasharray = `${len}`;
+      pathElement.style.strokeDashoffset = `${len}`;
+      pathElement.style.opacity = "0";
+      pathElement.style.transform = "scale(0.5)";
+      pathElement.style.transformOrigin = "center";
+
+      pathAnimation = pathElement.animate(
+        [
+          {
+            strokeDashoffset: len,
+            opacity: 0,
+            transform: "scale(0.5)",
+          },
+          {
+            strokeDashoffset: 0,
+            opacity: 1,
+            transform: "scale(1)",
+          },
+        ],
+        {
+          duration: 400,
+          easing: "ease-out",
+          fill: "forwards",
+        }
+      );
+    }
+
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
 export function stopAnimation() {
   isAnimating = false;
+
+  if (pathAnimation) {
+    pathAnimation.cancel();
+    pathAnimation = null;
+  }
+
+  if (pathElement) {
+    pathElement.style.strokeDasharray = "";
+    pathElement.style.strokeDashoffset = "";
+    pathElement.style.opacity = "";
+    pathElement.style.transform = "";
+  }
 }
 
 export function setControlled(value: boolean) {
@@ -53,9 +98,8 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:check-animate={isAnimating}
   >
-    <path d="m4.5 12.75 6 6 9-13.5" />
+    <path bind:this={pathElement} d="m4.5 12.75 6 6 9-13.5" />
   </svg>
 </div>
 
@@ -67,22 +111,10 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.check-animate {
-  animation: check-animate 0.6s ease-in-out;
-}
-
-@keyframes check-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.icon-svg path {
+  transform-box: fill-box;
+  transform-origin: center;
 }
 </style>

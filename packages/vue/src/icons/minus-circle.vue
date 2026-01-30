@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,12 +16,10 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
       />
-      <path d="M15 12H9" />
+      <Motion is="path" ref="lineRef" d="M15 12H9" />
     </svg>
   </div>
 </template>
@@ -38,6 +37,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -46,23 +46,23 @@ const props = withDefaults(defineProps<Props>(), {
 
 const variants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    pathLength: 1,
+    opacity: 1,
+    pathOffset: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    pathLength: [0, 1],
+    opacity: [0, 1],
+    pathOffset: [1, 0],
     transition: {
-      duration: 0.45,
+      duration: 0.4,
       ease: "easeInOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const lineRef = ref<SVGPathElement | null>();
+const motionInstance = useMotion(lineRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

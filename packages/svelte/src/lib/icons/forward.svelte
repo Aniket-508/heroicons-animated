@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -73,18 +74,21 @@ div {
 }
 
 .icon-svg.forward-animate {
-  animation: forward-animate 0.6s ease-in-out;
+  animation: forward-animate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @keyframes forward-animate {
   0% {
-    transform: scale(1);
+    transform: translateX(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-1px) rotate(-10deg);
   }
   50% {
-    transform: scale(1.1);
+    transform: translateX(2px) rotate(0deg);
   }
   100% {
-    transform: scale(1);
+    transform: translateX(0) rotate(0deg);
   }
 }
 </style>

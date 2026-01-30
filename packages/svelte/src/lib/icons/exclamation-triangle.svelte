@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -9,9 +9,6 @@ let isControlled = false;
 export function startAnimation() {
   if (!isControlled) {
     isAnimating = true;
-    setTimeout(() => {
-      isAnimating = false;
-    }, 600);
   }
 }
 
@@ -37,6 +34,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,12 +51,14 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:exclamationtriangle-animate={isAnimating}
   >
     <path
       d="M2.697 16.126c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126Z"
     />
-    <g>
+    <g
+      class="exclamationtriangle-inner"
+      class:exclamationtriangle-pulse={isAnimating}
+    >
       <path d="M12 9v3.75" />
       <path d="M12 15.75h.007v.008H12v-.008Z" />
     </g>
@@ -73,22 +73,24 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.exclamationtriangle-animate {
-  animation: exclamationtriangle-animate 0.6s ease-in-out;
+.exclamationtriangle-inner {
+  transform-origin: 50% 50%;
 }
 
-@keyframes exclamationtriangle-animate {
-  0% {
+.exclamationtriangle-inner.exclamationtriangle-pulse {
+  animation: exclamationtriangle-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes exclamationtriangle-pulse {
+  0%, 100% {
+    opacity: 1;
     transform: scale(1);
   }
   50% {
+    opacity: 0.4;
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 </style>

@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,19 +18,15 @@
     >
       <Motion
         is="path"
-        ref="bar1"
+        ref="bar1Ref"
         d="M3.75 9h16.5"
-        :initial="variants.normal"
-        :variants="variants"
-        :custom="0"
+        style="transform-origin: center"
       />
       <Motion
         is="path"
-        ref="bar2"
+        ref="bar2Ref"
         d="M3.75 15.75h16.5"
-        :initial="variants.normal"
-        :variants="variants"
-        :custom="0.1"
+        style="transform-origin: center"
       />
     </svg>
   </div>
@@ -48,13 +45,14 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const createBarVariants = (delay: number) => ({
   normal: {
     scaleX: 1,
     transition: {
@@ -62,36 +60,42 @@ const variants = {
       ease: "easeInOut",
     },
   },
-  animate: (custom: number) => ({
+  animate: {
     scaleX: [1, 0.6, 1],
     transition: {
       duration: 0.3,
       ease: "easeInOut",
-      delay: custom,
+      delay,
     },
-  }),
-};
-
-const bar1 = ref();
-const bar2 = ref();
-
-const motion1 = useMotion(bar1, {
-  initial: variants.normal,
+  },
 });
-const motion2 = useMotion(bar2, {
-  initial: variants.normal,
+
+const bar1Variants = createBarVariants(0);
+const bar2Variants = createBarVariants(0.1);
+
+const bar1Ref = ref<SVGPathElement>();
+const bar2Ref = ref<SVGPathElement>();
+
+const bar1Motion = useMotion(bar1Ref, {
+  initial: bar1Variants.normal,
+  enter: bar1Variants.normal,
+});
+
+const bar2Motion = useMotion(bar2Ref, {
+  initial: bar2Variants.normal,
+  enter: bar2Variants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motion1.apply(variants.animate(0));
-  motion2.apply(variants.animate(0.1));
+  bar1Motion.apply(bar1Variants.animate);
+  bar2Motion.apply(bar2Variants.animate);
 };
 
 const stopAnimation = () => {
-  motion1.apply(variants.normal);
-  motion2.apply(variants.normal);
+  bar1Motion.apply(bar1Variants.normal);
+  bar2Motion.apply(bar2Variants.normal);
 };
 
 const handleMouseEnter = () => {

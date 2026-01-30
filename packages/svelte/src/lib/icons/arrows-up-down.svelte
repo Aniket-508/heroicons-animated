@@ -1,5 +1,5 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -53,12 +53,11 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:arrowsupdown-animate={isAnimating}
   >
-    <g>
+    <g class="up-arrow-group" class:animate={isAnimating}>
       <path d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5" />
     </g>
-    <g>
+    <g class="down-arrow-group" class:animate={isAnimating}>
       <path d="M21 16.5L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
     </g>
   </svg>
@@ -72,22 +71,44 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.arrowsupdown-animate {
-  animation: arrowsupdown-animate 0.6s ease-in-out;
+.up-arrow-group,
+.down-arrow-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes arrowsupdown-animate {
+.up-arrow-group.animate {
+  animation: up-arrow-translate 0.5s ease-in-out forwards;
+}
+
+.down-arrow-group.animate {
+  animation: down-arrow-translate 0.5s ease-in-out forwards;
+}
+
+@keyframes up-arrow-translate {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
-  50% {
-    transform: scale(1.1);
+  40% {
+    transform: translateY(-2px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes down-arrow-translate {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 </style>

@@ -1,8 +1,9 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+let pathElement: SVGPathElement;
 let isAnimating = false;
 let isControlled = false;
 
@@ -53,9 +54,11 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:bookmark-animate={isAnimating}
   >
     <path
+      bind:this={pathElement}
+      class="bookmark-path"
+      class:animate={isAnimating}
       d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
     />
   </svg>
@@ -69,22 +72,33 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.bookmark-animate {
-  animation: bookmark-animate 0.6s ease-in-out;
+.bookmark-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.6s ease-out;
 }
 
-@keyframes bookmark-animate {
+.bookmark-path.animate {
+  animation: bookmark-bounce 0.6s ease-out forwards;
+}
+
+@keyframes bookmark-bounce {
   0% {
-    transform: scale(1);
+    transform: scaleY(1) scaleX(1);
   }
-  50% {
-    transform: scale(1.1);
+  20% {
+    transform: scaleY(1.3) scaleX(0.9);
+  }
+  40% {
+    transform: scaleY(0.9) scaleX(1.1);
+  }
+  60% {
+    transform: scaleY(1.05) scaleX(0.95);
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(1) scaleX(1);
   }
 }
 </style>

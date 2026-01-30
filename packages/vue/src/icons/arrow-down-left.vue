@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +18,7 @@
     >
       <Motion
         is="path"
-        ref="pathRef"
+        ref="headRef"
         d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25"
       />
     </svg>
@@ -37,43 +38,42 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const headVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    translateX: 0,
+    translateY: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: [0, 3, 0],
+    translateY: [0, -3, 0],
     transition: {
-      duration: 0.45,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const headRef = ref();
+const headMotion = useMotion(headRef, {
+  initial: headVariants.normal,
+  enter: headVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  headMotion.apply(headVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  headMotion.apply(headVariants.normal);
 };
 
 const handleMouseEnter = () => {

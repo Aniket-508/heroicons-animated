@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:currencypound-animate={isAnimating}
+    class:currencypound-flip={isAnimating}
   >
     <path
       d="M14.1213 7.62877C12.9497 6.45719 11.0503 6.45719 9.87868 7.62877C9.37424 8.13321 9.08699 8.7726 9.01694 9.43073C8.9944 9.64251 9.01512 9.85582 9.04524 10.0667L9.5512 13.6084C9.68065 14.5146 9.5307 15.4386 9.12135 16.2573L9 16.5L10.5385 15.9872C11.0003 15.8332 11.4997 15.8332 11.9615 15.9872L12.6158 16.2053C13.182 16.394 13.7999 16.3501 14.3336 16.0832L15 15.75M8.25 12H12M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
@@ -68,23 +69,20 @@ div {
 
 .icon-svg {
   transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
-.icon-svg.currencypound-animate {
-  animation: currencypound-animate 0.6s ease-in-out;
+.icon-svg.currencypound-flip {
+  animation: currencypound-flip 0.6s ease-in-out;
 }
 
-@keyframes currencypound-animate {
-  0% {
-    transform: scale(1);
+@keyframes currencypound-flip {
+  0%,
+  100% {
+    transform: scaleX(1);
   }
   50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+    transform: scaleX(-1);
   }
 }
 </style>

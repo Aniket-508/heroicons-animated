@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,14 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5"
       />
-      <path d="M9 11.25v1.5" />
-      <path d="M12 9v3.75" />
-      <path d="M15 6.75v6" />
+      <Motion is="path" ref="bar1Ref" d="M9 11.25v1.5" />
+      <Motion is="path" ref="bar2Ref" d="M12 9v3.75" />
+      <Motion is="path" ref="bar3Ref" d="M15 6.75v6" />
     </svg>
   </div>
 </template>
@@ -46,37 +45,54 @@ const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const createBarVariants = (delay: number) => ({
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    opacity: 1,
+    pathLength: 1,
+    pathOffset: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    pathOffset: [1, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      delay,
+      duration: 0.4,
+      ease: "easeOut",
+      opacity: { duration: 0.1, delay },
     },
   },
-};
+});
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const bar1Ref = ref<SVGPathElement | null>();
+const bar2Ref = ref<SVGPathElement | null>();
+const bar3Ref = ref<SVGPathElement | null>();
+const bar1Motion = useMotion(bar1Ref, {
+  initial: createBarVariants(0).normal,
+  enter: createBarVariants(0).normal,
+});
+const bar2Motion = useMotion(bar2Ref, {
+  initial: createBarVariants(0.15).normal,
+  enter: createBarVariants(0.15).normal,
+});
+const bar3Motion = useMotion(bar3Ref, {
+  initial: createBarVariants(0.3).normal,
+  enter: createBarVariants(0.3).normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  bar1Motion.apply(createBarVariants(0).animate);
+  bar2Motion.apply(createBarVariants(0.15).animate);
+  bar3Motion.apply(createBarVariants(0.3).animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  const barNormal = { opacity: 1, pathLength: 1, pathOffset: 0 };
+  bar1Motion.apply(barNormal);
+  bar2Motion.apply(barNormal);
+  bar3Motion.apply(barNormal);
 };
 
 const handleMouseEnter = () => {

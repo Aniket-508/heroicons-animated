@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,8 +16,8 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M6.75 15.75 3 12m0 0 3.75-3.75" />
-      <path d="M3 12h18" />
+      <Motion is="path" ref="headRef" d="M6.75 15.75 3 12m0 0 3.75-3.75" />
+      <path ref="lineRef" d="M3 12h18" />
     </svg>
   </div>
 </template>
@@ -34,43 +35,62 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const headVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    translateX: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: [0, 3, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.4,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const headRef = ref<SVGPathElement>();
+const lineRef = ref<SVGPathElement>();
+const headMotion = useMotion(headRef, {
+  initial: headVariants.normal,
+  enter: headVariants.normal,
 });
 
 let isControlled = false;
+let lineAnimation: Animation | null = null;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  headMotion.apply(headVariants.animate);
+
+  // Animate line path morphing using Web Animations API
+  if (lineRef.value) {
+    lineAnimation = lineRef.value.animate(
+      [{ d: "M3 12h18" }, { d: "M6 12h15" }, { d: "M3 12h18" }],
+      {
+        duration: 400,
+        easing: "ease-in-out",
+        fill: "forwards",
+      },
+    );
+  }
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  headMotion.apply(headVariants.normal);
+
+  if (lineAnimation) {
+    lineAnimation.cancel();
+    lineAnimation = null;
+  }
+
+  if (lineRef.value) {
+    lineRef.value.setAttribute("d", "M3 12h18");
+  }
 };
 
 const handleMouseEnter = () => {

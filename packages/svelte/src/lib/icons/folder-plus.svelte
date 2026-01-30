@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 800);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,13 +54,20 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:folderplus-animate={isAnimating}
   >
     <path
       d="M10.94 4.19a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
     />
-    <path d="M12 10.5v6" />
-    <path d="M9 13.5h6" />
+    <path
+      d="M12 10.5v6"
+      class="folderplus-vertical"
+      class:folderplus-draw={isAnimating}
+    />
+    <path
+      d="M9 13.5h6"
+      class="folderplus-horizontal"
+      class:folderplus-draw={isAnimating}
+    />
   </svg>
 </div>
 
@@ -71,22 +79,31 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.folderplus-animate {
-  animation: folderplus-animate 0.6s ease-in-out;
+.folderplus-vertical,
+.folderplus-horizontal {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-@keyframes folderplus-animate {
+.folderplus-vertical.folderplus-draw {
+  animation: folderplus-draw 0.2s ease-out 0.3s both;
+}
+
+.folderplus-horizontal.folderplus-draw {
+  animation: folderplus-draw 0.2s ease-out 0.6s both;
+}
+
+@keyframes folderplus-draw {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

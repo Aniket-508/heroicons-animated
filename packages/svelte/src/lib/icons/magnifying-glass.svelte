@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 1000);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:magnifyingglass-animate={isAnimating}
+    class:magnifyingglass-bounce={isAnimating}
   >
     <path
       d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
@@ -72,19 +73,20 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.magnifyingglass-animate {
-  animation: magnifyingglass-animate 0.6s ease-in-out;
+.icon-svg.magnifyingglass-bounce {
+  animation: magnifyingglass-bounce 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-@keyframes magnifyingglass-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+@keyframes magnifyingglass-bounce {
+  0%,
   100% {
-    transform: scale(1);
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(0, -4px);
+  }
+  66% {
+    transform: translate(-3px, 0);
   }
 }
 </style>

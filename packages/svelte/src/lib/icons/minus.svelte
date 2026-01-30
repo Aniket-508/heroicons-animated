@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 300);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,9 +54,8 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:minus-animate={isAnimating}
   >
-    <path d="M5 12h14" />
+    <path d="M5 12h14" class="minus-line" class:minus-line-animate={isAnimating} />
   </svg>
 </div>
 
@@ -67,22 +67,28 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.minus-animate {
-  animation: minus-animate 0.6s ease-in-out;
+.minus-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
 }
 
-@keyframes minus-animate {
+.minus-line.minus-line-animate {
+  animation: minus-line-draw 0.3s ease-out forwards;
+}
+
+@keyframes minus-line-draw {
   0% {
-    transform: scale(1);
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

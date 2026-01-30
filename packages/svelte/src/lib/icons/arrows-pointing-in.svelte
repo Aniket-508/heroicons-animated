@@ -1,5 +1,5 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -53,18 +53,17 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:arrowspointingin-animate={isAnimating}
   >
-    <g>
+    <g class="top-left-group" class:animate={isAnimating}>
       <path d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75" />
     </g>
-    <g>
+    <g class="bottom-left-group" class:animate={isAnimating}>
       <path d="M9 15v4.5M9 15H4.5M9 15l-5.25 5.25" />
     </g>
-    <g>
+    <g class="top-right-group" class:animate={isAnimating}>
       <path d="M15 9h4.5M15 9V4.5M15 9l5.25-5.25" />
     </g>
-    <g>
+    <g class="bottom-right-group" class:animate={isAnimating}>
       <path d="M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
     </g>
   </svg>
@@ -78,22 +77,78 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.arrowspointingin-animate {
-  animation: arrowspointingin-animate 0.6s ease-in-out;
+.top-left-group,
+.bottom-left-group,
+.top-right-group,
+.bottom-right-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes arrowspointingin-animate {
+.top-left-group.animate {
+  animation: top-left-move 0.5s ease-in-out forwards;
+}
+
+.bottom-left-group.animate {
+  animation: bottom-left-move 0.5s ease-in-out forwards;
+}
+
+.top-right-group.animate {
+  animation: top-right-move 0.5s ease-in-out forwards;
+}
+
+.bottom-right-group.animate {
+  animation: bottom-right-move 0.5s ease-in-out forwards;
+}
+
+@keyframes top-left-move {
   0% {
-    transform: scale(1);
+    transform: translate(0, 0);
   }
-  50% {
-    transform: scale(1.1);
+  40% {
+    transform: translate(2px, 2px);
   }
   100% {
-    transform: scale(1);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bottom-left-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes top-right-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bottom-right-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 </style>

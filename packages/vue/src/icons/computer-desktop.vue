@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -40,44 +41,40 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+// Match React SCREEN_VARIANTS: fill opacity pulse on screen path
+const screenVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    fillOpacity: 0,
+    fill: "currentColor",
   },
   animate: {
-    scale: [1, 1.08, 1],
+    fillOpacity: [0, 1, 0, 1, 0],
+    fill: "currentColor",
     transition: {
-      duration: 0.45,
+      duration: 0.6,
       ease: "easeInOut",
+      times: [0, 0.25, 0.5, 0.75, 1],
     },
   },
 };
 
-const pathRef = ref();
+const pathRef = ref<SVGPathElement | null>();
 const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+  initial: screenVariants.normal,
+  enter: screenVariants.normal,
 });
 
 let isControlled = false;
 
-const startAnimation = () => {
-  motionInstance.apply(variants.animate);
-};
-
-const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
-};
+const startAnimation = () => motionInstance.apply(screenVariants.animate);
+const stopAnimation = () => motionInstance.apply(screenVariants.normal);
 
 const handleMouseEnter = () => {
   if (!isControlled) {

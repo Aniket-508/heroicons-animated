@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:cube-animate={isAnimating}
+    class:cube-rotate={isAnimating}
   >
     <path
       d="M21 7.5L12 2.25L3 7.5M21 7.5L12 12.75M21 7.5V16.5L12 21.75M3 7.5L12 12.75M3 7.5V16.5L12 21.75M12 12.75V21.75"
@@ -68,23 +69,23 @@ div {
 
 .icon-svg {
   transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
-.icon-svg.cube-animate {
-  animation: cube-animate 0.6s ease-in-out;
+.icon-svg.cube-rotate {
+  animation: cube-rotate 0.6s ease-in-out;
 }
 
-@keyframes cube-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+@keyframes cube-rotate {
+  0%,
   100% {
-    transform: scale(1);
+    transform: rotateY(0deg);
+  }
+  33% {
+    transform: rotateY(15deg);
+  }
+  66% {
+    transform: rotateY(-15deg);
   }
 }
 </style>

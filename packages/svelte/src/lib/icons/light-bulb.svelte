@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,9 +54,10 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:lightbulb-animate={isAnimating}
   >
     <path
+      class="lightbulb-bulb"
+      class:lightbulb-glow={isAnimating}
       d="M14.25 18V17.8083C14.25 16.8254 14.9083 15.985 15.7585 15.4917C17.9955 14.1938 19.5 11.7726 19.5 9C19.5 4.85786 16.1421 1.5 12 1.5C7.85786 1.5 4.5 4.85786 4.5 9C4.5 11.7726 6.00446 14.1938 8.24155 15.4917C9.09173 15.985 9.75 16.8254 9.75 17.8083V18"
     />
     <path
@@ -81,19 +83,30 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.lightbulb-animate {
-  animation: lightbulb-animate 0.6s ease-in-out;
+.lightbulb-bulb {
+  fill: currentColor;
+  fill-opacity: 0;
 }
 
-@keyframes lightbulb-animate {
+.lightbulb-bulb.lightbulb-glow {
+  animation: lightbulb-glow 0.6s ease-in-out forwards;
+}
+
+@keyframes lightbulb-glow {
   0% {
-    transform: scale(1);
+    fill-opacity: 0;
+  }
+  25% {
+    fill-opacity: 1;
   }
   50% {
-    transform: scale(1.1);
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
   }
   100% {
-    transform: scale(1);
+    fill-opacity: 0;
   }
 }
 </style>

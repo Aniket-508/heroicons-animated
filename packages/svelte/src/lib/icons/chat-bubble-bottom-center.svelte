@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:chatbubblebottomcenter-animate={isAnimating}
+    class:bubble-animate={isAnimating}
   >
     <path
       d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
@@ -72,19 +73,23 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.chatbubblebottomcenter-animate {
-  animation: chatbubblebottomcenter-animate 0.6s ease-in-out;
+/* scale 1.05, rotate [0,-7,7,0], 0.5s easeInOut (matches React ICON_VARIANTS) */
+.icon-svg.bubble-animate {
+  animation: bubble-animate 0.5s ease-in-out forwards;
 }
 
-@keyframes chatbubblebottomcenter-animate {
+@keyframes bubble-animate {
   0% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    transform: scale(1.05) rotate(-7deg);
+  }
+  66% {
+    transform: scale(1.05) rotate(7deg);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.05) rotate(0deg);
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 850);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,15 +54,34 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:chartbarsquare-animate={isAnimating}
   >
     <path
       d="M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
     />
-    <path d="M7.5 14.25v2.25" />
-    <path d="M10.5 12v4.5" />
-    <path d="M13.5 9.75v6.75" />
-    <path d="M16.5 7.5v9" />
+    <path
+      class="chart-bar"
+      class:chart-bar-animate={isAnimating}
+      style="animation-delay: 0s"
+      d="M7.5 14.25v2.25"
+    />
+    <path
+      class="chart-bar"
+      class:chart-bar-animate={isAnimating}
+      style="animation-delay: 0.15s"
+      d="M10.5 12v4.5"
+    />
+    <path
+      class="chart-bar"
+      class:chart-bar-animate={isAnimating}
+      style="animation-delay: 0.3s"
+      d="M13.5 9.75v6.75"
+    />
+    <path
+      class="chart-bar"
+      class:chart-bar-animate={isAnimating}
+      style="animation-delay: 0.45s"
+      d="M16.5 7.5v9"
+    />
   </svg>
 </div>
 
@@ -73,22 +93,30 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.chartbarsquare-animate {
-  animation: chartbarsquare-animate 0.6s ease-in-out;
+/* pathLength [0,1] pathOffset [1,0], opacity [0,1], 0.4s easeOut, staggered delay (matches React CREATE_BAR_VARIANTS) */
+.chart-bar {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-@keyframes chartbarsquare-animate {
+.chart-bar.chart-bar-animate {
+  animation: chart-bar-draw 0.4s ease-out forwards;
+}
+
+@keyframes chart-bar-draw {
   0% {
-    transform: scale(1);
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.1);
+  25% {
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

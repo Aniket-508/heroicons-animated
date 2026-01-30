@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -9,9 +9,6 @@ let isControlled = false;
 export function startAnimation() {
   if (!isControlled) {
     isAnimating = true;
-    setTimeout(() => {
-      isAnimating = false;
-    }, 600);
   }
 }
 
@@ -37,6 +34,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -73,18 +71,12 @@ div {
 }
 
 .icon-svg.globealt-animate {
-  animation: globealt-animate 0.6s ease-in-out;
+  animation: globealt-spin 1.5s linear infinite;
 }
 
-@keyframes globealt-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+@keyframes globealt-spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 </style>

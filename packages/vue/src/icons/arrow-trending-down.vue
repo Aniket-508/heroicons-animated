@@ -3,8 +3,11 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
-    <svg
+    <Motion
+      is="svg"
+      ref="svgRef"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -15,15 +18,15 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
+      <path
         ref="pathRef"
         d="M2.25 6L9 12.75L13.2862 8.46383C15.3217 10.0166 16.8781 12.23 17.5919 14.8941L18.3684 17.7919"
       />
       <path
+        ref="arrowRef"
         d="M18.3684 17.7919L21.5504 12.2806M18.3684 17.7919L12.857 14.6099"
       />
-    </svg>
+    </Motion>
   </div>
 </template>
 
@@ -40,43 +43,111 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const svgVariants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    translateX: 0,
+    translateY: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: [0, 2, 0],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.5,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const svgRef = ref<SVGSVGElement>();
+const pathRef = ref<SVGPathElement>();
+const arrowRef = ref<SVGPathElement>();
+const svgMotion = useMotion(svgRef, {
+  initial: svgVariants.normal,
+  enter: svgVariants.normal,
 });
 
 let isControlled = false;
+let pathAnimation: Animation | null = null;
+let arrowAnimation: Animation | null = null;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  svgMotion.apply(svgVariants.animate);
+
+  // Animate path drawing using Web Animations API
+  if (pathRef.value) {
+    const pathLength = pathRef.value.getTotalLength();
+    pathRef.value.style.strokeDasharray = `${pathLength}`;
+    pathRef.value.style.strokeDashoffset = `${pathLength}`;
+    pathRef.value.style.opacity = "0";
+
+    pathAnimation = pathRef.value.animate(
+      [
+        { strokeDashoffset: pathLength, opacity: 0 },
+        { strokeDashoffset: 0, opacity: 1 },
+      ],
+      {
+        duration: 400,
+        easing: "ease-in-out",
+        fill: "forwards",
+      },
+    );
+  }
+
+  // Animate arrow path drawing with delay
+  if (arrowRef.value) {
+    const arrowLength = arrowRef.value.getTotalLength();
+    arrowRef.value.style.strokeDasharray = `${arrowLength}`;
+    arrowRef.value.style.strokeDashoffset = `${arrowLength * 0.5}`;
+    arrowRef.value.style.opacity = "0";
+
+    setTimeout(() => {
+      if (arrowRef.value) {
+        arrowAnimation = arrowRef.value.animate(
+          [
+            { strokeDashoffset: arrowLength * 0.5, opacity: 0 },
+            { strokeDashoffset: 0, opacity: 1 },
+          ],
+          {
+            duration: 300,
+            easing: "ease-in-out",
+            fill: "forwards",
+          },
+        );
+      }
+    }, 300);
+  }
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  svgMotion.apply(svgVariants.normal);
+
+  if (pathAnimation) {
+    pathAnimation.cancel();
+    pathAnimation = null;
+  }
+
+  if (arrowAnimation) {
+    arrowAnimation.cancel();
+    arrowAnimation = null;
+  }
+
+  if (pathRef.value) {
+    pathRef.value.style.strokeDasharray = "";
+    pathRef.value.style.strokeDashoffset = "";
+    pathRef.value.style.opacity = "1";
+  }
+
+  if (arrowRef.value) {
+    arrowRef.value.style.strokeDasharray = "";
+    arrowRef.value.style.strokeDashoffset = "";
+    arrowRef.value.style.opacity = "1";
+  }
 };
 
 const handleMouseEnter = () => {

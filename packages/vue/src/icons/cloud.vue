@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +38,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -44,23 +46,15 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+  normal: { translateX: 0, translateY: 0 },
   animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
+    translateX: 1.1,
+    translateY: -1.1,
+    transition: { type: "spring", stiffness: 250, damping: 15, bounce: 0.6 },
   },
 };
 
-const pathRef = ref();
+const pathRef = ref<SVGPathElement | null>();
 const motionInstance = useMotion(pathRef, {
   initial: variants.normal,
   enter: variants.normal,
@@ -68,33 +62,20 @@ const motionInstance = useMotion(pathRef, {
 
 let isControlled = false;
 
-const startAnimation = () => {
-  motionInstance.apply(variants.animate);
-};
-
-const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
-};
+const startAnimation = () => motionInstance.apply(variants.animate);
+const stopAnimation = () => motionInstance.apply(variants.normal);
 
 const handleMouseEnter = () => {
-  if (!isControlled) {
-    startAnimation();
-  }
+  if (!isControlled) startAnimation();
 };
 
 const handleMouseLeave = () => {
-  if (!isControlled) {
-    stopAnimation();
-  }
+  if (!isControlled) stopAnimation();
 };
 
 const setControlled = (value: boolean) => {
   isControlled = value;
 };
 
-defineExpose({
-  startAnimation,
-  stopAnimation,
-  setControlled,
-});
+defineExpose({ startAnimation, stopAnimation, setControlled });
 </script>

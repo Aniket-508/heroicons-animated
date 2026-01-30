@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:cubetransparent-animate={isAnimating}
+    class:cubetransparent-rotate={isAnimating}
   >
     <path
       d="M21 7.5L18.75 6.1875M21 7.5V9.75M21 7.5L18.75 8.8125M3 7.5L5.25 6.1875M3 7.5L5.25 8.8125M3 7.5V9.75M12 12.75L14.25 11.4375M12 12.75L9.75 11.4375M12 12.75V15M12 21.75L14.25 20.4375M12 21.75V19.5M12 21.75L9.75 20.4375M9.75 3.5625L12 2.25L14.25 3.5625M21 14.25V16.5L18.75 17.8125M5.25 17.8125L3 16.5V14.25"
@@ -68,23 +69,23 @@ div {
 
 .icon-svg {
   transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
-.icon-svg.cubetransparent-animate {
-  animation: cubetransparent-animate 0.6s ease-in-out;
+.icon-svg.cubetransparent-rotate {
+  animation: cubetransparent-rotate 0.6s ease-in-out;
 }
 
-@keyframes cubetransparent-animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+@keyframes cubetransparent-rotate {
+  0%,
   100% {
-    transform: scale(1);
+    transform: rotateY(0deg);
+  }
+  33% {
+    transform: rotateY(20deg);
+  }
+  66% {
+    transform: rotateY(-20deg);
   }
 }
 </style>

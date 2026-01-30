@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,12 +18,10 @@
     >
       <defs>
         <clipPath :id="clipId">
-          <rect height="4.5" x="4.5" y="10.5" />
+          <Motion is="rect" ref="clipRectRef" height="4.5" x="4.5" y="10.5" />
         </clipPath>
       </defs>
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21"
       />
       <path
@@ -52,43 +51,46 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
+const clipId = `battery-clip-${Math.random().toString(36).substr(2, 9)}`;
+
+const clipVariants = {
   normal: {
-    scale: 1,
+    width: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.4,
       ease: "easeOut",
     },
   },
   animate: {
-    scale: [1, 1.08, 1],
+    width: 6.75,
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.4,
+      ease: "easeOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const clipRectRef = ref<SVGRectElement>();
+const clipMotion = useMotion(clipRectRef, {
+  initial: clipVariants.normal,
+  enter: clipVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  clipMotion.apply(clipVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  clipMotion.apply(clipVariants.normal);
 };
 
 const handleMouseEnter = () => {
@@ -112,5 +114,4 @@ defineExpose({
   stopAnimation,
   setControlled,
 });
-const clipId = `battery-clip-${Math.random().toString(36).substr(2, 9)}`;
 </script>

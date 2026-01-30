@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,10 +54,9 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:pause-animate={isAnimating}
   >
-    <path d="M15.75 5.25v13.5" />
-    <path d="M8.25 5.25v13.5" />
+    <path d="M15.75 5.25v13.5" class="pause-left" class:pause-left-animate={isAnimating} />
+    <path d="M8.25 5.25v13.5" class="pause-right" class:pause-right-animate={isAnimating} />
   </svg>
 </div>
 
@@ -68,22 +68,43 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.pause-animate {
-  animation: pause-animate 0.6s ease-in-out;
+.pause-left,
+.pause-right {
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
-@keyframes pause-animate {
-  0% {
-    transform: scale(1);
+.pause-left.pause-left-animate {
+  animation: pause-left-bounce 0.5s ease-in-out forwards;
+}
+
+.pause-right.pause-right-animate {
+  animation: pause-right-bounce 0.5s ease-in-out forwards;
+}
+
+@keyframes pause-left-bounce {
+  0%, 20% {
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.1);
+    transform: translateY(2px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes pause-right-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  50%, 100% {
+    transform: translateY(0);
   }
 }
 </style>

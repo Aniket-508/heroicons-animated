@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,7 +54,7 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:mappin-animate={isAnimating}
+    class:mappin-bounce={isAnimating}
   >
     <path
       d="M15 10.5C15 12.1569 13.6569 13.5 12 13.5C10.3431 13.5 9 12.1569 9 10.5C9 8.84315 10.3431 7.5 12 7.5C13.6569 7.5 15 8.84315 15 10.5Z"
@@ -75,19 +76,17 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.mappin-animate {
-  animation: mappin-animate 0.6s ease-in-out;
+.icon-svg.mappin-bounce {
+  animation: mappin-bounce 0.4s ease-out forwards;
 }
 
-@keyframes mappin-animate {
-  0% {
-    transform: scale(1);
+@keyframes mappin-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+    transform: translateY(-4px);
   }
 }
 </style>

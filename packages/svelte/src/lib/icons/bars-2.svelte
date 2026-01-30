@@ -1,8 +1,10 @@
 <script lang="ts">
-export const size = 28;
+export let size: number = 28;
 const className = "";
 export { className as class };
 
+let bar1Path: SVGPathElement;
+let bar2Path: SVGPathElement;
 let isAnimating = false;
 let isControlled = false;
 
@@ -11,7 +13,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -34,8 +36,6 @@ function handleMouseLeave() {
     stopAnimation();
   }
 }
-
-const BARS = [{ d: "M3.75 9h16.5" }, { d: "M3.75 15.75h16.5" }];
 </script>
 
 <div
@@ -55,11 +55,9 @@ const BARS = [{ d: "M3.75 9h16.5" }, { d: "M3.75 15.75h16.5" }];
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:bars2-animate={isAnimating}
   >
-    {#each BARS as bar}
-      <path d={bar.d} />
-    {/each}
+    <path bind:this={bar1Path} class="bar-path" class:animate={isAnimating} d="M3.75 9h16.5" />
+    <path bind:this={bar2Path} class="bar-path" class:animate={isAnimating} d="M3.75 15.75h16.5" />
   </svg>
 </div>
 
@@ -71,22 +69,31 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.bars2-animate {
-  animation: bars2-animate 0.6s ease-in-out;
+.bar-path {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes bars2-animate {
+.bar-path.animate {
+  animation: bar-scale-x 0.3s ease-in-out forwards;
+}
+
+.bar-path:nth-child(2).animate {
+  animation-delay: 0.1s;
+}
+
+@keyframes bar-scale-x {
   0% {
-    transform: scale(1);
+    transform: scaleX(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scaleX(0.6);
   }
   100% {
-    transform: scale(1);
+    transform: scaleX(1);
   }
 }
 </style>

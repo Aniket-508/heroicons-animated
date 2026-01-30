@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,17 +16,17 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <line x1="6" x2="6" y1="3.75" y2="13.5" />
-      <line x1="6" x2="6" y1="16.5" y2="20.25" />
-      <circle cx="6" cy="15" fill="none" r="1.5" />
+      <line ref="line1Ref" x1="6" x2="6" y1="3.75" y2="13.5" />
+      <line ref="line2Ref" x1="6" x2="6" y1="16.5" y2="20.25" />
+      <circle ref="circle1Ref" cx="6" cy="15" fill="none" r="1.5" />
 
-      <line x1="12" x2="12" y1="3.75" y2="7.5" />
-      <line x1="12" x2="12" y1="10.5" y2="20.25" />
-      <circle cx="12" cy="9" fill="none" r="1.5" />
+      <line ref="line3Ref" x1="12" x2="12" y1="3.75" y2="7.5" />
+      <line ref="line4Ref" x1="12" x2="12" y1="10.5" y2="20.25" />
+      <circle ref="circle2Ref" cx="12" cy="9" fill="none" r="1.5" />
 
-      <line x1="18" x2="18" y1="3.75" y2="13.5" />
-      <line x1="18" x2="18" y1="16.5" y2="20.25" />
-      <circle cx="18" cy="15" fill="none" r="1.5" />
+      <line ref="line5Ref" x1="18" x2="18" y1="3.75" y2="13.5" />
+      <line ref="line6Ref" x1="18" x2="18" y1="16.5" y2="20.25" />
+      <circle ref="circle3Ref" cx="18" cy="15" fill="none" r="1.5" />
     </svg>
   </div>
 </template>
@@ -37,49 +38,69 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
 
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
-  animate: {
-    scale: [1, 1.08, 1],
-    transition: {
-      duration: 0.45,
-      ease: "easeInOut",
-    },
-  },
+const defaultOptions = {
+  duration: 300,
+  easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)", // Approximate spring
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
-});
+const line1Ref = ref<SVGLineElement>();
+const line2Ref = ref<SVGLineElement>();
+const circle1Ref = ref<SVGCircleElement>();
+const line3Ref = ref<SVGLineElement>();
+const line4Ref = ref<SVGLineElement>();
+const circle2Ref = ref<SVGCircleElement>();
+const line5Ref = ref<SVGLineElement>();
+const line6Ref = ref<SVGLineElement>();
+const circle3Ref = ref<SVGCircleElement>();
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  if (!isControlled) {
+    // Column 1
+    line1Ref.value?.animate([{ y2: 13.5 }, { y2: 10.5 }], defaultOptions);
+    line2Ref.value?.animate([{ y1: 16.5 }, { y1: 13.5 }], defaultOptions);
+    circle1Ref.value?.animate([{ cy: 15 }, { cy: 12 }], defaultOptions);
+
+    // Column 2
+    line3Ref.value?.animate([{ y2: 7.5 }, { y2: 10.5 }], defaultOptions);
+    line4Ref.value?.animate([{ y1: 10.5 }, { y1: 13.5 }], defaultOptions);
+    circle2Ref.value?.animate([{ cy: 9 }, { cy: 12 }], defaultOptions);
+
+    // Column 3
+    line5Ref.value?.animate([{ y2: 13.5 }, { y2: 10.5 }], defaultOptions);
+    line6Ref.value?.animate([{ y1: 16.5 }, { y1: 13.5 }], defaultOptions);
+    circle3Ref.value?.animate([{ cy: 15 }, { cy: 12 }], defaultOptions);
+  }
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  // Column 1
+  line1Ref.value?.animate([{ y2: 10.5 }, { y2: 13.5 }], defaultOptions);
+  line2Ref.value?.animate([{ y1: 13.5 }, { y1: 16.5 }], defaultOptions);
+  circle1Ref.value?.animate([{ cy: 12 }, { cy: 15 }], defaultOptions);
+
+  // Column 2
+  line3Ref.value?.animate([{ y2: 10.5 }, { y2: 7.5 }], defaultOptions);
+  line4Ref.value?.animate([{ y1: 13.5 }, { y1: 10.5 }], defaultOptions);
+  circle2Ref.value?.animate([{ cy: 12 }, { cy: 9 }], defaultOptions);
+
+  // Column 3
+  line5Ref.value?.animate([{ y2: 10.5 }, { y2: 13.5 }], defaultOptions);
+  line6Ref.value?.animate([{ y1: 13.5 }, { y1: 16.5 }], defaultOptions);
+  circle3Ref.value?.animate([{ cy: 12 }, { cy: 15 }], defaultOptions);
 };
 
 const handleMouseEnter = () => {

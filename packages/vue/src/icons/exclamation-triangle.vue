@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,15 +16,13 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion
-        is="path"
-        ref="pathRef"
+      <path
         d="M2.697 16.126c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126Z"
       />
-      <g>
+      <Motion is="g" ref="groupRef" style="transform-origin: 50% 50%">
         <path d="M12 9v3.75" />
         <path d="M12 15.75h.007v.008H12v-.008Z" />
-      </g>
+      </Motion>
     </svg>
   </div>
 </template>
@@ -41,31 +40,29 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
+// Match React: motion.g opacity [1, 0.4, 1], scale [1, 1.1, 1], 0.8s easeInOut, repeat infinite
 const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+  normal: { opacity: 1, scale: 1 },
   animate: {
-    scale: [1, 1.08, 1],
+    opacity: [1, 0.4, 1],
+    scale: [1, 1.1, 1],
     transition: {
-      duration: 0.45,
+      duration: 0.8,
       ease: "easeInOut",
+      repeat: Number.POSITIVE_INFINITY,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const groupRef = ref<SVGGElement | null>(null);
+const motionInstance = useMotion(groupRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,12 +54,15 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:documentminus-animate={isAnimating}
   >
     <path
       d="M19.5 14.25V11.625C19.5 9.76104 17.989 8.25 16.125 8.25H14.625C14.0037 8.25 13.5 7.74632 13.5 7.125V5.625C13.5 3.76104 11.989 2.25 10.125 2.25H8.25M10.5 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.25C19.5 6.27944 15.4706 2.25 10.5 2.25Z"
     />
-    <path d="M15 14.25H9" />
+    <path
+      d="M15 14.25H9"
+      class="documentminus-line"
+      class:documentminus-draw={isAnimating}
+    />
   </svg>
 </div>
 
@@ -70,22 +74,26 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.documentminus-animate {
-  animation: documentminus-animate 0.6s ease-in-out;
+.documentminus-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-@keyframes documentminus-animate {
-  0% {
-    transform: scale(1);
+.documentminus-line.documentminus-draw {
+  animation: documentminus-draw 0.4s ease-in-out forwards;
+}
+
+@keyframes documentminus-draw {
+  from {
+    stroke-dashoffset: 1;
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 </style>

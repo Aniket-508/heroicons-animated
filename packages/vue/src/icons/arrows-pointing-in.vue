@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,18 +16,18 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <g>
-        <Motion is="path" ref="pathRef" d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75" />
-      </g>
-      <g>
+      <Motion is="g" ref="topLeftRef">
+        <path d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75" />
+      </Motion>
+      <Motion is="g" ref="bottomLeftRef">
         <path d="M9 15v4.5M9 15H4.5M9 15l-5.25 5.25" />
-      </g>
-      <g>
+      </Motion>
+      <Motion is="g" ref="topRightRef">
         <path d="M15 9h4.5M15 9V4.5M15 9l5.25-5.25" />
-      </g>
-      <g>
+      </Motion>
+      <Motion is="g" ref="bottomRightRef">
         <path d="M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
-      </g>
+      </Motion>
     </svg>
   </div>
 </template>
@@ -44,43 +45,100 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+const topLeftVariants = {
+  normal: { translateX: 0, translateY: 0 },
   animate: {
-    scale: [1, 1.08, 1],
+    translateX: [0, 2, 0],
+    translateY: [0, 2, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const bottomLeftVariants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: {
+    translateX: [0, 2, 0],
+    translateY: [0, -2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const topRightVariants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: {
+    translateX: [0, -2, 0],
+    translateY: [0, 2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const bottomRightVariants = {
+  normal: { translateX: 0, translateY: 0 },
+  animate: {
+    translateX: [0, -2, 0],
+    translateY: [0, -2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const topLeftRef = ref();
+const bottomLeftRef = ref();
+const topRightRef = ref();
+const bottomRightRef = ref();
+
+const topLeftMotion = useMotion(topLeftRef, {
+  initial: topLeftVariants.normal,
+  enter: topLeftVariants.normal,
+});
+
+const bottomLeftMotion = useMotion(bottomLeftRef, {
+  initial: bottomLeftVariants.normal,
+  enter: bottomLeftVariants.normal,
+});
+
+const topRightMotion = useMotion(topRightRef, {
+  initial: topRightVariants.normal,
+  enter: topRightVariants.normal,
+});
+
+const bottomRightMotion = useMotion(bottomRightRef, {
+  initial: bottomRightVariants.normal,
+  enter: bottomRightVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  topLeftMotion.apply(topLeftVariants.animate);
+  bottomLeftMotion.apply(bottomLeftVariants.animate);
+  topRightMotion.apply(topRightVariants.animate);
+  bottomRightMotion.apply(bottomRightVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  topLeftMotion.apply(topLeftVariants.normal);
+  bottomLeftMotion.apply(bottomLeftVariants.normal);
+  topRightMotion.apply(topRightVariants.normal);
+  bottomRightMotion.apply(bottomRightVariants.normal);
 };
 
 const handleMouseEnter = () => {

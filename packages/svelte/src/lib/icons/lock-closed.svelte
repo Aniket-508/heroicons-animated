@@ -1,6 +1,6 @@
 <script lang="ts">
-export const size = 28;
-const className = "";
+export let size: number = 28;
+export let className = "";
 export { className as class };
 
 let isAnimating = false;
@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -37,6 +37,7 @@ function handleMouseLeave() {
 </script>
 
 <div
+  ...$$restProps
   class={className}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
@@ -53,9 +54,11 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:lockclosed-animate={isAnimating}
+    class:lockclosed-shake={isAnimating}
   >
     <path
+      class="lockclosed-shackle"
+      class:lockclosed-shackle-bounce={isAnimating}
       d="M16.5 10.5V6.75C16.5 4.26472 14.4853 2.25 12 2.25C9.51472 2.25 7.5 4.26472 7.5 6.75V10.5"
     />
     <path
@@ -75,19 +78,42 @@ div {
   transition: transform 0.3s ease;
 }
 
-.icon-svg.lockclosed-animate {
-  animation: lockclosed-animate 0.6s ease-in-out;
+.icon-svg.lockclosed-shake {
+  animation: lockclosed-shake 0.5s ease-in-out forwards;
 }
 
-@keyframes lockclosed-animate {
+.lockclosed-shackle.lockclosed-shackle-bounce {
+  animation: lockclosed-shackle-bounce 0.3s ease-in-out forwards;
+}
+
+@keyframes lockclosed-shake {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg) scale(1);
   }
-  50% {
-    transform: scale(1.1);
+  20% {
+    transform: rotate(-3deg) scale(1.02);
+  }
+  40% {
+    transform: rotate(2deg) scale(0.98);
+  }
+  60% {
+    transform: rotate(-2deg) scale(1);
+  }
+  80% {
+    transform: rotate(1deg) scale(1);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes lockclosed-shackle-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
   }
 }
 </style>

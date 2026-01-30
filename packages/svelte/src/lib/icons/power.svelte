@@ -11,7 +11,7 @@ export function startAnimation() {
     isAnimating = true;
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 500);
   }
 }
 
@@ -53,10 +53,9 @@ function handleMouseLeave() {
     stroke-linecap="round"
     stroke-linejoin="round"
     class="icon-svg"
-    class:power-animate={isAnimating}
   >
-    <path d="M5.636 5.636a9 9 0 1 0 12.728 0" />
-    <path d="M12 3v9" />
+    <path d="M5.636 5.636a9 9 0 1 0 12.728 0" class="power-circle" class:power-circle-animate={isAnimating} />
+    <path d="M12 3v9" class="power-line" class:power-line-animate={isAnimating} />
   </svg>
 </div>
 
@@ -68,22 +67,51 @@ div {
 .icon-svg {
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.3s ease;
 }
 
-.icon-svg.power-animate {
-  animation: power-animate 0.6s ease-in-out;
+.power-circle {
+  transform-box: fill-box;
+  transform-origin: center center;
 }
 
-@keyframes power-animate {
+.power-circle.power-circle-animate {
+  animation: power-circle-pulse 0.5s ease-in-out forwards;
+}
+
+@keyframes power-circle-pulse {
   0% {
+    opacity: 0.5;
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.1);
+  33% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  66% {
+    opacity: 0.5;
+    transform: scale(1);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
+  }
+}
+
+.power-line {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.power-line.power-line-animate {
+  animation: power-line-bounce 0.3s ease-in-out forwards;
+}
+
+@keyframes power-line-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
   }
 }
 </style>

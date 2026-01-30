@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,13 +16,11 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <g>
-        <Motion
-          is="path"
-          ref="pathRef"
+      <Motion is="g" ref="planeRef">
+        <path
           d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
         />
-      </g>
+      </Motion>
     </svg>
   </div>
 </template>
@@ -39,6 +38,7 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -48,22 +48,24 @@ const props = withDefaults(defineProps<Props>(), {
 const variants = {
   normal: {
     scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    x: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    scale: [1, 0.8, 1, 1, 1],
+    x: [0, "-10%", "125%", "-150%", 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      default: { ease: "easeInOut", duration: 1.2 },
+      x: {
+        ease: "easeInOut",
+        duration: 1.2,
+        times: [0, 0.25, 0.5, 0.5, 1],
+      },
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const planeRef = ref<SVGGElement | null>();
+const motionInstance = useMotion(planeRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

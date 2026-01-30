@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -36,14 +37,15 @@ import { onMounted, ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const DOT_DURATION = 100;
-const LINE_DURATION = 300;
+const DOT_DURATION = 0.1;
+const LINE_DURATION = 0.3;
 
 const LIST_ITEMS = [
   {
@@ -85,7 +87,7 @@ onMounted(() => {
 let isControlled = false;
 
 const startAnimation = () => {
-  LIST_ITEMS.forEach((_, index) => {
+  for (let index = 0; index < LIST_ITEMS.length; index++) {
     const bulletDelay = index * (DOT_DURATION + LINE_DURATION);
     const lineDelay = bulletDelay + DOT_DURATION;
 
@@ -93,6 +95,7 @@ const startAnimation = () => {
       opacity: [0, 1],
       transition: {
         duration: DOT_DURATION,
+        ease: "easeInOut",
         delay: bulletDelay,
       },
     });
@@ -101,11 +104,19 @@ const startAnimation = () => {
       pathLength: [0, 1],
       opacity: [0, 1],
       transition: {
-        duration: LINE_DURATION,
-        delay: lineDelay,
+        pathLength: {
+          duration: LINE_DURATION,
+          ease: "easeInOut",
+          delay: lineDelay,
+        },
+        opacity: {
+          duration: LINE_DURATION,
+          ease: "easeInOut",
+          delay: lineDelay,
+        },
       },
     });
-  });
+  }
 };
 
 const stopAnimation = () => {

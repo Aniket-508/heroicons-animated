@@ -1,10 +1,13 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-    <svg
+    <Motion
+      is="svg"
+      ref="svgRef"
       xmlns="http://www.w3.org/2000/svg"
       :width="props.size"
       :height="props.size"
@@ -15,9 +18,9 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <Motion is="path" ref="pathRef" d="M5 12h14" />
+      <path d="M5 12h14" />
       <path d="M12 5v14" />
-    </svg>
+    </Motion>
   </div>
 </template>
 
@@ -42,23 +45,20 @@ const props = withDefaults(defineProps<Props>(), {
 
 const variants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    rotate: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    rotate: 180,
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const svgRef = ref<SVGSVGElement | null>();
+const motionInstance = useMotion(svgRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-bind="$attrs"
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -15,12 +16,10 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
+      <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
       <Motion
         is="path"
-        ref="pathRef"
-        d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-      />
-      <path
+        ref="triangleRef"
         d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z"
       />
     </svg>
@@ -48,23 +47,22 @@ const props = withDefaults(defineProps<Props>(), {
 
 const variants = {
   normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
+    x: 0,
+    rotate: 0,
   },
   animate: {
-    scale: [1, 1.08, 1],
+    x: [0, -1, 2, 0],
+    rotate: [0, -10, 0, 0],
     transition: {
-      duration: 0.45,
+      duration: 0.5,
+      times: [0, 0.2, 0.5, 1],
       ease: "easeInOut",
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
+const triangleRef = ref<SVGPathElement | null>();
+const motionInstance = useMotion(triangleRef, {
   initial: variants.normal,
   enter: variants.normal,
 });

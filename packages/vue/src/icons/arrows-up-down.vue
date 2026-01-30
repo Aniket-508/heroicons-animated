@@ -3,6 +3,7 @@
     :class="props.class"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,16 +16,12 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <g>
-        <Motion
-          is="path"
-          ref="pathRef"
-          d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5"
-        />
-      </g>
-      <g>
+      <Motion is="g" ref="upArrowRef">
+        <path d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5" />
+      </Motion>
+      <Motion is="g" ref="downArrowRef">
         <path d="M21 16.5L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
-      </g>
+      </Motion>
     </svg>
   </div>
 </template>
@@ -42,43 +39,58 @@ import { ref } from "vue";
 export interface Props {
   size?: number;
   class?: string;
+  [key: string]: any; // Allow all HTMLAttributes
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const variants = {
-  normal: {
-    scale: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
+const upArrowVariants = {
+  normal: { translateY: 0 },
   animate: {
-    scale: [1, 1.08, 1],
+    translateY: [0, -2, 0],
     transition: {
-      duration: 0.45,
-      ease: "easeInOut",
+      duration: 0.5,
+      times: [0, 0.4, 1],
     },
   },
 };
 
-const pathRef = ref();
-const motionInstance = useMotion(pathRef, {
-  initial: variants.normal,
-  enter: variants.normal,
+const downArrowVariants = {
+  normal: { translateY: 0 },
+  animate: {
+    translateY: [0, 2, 0],
+    transition: {
+      duration: 0.5,
+      times: [0, 0.4, 1],
+    },
+  },
+};
+
+const upArrowRef = ref();
+const downArrowRef = ref();
+
+const upArrowMotion = useMotion(upArrowRef, {
+  initial: upArrowVariants.normal,
+  enter: upArrowVariants.normal,
+});
+
+const downArrowMotion = useMotion(downArrowRef, {
+  initial: downArrowVariants.normal,
+  enter: downArrowVariants.normal,
 });
 
 let isControlled = false;
 
 const startAnimation = () => {
-  motionInstance.apply(variants.animate);
+  upArrowMotion.apply(upArrowVariants.animate);
+  downArrowMotion.apply(downArrowVariants.animate);
 };
 
 const stopAnimation = () => {
-  motionInstance.apply(variants.normal);
+  upArrowMotion.apply(upArrowVariants.normal);
+  downArrowMotion.apply(downArrowVariants.normal);
 };
 
 const handleMouseEnter = () => {
