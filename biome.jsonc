@@ -51,5 +51,25 @@
   },
   "html": {
     "experimentalFullSupportEnabled": true
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.svelte", "**/*.vue"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          },
+          "suspicious": {
+            "noUnassignedVariables": "off"
+          }
+        }
+      }
+    }
+  ]
 }
