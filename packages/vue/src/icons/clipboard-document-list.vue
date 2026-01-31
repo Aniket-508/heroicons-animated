@@ -47,8 +47,8 @@ const props = withDefaults(defineProps<Props>(), {
   size: 28,
 });
 
-const DOT_DURATION = 100;
-const LINE_DURATION = 300;
+const DOT_DURATION = 0.1;
+const LINE_DURATION = 0.3;
 
 const LIST_ITEMS = [
   { y: 12, dotPath: "M6.75 12h.008v.008H6.75V12Z", linePath: "M9 12h3.75" },
@@ -87,6 +87,7 @@ const startAnimation = () => {
       transition: {
         duration: DOT_DURATION,
         delay: dotDelay,
+        ease: "easeInOut",
       },
     });
 
@@ -96,6 +97,7 @@ const startAnimation = () => {
       transition: {
         duration: LINE_DURATION,
         delay: lineDelay,
+        ease: "easeInOut",
       },
     });
   });
