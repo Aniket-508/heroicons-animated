@@ -26,18 +26,21 @@ heroicons-animated/
 ### Using shadcn CLI
 
 #### React
+
 ```bash
 pnpm dlx shadcn add @heroicons-animated/heart
 pnpm dlx shadcn add @heroicons-animated/wifi
 ```
 
 #### Vue
+
 ```bash
 pnpm dlx shadcn-vue add @heroicons-animated/vue/heart
 pnpm dlx shadcn-vue add @heroicons-animated/vue/wifi
 ```
 
 #### Svelte
+
 ```bash
 pnpm dlx shadcn-svelte add @heroicons-animated/svelte/heart
 pnpm dlx shadcn-svelte add @heroicons-animated/svelte/wifi
@@ -46,26 +49,28 @@ pnpm dlx shadcn-svelte add @heroicons-animated/svelte/wifi
 ### Using npm packages
 
 #### React
+
 ```bash
 pnpm add @heroicons-animated/react motion
 ```
 
 ```tsx
-import { BeakerIcon } from '@heroicons-animated/react'
+import { BeakerIcon } from "@heroicons-animated/react";
 
 export default function App() {
-  return <BeakerIcon className="size-6" />
+  return <BeakerIcon className="size-6" />;
 }
 ```
 
 #### Vue
+
 ```bash
 pnpm add @heroicons-animated/vue @vueuse/motion
 ```
 
 ```vue
 <script setup>
-import { BeakerIcon } from '@heroicons-animated/vue'
+import { BeakerIcon } from "@heroicons-animated/vue";
 </script>
 
 <template>
@@ -74,6 +79,7 @@ import { BeakerIcon } from '@heroicons-animated/vue'
 ```
 
 #### Svelte
+
 ```bash
 pnpm add @heroicons-animated/svelte
 ```
@@ -85,6 +91,10 @@ pnpm add @heroicons-animated/svelte
 
 <BeakerIcon class="size-6" />
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Aniket-508/heroicons-animated&type=date&legend=top-left)](https://www.star-history.com/#Aniket-508/heroicons-animated&type=date&legend=top-left)
 
 ## Contributing
 
