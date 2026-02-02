@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@heroicons-animated/shared";
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import Link from "next/link";
@@ -9,6 +8,7 @@ import { GithubStarsButton } from "@/components/github-button";
 import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LINK } from "@/constants";
+import { cn } from "@/lib/utils";
 
 interface FilledHeartIconHandle {
   startAnimation: () => void;

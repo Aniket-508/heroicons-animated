@@ -50,7 +50,8 @@
     "motion": "^12.0.0"
   },
   "dependencies": {
-    "@heroicons-animated/shared": "workspace:*"
+    "clsx": "catalog:",
+    "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

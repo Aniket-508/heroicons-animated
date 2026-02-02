@@ -49,9 +49,6 @@
     "vue": "^3.0.0",
     "@vueuse/motion": "^2.0.0"
   },
-  "dependencies": {
-    "@heroicons-animated/shared": "workspace:*"
-  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@vitejs/plugin-vue": "^5.2.1",

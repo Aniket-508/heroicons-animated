@@ -1,4 +1,3 @@
-import { ICON_MANIFEST } from "@heroicons-animated/shared";
 import {
   generateRegistryRssFeed,
   type RegistryItem,
@@ -6,6 +5,7 @@ import {
 } from "@wandry/analytics-sdk";
 import type { NextRequest } from "next/server";
 import { SITE } from "@/constants";
+import { ICON_MANIFEST } from "@/lib/manifest";
 
 export const revalidate = 3600;
 

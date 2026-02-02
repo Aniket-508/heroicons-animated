@@ -1,6 +1,6 @@
 import { Tooltip as BaseTooltip } from "@base-ui/react/tooltip";
-import { cn } from "@heroicons-animated/shared";
 import type * as React from "react";
+import { cn } from "@/lib/utils";
 
 const TooltipProvider = ({
   delay = 150,

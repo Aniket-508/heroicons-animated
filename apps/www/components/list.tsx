@@ -1,12 +1,12 @@
 "use client";
 
-import { getIconList } from "@heroicons-animated/react";
 import Fuse from "fuse.js";
 import Link from "next/link";
 import { useQueryState } from "nuqs";
 import { useDeferredValue, useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
 import { Card, CardActions, CardTitle } from "@/components/card";
+import { getIconList } from "@/lib/icons";
 import { useFramework } from "@/providers/framework";
 import { SearchInput } from "./search-input";
 

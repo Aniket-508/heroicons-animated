@@ -1,5 +1,5 @@
-import type { Framework } from "@heroicons-animated/shared";
 import { type PACKAGE_MANAGER, SITE } from "@/constants";
+import type { Framework } from "@/types/icon";
 import { getPackageManagerPrefix } from "./get-package-manager-prefix";
 
 type PackageManager = (typeof PACKAGE_MANAGER)[keyof typeof PACKAGE_MANAGER];

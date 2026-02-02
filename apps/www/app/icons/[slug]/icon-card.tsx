@@ -1,9 +1,9 @@
 "use client";
 
-import { getIconList } from "@heroicons-animated/react";
 import { useMemo, useRef } from "react";
 import type { Icon } from "@/actions/get-icons";
 import { Card, CardActions } from "@/components/card";
+import { getIconList } from "@/lib/icons";
 
 type Props = {
   icon: Icon;

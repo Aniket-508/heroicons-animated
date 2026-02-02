@@ -1,8 +1,8 @@
 "use client";
 
 import { Tabs as BaseTabs } from "@base-ui/react/tabs";
-import { cn } from "@heroicons-animated/shared";
 import type * as React from "react";
+import { cn } from "@/lib/utils";
 
 type TabsProps = React.ComponentProps<typeof BaseTabs.Root>;
 

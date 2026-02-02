@@ -2,10 +2,9 @@
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-
-import { cn } from "@heroicons-animated/shared";
 import { CircleIcon } from "@radix-ui/react-icons";
 import type * as React from "react";
+import { cn } from "@/lib/utils";
 
 function DropdownMenu({ ...props }: MenuPrimitive.Root.Props) {
   return <MenuPrimitive.Root data-slot="dropdown-menu" {...props} />;

@@ -1,8 +1,8 @@
 "use client";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { cn } from "@heroicons-animated/shared";
 import type { SVGProps } from "react";
+import { cn } from "@/lib/utils";
 import { useFramework } from "@/providers/framework";
 import {
   DropdownMenu,

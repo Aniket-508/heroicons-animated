@@ -2,7 +2,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import type { Framework } from "@heroicons-animated/shared";
+import type { Framework } from "@/types/icon";
 
 export async function getIconContent(
   name: string,

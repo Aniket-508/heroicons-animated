@@ -1,8 +1,8 @@
-import { ICON_MANIFEST } from "@heroicons-animated/shared";
 import type { NextRequest } from "next/server";
 import { getIcons } from "@/actions/get-icons";
 import { LINK, SITE } from "@/constants";
 import { kebabToPascalCase } from "@/lib/kebab-to-pascal";
+import { ICON_MANIFEST } from "@/lib/manifest";
 
 type RouteContext = {
   params: Promise<{ slug?: string[] }>;

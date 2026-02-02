@@ -1,8 +1,8 @@
 "use client";
 
-import type { Framework } from "@heroicons-animated/shared";
 import { parseAsStringLiteral, useQueryState } from "nuqs";
 import { createContext, type ReactNode, useContext } from "react";
+import type { Framework } from "@/types/icon";
 
 type FrameworkContextType = {
   framework: Framework;

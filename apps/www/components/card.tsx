@@ -6,7 +6,6 @@ import {
   PauseIcon,
   PlayIcon,
 } from "@heroicons/react/24/outline";
-import { cn } from "@heroicons-animated/shared";
 import type { RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
@@ -24,6 +23,7 @@ import {
 } from "@/components/ui/tooltip";
 import { useTouchDevice } from "@/hooks/use-touch-device";
 import { getCLICommand, getFileExtension } from "@/lib/cli";
+import { cn } from "@/lib/utils";
 import { useFramework } from "@/providers/framework";
 import { usePackageNameContext } from "@/providers/package-name";
 

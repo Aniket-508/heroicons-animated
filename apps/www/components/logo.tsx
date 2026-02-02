@@ -1,4 +1,4 @@
-import { cn } from "@heroicons-animated/shared";
+import { cn } from "@/lib/utils";
 
 type LogoProps = {
   className?: string;

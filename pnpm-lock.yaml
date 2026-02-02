@@ -59,9 +59,6 @@ importers:
       '@heroicons-animated/react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@heroicons-animated/shared':
-        specifier: workspace:*
-        version: link:../../packages/shared
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.1)
@@ -80,6 +77,9 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
       fuse.js:
         specifier: ^7.1.0
         version: 7.1.0
@@ -107,6 +107,9 @@ importers:
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      tailwind-merge:
+        specifier: 'catalog:'
+        version: 3.4.0
       tsx:
         specifier: ^4.21.0
         version: 4.21.0
@@ -147,12 +150,15 @@ importers:
 
   packages/react:
     dependencies:
-      '@heroicons-animated/shared':
-        specifier: workspace:*
-        version: link:../shared
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
       motion:
         specifier: ^12.0.0
         version: 12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      tailwind-merge:
+        specifier: 'catalog:'
+        version: 3.4.0
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
@@ -163,22 +169,6 @@ importers:
       react:
         specifier: ^19.2.1
         version: 19.2.1
-      tsup:
-        specifier: 'catalog:'
-        version: 8.5.1(@microsoft/api-extractor@7.55.2(@types/node@24.10.4))(jiti@2.6.1)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
-
-  packages/shared:
-    dependencies:
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
-      tailwind-merge:
-        specifier: 'catalog:'
-        version: 3.4.0
-    devDependencies:
       tsup:
         specifier: 'catalog:'
         version: 8.5.1(@microsoft/api-extractor@7.55.2(@types/node@24.10.4))(jiti@2.6.1)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)
@@ -212,9 +202,6 @@ importers:
 
   packages/vue:
     dependencies:
-      '@heroicons-animated/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@vueuse/motion':
         specifier: ^2.0.0
         version: 2.2.6(vue@3.5.26(typescript@5.9.3))

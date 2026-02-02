@@ -1,4 +1,4 @@
-import { ICON_MANIFEST } from "@heroicons-animated/shared";
+import { ICON_MANIFEST } from "@/lib/manifest";
 
 type Icon = {
   name: string;
