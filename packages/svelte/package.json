@@ -1,6 +1,6 @@
 {
   "name": "@heroicons-animated/svelte",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Animated Heroicons for Svelte, built with CSS animations",
   "author": "Aniket-508",
   "license": "MIT",
