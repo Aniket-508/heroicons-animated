@@ -41,6 +41,11 @@ yarn-error.log*
 dist/
 .cache
 
+# generated icon proxies
+packages/react/icons/
+packages/vue/icons/
+packages/svelte/icons/
+
 # turbo
 .turbo
 

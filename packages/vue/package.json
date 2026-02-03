@@ -29,20 +29,28 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./icons/*": {
-      "import": "./dist/icons/*.js",
-      "types": "./dist/icons/*.d.ts"
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "icons/*": [
+        "./dist/icons/*.d.ts"
+      ]
     }
   },
   "files": [
     "dist",
+    "icons",
     "README.md"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-proxies.mjs",
     "dev": "vite build --watch",
     "type-check": "vue-tsc --noEmit"
   },

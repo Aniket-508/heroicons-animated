@@ -1,4 +1,10 @@
-import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+} from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "tsup";
@@ -6,9 +12,10 @@ import { defineConfig } from "tsup";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const iconsDir = join(__dirname, "src/icons");
-const iconFiles = readdirSync(iconsDir)
+const iconNames = readdirSync(iconsDir)
   .filter((file) => file.endsWith(".tsx") && file !== "index.ts")
-  .map((file) => `src/icons/${file}`);
+  .map((file) => file.replace(".tsx", ""));
+const iconFiles = iconNames.map((name) => `src/icons/${name}.tsx`);
 
 function getAllJsFiles(dir: string): string[] {
   const files: string[] = [];
@@ -32,6 +39,31 @@ function addUseClientDirective() {
     if (!content.startsWith('"use client"')) {
       writeFileSync(filePath, `"use client";\n${content}`);
     }
+  }
+}
+
+function createIconProxies() {
+  const proxyDir = join(__dirname, "icons");
+  if (!existsSync(proxyDir)) {
+    mkdirSync(proxyDir, { recursive: true });
+  }
+
+  for (const name of iconNames) {
+    // CJS proxy
+    writeFileSync(
+      join(proxyDir, `${name}.js`),
+      `module.exports = require("../dist/icons/${name}.js");\n`
+    );
+    // ESM proxy
+    writeFileSync(
+      join(proxyDir, `${name}.mjs`),
+      `export * from "../dist/icons/${name}.mjs";\n`
+    );
+    // TypeScript declarations proxy
+    writeFileSync(
+      join(proxyDir, `${name}.d.ts`),
+      `export * from "../dist/icons/${name}";\n`
+    );
   }
 }
 
@@ -68,6 +100,7 @@ export default defineConfig([
     onSuccess: async () => {
       await Promise.resolve();
       addUseClientDirective();
+      createIconProxies();
     },
   },
 ]);

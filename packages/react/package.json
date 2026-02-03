@@ -37,8 +37,16 @@
       "require": "./dist/icons/*.js"
     }
   },
+  "typesVersions": {
+    "*": {
+      "icons/*": [
+        "./dist/icons/*.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist",
+    "icons",
     "README.md"
   ],
   "scripts": {
