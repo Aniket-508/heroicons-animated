@@ -1,5 +1,11 @@
 # @heroicons-animated/svelte
 
+## 1.1.1
+
+### Patch Changes
+
+- [`3ff27c1`](https://github.com/Aniket-508/heroicons-animated/commit/3ff27c1b22668cf0e9f28a4f4b89d0ae008625dd) - Fix type resolution in tree-shaking icons
+
 ## 1.1.0
 
 ### Minor Changes
