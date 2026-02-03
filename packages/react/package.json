@@ -31,7 +31,8 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./icons/*": {
+    "./package.json": "./package.json",
+    "./*": {
       "types": "./dist/icons/*.d.ts",
       "import": "./dist/icons/*.mjs",
       "require": "./dist/icons/*.js"
@@ -39,14 +40,16 @@
   },
   "typesVersions": {
     "*": {
-      "icons/*": [
+      "*": [
         "./dist/icons/*.d.ts"
       ]
     }
   },
   "files": [
     "dist",
-    "icons",
+    "*.js",
+    "*.mjs",
+    "*.d.ts",
     "README.md"
   ],
   "scripts": {

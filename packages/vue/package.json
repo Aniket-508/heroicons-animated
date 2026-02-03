@@ -32,21 +32,23 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./icons/*": {
+    "./package.json": "./package.json",
+    "./*": {
       "types": "./dist/icons/*.d.ts",
       "import": "./dist/icons/*.js"
     }
   },
   "typesVersions": {
     "*": {
-      "icons/*": [
+      "*": [
         "./dist/icons/*.d.ts"
       ]
     }
   },
   "files": [
     "dist",
-    "icons",
+    "*.js",
+    "*.d.ts",
     "README.md"
   ],
   "scripts": {

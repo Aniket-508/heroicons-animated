@@ -30,21 +30,23 @@
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     },
-    "./icons/*": {
+    "./package.json": "./package.json",
+    "./*": {
       "types": "./dist/icons/*.d.ts",
       "svelte": "./dist/icons/*.js"
     }
   },
   "typesVersions": {
     "*": {
-      "icons/*": [
+      "*": [
         "./dist/icons/*.d.ts"
       ]
     }
   },
   "files": [
     "dist",
-    "icons",
+    "*.js",
+    "*.d.ts",
     "README.md"
   ],
   "scripts": {

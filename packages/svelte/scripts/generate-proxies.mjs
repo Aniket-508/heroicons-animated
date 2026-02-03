@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,10 +10,7 @@ const iconNames = readdirSync(iconsDir)
   .filter((file) => file.endsWith(".svelte"))
   .map((file) => file.replace(".svelte", ""));
 
-const proxyDir = join(packageDir, "icons");
-if (!existsSync(proxyDir)) {
-  mkdirSync(proxyDir, { recursive: true });
-}
+const proxyDir = packageDir;
 
 for (const name of iconNames) {
   // ESM proxy (Svelte is ESM only)

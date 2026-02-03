@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,21 +10,18 @@ const iconNames = readdirSync(iconsDir)
   .filter((file) => file.endsWith(".vue"))
   .map((file) => file.replace(".vue", ""));
 
-const proxyDir = join(packageDir, "icons");
-if (!existsSync(proxyDir)) {
-  mkdirSync(proxyDir, { recursive: true });
-}
+const proxyDir = packageDir;
 
 for (const name of iconNames) {
   // ESM proxy (Vue is ESM only)
   writeFileSync(
     join(proxyDir, `${name}.js`),
-    `export { default } from "../dist/icons/${name}.js";\nexport * from "../dist/icons/${name}.js";\n`
+    `export { default } from "./dist/icons/${name}.js";\nexport * from "./dist/icons/${name}.js";\n`
   );
   // TypeScript declarations proxy
   writeFileSync(
     join(proxyDir, `${name}.d.ts`),
-    `export { default } from "../dist/icons/${name}";\nexport * from "../dist/icons/${name}";\n`
+    `export { default } from "./dist/icons/${name}";\nexport * from "./dist/icons/${name}";\n`
   );
 }
 

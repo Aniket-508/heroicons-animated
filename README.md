@@ -55,9 +55,15 @@ pnpm add @heroicons-animated/react motion
 
 ```tsx
 import { BeakerIcon } from "@heroicons-animated/react";
+import { HeartIcon } from "@heroicons-animated/react/heart";
 
 export default function App() {
-  return <BeakerIcon className="size-6" />;
+  return (
+    <>
+      <BeakerIcon className="size-6" />
+      <HeartIcon className="size-6" />
+    </>
+  );
 }
 ```
 
@@ -70,10 +76,12 @@ pnpm add @heroicons-animated/vue @vueuse/motion
 ```vue
 <script setup>
 import { BeakerIcon } from "@heroicons-animated/vue";
+import HeartIcon from "@heroicons-animated/vue/heart";
 </script>
 
 <template>
   <BeakerIcon class="size-6" />
+  <HeartIcon class="size-6" />
 </template>
 ```
 
@@ -86,9 +94,11 @@ pnpm add @heroicons-animated/svelte
 ```svelte
 <script>
   import { BeakerIcon } from '@heroicons-animated/svelte'
+  import HeartIcon from '@heroicons-animated/svelte/heart'
 </script>
 
 <BeakerIcon class="size-6" />
+<HeartIcon class="size-6" />
 ```
 
 ## Star History

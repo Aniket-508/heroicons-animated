@@ -1,10 +1,4 @@
-import {
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  writeFileSync,
-} from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "tsup";
@@ -43,11 +37,7 @@ function addUseClientDirective() {
 }
 
 function createIconProxies() {
-  const proxyDir = join(__dirname, "icons");
-  if (!existsSync(proxyDir)) {
-    mkdirSync(proxyDir, { recursive: true });
-  }
-
+  const proxyDir = __dirname;
   for (const name of iconNames) {
     // CJS proxy
     writeFileSync(

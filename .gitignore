@@ -42,9 +42,13 @@ dist/
 .cache
 
 # generated icon proxies
-packages/react/icons/
-packages/vue/icons/
-packages/svelte/icons/
+packages/react/*.js
+packages/react/*.mjs
+packages/react/*.d.ts
+packages/vue/*.js
+packages/vue/*.d.ts
+packages/svelte/*.js
+packages/svelte/*.d.ts
 
 # turbo
 .turbo
