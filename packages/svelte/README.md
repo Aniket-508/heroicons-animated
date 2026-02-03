@@ -26,7 +26,7 @@ Import individual icons to reduce bundle size:
 
 ```svelte
 <script>
-  import BeakerIcon from '@heroicons-animated/svelte/icons/BeakerIcon'
+  import BeakerIcon from '@heroicons-animated/svelte/beaker'
 </script>
 ```
 

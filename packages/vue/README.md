@@ -14,7 +14,7 @@ pnpm add @heroicons-animated/vue @vueuse/motion
 
 ```vue
 <script setup>
-import { BeakerIcon } from '@heroicons-animated/vue'
+import { BeakerIcon } from "@heroicons-animated/vue";
 </script>
 
 <template>
@@ -28,7 +28,7 @@ Import individual icons to reduce bundle size:
 
 ```vue
 <script setup>
-import BeakerIcon from '@heroicons-animated/vue/icons/BeakerIcon'
+import BeakerIcon from "@heroicons-animated/vue/beaker";
 </script>
 ```
 

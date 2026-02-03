@@ -13,10 +13,10 @@ pnpm add @heroicons-animated/react motion
 ## Usage
 
 ```tsx
-import { BeakerIcon } from '@heroicons-animated/react'
+import { BeakerIcon } from "@heroicons-animated/react";
 
 export default function App() {
-  return <BeakerIcon className="size-6" />
+  return <BeakerIcon className="size-6" />;
 }
 ```
 
@@ -25,7 +25,7 @@ export default function App() {
 Import individual icons to reduce bundle size:
 
 ```tsx
-import { BeakerIcon } from '@heroicons-animated/react/icons/BeakerIcon'
+import { BeakerIcon } from "@heroicons-animated/react/beaker";
 ```
 
 ## Requirements
