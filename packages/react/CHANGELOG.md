@@ -1,5 +1,15 @@
 # @heroicons-animated/react
 
+## 1.3.0
+
+### Minor Changes
+
+- [`924bfa7`](https://github.com/Aniket-508/heroicons-animated/commit/924bfa7aa72e0c004e5246827c9afe393dcfbffa) - Reduce React package size
+
+  - Disable source maps (~8.5 MB savings)
+  - ESM-only build, remove CJS (~3 MB savings)
+  - Unpacked size reduced from ~17 MB to ~4 MB
+
 ## 1.2.0
 
 ### Minor Changes
