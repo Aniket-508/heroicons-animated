@@ -1,5 +1,11 @@
 # @heroicons-animated/vue
 
+## 1.2.0
+
+### Minor Changes
+
+- [`39c186d`](https://github.com/Aniket-508/heroicons-animated/commit/39c186d2492a5d979756e8a472114743186881ff) - Updated README for tree-shakable direct icon imports
+
 ## 1.1.2
 
 ### Patch Changes
