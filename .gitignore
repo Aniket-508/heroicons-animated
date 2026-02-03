@@ -46,3 +46,4 @@ dist/
 
 # agents
 AGENTS.md
+.cursor/
