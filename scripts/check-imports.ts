@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const ICONS_DIR = join(process.cwd(), "src/icons");
@@ -75,7 +75,7 @@ function printReport() {
   if (result.missingImports.length > 0) {
     console.log("MISSING IMPORTS:");
     for (const file of result.missingImports) {
-      console.log("  - icons/" + file + ".tsx");
+      console.log(`  - icons/${file}.tsx`);
     }
     console.log("");
     process.exit(1);
@@ -84,7 +84,7 @@ function printReport() {
   if (result.missingInList.length > 0) {
     console.log("MISSING FILES (imported but not found):");
     for (const file of result.missingInList) {
-      console.log("  - " + file);
+      console.log(`  - ${file}`);
     }
     console.log("");
     process.exit(1);

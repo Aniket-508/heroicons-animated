@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const ICONS_DIR = join(process.cwd(), "src/icons");
@@ -44,12 +44,15 @@ function printReport() {
 
   const duplicates = checkDuplicates();
 
-  console.log("   Total icon files:", duplicates.length > 0 ? "checking..." : getAllIconFiles().length);
+  console.log(
+    "   Total icon files:",
+    duplicates.length > 0 ? "checking..." : getAllIconFiles().length
+  );
 
   if (duplicates.length > 0) {
     console.log("DUPLICATE NAMES FOUND:");
     for (const { name, count } of duplicates) {
-      console.log("  - " + name + " appears " + count + " times");
+      console.log(`  - ${name} appears ${count} times`);
     }
     console.log("");
     process.exit(1);

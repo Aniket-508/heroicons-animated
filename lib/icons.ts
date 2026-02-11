@@ -1,8 +1,18 @@
-import type { ComponentType } from "react";
+import type { ComponentType, HTMLAttributes, Ref } from "react";
+
+type AnimatedIconHandle = {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+};
+
+type AnimatedIconProps = HTMLAttributes<HTMLDivElement> & {
+  size?: number;
+  ref?: Ref<AnimatedIconHandle>;
+};
 
 type IconEntry = {
   name: string;
-  icon: ComponentType;
+  icon: ComponentType<AnimatedIconProps>;
   keywords: string[];
 };
 
@@ -331,7 +341,7 @@ import {
   XMarkIcon,
 } from "@heroicons-animated/react";
 
-const ICON_MAP: Record<string, ComponentType> = {
+const ICON_MAP: Record<string, ComponentType<AnimatedIconProps>> = {
   "academic-cap": AcademicCapIcon,
   "adjustments-horizontal": AdjustmentsHorizontalIcon,
   "adjustments-vertical": AdjustmentsVerticalIcon,

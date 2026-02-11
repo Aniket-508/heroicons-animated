@@ -15,7 +15,18 @@ const ICON_MAP = new Map(getIconList().map((item) => [item.name, item]));
 const SimilarIconItem = ({
   icon,
 }: {
-  icon: { name: string; icon: React.ComponentType };
+  icon: {
+    name: string;
+    icon: React.ComponentType<
+      React.HTMLAttributes<HTMLDivElement> & {
+        size?: number;
+        ref?: React.Ref<{
+          startAnimation: () => void;
+          stopAnimation: () => void;
+        }>;
+      }
+    >;
+  };
 }) => {
   const animationRef = useRef<{
     startAnimation: () => void;
