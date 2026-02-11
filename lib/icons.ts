@@ -6,9 +6,11 @@ import { ICON_MANIFEST } from "./manifest";
 function slugToComponentName(slug: string): string {
   const pascal = `${slug
     .split("-")
-    .map((part) =>
-      part === "3d" ? "3D" : part.charAt(0).toUpperCase() + part.slice(1)
-    )
+    .map((part) => {
+      if (part === "3d") return "3D";
+      if (part === "2x2") return "2X2";
+      return part.charAt(0).toUpperCase() + part.slice(1);
+    })
     .join("")}Icon`;
   return pascal;
 }
