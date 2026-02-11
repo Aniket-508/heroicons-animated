@@ -1,0 +1,74 @@
+{
+  "name": "@heroicons-animated/react",
+  "version": "0.0.1",
+  "description": "Animated Heroicons for React, built with Motion for React",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://react.heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroicons-animated/heroicons-animated",
+    "directory": "src"
+  },
+  "bugs": {
+    "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
+  },
+  "keywords": [
+    "heroicons",
+    "react",
+    "react18",
+    "react19",
+    "icons",
+    "animated",
+    "motion",
+    "motion-react"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js",
+      "default": "./dist/icons/*.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/icons/*.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "readme": "../README.md",
+  "license": "../LICENSE",
+  "scripts": {
+    "build": "vite build",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "motion": "^11.0.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "clsx": "^2.1.1",
+    "motion": "^12.0.0",
+    "react": "^19.0.0",
+    "tailwind-merge": "^2.5.0",
+    "typescript": "^5.0.0",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.0.0"
+  }
+}

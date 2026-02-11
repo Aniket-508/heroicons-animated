@@ -1,15 +1,74 @@
 "use client";
 
+import NumberFlow from "@number-flow/react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
 import { LINK } from "@/constants";
-import { useGithubStars } from "@/providers/github-stars";
+
+const GITHUB_API = "https://api.github.com/repos/Aniket-508/heroicons-animated";
+
+interface GitHubRepoResponse {
+  stargazers_count?: number;
+}
 
 const GithubStarsButton = () => {
-  const { stars } = useGithubStars();
+  const [displayStars, setDisplayStars] = useState<number>(0);
+  const [starsLoaded, setStarsLoaded] = useState(false);
+
+  useEffect(() => {
+    let animationInterval: ReturnType<typeof setInterval> | undefined;
+
+    const animateStars = (targetStars: number) => {
+      let current = 0;
+      const duration = 1500;
+      const interval = 20;
+      const steps = duration / interval;
+      const increment = targetStars / steps;
+
+      animationInterval = setInterval(() => {
+        current += increment;
+        if (current >= targetStars) {
+          setDisplayStars(targetStars);
+          setStarsLoaded(true);
+          clearInterval(animationInterval);
+        } else {
+          setDisplayStars(Math.floor(current));
+        }
+      }, interval);
+    };
+
+    const fetchStars = async () => {
+      try {
+        const response = await fetch(GITHUB_API, {
+          headers: {
+            Accept: "application/vnd.github.v3+json",
+            "User-Agent": "heroicons-animated",
+          },
+        });
+
+        if (response.ok) {
+          const data = (await response.json()) as GitHubRepoResponse;
+          const count = data.stargazers_count ?? 0;
+          setDisplayStars(0);
+          animateStars(count);
+        }
+      } catch {
+        setStarsLoaded(true);
+      }
+    };
+
+    fetchStars();
+
+    return () => {
+      if (animationInterval) {
+        clearInterval(animationInterval);
+      }
+    };
+  }, []);
 
   return (
     <a
-      aria-label={`Star on GitHub${stars ? ` (${stars.toLocaleString()} stars)` : ""}`}
+      aria-label={`Star on GitHub${starsLoaded ? ` (${displayStars.toLocaleString()} stars)` : ""}`}
       className="group/github-stars supports-[corner-shape:squircle]:corner-squircle flex size-9 items-center justify-center gap-2 rounded-[14px] bg-white focus-within:outline-offset-2 focus-visible:outline-1 focus-visible:outline-primary supports-[corner-shape:squircle]:rounded-[20px] sm:size-auto sm:px-2.5 sm:py-2 dark:bg-white/10"
       href={LINK.GITHUB}
       rel="noopener noreferrer"
@@ -17,21 +76,18 @@ const GithubStarsButton = () => {
       target="_blank"
     >
       <GitHubLogoIcon aria-hidden="true" className="size-4" />
-      {stars !== null && (
-        <span
-          aria-hidden="true"
-          className="hidden font-sans text-black text-sm tabular-nums tracking-[-0.4px] [text-shadow:-0.1px_0_0_currentColor,0.1px_0_0_currentColor] sm:inline dark:text-white"
-        >
-          {stars.toLocaleString()}
-        </span>
-      )}
+      <NumberFlow
+        aria-hidden="true"
+        className="hidden min-w-4 text-center font-sans text-black text-sm tabular-nums tracking-[-0.4px] [text-shadow:-0.1px_0_0_currentColor,0.1px_0_0_currentColor] sm:inline dark:text-white"
+        value={displayStars}
+      />
       <svg
         aria-hidden="true"
         className="hidden text-neutral-400 transition-colors duration-100 group-hover/github-stars:text-[#e3b341] sm:block"
         fill="none"
-        height="13"
+        height={13}
         viewBox="0 0 13 13"
-        width="13"
+        width={13}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

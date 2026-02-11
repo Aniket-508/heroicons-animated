@@ -4,8 +4,9 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
-// Get all icon files
-const iconsDir = resolve(import.meta.dirname);
+const srcDir = resolve(import.meta.dirname, "src");
+const iconsDir = resolve(srcDir, "icons");
+
 const iconFiles = fs
   .readdirSync(iconsDir)
   .filter(
@@ -13,12 +14,11 @@ const iconFiles = fs
       file.endsWith(".tsx") && file !== "index.ts" && file !== "types.ts"
   );
 
-// Create entry points for each icon
 const entryPoints: Record<string, string> = {
-  index: resolve(import.meta.dirname, "index.ts"),
+  index: resolve(srcDir, "index.ts"),
   ...iconFiles.reduce<Record<string, string>>((acc, file) => {
     const name = file.replace(".tsx", "");
-    acc[name] = resolve(import.meta.dirname, file);
+    acc[name] = resolve(iconsDir, file);
     return acc;
   }, {}),
 };
@@ -27,14 +27,15 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      include: ["**/*.tsx", "index.ts"],
+      include: [srcDir],
       exclude: ["node_modules"],
       insertTypesEntry: true,
+      tsconfigPath: "./tsconfig.lib.json",
     }),
   ],
   resolve: {
     alias: {
-      "@": resolve(import.meta.dirname),
+      "@": srcDir,
     },
   },
   build: {
@@ -52,11 +53,18 @@ export default defineConfig({
         "tailwind-merge",
       ],
       output: {
-        preserveModules: false,
-        inlineDynamicImports: false,
+        preserveModules: true,
+        preserveModulesRoot: srcDir,
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.name === "index") {
+            return "index.js";
+          }
+          return `icons/${chunkInfo.name}.js`;
+        },
+        chunkFileNames: "chunks/[name]-[hash].js",
       },
     },
-    outDir: "dist",
+    outDir: "src/dist",
     emptyOutDir: true,
     sourcemap: true,
   },

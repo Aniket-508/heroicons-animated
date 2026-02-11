@@ -39,16 +39,16 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build React Package
-        run: pnpm run build:react
+        run: pnpm run build:lib
 
       - name: Publish React Package
         if: ${{ !inputs.dry-run }}
-        run: pnpm --dir react publish --access public --no-git-checks
+        run: cd src && pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Dry Run - Publish
         if: ${{ inputs.dry-run }}
-        run: pnpm --dir react publish --dry-run --access public --no-git-checks
+        run: cd src && pnpm publish --dry-run --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

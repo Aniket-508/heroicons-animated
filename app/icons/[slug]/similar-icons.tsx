@@ -10,19 +10,19 @@ type Props = {
   currentIcon: Icon;
 };
 
-const ICON_MAP = new Map(getIconList().map((item) => [item.name, item.icon]));
+const ICON_MAP = new Map(getIconList().map((item) => [item.name, item]));
 
 const SimilarIconItem = ({
   icon,
-  Icon,
 }: {
-  icon: Icon;
-  Icon: React.ElementType | undefined;
+  icon: { name: string; icon: React.ComponentType };
 }) => {
   const animationRef = useRef<{
     startAnimation: () => void;
     stopAnimation: () => void;
   }>(null);
+
+  const Icon = ICON_MAP.get(icon.name)?.icon;
 
   if (!Icon) {
     return null;
@@ -51,12 +51,13 @@ const SimilarIconItem = ({
 
 const SimilarIcons = ({ currentIcon }: Props) => {
   const similarIcons = useMemo(() => {
-    const currentKeywords = new Set(currentIcon.keywords);
+    const currentKeywords = new Set(currentIcon.keywords || []);
 
     const scored = getIconList()
       .filter((icon) => icon.name !== currentIcon.name)
       .map((icon) => {
-        const sharedKeywords = icon.keywords.filter((kw) =>
+        const iconKeywords = icon.keywords || [];
+        const sharedKeywords = iconKeywords.filter((kw) =>
           currentKeywords.has(kw)
         ).length;
         return { icon, score: sharedKeywords };
@@ -79,11 +80,7 @@ const SimilarIcons = ({ currentIcon }: Props) => {
       <h2 className="mb-4 font-sans text-xl">Similar Icons</h2>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-2">
         {similarIcons.map((icon) => (
-          <SimilarIconItem
-            Icon={ICON_MAP.get(icon.name) ?? undefined}
-            icon={icon}
-            key={icon.name}
-          />
+          <SimilarIconItem icon={icon} key={icon.name} />
         ))}
       </div>
     </div>

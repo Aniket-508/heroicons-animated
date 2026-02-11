@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef } from "react";
-import { ANALYTIC_EVENT } from "@/components/analytics";
 import {
   ArrowTopRightOnSquareIcon,
   type ArrowTopRightOnSquareIconHandle,
-} from "@/icons";
+} from "@heroicons-animated/react";
+import { useRef } from "react";
+import { ANALYTIC_EVENT } from "@/components/analytics";
 
 const CommentAuthorLinkClient = () => {
   return (

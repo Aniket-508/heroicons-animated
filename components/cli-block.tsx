@@ -9,7 +9,7 @@ import type { IconStatus } from "@/components/ui/icon-state";
 import { IconState } from "@/components/ui/icon-state";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TextLoop } from "@/components/ui/text-loop";
-import { PACKAGE_MANAGER, SITE } from "@/constants";
+import { PACKAGE_MANAGER } from "@/constants";
 import { getCLICommand, getRegistryPathPrefix, getShadcnCLI } from "@/lib/cli";
 import { getPackageManagerPrefix } from "@/lib/get-package-manager-prefix";
 import { cn } from "@/lib/utils";
@@ -95,8 +95,9 @@ const CliBlock = ({ icons, staticIconName, className }: CliBlockProps) => {
                 )}
               >
                 <span className="sr-only">
-                  {getPackageManagerPrefix(pm)} {getShadcnCLI()} add @
-                  {SITE.NAME}/{staticIconName || currentIconName.current}
+                  {getPackageManagerPrefix(pm)} {getShadcnCLI()}{" "}
+                  {getRegistryPathPrefix()}
+                  {staticIconName || currentIconName.current}
                 </span>
                 <span
                   aria-hidden="true"
@@ -105,8 +106,7 @@ const CliBlock = ({ icons, staticIconName, className }: CliBlockProps) => {
                   {getPackageManagerPrefix(pm)}
                 </span>{" "}
                 <span aria-hidden="true" className="text-black dark:text-white">
-                  {getShadcnCLI()} add @{SITE.NAME}
-                  {getRegistryPathPrefix()}
+                  {getShadcnCLI()} add {getRegistryPathPrefix()}
                 </span>
                 {isStatic ? (
                   <span className="shrink-0 text-primary">

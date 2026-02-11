@@ -24,24 +24,25 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm run build:icons && next build",
+    "build": "pnpm run build:lib && next build",
     "start": "next start",
     "lint": "pnpm run check-style:fix && ultracite fix",
     "lint:check": "pnpm run check-style && ultracite check",
-    "type-check": "pnpm run type-check:icons && tsc --noEmit",
+    "type-check": "pnpm run type-check:lib && tsc --noEmit",
     "check-duplicates": "node --import tsx scripts/check-duplicates.ts",
     "check-imports": "node --import tsx scripts/check-imports.ts",
     "check-style": "node --import tsx scripts/check-icon-style.ts",
     "check-style:fix": "node --import tsx scripts/check-icon-style.ts --fix",
     "build-registry": "node --import tsx scripts/registry-build.ts",
-    "build:icons": "cd icons && vite build",
-    "dev:icons": "cd icons && vite build --watch",
-    "type-check:icons": "tsc --project icons/tsconfig.json --noEmit"
+    "build:lib": "vite build --config vite.lib.config.ts",
+    "dev:lib": "vite build --config vite.lib.config.ts --watch",
+    "type-check:lib": "tsc --project tsconfig.lib.json --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
-    "@heroicons-animated/react": "link:./icons",
+    "@heroicons-animated/react": "link:./src",
     "@heroicons/react": "^2.2.0",
+    "@number-flow/react": "^0.5.11",
     "@radix-ui/react-icons": "^1.3.2",
     "@toolwind/corner-shape": "0.0.8-3",
     "@wandry/analytics-sdk": "^1.16.0",
@@ -66,12 +67,15 @@
     "@types/node": "^24.10.4",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "tsup": "^8.4.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "ultracite": "7.0.5"
+    "ultracite": "7.0.5",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.0.0"
   },
   "engines": {
     "node": ">=20.x",

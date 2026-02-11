@@ -20,7 +20,7 @@ const CommentBlock = () => {
             <AvatarImage
               alt="Aniket Pawar, the author of the heroicons-animated"
               className="select-none"
-              src="/aniket.jpg"
+              src="https://ik.imagekit.io/2oajjadqkz/profile.jpg?updatedAt=1770631384305"
             />
             <AvatarFallback className="bg-neutral-200 font-sans dark:bg-neutral-800">
               AP
