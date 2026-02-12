@@ -1,13 +1,13 @@
 {
   "name": "@heroicons-animated/react",
   "version": "1.3.1",
-  "description": "Animated Heroicons for React, built with Motion for React",
+  "description": "Beautifully animated Heroicons for React",
   "author": "Aniket-508",
   "homepage": "https://www.heroicons-animated.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heroicons-animated/heroicons-animated.git",
-    "directory": "src"
+    "directory": "packages/react"
   },
   "bugs": {
     "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
@@ -53,8 +53,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prepack": "cp ../README.md ../LICENSE .",
-    "postpack": "rm -f README.md LICENSE"
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "type-check": "tsc --noEmit",
+    "prepack": "cp ../../LICENSE . 2>/dev/null || true",
+    "postpack": "rm -f LICENSE 2>/dev/null || true"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -63,5 +66,11 @@
   "peerDependencies": {
     "motion": "^11.0.0 || ^12.0.0",
     "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.0.0"
   }
 }

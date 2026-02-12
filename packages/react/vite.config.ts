@@ -30,7 +30,7 @@ export default defineConfig({
       include: [srcDir],
       exclude: ["node_modules"],
       insertTypesEntry: true,
-      tsconfigPath: "./tsconfig.lib.json",
+      tsconfigPath: "./tsconfig.json",
     }),
   ],
   resolve: {
@@ -64,7 +64,7 @@ export default defineConfig({
         chunkFileNames: "chunks/[name]-[hash].js",
       },
     },
-    outDir: "src/dist",
+    outDir: "dist",
     emptyOutDir: true,
     sourcemap: true,
   },

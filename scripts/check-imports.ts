@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ICONS_DIR = join(process.cwd(), "src/icons");
+const ICONS_DIR = join(process.cwd(), "packages/react/src/icons");
 
 interface CheckResult {
   missingImports: string[];
@@ -23,7 +23,7 @@ function getAllIconFiles(): string[] {
 }
 
 function getImportsFromIndex(): Set<string> {
-  const indexPath = join(process.cwd(), "src", "index.ts");
+  const indexPath = join(process.cwd(), "packages/react/src", "index.ts");
 
   if (!existsSync(indexPath)) {
     console.error("index.ts not found:", indexPath);

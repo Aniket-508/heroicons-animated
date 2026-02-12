@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ICONS_DIR = join(process.cwd(), "src/icons");
+const ICONS_DIR = join(process.cwd(), "packages/react/src/icons");
 const FIX_MODE = process.argv.includes("--fix");
 
 const REQUIRED_PATTERNS = [
