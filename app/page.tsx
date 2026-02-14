@@ -15,7 +15,7 @@ const Home = () => {
         id="hero"
       >
         <h1 className="px-4 text-center font-sans text-[32px] min-[640px]:text-[42px]">
-          Beautifully animated heroicons<span className="text-primary">*</span>
+          Beautifully animated heroicons<span className="text-primary">^</span>
         </h1>
         <p className="mt-5 max-w-[582px] px-4 text-center font-mono text-secondary text-sm">
           an open-source (
