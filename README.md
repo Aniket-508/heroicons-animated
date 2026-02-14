@@ -24,8 +24,6 @@ heroicons-animated/
 
 ### Using shadcn CLI
 
-#### React
-
 ```bash
 pnpm dlx shadcn add @heroicons-animated/heart
 pnpm dlx shadcn add @heroicons-animated/wifi
@@ -33,21 +31,17 @@ pnpm dlx shadcn add @heroicons-animated/wifi
 
 ### Using npm packages
 
-#### React
-
 ```bash
 pnpm add @heroicons-animated/react motion
 ```
 
 ```tsx
 import { BeakerIcon } from "@heroicons-animated/react";
-import { HeartIcon } from "@heroicons-animated/react/heart";
 
 export default function App() {
   return (
     <>
       <BeakerIcon className="size-6" />
-      <HeartIcon className="size-6" />
     </>
   );
 }
