@@ -11,9 +11,13 @@ const Home = () => {
   return (
     <>
       <section
-        className="view-container flex flex-col items-center justify-center border-neutral-200 px-0 pt-[60px] xl:border-x dark:border-neutral-800"
+        className="view-container relative flex flex-col items-center justify-center border-neutral-200 px-0 pt-[60px] xl:border-x dark:border-neutral-800"
         id="hero"
       >
+        <span className="absolute top-6 left-1/2 flex h-8 -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 font-medium text-sm dark:bg-white/10">
+          <span className="text-secondary">Backed by</span>
+          <span>▲Vercel OSS Program</span>
+        </span>
         <h1 className="px-4 text-center font-sans text-[32px] min-[640px]:text-[42px]">
           Beautifully animated heroicons<span className="text-primary">^</span>
         </h1>
