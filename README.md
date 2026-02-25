@@ -15,9 +15,9 @@
 
 ```
 heroicons-animated/
-├── app/                    # Website
+├── src/                    # Website
 ├── packages/
-│   └── react/              # React package (@heroicons-animated/react)
+│   └── react/              # React package
 ```
 
 ## Installation
@@ -26,7 +26,6 @@ heroicons-animated/
 
 ```bash
 pnpm dlx shadcn add @heroicons-animated/heart
-pnpm dlx shadcn add @heroicons-animated/wifi
 ```
 
 ### Using npm packages
