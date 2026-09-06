@@ -50,9 +50,9 @@ export default function App() {
 
 <a href="https://www.star-history.com/?repos=heroicons-animated%2Fheroicons-animated&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=heroicons-animated/heroicons-animated&type=date&theme=dark&legend=top-left&sealed_token=oXX-1tNCACcRTch3WpWZmZ0Wn5-L6ask6b04p-Jnog6aVZE5pYiR2Q4lNEgTcpIAmqftSUw8eSVI926IvgK96C7ruBhIswyKa7UUv0ogNh24AHy8_Z1LRyIPqz8vJ0b2j79600wavKHnSyhdf9b_MEWRQsBp73kd1F0cnXi5YDp2Ywx_DQOVBY--zuR4" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=heroicons-animated/heroicons-animated&type=date&legend=top-left&sealed_token=oXX-1tNCACcRTch3WpWZmZ0Wn5-L6ask6b04p-Jnog6aVZE5pYiR2Q4lNEgTcpIAmqftSUw8eSVI926IvgK96C7ruBhIswyKa7UUv0ogNh24AHy8_Z1LRyIPqz8vJ0b2j79600wavKHnSyhdf9b_MEWRQsBp73kd1F0cnXi5YDp2Ywx_DQOVBY--zuR4" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=heroicons-animated/heroicons-animated&type=date&legend=top-left&sealed_token=oXX-1tNCACcRTch3WpWZmZ0Wn5-L6ask6b04p-Jnog6aVZE5pYiR2Q4lNEgTcpIAmqftSUw8eSVI926IvgK96C7ruBhIswyKa7UUv0ogNh24AHy8_Z1LRyIPqz8vJ0b2j79600wavKHnSyhdf9b_MEWRQsBp73kd1F0cnXi5YDp2Ywx_DQOVBY--zuR4" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=heroicons-animated/heroicons-animated&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=heroicons-animated/heroicons-animated&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=heroicons-animated/heroicons-animated&type=date&legend=top-left" />
  </picture>
 </a>
 
