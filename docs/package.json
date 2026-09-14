@@ -5,6 +5,7 @@
   "description": "Documentation site for Heroicons Animated",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "pnpm --filter @heroicons-animated/react build",
     "build": "next build",
     "start": "next start",
     "lint": "ultracite fix",
