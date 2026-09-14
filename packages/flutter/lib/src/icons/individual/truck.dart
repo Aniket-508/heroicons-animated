@@ -1,0 +1,116 @@
+import 'package:heroicons_animated/src/icons/icon_base.dart';
+
+const truck = HeroiconAnimatedIconData(
+  name: 'truck',
+  elements: [
+    LineElement(
+      x1: 0.0,
+      y1: 8.0,
+      x2: 5.0,
+      y2: 8.0,
+      animation: CombinedAnimation(
+        duration: Duration(milliseconds: 500),
+        delay: Duration(milliseconds: 0),
+        curve: Curves.easeOut,
+        opacityKeyframe: OpacityKeyframeAnimation(
+          keyframes: [0.0, 0.7, 0.5, 0.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 0),
+          curve: Curves.easeOut,
+        ),
+        scaleXYKeyframe: ScaleXYKeyframeAnimation(
+          keyframesX: [0.2, 1.0, 0.8, 0.3],
+          keyframesY: [1.0, 1.0, 1.0, 1.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 0),
+          curve: Curves.easeOut,
+          originX: 0.0,
+          originY: 0.5,
+        ),
+        translateKeyframe: TranslateKeyframeAnimation(
+          keyframesX: [0.0, -4.0, -10.0, -16.0],
+          keyframesY: [0.0, 0.0, 0.0, 0.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 0),
+          curve: Curves.easeOut,
+        ),
+      ),
+    ),
+    LineElement(
+      x1: -1.0,
+      y1: 11.0,
+      x2: 6.0,
+      y2: 11.0,
+      animation: CombinedAnimation(
+        duration: Duration(milliseconds: 500),
+        delay: Duration(milliseconds: 80),
+        curve: Curves.easeOut,
+        opacityKeyframe: OpacityKeyframeAnimation(
+          keyframes: [0.0, 0.7, 0.5, 0.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 80),
+          curve: Curves.easeOut,
+        ),
+        scaleXYKeyframe: ScaleXYKeyframeAnimation(
+          keyframesX: [0.2, 1.0, 0.8, 0.3],
+          keyframesY: [1.0, 1.0, 1.0, 1.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 80),
+          curve: Curves.easeOut,
+          originX: 0.0,
+          originY: 0.5,
+        ),
+        translateKeyframe: TranslateKeyframeAnimation(
+          keyframesX: [0.0, -4.0, -10.0, -16.0],
+          keyframesY: [0.0, 0.0, 0.0, 0.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 80),
+          curve: Curves.easeOut,
+        ),
+      ),
+    ),
+    LineElement(
+      x1: 0.0,
+      y1: 14.0,
+      x2: 4.0,
+      y2: 14.0,
+      animation: CombinedAnimation(
+        duration: Duration(milliseconds: 500),
+        delay: Duration(milliseconds: 160),
+        curve: Curves.easeOut,
+        opacityKeyframe: OpacityKeyframeAnimation(
+          keyframes: [0.0, 0.7, 0.5, 0.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 160),
+          curve: Curves.easeOut,
+        ),
+        scaleXYKeyframe: ScaleXYKeyframeAnimation(
+          keyframesX: [0.2, 1.0, 0.8, 0.3],
+          keyframesY: [1.0, 1.0, 1.0, 1.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 160),
+          curve: Curves.easeOut,
+          originX: 0.0,
+          originY: 0.5,
+        ),
+        translateKeyframe: TranslateKeyframeAnimation(
+          keyframesX: [0.0, -4.0, -10.0, -16.0],
+          keyframesY: [0.0, 0.0, 0.0, 0.0],
+          duration: Duration(milliseconds: 500),
+          delay: Duration(milliseconds: 160),
+          curve: Curves.easeOut,
+        ),
+      ),
+    ),
+    PathElement(
+      d: 'M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12',
+      animation: TranslateKeyframeAnimation(
+        keyframesX: [0.0, 0.0, 0.0, 0.0, 0.0],
+        keyframesY: [0.0, -1.0, 0.0, -0.5, 0.0],
+        duration: Duration(milliseconds: 400),
+        delay: Duration(milliseconds: 0),
+        curve: Curves.easeInOut,
+      ),
+    ),
+  ],
+);

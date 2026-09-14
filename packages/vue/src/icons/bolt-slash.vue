@@ -1,0 +1,100 @@
+<template>
+  <div
+    :class="props.class"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
+  >
+    <svg
+      ref="svgRef"
+      xmlns="http://www.w3.org/2000/svg"
+      :width="props.size"
+      :height="props.size"
+      viewBox="0 0 24 24"
+      fill="none"
+      :stroke="props.color"
+      :stroke-width="props.strokeWidth"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path
+        d="M11.412 15.655 9.75 21.75l3.745-4.012M9.257 13.5H3.75l2.659-2.849m2.048-2.194L14.25 2.25 12 10.5h8.25l-4.707 5.043M8.457 8.457 3 3m5.457 5.457 7.086 7.086m0 0L21 21"
+      />
+    </svg>
+  </div>
+</template>
+
+<script lang="ts">
+  export default {
+    name: "BoltSlashIcon",
+  };
+</script>
+
+<script setup lang="ts">
+  import { useMotion } from "../motion";
+  import { ref } from "vue";
+
+  export interface Props {
+    size?: number;
+    class?: string;
+    color?: string;
+    strokeWidth?: number | string;
+  }
+
+  const props = withDefaults(defineProps<Props>(), {
+    size: 28,
+    color: "currentColor",
+    strokeWidth: 1.5,
+  });
+
+  const variants = {
+    normal: {
+      x: 0,
+    },
+    animate: {
+      x: [0, "-7%", "7%", "-7%", "7%", 0],
+      transition: {
+        duration: 0.6,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const svgRef = ref<SVGSVGElement>();
+  const svgMotion = useMotion(svgRef, {
+    initial: variants.normal,
+    enter: variants.normal,
+  });
+
+  let isControlled = false;
+
+  const startAnimation = () => {
+    svgMotion.apply(variants.animate);
+  };
+
+  const stopAnimation = () => {
+    svgMotion.apply(variants.normal);
+  };
+
+  const handleMouseEnter = () => {
+    if (!isControlled) {
+      startAnimation();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isControlled) {
+      stopAnimation();
+    }
+  };
+
+  const setControlled = (value: boolean) => {
+    isControlled = value;
+  };
+
+  defineExpose({
+    startAnimation,
+    stopAnimation,
+    setControlled,
+  });
+</script>
