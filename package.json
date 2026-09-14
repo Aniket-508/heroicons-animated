@@ -2,7 +2,7 @@
   "name": "heroicons-animated",
   "version": "0.1.0",
   "private": true,
-  "description": "Beautifully animated Heroicons for React, Vue, Svelte, Solid, Angular, React Native, Preact, and Astro",
+  "description": "Beautifully animated Heroicons for React, Vue, Svelte, Solid, Angular, React Native, Preact, Astro, and Flutter",
   "author": "Aniket-508",
   "license": "MIT",
   "homepage": "https://heroicons-animated.com",
@@ -25,6 +25,7 @@
     "react-native",
     "preact",
     "astro",
+    "flutter",
     "motion"
   ],
   "scripts": {

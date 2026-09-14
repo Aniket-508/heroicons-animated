@@ -24,7 +24,8 @@ heroicons-animated/
 │   ├── angular/                   # @heroicons-animated/angular
 │   ├── react-native/              # @heroicons-animated/react-native
 │   ├── preact/                    # @heroicons-animated/preact
-│   └── astro/                     # @heroicons-animated/astro
+│   ├── astro/                     # @heroicons-animated/astro
+│   └── flutter/                   # heroicons_animated
 ```
 
 ## Installation
@@ -147,6 +148,28 @@ import { BeakerIcon } from "@heroicons-animated/astro";
 ---
 
 <BeakerIcon size={32} color="orange" strokeWidth={2.5} />
+```
+
+### Flutter
+
+```yaml
+dependencies:
+  heroicons_animated:
+    git:
+      url: https://github.com/heroicons-animated/heroicons-animated.git
+      path: packages/flutter
+```
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:heroicons_animated/heroicons_animated.dart';
+
+HeroiconAnimatedIcon(
+  icon: beaker,
+  size: 32,
+  color: Colors.orange,
+  trigger: AnimationTrigger.onTap,
+);
 ```
 
 ## Star History

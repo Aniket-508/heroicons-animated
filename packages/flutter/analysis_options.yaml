@@ -1,0 +1,12 @@
+analyzer:
+  exclude:
+    - build/**
+include: package:very_good_analysis/analysis_options.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+    avoid_redundant_argument_values: false
+    lines_longer_than_80_chars: false
+    prefer_int_literals: false
+    use_named_constants: false
