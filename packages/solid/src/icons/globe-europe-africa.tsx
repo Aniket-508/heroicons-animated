@@ -1,0 +1,106 @@
+import type { JSX } from "solid-js";
+import { createSignal, mergeProps, splitProps } from "solid-js";
+import { Motion } from "solid-motionone";
+import { resolveTransition, resolveValues } from "@/lib/motion-compat";
+import { cn } from "@/lib/utils";
+
+export interface GlobeEuropeAfricaIconHandle {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+}
+
+interface GlobeEuropeAfricaIconProps
+  extends Omit<JSX.HTMLAttributes<HTMLDivElement>, "ref"> {
+  size?: number;
+  ref?: (handle: GlobeEuropeAfricaIconHandle) => void;
+}
+
+const LAND_VARIANTS = {
+  normal: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    pathOffset: [1, 0],
+    transition: {
+      duration: 0.6,
+      ease: "linear",
+      opacity: { duration: 0.1 },
+    },
+  },
+};
+const GlobeEuropeAfricaIcon = (rawProps: GlobeEuropeAfricaIconProps) => {
+  const props = mergeProps({ size: 28 }, rawProps);
+  const [local, others] = splitProps(props, [
+    "onMouseEnter",
+    "onMouseLeave",
+    "class",
+    "size",
+    "ref",
+  ]);
+  const [variant, setVariant] = createSignal("normal");
+  let isControlled = false;
+
+  if (local.ref) {
+    isControlled = true;
+    local.ref({
+      startAnimation: () => setVariant("animate"),
+      stopAnimation: () => setVariant("normal"),
+    });
+  }
+
+  const handleMouseEnter: JSX.EventHandler<HTMLDivElement, MouseEvent> = (
+    e
+  ) => {
+    if (isControlled) {
+      if (typeof local.onMouseEnter === "function") {
+        local.onMouseEnter(e);
+      }
+    } else {
+      setVariant("animate");
+    }
+  };
+
+  const handleMouseLeave: JSX.EventHandler<HTMLDivElement, MouseEvent> = (
+    e
+  ) => {
+    if (isControlled) {
+      if (typeof local.onMouseLeave === "function") {
+        local.onMouseLeave(e);
+      }
+    } else {
+      setVariant("normal");
+    }
+  };
+
+  return (
+    <div
+      class={cn(local.class)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      {...others}
+    >
+      <svg
+        fill="none"
+        height={local.size}
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        width={local.size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M20.893 13.393A9 9 0 0 0 8.965 3.525M20.893 13.393A9 9 0 1 1 8.965 3.525" />
+        <Motion.path
+          animate={resolveValues(LAND_VARIANTS, variant())}
+          d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76"
+          transition={resolveTransition(LAND_VARIANTS, variant())}
+        />
+      </svg>
+    </div>
+  );
+};
+
+export { GlobeEuropeAfricaIcon };

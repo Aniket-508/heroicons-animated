@@ -1,0 +1,100 @@
+import type { JSX } from "solid-js";
+import { createSignal, mergeProps, splitProps } from "solid-js";
+import { Motion } from "solid-motionone";
+import { resolveTransition, resolveValues } from "@/lib/motion-compat";
+import { cn } from "@/lib/utils";
+
+export interface BackspaceIconHandle {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+}
+
+interface BackspaceIconProps
+  extends Omit<JSX.HTMLAttributes<HTMLDivElement>, "ref"> {
+  size?: number;
+  ref?: (handle: BackspaceIconHandle) => void;
+}
+
+const SVG_VARIANTS = {
+  normal: {
+    x: 0,
+  },
+  animate: {
+    x: [0, -3, 0],
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
+const BackspaceIcon = (rawProps: BackspaceIconProps) => {
+  const props = mergeProps({ size: 28 }, rawProps);
+  const [local, others] = splitProps(props, [
+    "onMouseEnter",
+    "onMouseLeave",
+    "class",
+    "size",
+    "ref",
+  ]);
+  const [variant, setVariant] = createSignal("normal");
+  let isControlled = false;
+
+  if (local.ref) {
+    isControlled = true;
+    local.ref({
+      startAnimation: () => setVariant("animate"),
+      stopAnimation: () => setVariant("normal"),
+    });
+  }
+
+  const handleMouseEnter: JSX.EventHandler<HTMLDivElement, MouseEvent> = (
+    e
+  ) => {
+    if (isControlled) {
+      if (typeof local.onMouseEnter === "function") {
+        local.onMouseEnter(e);
+      }
+    } else {
+      setVariant("animate");
+    }
+  };
+
+  const handleMouseLeave: JSX.EventHandler<HTMLDivElement, MouseEvent> = (
+    e
+  ) => {
+    if (isControlled) {
+      if (typeof local.onMouseLeave === "function") {
+        local.onMouseLeave(e);
+      }
+    } else {
+      setVariant("normal");
+    }
+  };
+
+  return (
+    <div
+      class={cn(local.class)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      {...others}
+    >
+      <Motion.svg
+        animate={resolveValues(SVG_VARIANTS, variant())}
+        fill="none"
+        height={local.size}
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        transition={resolveTransition(SVG_VARIANTS, variant())}
+        viewBox="0 0 24 24"
+        width={local.size}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M12 9.75L14.25 12M14.25 12L16.5 14.25M14.25 12L16.5 9.75M14.25 12L12 14.25M9.42051 19.1705L3.04551 12.7955C2.60617 12.3562 2.60617 11.6438 3.04551 11.2045L9.42051 4.82951C9.63149 4.61853 9.91764 4.5 10.216 4.5L19.5 4.5C20.7427 4.5 21.75 5.50736 21.75 6.75V17.25C21.75 18.4926 20.7427 19.5 19.5 19.5H10.216C9.91764 19.5 9.63149 19.3815 9.42051 19.1705Z" />
+      </Motion.svg>
+    </div>
+  );
+};
+
+export { BackspaceIcon };

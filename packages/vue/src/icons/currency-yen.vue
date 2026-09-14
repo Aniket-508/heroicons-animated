@@ -1,0 +1,97 @@
+<template>
+  <div
+    :class="props.class"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
+  >
+    <svg
+      ref="svgRef"
+      xmlns="http://www.w3.org/2000/svg"
+      :width="props.size"
+      :height="props.size"
+      viewBox="0 0 24 24"
+      fill="none"
+      :stroke="props.color"
+      :stroke-width="props.strokeWidth"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      style="transform-origin: 50% 50%"
+    >
+      <path
+        d="M9 7.5L12 12M12 12L15 7.5M12 12V17.25M15 12H9M15 15H9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+      />
+    </svg>
+  </div>
+</template>
+
+<script lang="ts">
+  export default {
+    name: "CurrencyYenIcon",
+  };
+</script>
+
+<script setup lang="ts">
+  import { useMotion } from "../motion";
+  import { ref } from "vue";
+
+  export interface Props {
+    size?: number;
+    class?: string;
+    color?: string;
+    strokeWidth?: number | string;
+  }
+
+  const props = withDefaults(defineProps<Props>(), {
+    size: 28,
+    color: "currentColor",
+    strokeWidth: 1.5,
+  });
+
+  // Match React ROTATE_VARIANTS: svg scaleX [1, -1, 1], 0.6s easeInOut
+  const variants = {
+    normal: { scaleX: 1 },
+    animate: {
+      scaleX: [1, -1, 1],
+      transition: { duration: 0.6, ease: "easeInOut" },
+    },
+  };
+
+  const svgRef = ref<SVGSVGElement | null>();
+  const motionInstance = useMotion(svgRef, {
+    initial: variants.normal,
+    enter: variants.normal,
+  });
+
+  let isControlled = false;
+
+  const startAnimation = () => {
+    motionInstance.apply(variants.animate);
+  };
+
+  const stopAnimation = () => {
+    motionInstance.apply(variants.normal);
+  };
+
+  const handleMouseEnter = () => {
+    if (!isControlled) {
+      startAnimation();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isControlled) {
+      stopAnimation();
+    }
+  };
+
+  const setControlled = (value: boolean) => {
+    isControlled = value;
+  };
+
+  defineExpose({
+    startAnimation,
+    stopAnimation,
+    setControlled,
+  });
+</script>

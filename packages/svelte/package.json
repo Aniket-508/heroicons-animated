@@ -1,0 +1,56 @@
+{
+  "name": "@heroicons-animated/svelte",
+  "version": "1.2.3",
+  "description": "Beautifully animated Heroicons for Svelte",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://svelte.heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroicons-animated/heroicons-animated.git",
+    "directory": "packages/svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
+  },
+  "keywords": ["heroicons", "svelte", "icons", "animated"],
+  "sideEffects": ["**/*.css"],
+  "type": "module",
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/icons/*.svelte.d.ts",
+      "svelte": "./dist/icons/*.svelte",
+      "import": "./dist/icons/*.svelte",
+      "default": "./dist/icons/*.svelte"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./dist/icons/*.svelte.d.ts"]
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "svelte-package",
+    "dev": "svelte-package --watch",
+    "type-check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "^2.3.4",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "svelte": "^5.48.2",
+    "svelte-check": "^4.3.5",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "@heroicons-animated/react-native",
+  "version": "0.1.0",
+  "description": "Beautifully animated Heroicons for React Native",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://react-native.heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroicons-animated/heroicons-animated.git",
+    "directory": "packages/react-native"
+  },
+  "bugs": {
+    "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
+  },
+  "keywords": ["heroicons", "react-native", "icons", "animated"],
+  "sideEffects": false,
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/typescript/index.d.ts",
+      "import": "./lib/module/index.js",
+      "require": "./lib/commonjs/index.js"
+    },
+    "./*": {
+      "types": "./lib/typescript/icons/*.d.ts",
+      "import": "./lib/module/icons/*.js",
+      "require": "./lib/commonjs/icons/*.js"
+    }
+  },
+  "files": ["lib", "src", "README.md"],
+  "scripts": {
+    "build": "bob build",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "pnpm build && pnpm type-check"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0",
+    "react-native-reanimated": ">=3.0.0",
+    "react-native-svg": ">=13.0.0"
+  },
+  "devDependencies": {
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-builder-bob": "^0.40.0",
+    "react-native-reanimated": "~4.1.6",
+    "react-native-svg": "15.12.1",
+    "typescript": "^5.9.3"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      ["typescript", { "project": "tsconfig.build.json" }]
+    ]
+  }
+}

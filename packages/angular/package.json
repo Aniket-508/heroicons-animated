@@ -1,0 +1,51 @@
+{
+  "name": "@heroicons-animated/angular",
+  "version": "0.1.0",
+  "description": "Beautifully animated Heroicons for Angular",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://angular.heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroicons-animated/heroicons-animated.git",
+    "directory": "packages/angular"
+  },
+  "bugs": {
+    "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
+  },
+  "keywords": ["heroicons", "angular", "icons", "animated"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/icons/*.d.ts",
+      "default": "./dist/icons/*.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "ng build",
+    "dev": "ng build --watch",
+    "type-check": "ngc -p tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/compiler-cli": "^19.2.0",
+    "ng-packagr": "^19.2.0",
+    "typescript": "~5.7.2"
+  }
+}

@@ -1,0 +1,131 @@
+<template>
+  <div
+    :class="props.class"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+    v-bind="$attrs"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      :width="props.size"
+      :height="props.size"
+      viewBox="0 0 24 24"
+      fill="none"
+      :stroke="props.color"
+      :stroke-width="props.strokeWidth"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path
+        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+      />
+      <path ref="line0Ref" d="M8.25 12.75h7.5" />
+      <path ref="line1Ref" d="M8.25 15.75H12" />
+    </svg>
+  </div>
+</template>
+
+<script lang="ts">
+  export default {
+    name: "DocumentTextIcon",
+  };
+</script>
+
+<script setup lang="ts">
+  import { useMotion } from "../motion";
+  import { ref } from "vue";
+
+  export interface Props {
+    size?: number;
+    class?: string;
+    color?: string;
+    strokeWidth?: number | string;
+  }
+
+  const props = withDefaults(defineProps<Props>(), {
+    size: 28,
+    color: "currentColor",
+    strokeWidth: 1.5,
+  });
+
+  // Match React: 2 lines hide (pathLength 0, opacity 0, delay i*0.1, 0.3s) then show (pathLength 1, opacity 1, same)
+  const lineVisible = { pathLength: 1, opacity: 1 };
+
+  const hidden = (i: number) => ({
+    pathLength: 0,
+    opacity: 0,
+    transition: { delay: i * 0.1, duration: 0.3 },
+  });
+  const visible = (i: number) => ({
+    pathLength: 1,
+    opacity: 1,
+    transition: { delay: i * 0.1, duration: 0.3 },
+  });
+
+  const line0Ref = ref<SVGPathElement | null>(null);
+  const line1Ref = ref<SVGPathElement | null>(null);
+  const motion0 = useMotion(line0Ref, {
+    initial: lineVisible,
+    enter: lineVisible,
+  });
+  const motion1 = useMotion(line1Ref, {
+    initial: lineVisible,
+    enter: lineVisible,
+  });
+
+  let isControlled = false;
+  let animationTimeout: number | undefined;
+
+  const clearAnimationTimeout = () => {
+    if (animationTimeout !== undefined) {
+      clearTimeout(animationTimeout);
+      animationTimeout = undefined;
+    }
+  };
+
+  const startAnimation = () => {
+    clearAnimationTimeout();
+
+    motion0.apply(hidden(0));
+    motion1.apply(hidden(1));
+
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const hideDurationMs = 400;
+    animationTimeout = window.setTimeout(() => {
+      motion0.apply(visible(0));
+      motion1.apply(visible(1));
+      animationTimeout = undefined;
+    }, hideDurationMs);
+  };
+
+  const stopAnimation = () => {
+    clearAnimationTimeout();
+    motion0.apply(lineVisible);
+    motion1.apply(lineVisible);
+  };
+
+  const handleMouseEnter = () => {
+    if (!isControlled) {
+      startAnimation();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isControlled) {
+      stopAnimation();
+    }
+  };
+
+  const setControlled = (value: boolean) => {
+    isControlled = value;
+  };
+
+  defineExpose({
+    startAnimation,
+    stopAnimation,
+    setControlled,
+  });
+</script>

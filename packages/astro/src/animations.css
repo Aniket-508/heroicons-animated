@@ -1,0 +1,162 @@
+.heroicon-animated {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroicon-animated svg {
+  transition: transform 0.45s ease-in-out;
+}
+
+.heroicon-animated:hover svg {
+  animation-duration: 0.45s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Scale animation */
+.heroicon-animate-scale:hover svg {
+  animation-name: heroicon-scale;
+}
+
+@keyframes heroicon-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* Rotate animation */
+.heroicon-animate-rotate:hover svg {
+  animation-name: heroicon-rotate;
+}
+
+@keyframes heroicon-rotate {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+/* Shake animation */
+.heroicon-animate-shake:hover svg {
+  animation-name: heroicon-shake;
+}
+
+@keyframes heroicon-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+/* Bounce animation */
+.heroicon-animate-bounce:hover svg {
+  animation-name: heroicon-bounce;
+}
+
+@keyframes heroicon-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Swing animation */
+.heroicon-animate-swing:hover svg {
+  animation-name: heroicon-swing;
+  transform-origin: top center;
+}
+
+@keyframes heroicon-swing {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  60% { transform: rotate(-3deg); }
+  80% { transform: rotate(3deg); }
+}
+
+/* Pulse animation */
+.heroicon-animate-pulse:hover svg {
+  animation-name: heroicon-pulse;
+}
+
+@keyframes heroicon-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* Spin animation */
+.heroicon-animate-spin:hover svg {
+  animation-name: heroicon-spin;
+}
+
+@keyframes heroicon-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Wiggle animation */
+.heroicon-animate-wiggle:hover svg {
+  animation-name: heroicon-wiggle;
+}
+
+@keyframes heroicon-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-8deg); }
+  30% { transform: rotate(6deg); }
+  45% { transform: rotate(-4deg); }
+  60% { transform: rotate(2deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+/* Flip animation */
+.heroicon-animate-flip:hover svg {
+  animation-name: heroicon-flip;
+}
+
+@keyframes heroicon-flip {
+  0% { transform: perspective(400px) rotateY(0); }
+  100% { transform: perspective(400px) rotateY(360deg); }
+}
+
+/* Fade animation */
+.heroicon-animate-fade:hover svg {
+  animation-name: heroicon-fade;
+}
+
+@keyframes heroicon-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Slide animation */
+.heroicon-animate-slide:hover svg {
+  animation-name: heroicon-slide;
+}
+
+@keyframes heroicon-slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+/* Float animation */
+.heroicon-animate-float:hover svg {
+  animation-name: heroicon-float;
+}
+
+@keyframes heroicon-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Rubber band animation */
+.heroicon-animate-rubber-band:hover svg {
+  animation-name: heroicon-rubber-band;
+}
+
+@keyframes heroicon-rubber-band {
+  0%, 100% { transform: scaleX(1) scaleY(1); }
+  30% { transform: scaleX(1.25) scaleY(0.75); }
+  40% { transform: scaleX(0.75) scaleY(1.25); }
+  50% { transform: scaleX(1.15) scaleY(0.85); }
+  65% { transform: scaleX(0.95) scaleY(1.05); }
+  75% { transform: scaleX(1.05) scaleY(0.95); }
+}

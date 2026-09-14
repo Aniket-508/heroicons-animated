@@ -1,0 +1,43 @@
+---
+import type { IconProps, IconData } from './types';
+
+interface Props extends IconProps {
+  icon: IconData;
+}
+
+const {
+  icon,
+  color = 'currentColor',
+  size = 24,
+  strokeWidth = 1.5,
+  class: className = '',
+  title,
+  ...rest
+} = Astro.props;
+
+const animationClass = `heroicon-animate-${icon.animation}`;
+---
+
+<div class:list={['heroicon-animated', animationClass, className]} {...rest}>
+  {title && <title>{title}</title>}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    stroke-width={strokeWidth}
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    {icon.node.map(([tag, attrs]) => {
+      const Tag = tag;
+      return <Tag {...attrs} />;
+    })}
+  </svg>
+</div>
+
+<style>
+  @import './animations.css';
+</style>

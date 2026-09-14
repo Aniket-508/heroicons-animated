@@ -1,0 +1,92 @@
+<script lang="ts">
+  import type { IconProps } from "./types.js";
+  let {
+    color = "currentColor",
+    size = 28,
+    strokeWidth = 1.5,
+    animate = false,
+    class: className = "",
+    ...restProps
+  }: IconProps = $props();
+
+  let isHovered = $state(false);
+  let shouldAnimate = $derived(animate || isHovered);
+
+  let svgElement: SVGSVGElement;
+
+  function handleMouseEnter() {
+    isHovered = true;
+  }
+
+  function handleMouseLeave() {
+    isHovered = false;
+  }
+</script>
+
+<div
+  {...restProps}
+  class={className}
+  onmouseenter={handleMouseEnter}
+  onmouseleave={handleMouseLeave}
+  aria-label="beaker"
+  role="img"
+>
+  <svg
+    bind:this={svgElement}
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    stroke-width={strokeWidth}
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon-svg"
+    class:animate={shouldAnimate}
+  >
+    <path
+      d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
+    />
+  </svg>
+</div>
+
+<style>
+  div {
+    display: inline-block;
+  }
+
+  .icon-svg {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .icon-svg.animate {
+    animation: beaker-shake 0.8s ease-in-out forwards;
+  }
+
+  @keyframes beaker-shake {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    12.5% {
+      transform: rotate(6deg) scale(0.9);
+    }
+    25% {
+      transform: rotate(-6deg) scale(0.9);
+    }
+    37.5% {
+      transform: rotate(3deg) scale(0.9);
+    }
+    50% {
+      transform: rotate(-3deg) scale(0.9);
+    }
+    62.5% {
+      transform: rotate(0deg) scale(0.9);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+</style>

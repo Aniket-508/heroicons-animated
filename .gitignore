@@ -38,9 +38,14 @@ yarn-error.log*
 dist/
 .cache
 
-# generated icon proxies
-react/*.js
-react/*.d.ts
+# svelte
+packages/svelte/.svelte-kit/
+
+# angular
+packages/angular/dist/
+
+# react native
+packages/react-native/lib/
 
 # agents
 AGENTS.md

@@ -1,0 +1,42 @@
+{
+  "name": "@heroicons-animated/astro",
+  "version": "1.0.0",
+  "description": "Beautifully animated Heroicons for Astro",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://astro.heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroicons-animated/heroicons-animated.git",
+    "directory": "packages/astro"
+  },
+  "bugs": {
+    "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
+  },
+  "keywords": ["heroicons", "astro", "icons", "animated"],
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    },
+    "./icons": {
+      "import": "./src/index.ts"
+    },
+    "./icons/*": {
+      "import": "./src/icons/*.ts"
+    }
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "echo 'Astro packages ship source files directly'",
+    "type-check": "astro check || true"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "devDependencies": {
+    "astro": "^7.3.0",
+    "typescript": "^5.9.3"
+  }
+}

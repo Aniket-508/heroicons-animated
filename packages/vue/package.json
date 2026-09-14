@@ -1,0 +1,57 @@
+{
+  "name": "@heroicons-animated/vue",
+  "version": "2.0.0",
+  "description": "Beautifully animated Heroicons for Vue",
+  "author": "Aniket-508",
+  "license": "MIT",
+  "homepage": "https://vue.heroicons-animated.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroicons-animated/heroicons-animated.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/heroicons-animated/heroicons-animated/issues"
+  },
+  "keywords": ["heroicons", "vue", "icons", "animated", "motion"],
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js",
+      "default": "./dist/icons/*.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./dist/icons/*.d.ts"]
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "vite build -c vite.lib.config.ts",
+    "dev": "vite build -c vite.lib.config.ts --watch",
+    "type-check": "vue-tsc --noEmit -p tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "motion-v": "^1.10.2",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.3.0",
+    "vue": "^3.5.27",
+    "vue-tsc": "^2.1.30"
+  }
+}
